@@ -101,13 +101,12 @@ namespace FlatLoginWatermark
                 // Verificar si las credenciales coinciden con las almacenadas
                 if (usuarioIngresado == usuarioValido && contraseñaIngresada == contraseñaValida)
                 {
-                FormPrincipal formPrincipal = new FormPrincipal();
-                this.Hide();
-                formPrincipal.Show();
-               
+                    FormPrincipal formPrincipal = new FormPrincipal();
+                    this.Hide();
+                    formPrincipal.Show();              
 
-                // Aquí puedes abrir la ventana principal de la aplicación o realizar otras acciones
-            }
+                    // Aquí puedes abrir la ventana principal de la aplicación o realizar otras acciones
+                }
                 else
                 {
                     MessageBox.Show("Nombre de usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
