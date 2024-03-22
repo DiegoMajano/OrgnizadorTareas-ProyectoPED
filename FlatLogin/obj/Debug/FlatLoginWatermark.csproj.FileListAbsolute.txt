@@ -1,0 +1,26 @@
+D:\RJ Code Advance\Source Code C#\2019\FlatLoginWatermark\FlatLoginWatermark\obj\Debug\FlatLoginWatermark.csprojResolveAssemblyReference.cache
+D:\RJ Code Advance\Source Code C#\2019\FlatLoginWatermark\FlatLoginWatermark\obj\Debug\FlatLoginWatermark.Properties.Resources.resources
+D:\RJ Code Advance\Source Code C#\2019\FlatLoginWatermark\FlatLoginWatermark\obj\Debug\FlatLoginWatermark.csproj.GenerateResource.Cache
+D:\RJ Code Advance\Source Code C#\2019\FlatLoginWatermark\FlatLoginWatermark\bin\Debug\FlatLoginWatermark.exe.config
+D:\RJ Code Advance\Source Code C#\2019\FlatLoginWatermark\FlatLoginWatermark\bin\Debug\FlatLoginWatermark.exe
+D:\RJ Code Advance\Source Code C#\2019\FlatLoginWatermark\FlatLoginWatermark\bin\Debug\FlatLoginWatermark.pdb
+D:\RJ Code Advance\Source Code C#\2019\FlatLoginWatermark\FlatLoginWatermark\obj\Debug\FlatLoginWatermark.exe
+D:\RJ Code Advance\Source Code C#\2019\FlatLoginWatermark\FlatLoginWatermark\obj\Debug\FlatLoginWatermark.pdb
+D:\RJ Code Advance\Source Code C#\2019\FlatLoginWatermark\FlatLoginWatermark\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+D:\RJ Code Advance\Source Code C#\2019\FlatLoginWatermark\FlatLoginWatermark\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\RJ Code Advance\Source Code C#\2019\FlatLoginWatermark\FlatLoginWatermark\obj\Debug\FlatLoginWatermark.FormLogin.resources
+C:\Users\50376\Downloads\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\FlatLoginWatermark\bin\Debug\FlatLoginWatermark.exe.config
+C:\Users\50376\Downloads\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\FlatLoginWatermark\bin\Debug\FlatLoginWatermark.exe
+C:\Users\50376\Downloads\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\FlatLoginWatermark\bin\Debug\FlatLoginWatermark.pdb
+C:\Users\50376\Downloads\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\FlatLoginWatermark\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\50376\Downloads\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\FlatLoginWatermark\obj\Debug\FlatLoginWatermark.csproj.AssemblyReference.cache
+C:\Users\50376\Downloads\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\FlatLoginWatermark\obj\Debug\FlatLoginWatermark.FormLogin.resources
+C:\Users\50376\Downloads\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\FlatLoginWatermark\obj\Debug\FlatLoginWatermark.Properties.Resources.resources
+C:\Users\50376\Downloads\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\FlatLoginWatermark\obj\Debug\FlatLoginWatermark.csproj.GenerateResource.cache
+C:\Users\50376\Downloads\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\FlatLoginWatermark\obj\Debug\FlatLoginWatermark.csproj.CoreCompileInputs.cache
+C:\Users\50376\Downloads\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\FlatLoginWatermark\obj\Debug\FlatLoginWatermark.csproj.CopyComplete
+C:\Users\50376\Downloads\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\FlatLoginWatermark\obj\Debug\FlatLoginWatermark.exe
+C:\Users\50376\Downloads\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\FlatLoginWatermark\obj\Debug\FlatLoginWatermark.pdb
+C:\Users\50376\Downloads\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\FlatLoginWatermark\bin\Debug\ModernGUI_V3.exe
+C:\Users\50376\Downloads\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\FlatLoginWatermark\bin\Debug\ModernGUI_V3.pdb
+C:\Users\50376\Downloads\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\Login-Plano-Moderno-Transparente-Placeholder-WinForm-C-Sharp-master\FlatLoginWatermark\bin\Debug\ModernGUI_V3.exe.config
