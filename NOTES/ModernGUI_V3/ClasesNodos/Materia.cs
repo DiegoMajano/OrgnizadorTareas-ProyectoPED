@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace AdministradorT.ClasesSistema
 {
-    public class Materia
+    public class Materia : CNodos
     {
         // atributos
 
         private string nombre;
-        private int id;
         private DateTime horaClase;
         private string docente;
         private string salon;
@@ -20,10 +19,6 @@ namespace AdministradorT.ClasesSistema
         public string Nombre
         {
             get { return nombre; } set { nombre = value; }
-        }
-        public int Id
-        {
-            get { return id; } set { id = value; }
         }
         public DateTime HoraClase
         {
@@ -38,6 +33,7 @@ namespace AdministradorT.ClasesSistema
             get { return salon; } set { salon = value; }
         }
 
+        
         
     }
 }

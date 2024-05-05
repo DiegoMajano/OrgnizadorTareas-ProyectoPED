@@ -188,7 +188,7 @@
             this.btnCrearNota.Name = "btnCrearNota";
             this.btnCrearNota.Size = new System.Drawing.Size(102, 27);
             this.btnCrearNota.TabIndex = 9;
-            this.btnCrearNota.Text = "Crear Nota";
+            this.btnCrearNota.Text = "Crear anotación";
             this.btnCrearNota.UseVisualStyleBackColor = true;
             // 
             // label1

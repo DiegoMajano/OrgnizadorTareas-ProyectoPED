@@ -10,10 +10,12 @@ namespace AdministradorT
     {
         //Nodo destino de la conexion realizada
         public CNodos nodoDestino;
+        public int peso;
 
-        public CConexion()
+        public CConexion(int peso)
         {
             nodoDestino = new CNodos();
+            this.peso = peso;
         }
 
         public CConexion(CNodos nodo)

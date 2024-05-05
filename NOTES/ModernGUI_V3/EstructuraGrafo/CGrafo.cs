@@ -18,6 +18,7 @@ namespace AdministradorT
 
         public CNodos AgregarNodos(string valor, int peso)
         {
+            // SE PODRIA HACER UN SWITCH AQUI, SEGUN EL TIPO DE NODO QUE SE QUIERE CREAR ES COMO SE VA A GENERAR, SI ES MATERIA, ANOTACION, ETC
             CNodos nodo = new CNodos(valor, peso);
             nodos.Add(nodo);
             return nodo;
@@ -30,7 +31,7 @@ namespace AdministradorT
 
         public CNodos BuscarNodo(string valor)
         {
-            return nodos.Find(n => n.valor == valor);
+            return nodos.Find(n => n.ID == valor);
         }
 
         public bool AgregarArco(CNodos origen, CNodos destino)

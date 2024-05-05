@@ -14,3 +14,5 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\Mode
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.CoreCompileInputs.cache
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.exe
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.pdb
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmPrincipal.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmOutput.resources

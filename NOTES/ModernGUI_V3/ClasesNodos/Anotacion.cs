@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace AdministradorT.ClasesSistema
 {
-    public class Recordatorio
+    public class Anotacion : CNodos
     {
-
+        public string titulo;
+        public string cuerpo;
     }
 }
+

@@ -62,8 +62,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClasesSistema\Materia.cs" />
-    <Compile Include="ClasesSistema\Recordatorio.cs" />
+    <Compile Include="ClasesNodos\Materia.cs" />
+    <Compile Include="ClasesNodos\Anotacion.cs" />
+    <Compile Include="ClasesNodos\Recordatorio.cs" />
     <Compile Include="EstructuraGrafo\CConexion.cs" />
     <Compile Include="EstructuraGrafo\CGrafo.cs" />
     <Compile Include="EstructuraGrafo\CNodos.cs" />
@@ -157,6 +158,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modelo\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

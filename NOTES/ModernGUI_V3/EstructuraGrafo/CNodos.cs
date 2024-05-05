@@ -6,28 +6,28 @@ using System.Threading.Tasks;
 
 namespace AdministradorT
 {
-    class CNodos
+    public class CNodos
     {
         //El valor es momentaneo (pa cambia :D)
-        public string valor;
-        private int peso;
-
-        public List<CConexion> listaAdyacencia; //Lista de adyacencia para los nodos (Solo para el principal)
-        public CNodos Principal; //Nodo de la materia
-
-        public int Peso
+        private string id;
+        public string ID
         {
-            get { return peso; } set { peso = value; } 
+            get { return id; }
+            set { id = GenerarID(); }
         }
+        public List<CConexion> listaAdyacencia; //Lista de adyacencia para los nodos (Solo para el principal)
 
-        public CNodos(string valor, int peso)
-        {
-            this.valor = valor;
-            this.peso = peso;
+        public CNodos() 
+        { 
             listaAdyacencia = new List<CConexion>();
         }
 
-        //Si no recibe ningun parametro lo deja vacio
-        public CNodos() : this("",0) { }
+        // crear funcion para generar el id segun el tipo de nodo - PENDIENTE XD
+        //         public string id = "AC001"; <- ejemplo
+
+        private string GenerarID()
+        {
+            return id;
+        }
     }
 }
