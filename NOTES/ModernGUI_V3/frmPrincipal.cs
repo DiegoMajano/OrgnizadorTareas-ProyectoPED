@@ -14,10 +14,10 @@ using System.Windows.Forms;
 namespace ModernGUI_V3
 {
  
-    public partial class FormPrincipal : Form
+    public partial class frmPrincipal : Form
     {
        
-        public FormPrincipal()
+        public frmPrincipal()
         {
             InitializeComponent();
         }
@@ -139,7 +139,7 @@ namespace ModernGUI_V3
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Output form = new Output();
+            frmOutput form = new frmOutput();
 
             // Mostrar el formulario secundario
             this.Hide();

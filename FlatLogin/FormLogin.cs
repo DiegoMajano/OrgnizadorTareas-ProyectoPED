@@ -101,7 +101,7 @@ namespace FlatLoginWatermark
                 // Verificar si las credenciales coinciden con las almacenadas
                 if (usuarioIngresado == usuarioValido && contraseñaIngresada == contraseñaValida)
                 {
-                    FormPrincipal formPrincipal = new FormPrincipal();
+                    frmPrincipal formPrincipal = new frmPrincipal();
                     this.Hide();
                     formPrincipal.Show();              
 

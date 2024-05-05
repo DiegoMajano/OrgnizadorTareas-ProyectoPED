@@ -10,22 +10,22 @@ using System.Windows.Forms;
 
 namespace ModernGUI_V3
 {
-    public partial class Output : Form
+    public partial class frmOutput : Form
     {
-        public Output()
+        public frmOutput()
         {
             InitializeComponent();
         }
 
-        private void btnsi_Click(object sender, EventArgs e)
+        private void btnSi_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btn_Click(object sender, EventArgs e)
+        private void btnNo_Click(object sender, EventArgs e)
         {
-            FormPrincipal form1 = new FormPrincipal();
-            form1.Show();
+            frmPrincipal frmPrincipal = new frmPrincipal();
+            frmPrincipal.Show();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace ModernGUI_V3
 {
-    partial class FormPrincipal
+    partial class frmPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.pnlFormularios = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
