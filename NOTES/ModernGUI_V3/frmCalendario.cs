@@ -10,14 +10,16 @@ using System.Windows.Forms;
 
 namespace ModernGUI_V3
 {
-    public partial class Form3 : Form
+    public partial class frmCalendario : Form
     {
-        public Form3()
+        public frmCalendario()
         {
             InitializeComponent();
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
-             
 }

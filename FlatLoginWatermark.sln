@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "FlatLogin\Login.csproj", "{3D9AEA30-82F4-4877-98E2-ACCFAB852DC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NOTES", "NOTES\ModernGUI_V3\NOTES.csproj", "{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema", "NOTES\ModernGUI_V3\Sistema.csproj", "{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

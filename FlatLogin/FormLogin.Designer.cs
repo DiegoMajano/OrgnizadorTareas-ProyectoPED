@@ -126,6 +126,7 @@
             this.txtpass.TabIndex = 2;
             this.txtpass.Text = "Contraseña";
             this.txtpass.Enter += new System.EventHandler(this.txtpass_Enter);
+            this.txtpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpass_KeyPress);
             this.txtpass.Leave += new System.EventHandler(this.txtpass_Leave);
             // 
             // label1
@@ -210,7 +211,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLogin";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);

@@ -1,6 +1,6 @@
 ﻿namespace ModernGUI_V3
 {
-    partial class Form5
+    partial class frmNotas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
-            this.panelformularios = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNotas));
+            this.pnlNotas = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
@@ -41,27 +41,27 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCrearNota = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelformularios.SuspendLayout();
+            this.pnlNotas.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelformularios
+            // pnlNotas
             // 
-            this.panelformularios.BackColor = System.Drawing.SystemColors.Control;
-            this.panelformularios.Controls.Add(this.panel1);
-            this.panelformularios.Controls.Add(this.button1);
-            this.panelformularios.Controls.Add(this.label1);
-            this.panelformularios.Controls.Add(this.pictureBox1);
-            this.panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelformularios.Location = new System.Drawing.Point(0, 0);
-            this.panelformularios.Margin = new System.Windows.Forms.Padding(2);
-            this.panelformularios.Name = "panelformularios";
-            this.panelformularios.Size = new System.Drawing.Size(798, 502);
-            this.panelformularios.TabIndex = 8;
+            this.pnlNotas.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlNotas.Controls.Add(this.panel1);
+            this.pnlNotas.Controls.Add(this.btnCrearNota);
+            this.pnlNotas.Controls.Add(this.label1);
+            this.pnlNotas.Controls.Add(this.pictureBox1);
+            this.pnlNotas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlNotas.Location = new System.Drawing.Point(0, 0);
+            this.pnlNotas.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlNotas.Name = "pnlNotas";
+            this.pnlNotas.Size = new System.Drawing.Size(798, 502);
+            this.pnlNotas.TabIndex = 10;
             // 
             // panel1
             // 
@@ -84,7 +84,7 @@
             // checkBox10
             // 
             this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(257, 242);
+            this.checkBox10.Location = new System.Drawing.Point(291, 243);
             this.checkBox10.Name = "checkBox10";
             this.checkBox10.Size = new System.Drawing.Size(86, 17);
             this.checkBox10.TabIndex = 9;
@@ -94,7 +94,7 @@
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(257, 186);
+            this.checkBox9.Location = new System.Drawing.Point(291, 187);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(80, 17);
             this.checkBox9.TabIndex = 8;
@@ -104,7 +104,7 @@
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(257, 132);
+            this.checkBox8.Location = new System.Drawing.Point(291, 133);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(80, 17);
             this.checkBox8.TabIndex = 7;
@@ -114,7 +114,7 @@
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(257, 85);
+            this.checkBox7.Location = new System.Drawing.Point(291, 86);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(80, 17);
             this.checkBox7.TabIndex = 6;
@@ -124,7 +124,7 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(257, 41);
+            this.checkBox6.Location = new System.Drawing.Point(291, 42);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(80, 17);
             this.checkBox6.TabIndex = 5;
@@ -134,7 +134,7 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(48, 242);
+            this.checkBox5.Location = new System.Drawing.Point(82, 243);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(80, 17);
             this.checkBox5.TabIndex = 4;
@@ -144,7 +144,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(48, 186);
+            this.checkBox4.Location = new System.Drawing.Point(82, 187);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(80, 17);
             this.checkBox4.TabIndex = 3;
@@ -154,7 +154,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(48, 132);
+            this.checkBox3.Location = new System.Drawing.Point(82, 133);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(80, 17);
             this.checkBox3.TabIndex = 2;
@@ -164,7 +164,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(48, 85);
+            this.checkBox2.Location = new System.Drawing.Point(82, 86);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(80, 17);
             this.checkBox2.TabIndex = 1;
@@ -174,22 +174,22 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(48, 41);
+            this.checkBox1.Location = new System.Drawing.Point(82, 42);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(80, 17);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnCrearNota
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(661, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 27);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Crear Nota";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCrearNota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearNota.Location = new System.Drawing.Point(661, 12);
+            this.btnCrearNota.Name = "btnCrearNota";
+            this.btnCrearNota.Size = new System.Drawing.Size(102, 27);
+            this.btnCrearNota.TabIndex = 9;
+            this.btnCrearNota.Text = "Crear Nota";
+            this.btnCrearNota.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -211,17 +211,17 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // Form5
+            // frmNotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 502);
-            this.Controls.Add(this.panelformularios);
+            this.Controls.Add(this.pnlNotas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form5";
+            this.Name = "frmNotas";
             this.Text = "Form5";
-            this.panelformularios.ResumeLayout(false);
-            this.panelformularios.PerformLayout();
+            this.pnlNotas.ResumeLayout(false);
+            this.pnlNotas.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -230,11 +230,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelformularios;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnlNotas;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox checkBox10;
         private System.Windows.Forms.CheckBox checkBox9;
@@ -246,5 +242,8 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btnCrearNota;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

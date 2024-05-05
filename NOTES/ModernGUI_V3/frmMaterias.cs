@@ -10,16 +10,14 @@ using System.Windows.Forms;
 
 namespace ModernGUI_V3
 {
-    public partial class Form1 : Form
+    public partial class frmMaterias : Form
     {
-        public Form1()
+        public frmMaterias()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+       
     }
+             
 }

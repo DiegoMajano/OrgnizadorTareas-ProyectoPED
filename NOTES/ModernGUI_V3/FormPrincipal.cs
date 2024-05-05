@@ -112,41 +112,32 @@ namespace ModernGUI_V3
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCalendario_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Form1>();
-            button1.BackColor = Color.FromArgb(12, 61, 92);
+            AbrirFormulario<frmCalendario>();
+            ReestablecerConfig();
+            btnCalendario.BackColor = Color.FromArgb(12, 61, 92);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnMetodos_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Form2>();
-            button2.BackColor = Color.FromArgb(12, 61, 92);
+            AbrirFormulario<frmTecnicaEstudio>();
+            ReestablecerConfig();
+            btnMetodos.BackColor = Color.FromArgb(12, 61, 92);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnMaterias_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Form3>();
-            button3.BackColor = Color.FromArgb(12, 61, 92);
+            AbrirFormulario<frmMaterias>();
+            ReestablecerConfig();
+            btnMaterias.BackColor = Color.FromArgb(12, 61, 92);
         }
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Form2>();
-            button2.BackColor = Color.FromArgb(12, 61, 92);
-        }
-       
 
-        private void btn6_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Form5>();
-            btn6.BackColor = Color.FromArgb(12, 61, 92);
-        }
-     
-        private void button8_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
             Output form = new Output();
 
@@ -160,12 +151,26 @@ namespace ModernGUI_V3
             //Mostar el que accedio
         }
 
+        private void btnNotas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmNotas>();
+            ReestablecerConfig();
+            btnNotas.BackColor = Color.FromArgb(12,61,92);
+        }
+
+        private void ReestablecerConfig()
+        {
+            btnCalendario.BackColor = Color.FromArgb(4, 41, 68);
+            btnMaterias.BackColor = Color.FromArgb(4, 41, 68);
+            btnMetodos.BackColor = Color.FromArgb(4, 41, 68);
+            btnNotas.BackColor = Color.FromArgb(4, 41, 68);
+        }
 
         #endregion
         //METODO PARA ABRIR FORMULARIOS DENTRO DEL PANEL
         private void AbrirFormulario<MiForm>() where MiForm : Form, new() {
             Form formulario;
-            formulario = panelformularios.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
+            formulario = pnlFormularios.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
             //si el formulario/instancia no existe
             if (formulario == null)
             {
@@ -173,8 +178,8 @@ namespace ModernGUI_V3
                 formulario.TopLevel = false;
                 formulario.FormBorderStyle = FormBorderStyle.None;
                 formulario.Dock = DockStyle.Fill;
-                panelformularios.Controls.Add(formulario);
-                panelformularios.Tag = formulario;
+                pnlFormularios.Controls.Add(formulario);
+                pnlFormularios.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
                 formulario.FormClosed += new FormClosedEventHandler(CloseForms );
@@ -186,11 +191,11 @@ namespace ModernGUI_V3
         }
         private void CloseForms(object sender,FormClosedEventArgs e) {
             if (Application.OpenForms["Form1"] == null)
-                button1.BackColor = Color.FromArgb(4, 41, 68);
+                btnCalendario.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["Form2"] == null)
-                button2.BackColor = Color.FromArgb(4, 41, 68);
+                btnMetodos.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["Form3"] == null)
-                button3.BackColor = Color.FromArgb(4, 41, 68);
+                btnMaterias.BackColor = Color.FromArgb(4, 41, 68);
         }
     }
 }

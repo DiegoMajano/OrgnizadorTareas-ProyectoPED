@@ -85,9 +85,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NOTES\ModernGUI_V3\NOTES.csproj">
+    <ProjectReference Include="..\NOTES\ModernGUI_V3\Sistema.csproj">
       <Project>{e0f5ad57-4ff3-4a5f-ac3e-fa1585f7b566}</Project>
-      <Name>NOTES</Name>
+      <Name>Sistema</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

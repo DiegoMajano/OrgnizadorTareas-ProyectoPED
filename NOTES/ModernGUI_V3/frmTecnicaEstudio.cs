@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ModernGUI_V3
 {
-    public partial class Form2 : Form
+    public partial class frmTecnicaEstudio : Form
     {
-        public Form2()
+        public frmTecnicaEstudio()
         {
            InitializeComponent();
         }

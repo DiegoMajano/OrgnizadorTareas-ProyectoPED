@@ -112,6 +112,12 @@ namespace FlatLoginWatermark
                     MessageBox.Show("Nombre de usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+        private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar))
+                btnlogin_Click(null, null);
         }
+    }
     }
 

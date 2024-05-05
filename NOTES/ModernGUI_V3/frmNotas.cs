@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ModernGUI_V3
 {
-    public partial class Form5 : Form
+    public partial class frmNotas : Form
     {
-        public Form5()
+        public frmNotas()
         {
             InitializeComponent();
         }
