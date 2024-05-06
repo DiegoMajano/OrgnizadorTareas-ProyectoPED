@@ -101,7 +101,7 @@ namespace FlatLoginWatermark
                 // Verificar si las credenciales coinciden con las almacenadas
                 if (usuarioIngresado == usuarioValido && contraseñaIngresada == contraseñaValida)
                 {
-                    FormPrincipal formPrincipal = new FormPrincipal();
+                    frmPrincipal formPrincipal = new frmPrincipal();
                     this.Hide();
                     formPrincipal.Show();              
 
@@ -112,6 +112,12 @@ namespace FlatLoginWatermark
                     MessageBox.Show("Nombre de usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+        private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar))
+                btnlogin_Click(null, null);
         }
+    }
     }
 
