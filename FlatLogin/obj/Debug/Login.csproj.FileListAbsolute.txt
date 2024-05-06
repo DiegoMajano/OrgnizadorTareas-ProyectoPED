@@ -50,7 +50,6 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\AdministradorT.exe
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\AdministradorT.pdb
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\AdministradorT.exe.config
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\Login.csproj.AssemblyReference.cache
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\Login.csproj.SuggestedBindingRedirects.cache
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\FlatLoginWatermark.FormLogin.resources
