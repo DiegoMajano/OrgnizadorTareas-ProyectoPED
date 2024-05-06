@@ -33,7 +33,14 @@ namespace AdministradorT.ClasesSistema
             get { return salon; } set { salon = value; }
         }
 
-        
-        
+        public Materia(string nombre, DateTime horaClase, string docente, string salon)
+        {
+            this.nombre = nombre;
+            this.horaClase = horaClase;
+            this.docente = docente;
+            this.salon = salon;
+            setID(1, nombre);
+        }
+
     }
 }

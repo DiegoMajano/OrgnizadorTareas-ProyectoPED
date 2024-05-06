@@ -11,5 +11,12 @@ namespace AdministradorT.ClasesSistema
         public string titulo;
         public DateTime arecordar;
         public string cuerpo;
+
+        public Recordatorio(string titulo, DateTime arecordar)
+        {
+            this.titulo = titulo;
+            this.arecordar = arecordar;
+            setID(3, titulo);
+        }
     }
 }
