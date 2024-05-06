@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdministradorT.ClasesSistema;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
@@ -17,14 +18,25 @@ namespace AdministradorT
             nodos = new List<CNodos>();
         }
 
-        public CNodos AgregarNodos(string valor, int peso)
+        public CNodos AgregarNodos(int tipo, string nombre, DateTime hora = new DateTime(), string cuerpo = "", string docente = "", string salon = "")
         {
             // SE PODRIA HACER UN SWITCH AQUI, SEGUN EL TIPO DE NODO QUE SE QUIERE CREAR ES COMO SE VA A GENERAR, SI ES MATERIA, ANOTACION, ETC
-            /*CNodos nodo = new CNodos(valor, peso);
-            nodos.Add(nodo);*/
+            switch (tipo)
+            {
+                case 1: //Creacion de nodo para la materia
+                    Materia materia = new Materia(nombre, hora, docente, salon);//Faltan los valores
+                    nodos.Add(materia);
+                    return materia;
+                case 2:
+                    Anotacion anotacion = new Anotacion(nombre, cuerpo);
+                    nodos.Add(anotacion);
+                    return anotacion;
+                case 3:
+                    Recordatorio recordatorio = new Recordatorio(nombre, hora);
+                    nodos.Add(recordatorio);
+                    return recordatorio;
+            }
             return null;
-
-            string[] ola = { "ola", "como", "estas", "?", "que", "te", "sale", "de", "error", "?" };
         }
 
         public void AgregarNodo(CNodos nodo)
