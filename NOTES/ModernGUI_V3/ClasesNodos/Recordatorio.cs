@@ -10,6 +10,6 @@ namespace AdministradorT.ClasesSistema
     {
         public string titulo;
         public DateTime arecordar;
-        
+        public string cuerpo;
     }
 }

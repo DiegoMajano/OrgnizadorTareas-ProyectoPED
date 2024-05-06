@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,9 +20,11 @@ namespace AdministradorT
         public CNodos AgregarNodos(string valor, int peso)
         {
             // SE PODRIA HACER UN SWITCH AQUI, SEGUN EL TIPO DE NODO QUE SE QUIERE CREAR ES COMO SE VA A GENERAR, SI ES MATERIA, ANOTACION, ETC
-            CNodos nodo = new CNodos(valor, peso);
-            nodos.Add(nodo);
-            return nodo;
+            /*CNodos nodo = new CNodos(valor, peso);
+            nodos.Add(nodo);*/
+            return null;
+
+            string[] ola = { "ola", "como", "estas", "?", "que", "te", "sale", "de", "error", "?" };
         }
 
         public void AgregarNodo(CNodos nodo)

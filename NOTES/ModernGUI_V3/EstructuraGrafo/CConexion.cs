@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdministradorT
 {
-    class CConexion
+    public class CConexion
     {
         //Nodo destino de la conexion realizada
         public CNodos nodoDestino;
