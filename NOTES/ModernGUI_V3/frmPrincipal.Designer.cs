@@ -128,9 +128,9 @@
             this.lblNombreusuario.AutoSize = true;
             this.lblNombreusuario.Location = new System.Drawing.Point(98, 36);
             this.lblNombreusuario.Name = "lblNombreusuario";
-            this.lblNombreusuario.Size = new System.Drawing.Size(45, 16);
+            this.lblNombreusuario.Size = new System.Drawing.Size(42, 16);
             this.lblNombreusuario.TabIndex = 10;
-            this.lblNombreusuario.Text = "label1";
+            this.lblNombreusuario.Text = "holaa";
             this.lblNombreusuario.Click += new System.EventHandler(this.lblNombreusuario_Click);
             // 
             // btnNotas
