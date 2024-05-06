@@ -9,7 +9,6 @@ namespace AdministradorT.ClasesSistema
     public class Materia : CNodos
     {
         // atributos
-
         private string nombre;
         private DateTime horaClase;
         private string docente;
