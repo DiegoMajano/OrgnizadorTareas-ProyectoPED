@@ -43,6 +43,9 @@ namespace AdministradorT
                 case 3: //Tipo 3: recordatorio
                     id += "R";
                     break;
+                case 4: // Tipo 4: tarea
+                    id += "T";
+                    break;
             }
             id += nombre[0];
             for (int i = 0; i == 2; i++)

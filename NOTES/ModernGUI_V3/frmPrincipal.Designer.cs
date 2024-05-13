@@ -31,9 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.pnlFormularios = new System.Windows.Forms.Panel();
+            this.btn = new System.Windows.Forms.Button();
+            this.btnNuevoCalen = new System.Windows.Forms.Button();
+            this.btnNuevoReco = new System.Windows.Forms.Button();
+            this.btnNuevoMeto = new System.Windows.Forms.Button();
+            this.btnNuevaAnot = new System.Windows.Forms.Button();
+            this.btnNuevaMat = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnVerGrafo = new System.Windows.Forms.Button();
+            this.btnCalendario = new System.Windows.Forms.Button();
+            this.btnRecordatorio = new System.Windows.Forms.Button();
+            this.btnMetodos = new System.Windows.Forms.Button();
+            this.btnAnotaciones = new System.Windows.Forms.Button();
+            this.btnMaterias = new System.Windows.Forms.Button();
             this.lblNombreusuario = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -43,11 +55,6 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnMaterias = new System.Windows.Forms.Button();
-            this.btnNotas = new System.Windows.Forms.Button();
-            this.btnMetodos = new System.Windows.Forms.Button();
-            this.btnRecordatorio = new System.Windows.Forms.Button();
-            this.btnCalendario = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             this.pnlFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,14 +82,98 @@
             // pnlFormularios
             // 
             this.pnlFormularios.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlFormularios.Controls.Add(this.btn);
+            this.pnlFormularios.Controls.Add(this.btnNuevoCalen);
+            this.pnlFormularios.Controls.Add(this.btnNuevoReco);
+            this.pnlFormularios.Controls.Add(this.btnNuevoMeto);
+            this.pnlFormularios.Controls.Add(this.btnNuevaAnot);
+            this.pnlFormularios.Controls.Add(this.btnNuevaMat);
             this.pnlFormularios.Controls.Add(this.label2);
             this.pnlFormularios.Controls.Add(this.pictureBox1);
             this.pnlFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFormularios.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlFormularios.Location = new System.Drawing.Point(188, 32);
             this.pnlFormularios.Margin = new System.Windows.Forms.Padding(2);
             this.pnlFormularios.Name = "pnlFormularios";
             this.pnlFormularios.Size = new System.Drawing.Size(834, 505);
             this.pnlFormularios.TabIndex = 2;
+            // 
+            // btn
+            // 
+            this.btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn.Location = new System.Drawing.Point(656, 208);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(178, 39);
+            this.btn.TabIndex = 8;
+            this.btn.Text = "Nueva Materia";
+            this.btn.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevoCalen
+            // 
+            this.btnNuevoCalen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevoCalen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoCalen.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoCalen.Location = new System.Drawing.Point(656, 167);
+            this.btnNuevoCalen.Name = "btnNuevoCalen";
+            this.btnNuevoCalen.Size = new System.Drawing.Size(178, 39);
+            this.btnNuevoCalen.TabIndex = 7;
+            this.btnNuevoCalen.Text = "Nuevo Calendario";
+            this.btnNuevoCalen.UseVisualStyleBackColor = true;
+            this.btnNuevoCalen.Click += new System.EventHandler(this.btnNuevoCalen_Click);
+            // 
+            // btnNuevoReco
+            // 
+            this.btnNuevoReco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevoReco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoReco.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoReco.Location = new System.Drawing.Point(656, 126);
+            this.btnNuevoReco.Name = "btnNuevoReco";
+            this.btnNuevoReco.Size = new System.Drawing.Size(178, 39);
+            this.btnNuevoReco.TabIndex = 6;
+            this.btnNuevoReco.Text = "Nuevo Recordatorio";
+            this.btnNuevoReco.UseVisualStyleBackColor = true;
+            this.btnNuevoReco.Click += new System.EventHandler(this.btnNuevoReco_Click);
+            // 
+            // btnNuevoMeto
+            // 
+            this.btnNuevoMeto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevoMeto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoMeto.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoMeto.Location = new System.Drawing.Point(656, 85);
+            this.btnNuevoMeto.Name = "btnNuevoMeto";
+            this.btnNuevoMeto.Size = new System.Drawing.Size(178, 39);
+            this.btnNuevoMeto.TabIndex = 5;
+            this.btnNuevoMeto.Text = "Nuevo Método";
+            this.btnNuevoMeto.UseVisualStyleBackColor = true;
+            this.btnNuevoMeto.Click += new System.EventHandler(this.btnNuevoMeto_Click);
+            // 
+            // btnNuevaAnot
+            // 
+            this.btnNuevaAnot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevaAnot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaAnot.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevaAnot.Location = new System.Drawing.Point(656, 44);
+            this.btnNuevaAnot.Name = "btnNuevaAnot";
+            this.btnNuevaAnot.Size = new System.Drawing.Size(178, 39);
+            this.btnNuevaAnot.TabIndex = 4;
+            this.btnNuevaAnot.Text = "Nueva Anotación";
+            this.btnNuevaAnot.UseVisualStyleBackColor = true;
+            this.btnNuevaAnot.Click += new System.EventHandler(this.btnNuevaAnot_Click);
+            // 
+            // btnNuevaMat
+            // 
+            this.btnNuevaMat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevaMat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaMat.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevaMat.Location = new System.Drawing.Point(656, 3);
+            this.btnNuevaMat.Name = "btnNuevaMat";
+            this.btnNuevaMat.Size = new System.Drawing.Size(178, 39);
+            this.btnNuevaMat.TabIndex = 3;
+            this.btnNuevaMat.Text = "Nueva Materia";
+            this.btnNuevaMat.UseVisualStyleBackColor = true;
+            this.btnNuevaMat.Click += new System.EventHandler(this.btnNuevaM_Click);
             // 
             // label2
             // 
@@ -110,29 +201,144 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.panelMenu.Controls.Add(this.btnVerGrafo);
             this.panelMenu.Controls.Add(this.btnCalendario);
             this.panelMenu.Controls.Add(this.btnRecordatorio);
             this.panelMenu.Controls.Add(this.btnMetodos);
-            this.panelMenu.Controls.Add(this.btnNotas);
+            this.panelMenu.Controls.Add(this.btnAnotaciones);
             this.panelMenu.Controls.Add(this.btnMaterias);
             this.panelMenu.Controls.Add(this.lblNombreusuario);
             this.panelMenu.Controls.Add(this.btnSalir);
             this.panelMenu.Controls.Add(this.button6);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelMenu.Location = new System.Drawing.Point(0, 32);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(188, 505);
             this.panelMenu.TabIndex = 1;
             // 
+            // btnVerGrafo
+            // 
+            this.btnVerGrafo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVerGrafo.Location = new System.Drawing.Point(0, 367);
+            this.btnVerGrafo.Name = "btnVerGrafo";
+            this.btnVerGrafo.Size = new System.Drawing.Size(188, 41);
+            this.btnVerGrafo.TabIndex = 3;
+            this.btnVerGrafo.Text = "VerGRafo";
+            this.btnVerGrafo.UseVisualStyleBackColor = true;
+            this.btnVerGrafo.Click += new System.EventHandler(this.btnVerGrafo_Click);
+            // 
+            // btnCalendario
+            // 
+            this.btnCalendario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCalendario.FlatAppearance.BorderSize = 0;
+            this.btnCalendario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnCalendario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnCalendario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalendario.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalendario.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCalendario.Image = ((System.Drawing.Image)(resources.GetObject("btnCalendario.Image")));
+            this.btnCalendario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCalendario.Location = new System.Drawing.Point(0, 310);
+            this.btnCalendario.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCalendario.Name = "btnCalendario";
+            this.btnCalendario.Size = new System.Drawing.Size(188, 57);
+            this.btnCalendario.TabIndex = 17;
+            this.btnCalendario.Text = "Calendario";
+            this.btnCalendario.UseVisualStyleBackColor = true;
+            this.btnCalendario.Click += new System.EventHandler(this.btnCalendario_Click);
+            // 
+            // btnRecordatorio
+            // 
+            this.btnRecordatorio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRecordatorio.FlatAppearance.BorderSize = 0;
+            this.btnRecordatorio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnRecordatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnRecordatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecordatorio.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecordatorio.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnRecordatorio.Image = ((System.Drawing.Image)(resources.GetObject("btnRecordatorio.Image")));
+            this.btnRecordatorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecordatorio.Location = new System.Drawing.Point(0, 253);
+            this.btnRecordatorio.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRecordatorio.Name = "btnRecordatorio";
+            this.btnRecordatorio.Size = new System.Drawing.Size(188, 57);
+            this.btnRecordatorio.TabIndex = 16;
+            this.btnRecordatorio.Text = "Recordatorios";
+            this.btnRecordatorio.UseVisualStyleBackColor = true;
+            this.btnRecordatorio.Click += new System.EventHandler(this.btnRecordatorio_Click);
+            // 
+            // btnMetodos
+            // 
+            this.btnMetodos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMetodos.FlatAppearance.BorderSize = 0;
+            this.btnMetodos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnMetodos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnMetodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMetodos.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMetodos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMetodos.Image = ((System.Drawing.Image)(resources.GetObject("btnMetodos.Image")));
+            this.btnMetodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMetodos.Location = new System.Drawing.Point(0, 196);
+            this.btnMetodos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMetodos.Name = "btnMetodos";
+            this.btnMetodos.Size = new System.Drawing.Size(188, 57);
+            this.btnMetodos.TabIndex = 13;
+            this.btnMetodos.Text = "Métodos";
+            this.btnMetodos.UseVisualStyleBackColor = true;
+            this.btnMetodos.Click += new System.EventHandler(this.btnMetodos_Click);
+            // 
+            // btnAnotaciones
+            // 
+            this.btnAnotaciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAnotaciones.FlatAppearance.BorderSize = 0;
+            this.btnAnotaciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnAnotaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnAnotaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnotaciones.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnotaciones.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAnotaciones.Image = ((System.Drawing.Image)(resources.GetObject("btnAnotaciones.Image")));
+            this.btnAnotaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnotaciones.Location = new System.Drawing.Point(0, 139);
+            this.btnAnotaciones.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAnotaciones.Name = "btnAnotaciones";
+            this.btnAnotaciones.Size = new System.Drawing.Size(188, 57);
+            this.btnAnotaciones.TabIndex = 12;
+            this.btnAnotaciones.Text = "Anotaciones";
+            this.btnAnotaciones.UseVisualStyleBackColor = true;
+            this.btnAnotaciones.Click += new System.EventHandler(this.btnAnotaciones_Click);
+            // 
+            // btnMaterias
+            // 
+            this.btnMaterias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMaterias.FlatAppearance.BorderSize = 0;
+            this.btnMaterias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnMaterias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaterias.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaterias.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMaterias.Image = ((System.Drawing.Image)(resources.GetObject("btnMaterias.Image")));
+            this.btnMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaterias.Location = new System.Drawing.Point(0, 82);
+            this.btnMaterias.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMaterias.Name = "btnMaterias";
+            this.btnMaterias.Size = new System.Drawing.Size(188, 57);
+            this.btnMaterias.TabIndex = 11;
+            this.btnMaterias.Text = "Materias";
+            this.btnMaterias.UseVisualStyleBackColor = true;
+            this.btnMaterias.Click += new System.EventHandler(this.btnMaterias_Click);
+            // 
             // lblNombreusuario
             // 
             this.lblNombreusuario.AutoSize = true;
-            this.lblNombreusuario.Location = new System.Drawing.Point(98, 36);
+            this.lblNombreusuario.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreusuario.ForeColor = System.Drawing.Color.White;
+            this.lblNombreusuario.Location = new System.Drawing.Point(65, 31);
             this.lblNombreusuario.Name = "lblNombreusuario";
-            this.lblNombreusuario.Size = new System.Drawing.Size(42, 16);
+            this.lblNombreusuario.Size = new System.Drawing.Size(77, 18);
             this.lblNombreusuario.TabIndex = 10;
-            this.lblNombreusuario.Text = "holaa";
+            this.lblNombreusuario.Text = "Username";
             this.lblNombreusuario.Click += new System.EventHandler(this.lblNombreusuario_Click);
             // 
             // btnSalir
@@ -142,7 +348,7 @@
             this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -153,8 +359,6 @@
             this.btnSalir.Size = new System.Drawing.Size(188, 55);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "LogOut";
-            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -165,7 +369,7 @@
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Gainsboro;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,6 +381,7 @@
             this.button6.Text = "                    ";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // pnlBarraTitulo
             // 
@@ -187,6 +392,7 @@
             this.pnlBarraTitulo.Controls.Add(this.btnMaximizar);
             this.pnlBarraTitulo.Controls.Add(this.btnCerrar);
             this.pnlBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlBarraTitulo.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlBarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.pnlBarraTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.pnlBarraTitulo.Name = "pnlBarraTitulo";
@@ -200,7 +406,7 @@
             this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.Gainsboro;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.Location = new System.Drawing.Point(4, 0);
@@ -270,109 +476,6 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // btnMaterias
-            // 
-            this.btnMaterias.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMaterias.FlatAppearance.BorderSize = 0;
-            this.btnMaterias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnMaterias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaterias.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaterias.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMaterias.Image = ((System.Drawing.Image)(resources.GetObject("btnMaterias.Image")));
-            this.btnMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMaterias.Location = new System.Drawing.Point(0, 82);
-            this.btnMaterias.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMaterias.Name = "btnMaterias";
-            this.btnMaterias.Size = new System.Drawing.Size(188, 57);
-            this.btnMaterias.TabIndex = 11;
-            this.btnMaterias.Text = "Materias";
-            this.btnMaterias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMaterias.UseVisualStyleBackColor = true;
-            this.btnMaterias.Click += new System.EventHandler(this.btnMaterias_Click);
-            // 
-            // btnNotas
-            // 
-            this.btnNotas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNotas.FlatAppearance.BorderSize = 0;
-            this.btnNotas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnNotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotas.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotas.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnNotas.Image = ((System.Drawing.Image)(resources.GetObject("btnNotas.Image")));
-            this.btnNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotas.Location = new System.Drawing.Point(0, 139);
-            this.btnNotas.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNotas.Name = "btnNotas";
-            this.btnNotas.Size = new System.Drawing.Size(188, 57);
-            this.btnNotas.TabIndex = 12;
-            this.btnNotas.Text = "Anotaciones";
-            this.btnNotas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNotas.UseVisualStyleBackColor = true;
-            this.btnNotas.Click += new System.EventHandler(this.btnNotas_Click);
-            // 
-            // btnMetodos
-            // 
-            this.btnMetodos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMetodos.FlatAppearance.BorderSize = 0;
-            this.btnMetodos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnMetodos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnMetodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMetodos.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMetodos.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMetodos.Image = ((System.Drawing.Image)(resources.GetObject("btnMetodos.Image")));
-            this.btnMetodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMetodos.Location = new System.Drawing.Point(0, 196);
-            this.btnMetodos.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMetodos.Name = "btnMetodos";
-            this.btnMetodos.Size = new System.Drawing.Size(188, 57);
-            this.btnMetodos.TabIndex = 13;
-            this.btnMetodos.Text = "Métodos";
-            this.btnMetodos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMetodos.UseVisualStyleBackColor = true;
-            this.btnMetodos.Click += new System.EventHandler(this.btnMetodos_Click);
-            // 
-            // btnRecordatorio
-            // 
-            this.btnRecordatorio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRecordatorio.FlatAppearance.BorderSize = 0;
-            this.btnRecordatorio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnRecordatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnRecordatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecordatorio.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecordatorio.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnRecordatorio.Image = ((System.Drawing.Image)(resources.GetObject("btnRecordatorio.Image")));
-            this.btnRecordatorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecordatorio.Location = new System.Drawing.Point(0, 253);
-            this.btnRecordatorio.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRecordatorio.Name = "btnRecordatorio";
-            this.btnRecordatorio.Size = new System.Drawing.Size(188, 57);
-            this.btnRecordatorio.TabIndex = 16;
-            this.btnRecordatorio.Text = "Recordatorios";
-            this.btnRecordatorio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRecordatorio.UseVisualStyleBackColor = true;
-            // 
-            // btnCalendario
-            // 
-            this.btnCalendario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCalendario.FlatAppearance.BorderSize = 0;
-            this.btnCalendario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnCalendario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnCalendario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalendario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalendario.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCalendario.Image = ((System.Drawing.Image)(resources.GetObject("btnCalendario.Image")));
-            this.btnCalendario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalendario.Location = new System.Drawing.Point(0, 310);
-            this.btnCalendario.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCalendario.Name = "btnCalendario";
-            this.btnCalendario.Size = new System.Drawing.Size(188, 57);
-            this.btnCalendario.TabIndex = 17;
-            this.btnCalendario.Text = "Calendario";
-            this.btnCalendario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCalendario.UseVisualStyleBackColor = true;
-            // 
             // frmPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -422,8 +525,15 @@
         private System.Windows.Forms.Button btnCalendario;
         private System.Windows.Forms.Button btnRecordatorio;
         private System.Windows.Forms.Button btnMetodos;
-        private System.Windows.Forms.Button btnNotas;
+        private System.Windows.Forms.Button btnAnotaciones;
         private System.Windows.Forms.Button btnMaterias;
+        private System.Windows.Forms.Button btnVerGrafo;
+        private System.Windows.Forms.Button btnNuevaMat;
+        private System.Windows.Forms.Button btn;
+        private System.Windows.Forms.Button btnNuevoCalen;
+        private System.Windows.Forms.Button btnNuevoReco;
+        private System.Windows.Forms.Button btnNuevoMeto;
+        private System.Windows.Forms.Button btnNuevaAnot;
     }
 }
 

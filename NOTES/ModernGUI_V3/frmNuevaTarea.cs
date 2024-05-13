@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ModernGUI_V3
+namespace AdministradorT
 {
-    public partial class frmNotas : Form
+    public partial class frmNuevaTarea : Form
     {
-        public frmNotas()
+        public frmNuevaTarea()
         {
             InitializeComponent();
         }

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdministradorT.ClasesSistema
+namespace AdministradorT.ClasesNodos
 {
     public class Anotacion : CNodos
     {
-        public string titulo;
-        public string cuerpo;
+        private string titulo;
+        private string cuerpo;
 
         public string Titulo
         {

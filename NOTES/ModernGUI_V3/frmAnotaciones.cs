@@ -11,17 +11,21 @@ using System.Windows.Forms;
 
 namespace ModernGUI_V3
 {
-    public partial class frmMaterias : Form
+    public partial class frmAnotaciones : Form
     {
-        public frmMaterias()
+        public frmAnotaciones()
         {
             InitializeComponent();
         }
 
+        private void btnAgregarA_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmNuevaAnotacion>();
+        }
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
-            formulario = pnlFormularios.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
+            formulario = pnlAnotaciones.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
             //si el formulario/instancia no existe
             if (formulario == null)
             {
@@ -29,8 +33,8 @@ namespace ModernGUI_V3
                 formulario.TopLevel = false;
                 formulario.FormBorderStyle = FormBorderStyle.None;
                 formulario.Dock = DockStyle.Fill;
-                pnlFormularios.Controls.Add(formulario);
-                pnlFormularios.Tag = formulario;
+                pnlAnotaciones.Controls.Add(formulario);
+                pnlAnotaciones.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
             }
@@ -41,17 +45,6 @@ namespace ModernGUI_V3
                 formulario.BringToFront();
             }
         }
-        frmNuevaMateria nuevaMateria = new frmNuevaMateria();
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            nuevaMateria.Visible = false;
-            nuevaMateria.control = false;
-            nuevaMateria.ShowDialog();
-            if (nuevaMateria.control)
-            {
-                //grafoMain.AgregarNodo(nuevaMateria.nuevaMateria);
-            }
-        }
+
     }
-             
 }
