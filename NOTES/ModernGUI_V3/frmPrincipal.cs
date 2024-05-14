@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AdministradorT;
+using AdministradorT.ClasesNodos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,16 +18,45 @@ namespace ModernGUI_V3
  
     public partial class frmPrincipal : Form
     {
-       
+        // crear la instancia del grafo
+        public CGrafo grafoMain = new CGrafo();
+        // ubicacion de los botones para agregar los nodos
+        private Point ubicacion;
+        // instanciar las ventanas para agregar los nodos
+        private frmNuevaMateria nuevaMateria = new frmNuevaMateria();
+        private frmNuevaAnotacion nuevaAnotacion = new frmNuevaAnotacion();
+        private frmNuevaTarea nuevaTarea = new frmNuevaTarea();
+        private frmNuevoRecordatorio nuevoRecordatorio = new frmNuevoRecordatorio();
+
+
         public frmPrincipal()
         {
             InitializeComponent();
+            ubicacion = btnNuevaMat.Location;
+            ConfigurarBotones();
+        }
+
+        private void ConfigurarBotones()
+        {
+            btnNuevaMat.Location = ubicacion;
+            btnNuevaAnot.Location = ubicacion;
+            btnNuevoCalen.Location = ubicacion;
+            btnNuevoMeto.Location = ubicacion;
+            btnNuevoReco.Location = ubicacion;
+            btn.Location = ubicacion;
+            btnNuevoReco.Visible = false;
+            btnNuevoMeto.Visible = false;
+            btnNuevaMat.Visible = false;
+            btnNuevaAnot.Visible = false;
+            btnNuevoCalen.Visible = false;
+            btn.Visible = false;
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
 
         }
+
         #region Funcionalidades del formulario
         //RESIZE METODO PARA REDIMENCIONAR/CAMBIAR TAMAÑO A FORMULARIO EN TIEMPO DE EJECUCION ----------------------------------------------------------
         private int tolerance = 12;
@@ -70,9 +101,61 @@ namespace ModernGUI_V3
             ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);
         }
 
+        // --------------------------------------- ACCIONES CLICK DE LOS BOTONES ---------------------------------------
+        private void btnMaterias_Click(object sender, EventArgs e)
+        {            
+            AbrirFormulario<frmMaterias>();
+            btnNuevaMat.BringToFront();
+            btnNuevaMat.Visible = true;
+            ReestablecerConfig();
+            btnMaterias.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
+        private void btnAnotaciones_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmAnotaciones>();
+            btnNuevaAnot.BringToFront();
+            btnNuevaAnot.Visible = true;
+            ReestablecerConfig();
+            btnAnotaciones.BackColor = Color.FromArgb(12, 61, 92);
+        }
+        private void btnMetodos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmTecnicaEstudio>();
+            btnNuevoMeto.BringToFront();
+            btnNuevoMeto.Visible = true;
+            ReestablecerConfig();
+            btnMetodos.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
+        private void btnRecordatorio_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmNuevoRecordatorio>(); 
+            btnNuevoReco.BringToFront();
+            btnNuevoReco.Visible = true;
+            ReestablecerConfig();
+            btnRecordatorio.BackColor = Color.FromArgb(12, 61, 92);
+        }
+        private void btnCalendario_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmCalendario>();
+            btnNuevoCalen.BringToFront();
+            btnNuevoCalen.Visible = true;
+            ReestablecerConfig();
+            btnCalendario.BackColor = Color.FromArgb(12, 61, 92);
+        }
+        private frmOutput form = new frmOutput();
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-          Application.Exit();
+            this.Hide();
+            form.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {            
+            // Mostrar el formulario secundario
+            this.Hide();
+            form.Show();
         }
         //Capturar posicion y tamaño antes de maximizar para restaurar
         int lx, ly;
@@ -97,53 +180,9 @@ namespace ModernGUI_V3
             this.Location = new Point(lx,ly);
         }
 
-        private void panelBarraTitulo_MouseMove(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        //METODO PARA ARRASTRAR EL FORMULARIO---------------------------------------------------------------------
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-
-        private void btnCalendario_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<frmCalendario>();
-            ReestablecerConfig();
-            btnCalendario.BackColor = Color.FromArgb(12, 61, 92);
-        }
-
-        private void btnMetodos_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<frmTecnicaEstudio>();
-            ReestablecerConfig();
-            btnMetodos.BackColor = Color.FromArgb(12, 61, 92);
-        }
-
-        private void btnMaterias_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<frmMaterias>();
-            ReestablecerConfig();
-            btnMaterias.BackColor = Color.FromArgb(12, 61, 92);
-        }
-
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            frmOutput form = new frmOutput();
-
-            // Mostrar el formulario secundario
-            this.Hide();
-            form.Show();
         }
 
         private void lblNombreusuario_Click(object sender, EventArgs e)
@@ -151,23 +190,89 @@ namespace ModernGUI_V3
             //Mostar el que accedio
         }
 
-        private void btnNotas_Click(object sender, EventArgs e)
+        private void btnVerGrafo_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frmNotas>();
-            ReestablecerConfig();
-            btnNotas.BackColor = Color.FromArgb(12,61,92);
+
+            MessageBox.Show(grafoMain.nodos.Count.ToString());
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNuevaM_Click(object sender, EventArgs e)
+        {
+            nuevaMateria.Visible = false;
+            nuevaMateria.control = false;
+            nuevaMateria.ShowDialog();
+            if (nuevaMateria.control)
+            {
+                if (grafoMain.AgregarNodos(1, nombre: nuevaMateria.nombreM, hora: nuevaMateria.horaClase, dias: nuevaMateria.dias, docente: nuevaMateria.nombreD, salon: nuevaMateria.salon) != null)
+                    MessageBox.Show("Se ha ingresado exitosamente la nueva materia", "Registro de materia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("No se ha ingresado la nueva materia", "Regustro de materia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnNuevoMeto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNuevaAnot_Click(object sender, EventArgs e)
+        {
+            nuevaAnotacion.Visible = false;
+            nuevaAnotacion.control = false;
+            nuevaAnotacion.materias = ObtenerMaterias(1);
+            nuevaAnotacion.RellenarMaterias();
+            nuevaAnotacion.ShowDialog();
+            if (nuevaAnotacion.control)
+            {
+                CNodos nodoOrigen = grafoMain.AgregarNodos(2, nombre: nuevaAnotacion.titulo, cuerpo: nuevaAnotacion.cuerpo);
+                CNodos nodoDestino = grafoMain.BuscarNodo(nuevaAnotacion.materiaE); // extraer con id en el obtener materias
+                if (nodoOrigen != null && nodoDestino != null)
+                {
+                    grafoMain.AgregarArco(nodoOrigen, nodoDestino);
+                    MessageBox.Show("Se ha ingresado exitosamente la nueva anotación", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                    MessageBox.Show("No se ha ingresado la nueva anotación", "Regustro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnNuevoCalen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNuevoReco_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //--------------------------------- METODO PARA ARRASTRAR EL FORMULARIO ----------------------------------
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        // ------------------------------- METODOS EXTRA -------------------------------
 
         private void ReestablecerConfig()
         {
             btnCalendario.BackColor = Color.FromArgb(4, 41, 68);
             btnMaterias.BackColor = Color.FromArgb(4, 41, 68);
             btnMetodos.BackColor = Color.FromArgb(4, 41, 68);
-            btnNotas.BackColor = Color.FromArgb(4, 41, 68);
+            btnAnotaciones.BackColor = Color.FromArgb(4, 41, 68);
+            btnRecordatorio.BackColor = Color.FromArgb(4, 41, 68);
         }
 
         #endregion
-        //METODO PARA ABRIR FORMULARIOS DENTRO DEL PANEL
+        // --------------------------------------- METODO PARA ABRIR FORMULARIOS DENTRO DEL PANEL ---------------------------------------
         private void AbrirFormulario<MiForm>() where MiForm : Form, new() {
             Form formulario;
             formulario = pnlFormularios.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
@@ -189,6 +294,11 @@ namespace ModernGUI_V3
                 formulario.BringToFront();
             }
         }
+
+       
+
+        // --------------------------------------- EVENTOS CLOSE ---------------------------------------
+
         private void CloseForms(object sender,FormClosedEventArgs e) {
             if (Application.OpenForms["Form1"] == null)
                 btnCalendario.BackColor = Color.FromArgb(4, 41, 68);
@@ -197,5 +307,53 @@ namespace ModernGUI_V3
             if (Application.OpenForms["Form3"] == null)
                 btnMaterias.BackColor = Color.FromArgb(4, 41, 68);
         }
+
+        // --------------------------------------- EVENTOS MOUSE ---------------------------------------
+
+        private void panelBarraTitulo_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        // --------------------------------------- METODOS EXTRA ---------------------------------------
+        private List<string> ObtenerMaterias(int op)
+        {
+            List<string> nodos = new List<string>();
+            switch (op)
+            {
+                case 1: // si es materia
+                    foreach (Materia nodo in grafoMain.nodosMaterias)
+                    {
+                        if (nodo.ID.StartsWith("M"))
+                            nodos.Add(nodo.Nombre);
+                    }
+                    break;
+                case 2: // si es anotacion
+                    foreach (Anotacion nodo in grafoMain.nodosAnotaciones)
+                    {
+                        if (nodo.ID.StartsWith("A"))
+                            nodos.Add(nodo.Titulo);
+                    }
+                    break;
+                case 3: // si es recordatorio
+                    foreach (Recordatorio nodo in grafoMain.nodosRecordatorios)
+                    {
+                        if (nodo.ID.StartsWith("R"))
+                            nodos.Add(nodo.Titulo);
+                    }
+                    break;
+                case 4:
+                    foreach (Tarea nodo in grafoMain.nodosTarea)
+                    {
+                        if (nodo.ID.StartsWith("T"))
+                            nodos.Add(nodo.Titulo);
+                    }
+                    break;
+                default:
+                    break;
+            }
+            return nodos;
+        }       
     }
 }

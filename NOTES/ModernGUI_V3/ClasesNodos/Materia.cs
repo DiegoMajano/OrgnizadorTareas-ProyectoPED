@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.VisualStyles;
 
-namespace AdministradorT.ClasesSistema
+namespace AdministradorT.ClasesNodos
 {
     public class Materia : CNodos
     {
         // atributos
-
         private string nombre;
-        private DateTime horaClase;
+        private TimeSpan horaClase;
+        private List<string> dias;
         private string docente;
         private string salon;
 
@@ -20,9 +21,13 @@ namespace AdministradorT.ClasesSistema
         {
             get { return nombre; } set { nombre = value; }
         }
-        public DateTime HoraClase
+        public TimeSpan HoraClase
         {
             get { return horaClase; } set { horaClase = value; }
+        }
+        public List<string> Dias
+        {
+            get { return dias; } set { dias = value; }
         }
         public string Docente
         {
@@ -33,12 +38,13 @@ namespace AdministradorT.ClasesSistema
             get { return salon; } set { salon = value; }
         }
 
-        public Materia(string nombre, DateTime horaClase, string docente, string salon)
+        public Materia(string nombre, TimeSpan horaClase, List<string> dias, string docente, string salon)
         {
-            this.nombre = nombre;
-            this.horaClase = horaClase;
-            this.docente = docente;
-            this.salon = salon;
+            this.Nombre = nombre;
+            this.HoraClase = horaClase;
+            this.Dias = dias;
+            this.Docente = docente;
+            this.Salon = salon;
             setID(1, nombre);
         }
 

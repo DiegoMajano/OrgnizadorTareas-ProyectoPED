@@ -4883,7 +4883,6 @@
         AH7vj/7ofwLW5nMK2POUNgAAAABJRU5ErkJggg==
 </value>
   </data>
-
   <data name="btnCalendario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -4925,7 +4924,7 @@
         HfVtf5rXpd0/I+nk1uw4a+AGDW1Dtuicd4OGViBr6i6sl5iJxBTFH+uQOJ6IIZMpAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnNotas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAnotaciones.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAOw2AADsNgHVoobGAAAAB3RJ
@@ -4991,45 +4990,6 @@
         5K+dpZHaa/bnnoNk0BxrZ8YXlPLt7KTRJ32LNYG+O4ahZZPSUjcZ9O5+CQaYvKExafRJ3+IMsMfoGIaW
         nVobmMlg27DR6hiGlpE1vv7WNl6FkRuppsE3oNu0qxkfXJFq0P23M6Fb4KkZfW6iPzHVVO3VzMz/DTPk
         RitzZx4AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnMaterias.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAVAAAAFQAFBt76BAAABBklE
-        QVRYR9WXUQrCQAxE++EtRD2H9wfvoaKnUGte2cB+tEzb2QoODOxm0mRou4HtFuAYvAZ7QXLIbY408A4+
-        yromMTTWmxm4BZ/Bc/BQYpA1MTRyNjNwLxxroHQbf2Fg6hMlT8F9cBdcDAooA/yAn2D+C5kPc38JYmIx
-        HAP5ZtBWn5I5BqY+QZNTwkPKgKNLuA2ULuE2ULqE20DpEm4DpUu4DZQu4TZQuoTbQOnDfGZEMq9JqDln
-        kBCzDNCcOU1CPUZzr0apbYCgM8tVA6UPwWy0ZpYTsw04BVzdLuDqdgFXtwu4ul3A1e0Cq3U29TFTx7C1
-        PgwWyNXqVTh19dpCH71g/ohd/wWKoxRcWtyjPwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnMetodos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAjZJREFUWEe910uIzVEAx/G/JI+MYmNjykJmEAsLssBWSMrMQpOUsiRJksSCFQsp
-        GyMrZEN5lYXNTE1YzIaENGMhiiiPIm++v3//O517/c7/npuOX326dTqP//2f171Fh5mD1/gdcQVZsxZu
-        4IYxZM1OuIEbfmAqsuU43MChJfinTKs+Xa7CDRraglimV5/RnMRXXMJqFVSZDy0wvWI3aEiLdA+mQNGU
-        bMUQfmIzbJbiO8LO7kOv/WNQluoB9IXeBGWihWrXyW2EFXPaj6ZsgquYywfMRRnN1VO4ijmdRZm9cBXq
-        aE1cxEEcwU18g6sbowW9DMVgVZDqAnQkt2YB7sC1cfQA61BOwSn8gqsYmnhtkWifpzzEO6xHU/qgxeEa
-        yAvMQLssROt2Dj1GD2x64RrJMaTmFlwfrzAL0cyDayjRE8zkKFwf71EbvT7XUDYiNdoZro+3qE03XEM5
-        gNRchutjHI074q9oYTyBayiPMBntohPuE1wfMopFaMoGaH5cg5AOnrpMQuzbhz5jF1S/2I6Ua1Z0nR6C
-        exNd0CHl2sWcQbEvKEilqdKDaGf04wS0xVzdOodR3s3PqoL/6TkmDjadgq5STgNoyjBcxRzuolyAYZaj
-        dTFqtV7Dl6AslRbsDbTuLpWvhM05qNJD7MZsKIuhOz/lxpQRrIKied6Be1D784hGlfXjNJbTcAOGriMW
-        HfVtf5rXpd0/I+nk1uw4a+AGDW1Dtuicd4OGViBr6i6sl5iJxBTFH+uQOJ6IIZMpAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnCalendario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAY1JREFUWEftl78uBFEUxqfjIXgAWlFSE72GJxDiFVTUFDwEidWoFSoiNApC0Ci8
-        gr/fb7Nncp2cOzuSsbvFfMmvmHPPd86XmNm4RYWmxLl4F1/iUSyLfqKHXjx4mTEt/qQx8Sy+HR9iVuTE
-        GT3e9yLGRW3NCTOviiXx0HveETltC3roxYPX5syL2loQZjSdCp73uk+xdgU99JpszmL3qUIzYk2si31h
-        RpMFOBP0RHBGTxSAmfSwg12/tCI+hTWnmCxAHaIAKexiZ6krETWCqckAwM5S9yJqAlPTAdhZqirAltgU
-        r0mtH/TiwRudQ+0A/8VoBjgUGw5qt65m8NlBdIYnNy8bgAYvvt30pUrFD0/uhwlPNI9aG2B0AxwJGlIG
-        +hJiInkKtTdXM54E/zdEZ3hy87IBSOjVvoRtgIEG4JNiaAo13nZfh5se0Rme3LzGAlyLRgMM/U/QBhha
-        gDtB8UBwK0rhQnHpakZHnLiacSHw+rpdethZ6lhQHCTsLDUhuEZHN9umYQe7JouiKH4Amljn2BXpvfUA
-        AAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnRestaurar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

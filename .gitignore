@@ -1,7 +1,14 @@
 ﻿################################################################################
+<<<<<<< HEAD
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/OrganizadorTareas/FileContentIndex/45a141ee-3cc4-4d57-a89a-cf1e549c81a5.vsidx
+=======
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
 /.vs/OrgnizadorTareas-ProyectoPED/FileContentIndex
 /.vs/OrganizadorTareas/FileContentIndex
 /.vs/OrgnizadorTareas-ProyectoPED/v17
+>>>>>>> cfb827bca0f664ac8f8f5bdbc1f97fe9ac051ac5

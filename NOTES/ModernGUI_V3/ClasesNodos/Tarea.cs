@@ -6,31 +6,32 @@ using System.Threading.Tasks;
 
 namespace AdministradorT.ClasesNodos
 {
-    public class Recordatorio : CNodos
+    // hacer el enum del estado de la tarea
+    public class Tarea : CNodos
     {
         private string titulo;
-        private DateTime arecordar;
         private string cuerpo;
+        private DateTime fechaEntrega;
 
         public string Titulo
         {
-            get { return titulo; } set { titulo = value; } 
-        }
-        public DateTime aRecordar
-        {
-            get { return arecordar; } set { arecordar = value; }
+            get { return titulo; } set { titulo = value; }
         }
         public string Cuerpo
         {
             get { return cuerpo; } set { cuerpo = value; }
         }
+        public DateTime FechaEntrega
+        {
+            get { return fechaEntrega; } set { fechaEntrega = value; }
+        }
 
-        public Recordatorio(string titulo, DateTime arecordar, string cuerpo)
+        public Tarea(string titulo, string cuerpo, DateTime fechaEntrega)
         {
             this.Titulo = titulo;
-            this.aRecordar = arecordar;
             this.Cuerpo = cuerpo;
-            setID(3, titulo);
+            this.FechaEntrega = fechaEntrega;
+            setID(4, titulo);
         }
     }
 }

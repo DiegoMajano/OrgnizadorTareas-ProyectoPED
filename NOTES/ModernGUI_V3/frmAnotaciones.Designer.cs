@@ -1,6 +1,6 @@
 ﻿namespace ModernGUI_V3
 {
-    partial class frmNotas
+    partial class frmAnotaciones
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNotas));
-            this.pnlNotas = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAnotaciones));
+            this.pnlAnotaciones = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
@@ -41,27 +41,27 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.btnCrearNota = new System.Windows.Forms.Button();
+            this.btnAgregarA = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlNotas.SuspendLayout();
+            this.pnlAnotaciones.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnlNotas
+            // pnlAnotaciones
             // 
-            this.pnlNotas.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlNotas.Controls.Add(this.panel1);
-            this.pnlNotas.Controls.Add(this.btnCrearNota);
-            this.pnlNotas.Controls.Add(this.label1);
-            this.pnlNotas.Controls.Add(this.pictureBox1);
-            this.pnlNotas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlNotas.Location = new System.Drawing.Point(0, 0);
-            this.pnlNotas.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlNotas.Name = "pnlNotas";
-            this.pnlNotas.Size = new System.Drawing.Size(798, 502);
-            this.pnlNotas.TabIndex = 10;
+            this.pnlAnotaciones.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlAnotaciones.Controls.Add(this.panel1);
+            this.pnlAnotaciones.Controls.Add(this.btnAgregarA);
+            this.pnlAnotaciones.Controls.Add(this.label1);
+            this.pnlAnotaciones.Controls.Add(this.pictureBox1);
+            this.pnlAnotaciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAnotaciones.Location = new System.Drawing.Point(0, 0);
+            this.pnlAnotaciones.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlAnotaciones.Name = "pnlAnotaciones";
+            this.pnlAnotaciones.Size = new System.Drawing.Size(798, 502);
+            this.pnlAnotaciones.TabIndex = 10;
             // 
             // panel1
             // 
@@ -181,23 +181,25 @@
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // btnCrearNota
+            // btnAgregarA
             // 
-            this.btnCrearNota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearNota.Location = new System.Drawing.Point(661, 12);
-            this.btnCrearNota.Name = "btnCrearNota";
-            this.btnCrearNota.Size = new System.Drawing.Size(102, 27);
-            this.btnCrearNota.TabIndex = 9;
-            this.btnCrearNota.Text = "Crear anotación";
-            this.btnCrearNota.UseVisualStyleBackColor = true;
+            this.btnAgregarA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarA.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarA.Location = new System.Drawing.Point(627, 12);
+            this.btnAgregarA.Name = "btnAgregarA";
+            this.btnAgregarA.Size = new System.Drawing.Size(159, 31);
+            this.btnAgregarA.TabIndex = 9;
+            this.btnAgregarA.Text = "Nueva anotación";
+            this.btnAgregarA.UseVisualStyleBackColor = true;
+            this.btnAgregarA.Click += new System.EventHandler(this.btnAgregarA_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(94, 12);
+            this.label1.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(94, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 31);
+            this.label1.Size = new System.Drawing.Size(91, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "My Notes";
             // 
@@ -211,17 +213,17 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // frmNotas
+            // frmAnotaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 502);
-            this.Controls.Add(this.pnlNotas);
+            this.Controls.Add(this.pnlAnotaciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmNotas";
+            this.Name = "frmAnotaciones";
             this.Text = "Form5";
-            this.pnlNotas.ResumeLayout(false);
-            this.pnlNotas.PerformLayout();
+            this.pnlAnotaciones.ResumeLayout(false);
+            this.pnlAnotaciones.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -230,7 +232,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel pnlNotas;
+        private System.Windows.Forms.Panel pnlAnotaciones;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox checkBox10;
         private System.Windows.Forms.CheckBox checkBox9;
@@ -242,7 +244,7 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button btnCrearNota;
+        private System.Windows.Forms.Button btnAgregarA;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
