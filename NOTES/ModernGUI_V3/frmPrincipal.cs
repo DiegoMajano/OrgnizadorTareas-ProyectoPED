@@ -230,7 +230,7 @@ namespace ModernGUI_V3
             if (nuevaAnotacion.control)
             {
                 CNodos nodoOrigen = grafoMain.AgregarNodos(2, nombre: nuevaAnotacion.titulo, cuerpo: nuevaAnotacion.cuerpo);
-                CNodos nodoDestino = grafoMain.BuscarNodo(nuevaAnotacion.materiaE);
+                CNodos nodoDestino = grafoMain.BuscarNodo(nuevaAnotacion.materiaE); // extraer con id en el obtener materias
                 if (nodoOrigen != null && nodoDestino != null)
                 {
                     grafoMain.AgregarArco(nodoOrigen, nodoDestino);

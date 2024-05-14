@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdministradorT.ClasesNodos
 {
+    // hacer el enum del estado de la tarea
     public class Tarea : CNodos
     {
         private string titulo;

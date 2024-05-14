@@ -37,14 +37,17 @@
             this.lblCuerpo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.lblTitu = new System.Windows.Forms.Label();
+            this.pnTop = new System.Windows.Forms.Panel();
             this.pnlMain.SuspendLayout();
+            this.pnTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbMateriaA
             // 
             this.cbMateriaA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMateriaA.FormattingEnabled = true;
-            this.cbMateriaA.Location = new System.Drawing.Point(265, 247);
+            this.cbMateriaA.Location = new System.Drawing.Point(241, 343);
             this.cbMateriaA.Name = "cbMateriaA";
             this.cbMateriaA.Size = new System.Drawing.Size(253, 26);
             this.cbMateriaA.TabIndex = 16;
@@ -53,7 +56,7 @@
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(355, 487);
+            this.btnCancelar.Location = new System.Drawing.Point(263, 398);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(105, 46);
             this.btnCancelar.TabIndex = 14;
@@ -65,7 +68,7 @@
             // 
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(235, 487);
+            this.btnRegistrar.Location = new System.Drawing.Point(142, 398);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(105, 46);
             this.btnRegistrar.TabIndex = 10;
@@ -76,16 +79,16 @@
             // txtCuerpo
             // 
             this.txtCuerpo.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCuerpo.Location = new System.Drawing.Point(265, 103);
+            this.txtCuerpo.Location = new System.Drawing.Point(241, 135);
             this.txtCuerpo.Multiline = true;
             this.txtCuerpo.Name = "txtCuerpo";
-            this.txtCuerpo.Size = new System.Drawing.Size(253, 120);
+            this.txtCuerpo.Size = new System.Drawing.Size(253, 177);
             this.txtCuerpo.TabIndex = 7;
             // 
             // txtTituloA
             // 
             this.txtTituloA.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTituloA.Location = new System.Drawing.Point(265, 42);
+            this.txtTituloA.Location = new System.Drawing.Point(241, 87);
             this.txtTituloA.Name = "txtTituloA";
             this.txtTituloA.Size = new System.Drawing.Size(253, 25);
             this.txtTituloA.TabIndex = 5;
@@ -94,7 +97,7 @@
             // 
             this.lblMateria.AutoSize = true;
             this.lblMateria.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMateria.Location = new System.Drawing.Point(69, 250);
+            this.lblMateria.Location = new System.Drawing.Point(45, 346);
             this.lblMateria.Name = "lblMateria";
             this.lblMateria.Size = new System.Drawing.Size(165, 18);
             this.lblMateria.TabIndex = 3;
@@ -104,7 +107,7 @@
             // 
             this.lblCuerpo.AutoSize = true;
             this.lblCuerpo.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCuerpo.Location = new System.Drawing.Point(69, 106);
+            this.lblCuerpo.Location = new System.Drawing.Point(45, 138);
             this.lblCuerpo.Name = "lblCuerpo";
             this.lblCuerpo.Size = new System.Drawing.Size(161, 18);
             this.lblCuerpo.TabIndex = 2;
@@ -114,7 +117,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(69, 45);
+            this.lblTitulo.Location = new System.Drawing.Point(45, 90);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(52, 18);
             this.lblTitulo.TabIndex = 0;
@@ -123,6 +126,7 @@
             // pnlMain
             // 
             this.pnlMain.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlMain.Controls.Add(this.pnTop);
             this.pnlMain.Controls.Add(this.cbMateriaA);
             this.pnlMain.Controls.Add(this.btnCancelar);
             this.pnlMain.Controls.Add(this.btnRegistrar);
@@ -136,19 +140,43 @@
             this.pnlMain.ForeColor = System.Drawing.Color.Black;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(861, 597);
+            this.pnlMain.Size = new System.Drawing.Size(545, 463);
             this.pnlMain.TabIndex = 2;
+            // 
+            // lblTitu
+            // 
+            this.lblTitu.AutoSize = true;
+            this.lblTitu.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitu.ForeColor = System.Drawing.Color.Transparent;
+            this.lblTitu.Location = new System.Drawing.Point(185, 19);
+            this.lblTitu.Name = "lblTitu";
+            this.lblTitu.Size = new System.Drawing.Size(174, 23);
+            this.lblTitu.TabIndex = 17;
+            this.lblTitu.Text = "Nueva anotación";
+            // 
+            // pnTop
+            // 
+            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(44)))), ((int)(((byte)(89)))));
+            this.pnTop.Controls.Add(this.lblTitu);
+            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTop.Location = new System.Drawing.Point(0, 0);
+            this.pnTop.Name = "pnTop";
+            this.pnTop.Size = new System.Drawing.Size(545, 60);
+            this.pnTop.TabIndex = 18;
             // 
             // frmNuevaAnotacion
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(861, 597);
+            this.ClientSize = new System.Drawing.Size(545, 463);
             this.Controls.Add(this.pnlMain);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNuevaAnotacion";
-            this.Text = "frmNuevaAnotacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Nueva anotación";
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
+            this.pnTop.ResumeLayout(false);
+            this.pnTop.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -163,5 +191,7 @@
         private System.Windows.Forms.Label lblCuerpo;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel pnlMain;
+        private System.Windows.Forms.Label lblTitu;
+        private System.Windows.Forms.Panel pnTop;
     }
 }

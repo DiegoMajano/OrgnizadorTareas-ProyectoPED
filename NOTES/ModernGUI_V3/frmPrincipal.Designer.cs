@@ -221,6 +221,7 @@
             // btnVerGrafo
             // 
             this.btnVerGrafo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVerGrafo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerGrafo.Location = new System.Drawing.Point(0, 367);
             this.btnVerGrafo.Name = "btnVerGrafo";
             this.btnVerGrafo.Size = new System.Drawing.Size(188, 41);
@@ -409,7 +410,7 @@
             this.button7.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.Gainsboro;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(4, 0);
+            this.button7.Location = new System.Drawing.Point(0, -8);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(186, 40);
