@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.pnlFormularios = new System.Windows.Forms.Panel();
-            this.btn = new System.Windows.Forms.Button();
+            this.btnNuevaTarea = new System.Windows.Forms.Button();
             this.btnNuevoCalen = new System.Windows.Forms.Button();
             this.btnNuevoReco = new System.Windows.Forms.Button();
             this.btnNuevoMeto = new System.Windows.Forms.Button();
@@ -55,6 +55,7 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.btnTareas = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             this.pnlFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,7 +83,7 @@
             // pnlFormularios
             // 
             this.pnlFormularios.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlFormularios.Controls.Add(this.btn);
+            this.pnlFormularios.Controls.Add(this.btnNuevaTarea);
             this.pnlFormularios.Controls.Add(this.btnNuevoCalen);
             this.pnlFormularios.Controls.Add(this.btnNuevoReco);
             this.pnlFormularios.Controls.Add(this.btnNuevoMeto);
@@ -98,17 +99,18 @@
             this.pnlFormularios.Size = new System.Drawing.Size(834, 505);
             this.pnlFormularios.TabIndex = 2;
             // 
-            // btn
+            // btnNuevaTarea
             // 
-            this.btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn.Location = new System.Drawing.Point(656, 208);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(178, 39);
-            this.btn.TabIndex = 8;
-            this.btn.Text = "Nueva Materia";
-            this.btn.UseVisualStyleBackColor = true;
+            this.btnNuevaTarea.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevaTarea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaTarea.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevaTarea.Location = new System.Drawing.Point(656, 208);
+            this.btnNuevaTarea.Name = "btnNuevaTarea";
+            this.btnNuevaTarea.Size = new System.Drawing.Size(178, 39);
+            this.btnNuevaTarea.TabIndex = 8;
+            this.btnNuevaTarea.Text = "Nueva Tarea";
+            this.btnNuevaTarea.UseVisualStyleBackColor = true;
+            this.btnNuevaTarea.Click += new System.EventHandler(this.btnNuevaTarea_Click);
             // 
             // btnNuevoCalen
             // 
@@ -201,6 +203,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.panelMenu.Controls.Add(this.btnTareas);
             this.panelMenu.Controls.Add(this.btnVerGrafo);
             this.panelMenu.Controls.Add(this.btnCalendario);
             this.panelMenu.Controls.Add(this.btnRecordatorio);
@@ -340,7 +343,6 @@
             this.lblNombreusuario.Size = new System.Drawing.Size(77, 18);
             this.lblNombreusuario.TabIndex = 10;
             this.lblNombreusuario.Text = "Username";
-            this.lblNombreusuario.Click += new System.EventHandler(this.lblNombreusuario_Click);
             // 
             // btnSalir
             // 
@@ -382,7 +384,6 @@
             this.button6.Text = "                    ";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // pnlBarraTitulo
             // 
@@ -477,6 +478,26 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // btnTareas
+            // 
+            this.btnTareas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTareas.FlatAppearance.BorderSize = 0;
+            this.btnTareas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnTareas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTareas.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTareas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnTareas.Image = ((System.Drawing.Image)(resources.GetObject("btnTareas.Image")));
+            this.btnTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTareas.Location = new System.Drawing.Point(0, 408);
+            this.btnTareas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTareas.Name = "btnTareas";
+            this.btnTareas.Size = new System.Drawing.Size(188, 57);
+            this.btnTareas.TabIndex = 18;
+            this.btnTareas.Text = "Tareas";
+            this.btnTareas.UseVisualStyleBackColor = true;
+            this.btnTareas.Click += new System.EventHandler(this.btnTareas_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -491,7 +512,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.panelContenedor.ResumeLayout(false);
             this.pnlFormularios.ResumeLayout(false);
             this.pnlFormularios.PerformLayout();
@@ -530,11 +550,12 @@
         private System.Windows.Forms.Button btnMaterias;
         private System.Windows.Forms.Button btnVerGrafo;
         private System.Windows.Forms.Button btnNuevaMat;
-        private System.Windows.Forms.Button btn;
+        private System.Windows.Forms.Button btnNuevaTarea;
         private System.Windows.Forms.Button btnNuevoCalen;
         private System.Windows.Forms.Button btnNuevoReco;
         private System.Windows.Forms.Button btnNuevoMeto;
         private System.Windows.Forms.Button btnNuevaAnot;
+        private System.Windows.Forms.Button btnTareas;
     }
 }
 

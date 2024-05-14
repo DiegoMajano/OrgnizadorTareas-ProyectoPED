@@ -75,28 +75,28 @@
     <Compile Include="frmCalendario.Designer.cs">
       <DependentUpon>frmCalendario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNuevaAnotacion.cs">
+    <Compile Include="NuevosRegistros\frmNuevaAnotacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNuevaAnotacion.Designer.cs">
+    <Compile Include="NuevosRegistros\frmNuevaAnotacion.Designer.cs">
       <DependentUpon>frmNuevaAnotacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNuevaMateria.cs">
+    <Compile Include="NuevosRegistros\frmNuevaMateria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNuevaMateria.Designer.cs">
+    <Compile Include="NuevosRegistros\frmNuevaMateria.Designer.cs">
       <DependentUpon>frmNuevaMateria.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNuevaTarea.cs">
+    <Compile Include="NuevosRegistros\frmNuevaTarea.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNuevaTarea.Designer.cs">
+    <Compile Include="NuevosRegistros\frmNuevaTarea.Designer.cs">
       <DependentUpon>frmNuevaTarea.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNuevoRecordatorio.cs">
+    <Compile Include="NuevosRegistros\frmNuevoRecordatorio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNuevoRecordatorio.Designer.cs">
+    <Compile Include="NuevosRegistros\frmNuevoRecordatorio.Designer.cs">
       <DependentUpon>frmNuevoRecordatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTecnicaEstudio.cs">
@@ -134,13 +134,16 @@
     <EmbeddedResource Include="frmCalendario.resx">
       <DependentUpon>frmCalendario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNuevaAnotacion.resx">
+    <EmbeddedResource Include="NuevosRegistros\frmNuevaAnotacion.resx">
       <DependentUpon>frmNuevaAnotacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNuevaMateria.resx">
+    <EmbeddedResource Include="NuevosRegistros\frmNuevaMateria.resx">
       <DependentUpon>frmNuevaMateria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNuevoRecordatorio.resx">
+    <EmbeddedResource Include="NuevosRegistros\frmNuevaTarea.resx">
+      <DependentUpon>frmNuevaTarea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevosRegistros\frmNuevoRecordatorio.resx">
       <DependentUpon>frmNuevoRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTecnicaEstudio.resx">

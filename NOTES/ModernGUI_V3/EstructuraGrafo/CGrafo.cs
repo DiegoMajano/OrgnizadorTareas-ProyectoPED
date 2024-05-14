@@ -64,12 +64,7 @@ namespace AdministradorT
             if (nodos.Count > antiugo)
                 return true;            
             return false;            
-        }
-
-        public CNodos BuscarNodo(string valor)
-        {
-            return nodos.Find(n => n.ID == valor);
-        }        
+        }          
 
         public bool AgregarArco(CNodos origen, CNodos destino)
         {
@@ -80,6 +75,46 @@ namespace AdministradorT
             }
             return false;
         }
-        
+
+        public CNodos BuscarNodo(string valor)
+        {
+            return nodos.Find(n => n.ID == valor);
+        }
+
+        public CNodos BuscarNodo(int tipo, string nombre)
+        {
+            switch (tipo)
+            {
+                case 1: // si es materia 
+                    foreach  (Materia nodoMateria in nodosMaterias)
+                    {
+                        if(nodoMateria.Nombre == nombre)
+                            return nodoMateria;
+                    }
+                    break; 
+                case 2: // si es anotacion
+                    foreach (Anotacion nodoAnotacion in nodosAnotaciones)
+                    {
+                        if (nodoAnotacion.Titulo == nombre)
+                            return nodoAnotacion;
+                    }
+                    break; 
+                case 3: // si es recordatorio
+                    foreach (Recordatorio nodoRecordatorio in nodosRecordatorios)
+                    {
+                        if (nodoRecordatorio.Titulo == nombre)
+                            return nodoRecordatorio;
+                    }
+                    break;
+                case 4: // si es tarea
+                    foreach (Tarea nodoTarea in nodosTarea)
+                    {
+                        if (nodoTarea.Titulo == nombre)
+                            return nodoTarea;
+                    }
+                    break;
+            }
+            return null;
+        }
     }
 }

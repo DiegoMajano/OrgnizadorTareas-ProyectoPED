@@ -37,8 +37,8 @@
             this.lblCuerpo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.lblTitu = new System.Windows.Forms.Label();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.lblTitu = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.SuspendLayout();
@@ -143,6 +143,16 @@
             this.pnlMain.Size = new System.Drawing.Size(545, 463);
             this.pnlMain.TabIndex = 2;
             // 
+            // pnTop
+            // 
+            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(44)))), ((int)(((byte)(89)))));
+            this.pnTop.Controls.Add(this.lblTitu);
+            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTop.Location = new System.Drawing.Point(0, 0);
+            this.pnTop.Name = "pnTop";
+            this.pnTop.Size = new System.Drawing.Size(545, 60);
+            this.pnTop.TabIndex = 18;
+            // 
             // lblTitu
             // 
             this.lblTitu.AutoSize = true;
@@ -154,22 +164,11 @@
             this.lblTitu.TabIndex = 17;
             this.lblTitu.Text = "Nueva anotación";
             // 
-            // pnTop
-            // 
-            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(44)))), ((int)(((byte)(89)))));
-            this.pnTop.Controls.Add(this.lblTitu);
-            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTop.Location = new System.Drawing.Point(0, 0);
-            this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(545, 60);
-            this.pnTop.TabIndex = 18;
-            // 
             // frmNuevaAnotacion
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(545, 463);
             this.Controls.Add(this.pnlMain);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNuevaAnotacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva anotación";
