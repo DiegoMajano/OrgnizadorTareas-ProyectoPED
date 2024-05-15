@@ -41,6 +41,7 @@
             this.btncerrar = new System.Windows.Forms.PictureBox();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.linkpass = new System.Windows.Forms.LinkLabel();
+            this.btnconectar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
@@ -136,9 +137,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(488, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 32);
+            this.label1.Size = new System.Drawing.Size(116, 32);
             this.label1.TabIndex = 4;
-            this.label1.Text = "LOGIN";
+            this.label1.Text = "LOGINn";
             // 
             // btnlogin
             // 
@@ -193,12 +194,29 @@
             this.linkpass.TabStop = true;
             this.linkpass.Text = "¿Ha olvidado contraseña?";
             // 
+            // btnconectar
+            // 
+            this.btnconectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
+            this.btnconectar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
+            this.btnconectar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnconectar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
+            this.btnconectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnconectar.ForeColor = System.Drawing.Color.LightGray;
+            this.btnconectar.Location = new System.Drawing.Point(309, 190);
+            this.btnconectar.Name = "btnconectar";
+            this.btnconectar.Size = new System.Drawing.Size(408, 40);
+            this.btnconectar.TabIndex = 9;
+            this.btnconectar.Text = "conectar";
+            this.btnconectar.UseVisualStyleBackColor = false;
+            this.btnconectar.Click += new System.EventHandler(this.btnconectar_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.btnconectar);
             this.Controls.Add(this.btnminimizar);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.linkpass);
@@ -237,6 +255,7 @@
         private System.Windows.Forms.PictureBox btncerrar;
         private System.Windows.Forms.PictureBox btnminimizar;
         private System.Windows.Forms.LinkLabel linkpass;
+        private System.Windows.Forms.Button btnconectar;
     }
 }
 

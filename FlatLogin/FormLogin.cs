@@ -99,6 +99,37 @@ namespace FlatLoginWatermark
         private void btnlogin_Click(object sender, EventArgs e)
         {
 
+            string usuarioIngresado = txtuser.Text;
+            string contraseñaIngresada = txtpass.Text;
+
+
+            // Verificar si las credenciales coinciden con las almacenadas
+            if (usuarioIngresado == usuarioValido && contraseñaIngresada == contraseñaValida)
+            {
+                frmPrincipal formPrincipal = new frmPrincipal();
+                this.Hide();
+                formPrincipal.Show();
+
+                // Aquí puedes abrir la ventana principal de la aplicación o realizar otras acciones
+            }
+            else
+            {
+                MessageBox.Show("Nombre de usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+           
+          
+
+        }
+
+        private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar))
+                btnlogin_Click(null, null);
+        }
+
+        private void btnconectar_Click(object sender, EventArgs e)
+        {
             CConexion conexionBD = new CConexion();
             if (conexionBD.AbrirConexion())
             {
@@ -109,13 +140,6 @@ namespace FlatLoginWatermark
             {
                 MessageBox.Show("No se pudo establecer la conexión.");
             }
-
-        }
-
-        private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsControl(e.KeyChar))
-                btnlogin_Click(null, null);
         }
     }
 }
