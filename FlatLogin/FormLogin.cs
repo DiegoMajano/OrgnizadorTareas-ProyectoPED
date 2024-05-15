@@ -18,7 +18,7 @@ namespace FlatLoginWatermark
     {
         // Variables para almacenar credenciales de usuario
         private string usuarioValido = "PED";
-        private string contraseñaValida = "arboles";
+        private string contraseñaValida = "12";
         private CConexion mConexion;
         public FormLogin()
         {

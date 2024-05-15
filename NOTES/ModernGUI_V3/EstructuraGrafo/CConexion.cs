@@ -9,7 +9,7 @@ namespace AdministradorT
         private SqlConnection conexion;
         private string servidor = "localhost";
         private string bd = "catedraped";
-        private string user = "root";
+        private string user = "william";
         private string password = "";
         private string cadenaConexion;
 
