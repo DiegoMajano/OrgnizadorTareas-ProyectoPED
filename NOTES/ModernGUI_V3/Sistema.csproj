@@ -66,6 +66,7 @@
     <Compile Include="ClasesNodos\Anotacion.cs" />
     <Compile Include="ClasesNodos\Recordatorio.cs" />
     <Compile Include="ClasesNodos\Tarea.cs" />
+    <Compile Include="Conexion\conectbdd.cs" />
     <Compile Include="EstructuraGrafo\CConexion.cs" />
     <Compile Include="EstructuraGrafo\CGrafo.cs" />
     <Compile Include="EstructuraGrafo\CNodos.cs" />
