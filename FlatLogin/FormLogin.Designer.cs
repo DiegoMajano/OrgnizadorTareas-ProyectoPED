@@ -136,9 +136,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(488, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 32);
+            this.label1.Size = new System.Drawing.Size(100, 32);
             this.label1.TabIndex = 4;
-            this.label1.Text = "MY NOTE";
+            this.label1.Text = "LOGIN";
             // 
             // btnlogin
             // 

@@ -99,34 +99,24 @@ namespace FlatLoginWatermark
         private void btnlogin_Click(object sender, EventArgs e)
         {
 
-            SqlDataReader mySqlDataReader = null;
-            string consulta = "select * from usuarios";
-
-            if (mConexion.GetConexion() != null)
+            CConexion conexionBD = new CConexion();
+            if (conexionBD.AbrirConexion())
             {
-                SqlCommand mySqlCommand = new SqlCommand(consulta);
-                mySqlCommand.Connection = mConexion.GetConexion();
-                mySqlDataReader = mySqlCommand.ExecuteReader();
-
-                while (mySqlDataReader.Read())
-                {
-                    MessageBox.Show("YEAAAA");
-                }
-                MessageBox.Show("SIII");
-
+                MessageBox.Show("Conexión establecida correctamente.");
+                conexionBD.CerrarConexion();
             }
-
             else
             {
-                MessageBox.Show("Error al conectar");
+                MessageBox.Show("No se pudo establecer la conexión.");
             }
-
 
         }
 
-        
-
-       
+        private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar))
+                btnlogin_Click(null, null);
+        }
     }
 }
     

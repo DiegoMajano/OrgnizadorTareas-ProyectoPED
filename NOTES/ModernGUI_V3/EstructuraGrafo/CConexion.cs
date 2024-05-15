@@ -1,21 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AdministradorT
 {
     public class CConexion
     {
-
-
-        //Nodo destino de la conexion realizada
-        public CNodos nodoDestino;
-        public int peso;
-
         private SqlConnection conexion;
         private string servidor = "localhost";
         private string bd = "catedraped";
@@ -25,38 +15,34 @@ namespace AdministradorT
 
         public CConexion()
         {
-            cadenaConexion =
-                "Data Source=" + servidor +
-                ";User id=" + user +
-                ";password=" + password +
-                ";Database=" + bd;
+            cadenaConexion = "Data Source=" + servidor +
+                             ";User id=" + user +
+                             ";password=" + password +
+                             ";Database=" + bd;
+
+            conexion = new SqlConnection(cadenaConexion);
         }
 
-
-
-        public CConexion(int peso)
+        public bool AbrirConexion()
         {
-            nodoDestino = new CNodos();
-            this.peso = peso;
-        }
-
-        public CConexion(CNodos nodo)
-        {
-            nodoDestino = nodo;
-        }
-
-       
-
-        public SqlConnection GetConexion()
-        {
-            if(conexion == null)
+            try
             {
-                conexion = new SqlConnection(cadenaConexion);
                 conexion.Open();
+                return true;
             }
-            return conexion;
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al abrir la conexión: " + ex.Message);
+                return false;
+            }
         }
 
-
+        public void CerrarConexion()
+        {
+            if (conexion != null && conexion.State != System.Data.ConnectionState.Closed)
+            {
+                conexion.Close();
+            }
+        }
     }
 }
