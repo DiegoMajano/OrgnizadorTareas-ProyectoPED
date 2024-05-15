@@ -38,6 +38,10 @@ namespace AdministradorT.ClasesNodos
             get { return salon; } set { salon = value; }
         }
 
+       
+
+
+
         public Materia(string nombre, TimeSpan horaClase, List<string> dias, string docente, string salon)
         {
             this.Nombre = nombre;
@@ -45,8 +49,10 @@ namespace AdministradorT.ClasesNodos
             this.Dias = dias;
             this.Docente = docente;
             this.Salon = salon;
+            
             setID(1, nombre);
         }
 
+        
     }
 }

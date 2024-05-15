@@ -1,5 +1,6 @@
 ﻿using AdministradorT.ClasesNodos;
 using ModernGUI_V3;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,11 +19,13 @@ namespace AdministradorT
         private frmPrincipal principal;
         public Materia nuevaMateria;
         public bool control;
+         private CConexion conexion;
         
         public frmNuevaMateria()
         {
             InitializeComponent();
             LlenarCampos();
+            conexion = new CConexion();
         }
 
         private void LlenarCampos()
@@ -51,21 +54,68 @@ namespace AdministradorT
         public List<string> dias = new List<string>();
         public TimeSpan horaClase;
         private void btnRegistrar_Click(object sender, EventArgs e)
-        {            
+        {
             if (cbHora.SelectedIndex == 0 || clbDias.CheckedItems.Count == 0 || string.IsNullOrEmpty(txtNDocente.Text) || string.IsNullOrEmpty(txtNombreM.Text) || string.IsNullOrEmpty(txtSalon.Text))
-                MessageBox.Show("Completar todos los campos","Error",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                
+                MessageBox.Show("Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
             {
                 nombreM = txtNombreM.Text;
                 nombreD = txtNDocente.Text;
                 salon = txtSalon.Text;
-                horaClase = new TimeSpan(cbHora.SelectedIndex);
+                horaClase = TimeSpan.Parse(cbHora.SelectedItem.ToString()); // Corregido para obtener la hora seleccionada correctamente
                 nuevaMateria = new Materia(nombreM, horaClase, dias, nombreD, salon);
-                control = true;                
-                LimpiarCampos();
-                this.Hide();
+                control = true;
+
+                // Insertar los datos en la base de datos
+                if (InsertarMateriaEnBDD(nuevaMateria))
+                {
+                    MessageBox.Show("Materia registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarCampos();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Error al registrar la materia.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
+
+        // Método para insertar la materia en la base de datos
+        private bool InsertarMateriaEnBDD(Materia materia)
+        {
+            string servidor = "localhost";
+            string baseDeDatos = "catedraped";
+            string usuario = "root";
+            string contraseña = "";
+
+            string cadenaConexion = $"Server={servidor};Database={baseDeDatos};Uid={usuario};Pwd={contraseña};";
+
+            using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
+            {
+                try
+                {
+                    conexion.Open();
+                    string consulta = "INSERT INTO materia (nombre, horaClase, docente, salon) VALUES (@nombre, @horaClase, @docente, @salon)";
+                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
+                    comando.Parameters.AddWithValue("@nombre", materia.Nombre);
+                    comando.Parameters.AddWithValue("@horaClase", DateTime.Today.Add(materia.HoraClase)); // Se agrega la hora seleccionada al día actual
+                    comando.Parameters.AddWithValue("@docente", materia.Docente);
+                    comando.Parameters.AddWithValue("@salon", materia.Salon);
+                    comando.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al insertar la materia en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+        }
+
+
+
+
+
 
         private void Validacion_KeyPress(object sender, KeyPressEventArgs e)
         {

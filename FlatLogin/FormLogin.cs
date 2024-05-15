@@ -132,8 +132,13 @@ namespace FlatLoginWatermark
         private void btnconectar_Click(object sender, EventArgs e)
         {
             CConexion conexion = new CConexion();
-            conexion.ProbarConexion();
+            conexion.Conexion();
 
+
+        }
+
+        private void linkpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
 
         }
     }

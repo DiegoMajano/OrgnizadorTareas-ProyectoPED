@@ -23,11 +23,18 @@ namespace AdministradorT.ClasesNodos
             set { cuerpo = value; }
         }
 
+        public int idMateria
+        {
+            get { return idMateria; }
+            set { idMateria = value; }
+        }
+
         public Anotacion(string titulo, string cuerpo)
         {
             this.titulo = titulo;
             this.cuerpo = cuerpo;
             setID(2, titulo);
+            
         }
     }
 }
