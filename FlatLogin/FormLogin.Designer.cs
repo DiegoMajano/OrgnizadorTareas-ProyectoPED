@@ -41,6 +41,7 @@
             this.linkpass = new System.Windows.Forms.LinkLabel();
             this.btnconectar = new System.Windows.Forms.Button();
             this.btnlogin = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
@@ -198,6 +199,17 @@
             this.btnlogin.UseVisualStyleBackColor = false;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(488, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(244, 32);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "LOGINnsddsdsdA";
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +221,7 @@
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.linkpass);
             this.Controls.Add(this.btnlogin);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.txtuser);
             this.Controls.Add(this.panel1);
@@ -242,6 +255,7 @@
         private System.Windows.Forms.LinkLabel linkpass;
         private System.Windows.Forms.Button btnconectar;
         private System.Windows.Forms.Button btnlogin;
+        private System.Windows.Forms.Label label1;
     }
 }
 

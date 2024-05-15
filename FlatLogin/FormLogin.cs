@@ -23,7 +23,8 @@ namespace FlatLoginWatermark
         public FormLogin()
         {
             InitializeComponent();
-            mConexion = new CConexion();
+              
+
         }
 
 
@@ -130,18 +131,15 @@ namespace FlatLoginWatermark
 
         private void btnconectar_Click(object sender, EventArgs e)
         {
-            CConexion conexionBD = new CConexion();
-            if (conexionBD.AbrirConexion())
-            {
-                MessageBox.Show("Conexión establecida correctamente.");
-                conexionBD.CerrarConexion();
-            }
-            else
-            {
-                MessageBox.Show("No se pudo establecer la conexión.");
-            }
+            CConexion conexion = new CConexion();
+            conexion.ProbarConexion();
+
+
         }
     }
-}
+
+
+    }
+
     
 
