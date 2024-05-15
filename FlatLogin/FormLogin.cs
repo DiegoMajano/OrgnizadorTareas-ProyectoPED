@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ModernGUI_V3;
+using AdministradorT;
 
 namespace FlatLoginWatermark
 {
@@ -97,12 +98,14 @@ namespace FlatLoginWatermark
             
                 string usuarioIngresado = txtuser.Text;
                 string contraseñaIngresada = txtpass.Text;
+            
 
-                // Verificar si las credenciales coinciden con las almacenadas
-                if (usuarioIngresado == usuarioValido && contraseñaIngresada == contraseñaValida)
+            // Verificar si las credenciales coinciden con las almacenadas
+            if (usuarioIngresado == usuarioValido && contraseñaIngresada == contraseñaValida)
                 {
-                    AdministradorT.Coneccion conect = new AdministradorT.Coneccion;
-                    frmPrincipal formPrincipal = new frmPrincipal();
+               
+
+                frmPrincipal formPrincipal = new frmPrincipal();
                     this.Hide();
                     formPrincipal.Show();              
 
