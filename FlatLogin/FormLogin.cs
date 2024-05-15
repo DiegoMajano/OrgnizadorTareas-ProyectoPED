@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ModernGUI_V3;
 using AdministradorT;
+using System.Data.SqlClient;
 
 namespace FlatLoginWatermark
 {
@@ -18,11 +19,13 @@ namespace FlatLoginWatermark
         // Variables para almacenar credenciales de usuario
         private string usuarioValido = "PED";
         private string contraseñaValida = "arboles";
+        private CConexion mConexion;
         public FormLogin()
         {
             InitializeComponent();
+            mConexion = new CConexion();
         }
-        
+
 
         #region Drag Form/ Mover Arrastrar Formulario
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -95,33 +98,36 @@ namespace FlatLoginWatermark
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            
-                string usuarioIngresado = txtuser.Text;
-                string contraseñaIngresada = txtpass.Text;
-            
 
-            // Verificar si las credenciales coinciden con las almacenadas
-            if (usuarioIngresado == usuarioValido && contraseñaIngresada == contraseñaValida)
+            SqlDataReader mySqlDataReader = null;
+            string consulta = "select * from usuarios";
+
+            if (mConexion.GetConexion() != null)
+            {
+                SqlCommand mySqlCommand = new SqlCommand(consulta);
+                mySqlCommand.Connection = mConexion.GetConexion();
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                while (mySqlDataReader.Read())
                 {
-               
-
-                frmPrincipal formPrincipal = new frmPrincipal();
-                    this.Hide();
-                    formPrincipal.Show();              
-
-                    // Aquí puedes abrir la ventana principal de la aplicación o realizar otras acciones
+                    MessageBox.Show("YEAAAA");
                 }
-                else
-                {
-                    MessageBox.Show("Nombre de usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("SIII");
+
             }
 
-        private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsControl(e.KeyChar))
-                btnlogin_Click(null, null);
+            else
+            {
+                MessageBox.Show("Error al conectar");
+            }
+
+
         }
+
+        
+
+       
     }
-    }
+}
+    
 

@@ -59,3 +59,17 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\Login.csproj.CopyComplete
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\FlatLoginWatermark.exe
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\FlatLoginWatermark.pdb
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\bin\Debug\FlatLoginWatermark.exe.config
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\bin\Debug\FlatLoginWatermark.exe
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\bin\Debug\FlatLoginWatermark.pdb
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\bin\Debug\AdministradorT.exe
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\bin\Debug\AdministradorT.pdb
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\bin\Debug\AdministradorT.exe.config
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\obj\Debug\Login.csproj.AssemblyReference.cache
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\obj\Debug\FlatLoginWatermark.FormLogin.resources
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\obj\Debug\FlatLoginWatermark.Properties.Resources.resources
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\obj\Debug\Login.csproj.CopyComplete
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\obj\Debug\FlatLoginWatermark.exe
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\obj\Debug\FlatLoginWatermark.pdb
