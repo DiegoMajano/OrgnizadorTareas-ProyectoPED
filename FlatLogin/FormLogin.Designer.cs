@@ -36,7 +36,6 @@
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.txtuser = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btncerrar = new System.Windows.Forms.PictureBox();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.linkpass = new System.Windows.Forms.LinkLabel();
@@ -130,17 +129,6 @@
             this.txtpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpass_KeyPress);
             this.txtpass.Leave += new System.EventHandler(this.txtpass_Leave);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(488, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 32);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "LOGINnsddsdsdA";
-            // 
             // btncerrar
             // 
             this.btncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -221,7 +209,6 @@
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.linkpass);
             this.Controls.Add(this.btnlogin);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.txtuser);
             this.Controls.Add(this.panel1);
@@ -249,7 +236,6 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.TextBox txtuser;
         private System.Windows.Forms.TextBox txtpass;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox btncerrar;
         private System.Windows.Forms.PictureBox btnminimizar;
