@@ -48,9 +48,9 @@ namespace AdministradorT
                     break;
             }
             id += nombre[0];
-            for (int i = 0; i == 2; i++)
+            for (int i = 0; i <= 2; i++)
             {
-                id += numero[rand.Next(0, 11)].ToString();
+                id += numero[rand.Next(0, 10)].ToString();
             }
             return id;
         }

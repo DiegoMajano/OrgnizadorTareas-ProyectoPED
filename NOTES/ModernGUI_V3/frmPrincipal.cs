@@ -27,6 +27,7 @@ namespace ModernGUI_V3
         private frmNuevaAnotacion nuevaAnotacion = new frmNuevaAnotacion();
         private frmNuevoRecordatorio nuevoRecordatorio = new frmNuevoRecordatorio();
         private frmNuevaTarea nuevaTarea = new frmNuevaTarea();
+        private frmMaterias materias; 
 
         public frmPrincipal()
         {
@@ -98,7 +99,7 @@ namespace ModernGUI_V3
         // --------------------------------------- ACCIONES CLICK DE LOS BOTONES ---------------------------------------
         private void btnMaterias_Click(object sender, EventArgs e)
         {            
-            AbrirFormulario<frmMaterias>();
+            materias = (frmMaterias)AbrirFormulario<frmMaterias>();
             btnNuevaMat.BringToFront();
             btnNuevaMat.Visible = true;
             ReestablecerConfig();
@@ -202,7 +203,10 @@ namespace ModernGUI_V3
             if (nuevaMateria.control)
             {
                 if (grafoMain.AgregarNodos(1, nombre: nuevaMateria.nombreM, hora: nuevaMateria.horaClase, dias: nuevaMateria.dias, docente: nuevaMateria.nombreD, salon: nuevaMateria.salon) != null)
+                {
+                    materias.ActualizarForm(grafoMain);
                     MessageBox.Show("Se ha ingresado exitosamente la nueva materia", "Registro de materia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 else
                     MessageBox.Show("No se ha ingresado la nueva materia", "Regustro de materia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -350,7 +354,7 @@ namespace ModernGUI_V3
 
         #endregion
         // --------------------------------------- METODO PARA ABRIR FORMULARIOS DENTRO DEL PANEL ---------------------------------------
-        private void AbrirFormulario<MiForm>() where MiForm : Form, new() {
+        private Form AbrirFormulario<MiForm>() where MiForm : Form, new() {
             Form formulario;
             formulario = pnlFormularios.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
             //si el formulario/instancia no existe
@@ -365,10 +369,12 @@ namespace ModernGUI_V3
                 formulario.Show();
                 formulario.BringToFront();
                 formulario.FormClosed += new FormClosedEventHandler(CloseForms );
+                return formulario;
             }
             //si el formulario/instancia existe
             else {
                 formulario.BringToFront();
+                return formulario;
             }
         }
 
