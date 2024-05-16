@@ -145,6 +145,84 @@ namespace AdministradorT
         }
 
 
+        public bool InsertarTarea(string titulo, string cuerpo, DateTime fechaLimite, string nombreMateria, string nombreAnotacion, int nivelImportancia)
+        {
+            try
+            {
+                conexion.Open();
+                string consulta = "INSERT INTO tarea (nombre, descripcion, fechaLimite, estadotarea, idAnotacion) VALUES (@nombre, @descripcion, @fechaLimite, @estadotarea, @idAnotacion)";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+                comando.Parameters.AddWithValue("@nombre", titulo);
+                comando.Parameters.AddWithValue("@descripcion", cuerpo);
+                comando.Parameters.AddWithValue("@fechaLimite", fechaLimite);
+
+                // Convertir el índice seleccionado en el estado correspondiente
+                string estadoTarea = "";
+                switch (nivelImportancia)
+                {
+                    case 1:
+                        estadoTarea = "Muy importante";
+                        break;
+                    case 2:
+                        estadoTarea = "Importante";
+                        break;
+                    case 3:
+                        estadoTarea = "No importante";
+                        break;
+                    default:
+                        // Por si acaso el índice seleccionado es inválido
+                        estadoTarea = "No especificado";
+                        break;
+                }
+                comando.Parameters.AddWithValue("@estadotarea", estadoTarea);
+
+                // Obtener el id de la anotación asociada a partir del nombre
+                int idAnotacion = ObtenerIdAnotacion(nombreAnotacion);
+                comando.Parameters.AddWithValue("@idAnotacion", idAnotacion);
+
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar la tarea en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
+
+        private int ObtenerIdAnotacion(string nombreAnotacion)
+        {
+            int idAnotacion = -1;
+            try
+            {
+                conexion.Open();
+                string consulta = "SELECT idAnotacion FROM anotacion WHERE titulo = @titulo";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+                comando.Parameters.AddWithValue("@titulo", nombreAnotacion);
+                object result = comando.ExecuteScalar();
+                if (result != null)
+                {
+                    idAnotacion = Convert.ToInt32(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener el id de la anotación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+            return idAnotacion;
+        }
+
+
+
 
 
 
@@ -153,16 +231,6 @@ namespace AdministradorT
 
 
     }
-
-
-
-
-
-
-
-
-
-
 
 }
 
