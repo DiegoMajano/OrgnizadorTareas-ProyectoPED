@@ -27,13 +27,16 @@ namespace ModernGUI_V3
         private frmNuevaAnotacion nuevaAnotacion = new frmNuevaAnotacion();
         private frmNuevoRecordatorio nuevoRecordatorio = new frmNuevoRecordatorio();
         private frmNuevaTarea nuevaTarea = new frmNuevaTarea();
-        private frmMaterias materias; 
+        private frmMaterias materias;
+        private CConexion conexion;
+        private frmMaterias mats = new frmMaterias();
 
         public frmPrincipal()
         {
             InitializeComponent();
             ubicacion = btnNuevaMat.Location;
             ConfigurarBotones();
+            conexion = new CConexion();
         }
 
         private void ConfigurarBotones()
@@ -96,15 +99,20 @@ namespace ModernGUI_V3
             ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);
         }
 
-        // --------------------------------------- ACCIONES CLICK DE LOS BOTONES ---------------------------------------
         private void btnMaterias_Click(object sender, EventArgs e)
-        {            
+        {
+            // Abrir el formulario frmMaterias y obtener una referencia a él
             materias = (frmMaterias)AbrirFormulario<frmMaterias>();
             btnNuevaMat.BringToFront();
             btnNuevaMat.Visible = true;
             ReestablecerConfig();
             btnMaterias.BackColor = Color.FromArgb(12, 61, 92);
+
+            // Llamar al método ActualizarForm del formulario frmMaterias para mostrar los datos
+            materias.ActualizarForm(grafoMain);
         }
+
+
 
         private void btnAnotaciones_Click(object sender, EventArgs e)
         {

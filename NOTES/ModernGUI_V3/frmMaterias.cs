@@ -14,11 +14,13 @@ namespace ModernGUI_V3
 {
     public partial class frmMaterias : Form
     {
-
+        public CGrafo grafoMain = new CGrafo();
         private frmNuevaMateria nuevaMateria = new frmNuevaMateria();
+        private CConexion conexion;
         public frmMaterias()
         {
             InitializeComponent();
+            conexion = new CConexion();
         }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
@@ -49,59 +51,43 @@ namespace ModernGUI_V3
         public void ActualizarForm(CGrafo grafo)
         {
             tabMaterias.TabPages.Clear();
-            foreach (Materia materia in grafo.nodosMaterias)
+            List<Materia> materias = conexion.ObtenerTodasLasMaterias(); // Obtener todas las materias de la base de datos
+
+            foreach (Materia materia in materias)
             {
-                //Definicion de todos los objetos agregador al TABCONTROL
+                // Crear una nueva TabPage para mostrar los datos de la materia
                 TabPage tp = new TabPage();
+                tp.Text = materia.ID; // Usar un identificador único de la materia como texto de la TabPage
+
+                // Crear y configurar los controles para mostrar los datos de la materia
                 Label nombre = new Label();
-                Label dias = new Label();
-                Label horaClase = new Label();
-                Label docente = new Label();
-                Label salon = new Label();
-                tp.Text = materia.ID;
-
-                //Label de el nombre
                 nombre.AutoSize = true;
-                nombre.Location = new Point(0,0);
-                nombre.Text = materia.Nombre.ToUpper();
-                nombre.Font = new Font("Times New Roman", 20, FontStyle.Bold);
-
-                //Label de los dias de clase
-                dias.AutoSize = true;
-                dias.Location = new Point(0,50);
-                dias.Text = "";
-                foreach (string dia in materia.Dias)
-                {
-                    dias.Text += dia+" ";
-                }
-                dias.Font = new Font("Times New Roman", 16);
-
-                //Label de la hora de la clase
-                horaClase.AutoSize = true;
-                horaClase.Location = new Point(0,100);
-                horaClase.Text = materia.HoraClase.ToString();
-                horaClase.Font = new Font("Times New Roman", 16);
-
-                //Label de el docente
-                docente.AutoSize = true;
-                docente.Location = new Point(0,150);
-                docente.Text = materia.Docente;
-                docente.Font = new Font("Times New Roman", 16);
-
-                //Label de el salon
-                salon.AutoSize = true;
-                salon.Location = new Point(0,200);
-                salon.Text = materia.Salon;
-                salon.Font = new Font("Times New Roman", 16);
-
+                nombre.Location = new Point(10, 10);
+                nombre.Text = "Nombre: " + materia.Nombre;
                 tp.Controls.Add(nombre);
-                tp.Controls.Add(dias);
+
+                Label horaClase = new Label();
+                horaClase.AutoSize = true;
+                horaClase.Location = new Point(10, 30);
+                horaClase.Text = "Hora de Clase: " + materia.HoraClase.ToString();
                 tp.Controls.Add(horaClase);
+
+                Label docente = new Label();
+                docente.AutoSize = true;
+                docente.Location = new Point(10, 50);
+                docente.Text = "Docente: " + materia.Docente;
                 tp.Controls.Add(docente);
+
+                Label salon = new Label();
+                salon.AutoSize = true;
+                salon.Location = new Point(10, 70);
+                salon.Text = "Salón: " + materia.Salon;
                 tp.Controls.Add(salon);
 
+                // Agregar la TabPage al TabControl
                 tabMaterias.TabPages.Add(tp);
             }
         }
+
     }
 }

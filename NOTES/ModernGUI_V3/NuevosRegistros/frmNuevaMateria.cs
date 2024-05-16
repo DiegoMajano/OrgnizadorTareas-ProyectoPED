@@ -67,7 +67,7 @@ namespace AdministradorT
                 control = true;
 
                 // Insertar los datos en la base de datos
-                if (InsertarMateriaEnBDD(nuevaMateria))
+                if (conexion.InsertarMateria(nuevaMateria))
                 {
                     MessageBox.Show("Materia registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos();

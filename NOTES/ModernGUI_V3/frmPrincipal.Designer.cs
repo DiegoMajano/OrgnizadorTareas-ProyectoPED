@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnTareas = new System.Windows.Forms.Button();
             this.btnVerGrafo = new System.Windows.Forms.Button();
             this.btnCalendario = new System.Windows.Forms.Button();
             this.btnRecordatorio = new System.Windows.Forms.Button();
@@ -55,7 +56,6 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnTareas = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             this.pnlFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -220,6 +220,26 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(188, 505);
             this.panelMenu.TabIndex = 1;
+            // 
+            // btnTareas
+            // 
+            this.btnTareas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTareas.FlatAppearance.BorderSize = 0;
+            this.btnTareas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnTareas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTareas.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTareas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnTareas.Image = ((System.Drawing.Image)(resources.GetObject("btnTareas.Image")));
+            this.btnTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTareas.Location = new System.Drawing.Point(0, 408);
+            this.btnTareas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTareas.Name = "btnTareas";
+            this.btnTareas.Size = new System.Drawing.Size(188, 57);
+            this.btnTareas.TabIndex = 18;
+            this.btnTareas.Text = "Tareas";
+            this.btnTareas.UseVisualStyleBackColor = true;
+            this.btnTareas.Click += new System.EventHandler(this.btnTareas_Click);
             // 
             // btnVerGrafo
             // 
@@ -477,26 +497,6 @@
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // btnTareas
-            // 
-            this.btnTareas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTareas.FlatAppearance.BorderSize = 0;
-            this.btnTareas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnTareas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTareas.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTareas.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnTareas.Image = ((System.Drawing.Image)(resources.GetObject("btnTareas.Image")));
-            this.btnTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTareas.Location = new System.Drawing.Point(0, 408);
-            this.btnTareas.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTareas.Name = "btnTareas";
-            this.btnTareas.Size = new System.Drawing.Size(188, 57);
-            this.btnTareas.TabIndex = 18;
-            this.btnTareas.Text = "Tareas";
-            this.btnTareas.UseVisualStyleBackColor = true;
-            this.btnTareas.Click += new System.EventHandler(this.btnTareas_Click);
             // 
             // frmPrincipal
             // 

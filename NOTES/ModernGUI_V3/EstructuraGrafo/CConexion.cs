@@ -222,6 +222,66 @@ namespace AdministradorT
         }
 
 
+        public List<Materia> ObtenerTodasLasMaterias()
+        {
+            List<Materia> materias = new List<Materia>();
+            try
+            {
+                conexion.Open();
+                string consulta = "SELECT * FROM materia";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+                using (MySqlDataReader reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string nombre = reader.GetString("nombre");
+                        TimeSpan horaClase = reader.GetDateTime("horaClase").TimeOfDay;
+                        string docente = reader.GetString("docente");
+                        string salon = reader.GetString("salon");
+                        // Aquí puedes crear la instancia de Materia y agregarla a la lista
+                        Materia materia = new Materia(nombre, horaClase, new List<string>(), docente, salon);
+                        materias.Add(materia);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener las materias de la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+            return materias;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
