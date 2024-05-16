@@ -18,6 +18,7 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\Mode
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevoRecordatorio.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmAnotaciones.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaTarea.resources
+<<<<<<< HEAD
 C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.exe.config
 C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.exe
 C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.pdb
@@ -69,3 +70,24 @@ C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\Moder
 C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.CopyComplete
+=======
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.AssemblyReference.cache
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmCalendario.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaAnotacion.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaMateria.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaTarea.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevoRecordatorio.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmTecnicaEstudio.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmMaterias.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmAnotaciones.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmPrincipal.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmOutput.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.Properties.Resources.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.GenerateResource.cache
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.CoreCompileInputs.cache
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.exe
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.pdb
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.exe.config
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.exe
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.pdb
+>>>>>>> 2dae40f902d766187444506c694f062775d1d610
