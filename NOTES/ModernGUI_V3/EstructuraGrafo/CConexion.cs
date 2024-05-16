@@ -256,6 +256,35 @@ namespace AdministradorT
         }
 
 
+        public List<string> ObtenerNombresAnotaciones()
+        {
+            List<string> nombresAnotaciones = new List<string>();
+            try
+            {
+                conexion.Open();
+                string consulta = "SELECT titulo FROM anotacion"; // Asumiendo que la tabla de anotaciones se llama 'anotacion' y tiene un campo 'nombre' que contiene los nombres de las anotaciones
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+                using (MySqlDataReader reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        nombresAnotaciones.Add(reader.GetString("titulo"));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener los nombres de las anotaciones: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+            return nombresAnotaciones;
+        }
+
+
+
 
 
 

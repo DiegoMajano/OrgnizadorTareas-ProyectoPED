@@ -292,7 +292,7 @@ namespace ModernGUI_V3
             nuevaTarea.control = false;
             nuevaTarea.materias = ObtenerNodos(1);
             nuevaTarea.anotaciones = ObtenerNodos(2);
-            nuevaTarea.RellenarMateriaAnotacion();
+            nuevaTarea.RellenarMateria();
             nuevaTarea.ShowDialog();
 
             if(nuevaTarea.control)

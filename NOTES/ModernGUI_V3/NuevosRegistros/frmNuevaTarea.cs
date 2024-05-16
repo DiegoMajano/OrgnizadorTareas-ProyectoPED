@@ -27,25 +27,34 @@ namespace AdministradorT
         {
             InitializeComponent();
             conexion = new CConexion();//Conexion
+            RellenarMateria();
         }
 
         // ------------------------- METODOS EXTRA -------------------------
 
-        public void RellenarMateriaAnotacion()
+        public void RellenarMateria()
         {
-            // para materias
             cbMateriaT.Items.Clear();
             cbMateriaT.Items.Add("Seleccionar materia");
-            cbMateriaT.SelectedIndex = 0;
+            materias = conexion.ObtenerNombresMaterias(); // Obtener los nombres de las materias desde la base de datos
             cbMateriaT.Items.AddRange(materias.ToArray());
-            // para anotaciones
+            cbMateriaT.SelectedIndex = 0;
+
             cbImportanciaPeso.Items.Clear();
             cbImportanciaPeso.Items.Add("Seleccionar importancia");
             cbImportanciaPeso.Items.Add("Muy importante");
             cbImportanciaPeso.Items.Add("Importante");
             cbImportanciaPeso.Items.Add("No importante");
             cbImportanciaPeso.SelectedIndex = 0;
+
+
+            cbAnotacionT.Items.Clear();
+            cbAnotacionT.Items.Add("Seleccionar anotación");
+            anotaciones = conexion.ObtenerNombresAnotaciones(); // Obtener los nombres de las anotaciones desde la base de datos
+            cbAnotacionT.Items.AddRange(anotaciones.ToArray());
+            cbAnotacionT.SelectedIndex = 0;
         }
+
         private void LimpiarCampos()
         {
             txtTituloR.Clear();
@@ -68,11 +77,10 @@ namespace AdministradorT
                 cuerpo = txtCuerpo.Text;
                 fechaEntrega = dtpFecha.Value;
                 materiaE = cbMateriaT.SelectedIndex > 0 ? cbMateriaT.SelectedItem.ToString() : "";
-                anotacionE = cbAnotacionT.SelectedIndex > 0 ? cbAnotacionT.SelectedItem.ToString() : "";
+                anotacionE = cbAnotacionT.SelectedIndex > 0 ? cbAnotacionT.SelectedItem.ToString() : ""; // Capturar el valor seleccionado del ComboBox cbAnotacionT
 
                 // Obtener el nivel de importancia seleccionado
                 int nivelImportancia = cbImportanciaPeso.SelectedIndex;
-                ;
 
                 // Llamar al método de inserción de tarea en la base de datos
                 if (conexion.InsertarTarea(titulo, cuerpo, fechaEntrega, materiaE, anotacionE, nivelImportancia))
@@ -81,8 +89,13 @@ namespace AdministradorT
                     LimpiarCampos();
                     this.Hide();
                 }
+                else
+                {
+                    MessageBox.Show("Error al registrar la tarea.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
+
 
 
         private void btnCancelar_Click(object sender, EventArgs e)
