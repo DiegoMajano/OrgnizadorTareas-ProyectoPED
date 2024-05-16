@@ -98,7 +98,7 @@ namespace AdministradorT
                     string consulta = "INSERT INTO materia (nombre, horaClase, docente, salon) VALUES (@nombre, @horaClase, @docente, @salon)";
                     MySqlCommand comando = new MySqlCommand(consulta, conexion);
                     comando.Parameters.AddWithValue("@nombre", materia.Nombre);
-                    comando.Parameters.AddWithValue("@horaClase", DateTime.Today.Add(materia.HoraClase)); // Se agrega la hora seleccionada al día actual
+                    comando.Parameters.AddWithValue("@horaClase", DateTime.Today.Add(materia.HoraClase)); 
                     comando.Parameters.AddWithValue("@docente", materia.Docente);
                     comando.Parameters.AddWithValue("@salon", materia.Salon);
                     comando.ExecuteNonQuery();
