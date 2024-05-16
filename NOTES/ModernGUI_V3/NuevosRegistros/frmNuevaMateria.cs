@@ -30,7 +30,7 @@ namespace AdministradorT
 
         private void LlenarCampos()
         {
-            List<string> dias = new List<string>() { "Luneas", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado","Domingo" };
+            List<string> dias = new List<string>() { "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado","Domingo" };
             List<TimeSpan> horas = new List<TimeSpan> {
                 new TimeSpan(07,00,00),
                 new TimeSpan(09,05,00),
@@ -50,6 +50,7 @@ namespace AdministradorT
             }
             cbHora.SelectedIndex = 0;
         }
+
         public string nombreM, nombreD, salon;
         public List<string> dias = new List<string>();
         public TimeSpan horaClase;
@@ -61,6 +62,9 @@ namespace AdministradorT
             {
                 nombreM = txtNombreM.Text;
                 nombreD = txtNDocente.Text;
+                foreach (var dia in clbDias.CheckedItems)
+                    dias.Add(dia.ToString());
+
                 salon = txtSalon.Text;
                 horaClase = TimeSpan.Parse(cbHora.SelectedItem.ToString()); // Corregido para obtener la hora seleccionada correctamente
                 nuevaMateria = new Materia(nombreM, horaClase, dias, nombreD, salon);
@@ -79,43 +83,6 @@ namespace AdministradorT
                 }
             }
         }
-
-        // Método para insertar la materia en la base de datos
-        private bool InsertarMateriaEnBDD(Materia materia)
-        {
-            string servidor = "localhost";
-            string baseDeDatos = "catedraped";
-            string usuario = "root";
-            string contraseña = "";
-
-            string cadenaConexion = $"Server={servidor};Database={baseDeDatos};Uid={usuario};Pwd={contraseña};";
-
-            using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
-            {
-                try
-                {
-                    conexion.Open();
-                    string consulta = "INSERT INTO materia (nombre, horaClase, docente, salon) VALUES (@nombre, @horaClase, @docente, @salon)";
-                    MySqlCommand comando = new MySqlCommand(consulta, conexion);
-                    comando.Parameters.AddWithValue("@nombre", materia.Nombre);
-                    comando.Parameters.AddWithValue("@horaClase", DateTime.Today.Add(materia.HoraClase)); 
-                    comando.Parameters.AddWithValue("@docente", materia.Docente);
-                    comando.Parameters.AddWithValue("@salon", materia.Salon);
-                    comando.ExecuteNonQuery();
-                    return true;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al insertar la materia en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
-            }
-        }
-
-
-
-
-
 
         private void Validacion_KeyPress(object sender, KeyPressEventArgs e)
         {
