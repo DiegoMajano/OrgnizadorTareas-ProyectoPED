@@ -31,7 +31,7 @@ CREATE TABLE `dia_materia` (
   `id` int NOT NULL,
   `materia_id` varchar(5) DEFAULT NULL,
   `dia` varchar(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `dia_materia`
