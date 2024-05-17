@@ -51,7 +51,7 @@ namespace ModernGUI_V3
         public void ActualizarForm(CGrafo grafo)
         {
             tabMaterias.TabPages.Clear();
-            List<Materia> materias = conexion.ObtenerTodasLasMaterias(); // Obtener todas las materias de la base de datos
+            List<Materia> materias = conexion.ObtenerTodasLasMaterias(grafo); // Obtener todas las materias de la base de datos
 
             foreach (Materia materia in materias)
             {
@@ -93,6 +93,12 @@ namespace ModernGUI_V3
                 salon.Location = new Point(10, 70);
                 salon.Text = "Salón: " + materia.Salon;
                 tp.Controls.Add(salon);
+
+                Button Editar = new Button();
+                Editar.AutoSize = true;
+                Editar.Location = new Point(tabMaterias.Width - 140, 10);
+                Editar.Text = "Editar Materia";
+                tp.Controls.Add(Editar);
 
                 // Agregar la TabPage al TabControl
                 tabMaterias.TabPages.Add(tp);
