@@ -200,7 +200,7 @@ namespace AdministradorT
         }
 
 
-        public List<Materia> ObtenerTodasLasMaterias()
+        public List<Materia> ObtenerTodasLasMaterias(CGrafo grafo)
         {
             List<Materia> materias = new List<Materia>();
             try
@@ -218,6 +218,8 @@ namespace AdministradorT
                         string salon = reader.GetString("salon");
                         // Aquí puedes crear la instancia de Materia y agregarla a la lista
                         Materia materia = new Materia(nombre, horaClase, new List<string>(), docente, salon);
+                        grafo.AgregarNodo(materia);
+                        grafo.nodosMaterias.Add(materia);
                         materias.Add(materia);
                     }
                 }

@@ -133,7 +133,7 @@ namespace ModernGUI_V3
 
         private void btnRecordatorio_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario<frmNuevoRecordatorio>(); 
+            AbrirFormulario<frmRecordatorios>(); 
             btnNuevoReco.BringToFront();
             btnNuevoReco.Visible = true;
             ReestablecerConfig();
@@ -150,7 +150,7 @@ namespace ModernGUI_V3
 
         private void btnTareas_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario<frmNuevaTarea>();
+            AbrirFormulario<frmTareas>();
             btnNuevaTarea.BringToFront();
             btnNuevaTarea.Visible = true;
             ReestablecerConfig();
@@ -398,7 +398,12 @@ namespace ModernGUI_V3
             if (Application.OpenForms["Form3"] == null)
                 btnMaterias.BackColor = Color.FromArgb(4, 41, 68);
         }
-            
+
+        private void btnVerGrafo_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show(grafoMain.nodos.Count.ToString());
+        }
+
 
         // --------------------------------------- EVENTOS MOUSE ---------------------------------------
 

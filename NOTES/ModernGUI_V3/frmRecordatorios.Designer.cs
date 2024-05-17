@@ -1,6 +1,6 @@
-﻿namespace ModernGUI_V3
+﻿namespace AdministradorT
 {
-    partial class frmAnotaciones
+    partial class frmRecordatorios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAnotaciones));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecordatorios));
             this.pnlAnotaciones = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.tabAnotaciones = new System.Windows.Forms.TabControl();
+            this.tabRecordatorios = new System.Windows.Forms.TabControl();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlAnotaciones.SuspendLayout();
@@ -42,7 +42,7 @@
             // 
             this.pnlAnotaciones.BackColor = System.Drawing.SystemColors.Control;
             this.pnlAnotaciones.Controls.Add(this.lblTitulo);
-            this.pnlAnotaciones.Controls.Add(this.tabAnotaciones);
+            this.pnlAnotaciones.Controls.Add(this.tabRecordatorios);
             this.pnlAnotaciones.Controls.Add(this.label1);
             this.pnlAnotaciones.Controls.Add(this.pictureBox1);
             this.pnlAnotaciones.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -50,7 +50,7 @@
             this.pnlAnotaciones.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAnotaciones.Name = "pnlAnotaciones";
             this.pnlAnotaciones.Size = new System.Drawing.Size(861, 597);
-            this.pnlAnotaciones.TabIndex = 10;
+            this.pnlAnotaciones.TabIndex = 11;
             // 
             // lblTitulo
             // 
@@ -58,18 +58,18 @@
             this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(294, 85);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(272, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(291, 31);
             this.lblTitulo.TabIndex = 13;
-            this.lblTitulo.Text = "Anotaciones registradas";
+            this.lblTitulo.Text = "Recordatorios registrados";
             // 
-            // tabAnotaciones
+            // tabRecordatorios
             // 
-            this.tabAnotaciones.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tabAnotaciones.Location = new System.Drawing.Point(32, 154);
-            this.tabAnotaciones.Name = "tabAnotaciones";
-            this.tabAnotaciones.SelectedIndex = 0;
-            this.tabAnotaciones.Size = new System.Drawing.Size(800, 282);
-            this.tabAnotaciones.TabIndex = 12;
+            this.tabRecordatorios.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.tabRecordatorios.Location = new System.Drawing.Point(32, 154);
+            this.tabRecordatorios.Name = "tabRecordatorios";
+            this.tabRecordatorios.SelectedIndex = 0;
+            this.tabRecordatorios.Size = new System.Drawing.Size(800, 282);
+            this.tabRecordatorios.TabIndex = 12;
             // 
             // label1
             // 
@@ -91,15 +91,15 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // frmAnotaciones
+            // frmRecordatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(861, 597);
             this.Controls.Add(this.pnlAnotaciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmAnotaciones";
-            this.Text = "frmAnotaciones";
+            this.Name = "frmRecordatorios";
+            this.Text = "frmRecordatorios";
             this.pnlAnotaciones.ResumeLayout(false);
             this.pnlAnotaciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -108,10 +108,11 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Panel pnlAnotaciones;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.TabControl tabRecordatorios;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.TabControl tabAnotaciones;
     }
 }

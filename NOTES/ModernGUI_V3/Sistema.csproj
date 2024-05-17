@@ -128,6 +128,18 @@
     <Compile Include="frmCalendario.Designer.cs">
       <DependentUpon>frmCalendario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRecordatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecordatorios.Designer.cs">
+      <DependentUpon>frmRecordatorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTareas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTareas.Designer.cs">
+      <DependentUpon>frmTareas.cs</DependentUpon>
+    </Compile>
     <Compile Include="NuevosRegistros\frmNuevaAnotacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +198,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCalendario.resx">
       <DependentUpon>frmCalendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecordatorios.resx">
+      <DependentUpon>frmRecordatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTareas.resx">
+      <DependentUpon>frmTareas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevosRegistros\frmNuevaAnotacion.resx">
       <DependentUpon>frmNuevaAnotacion.cs</DependentUpon>
