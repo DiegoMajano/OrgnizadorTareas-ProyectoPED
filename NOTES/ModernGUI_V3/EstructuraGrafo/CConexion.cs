@@ -566,10 +566,10 @@ namespace AdministradorT
             {
                 conexion.Open();
 
-                string consulta = "UPDATE anotacion SET titulo = @tituloN, cuerpo = @cuerpoN where idRecordatorio = @id ";
+                string consulta = "UPDATE anotacion SET titulo = @tituloN, cuerpo = @cuerpoN where idAnotacion = @id ";
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
-                comando.Parameters.AddWithValue("@nombreN", anotacionN.Titulo);
-                comando.Parameters.AddWithValue("@cuerpo", anotacionN.Cuerpo);
+                comando.Parameters.AddWithValue("@tituloN", anotacionN.Titulo);
+                comando.Parameters.AddWithValue("@cuerpoN", anotacionN.Cuerpo);
                 comando.Parameters.AddWithValue("@id", anotacionN.ID);
                 comando.ExecuteNonQuery();
 

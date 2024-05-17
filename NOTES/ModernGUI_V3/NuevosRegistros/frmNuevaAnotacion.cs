@@ -27,11 +27,6 @@ namespace AdministradorT
 
         public void RellenarMaterias()
         {
-            cbMateriaA.Items.Clear();
-            cbMateriaA.Items.Add("Seleccionar materia");
-            materias = conexion.ObtenerNombresMaterias(); // Obtener los nombres de las materias desde la base de datos
-            cbMateriaA.Items.AddRange(materias.ToArray());
-            cbMateriaA.SelectedIndex = 0;
         }
 
 
@@ -39,18 +34,17 @@ namespace AdministradorT
         {
             txtTituloA.Clear();
             txtCuerpo.Clear();
-            cbMateriaA.SelectedIndex = 0;
         }
         public string titulo, cuerpo, materiaE;
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTituloA.Text) || string.IsNullOrEmpty(txtCuerpo.Text) || cbMateriaA.SelectedIndex < 0)
+            if (string.IsNullOrEmpty(txtTituloA.Text) || string.IsNullOrEmpty(txtCuerpo.Text))
                 MessageBox.Show("Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
             {
                 titulo = txtTituloA.Text;
                 cuerpo = txtCuerpo.Text;
-                materiaE = cbMateriaA.SelectedItem.ToString();
+                //materiaE = cbMateriaA.SelectedItem.ToString();
                 control = true;
                 LimpiarCampos();
                 this.Hide();
