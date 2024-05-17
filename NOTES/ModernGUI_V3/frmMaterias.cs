@@ -120,7 +120,7 @@ namespace ModernGUI_V3
                     Eliminar.Tag = materia;
                     Eliminar.FlatStyle = btnEliminarMateria.FlatStyle;
                     Eliminar.Location = btnEliminarMateria.Location;
-                    btnEliminarMateria.Click += btnEliminarMateria_Click;
+                    Eliminar.Click += btnEliminarMateria_Click;
                     tp.Controls.Add(Eliminar);
 
 
@@ -162,13 +162,16 @@ namespace ModernGUI_V3
         private void btnEliminarMateria_Click(object sender, EventArgs e)
         {
             Button boton = sender as Button;
-            DialogResult resultado = MessageBox.Show("Esta seguro que quiere eliminar esta materia?", "Materia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (resultado == DialogResult.Yes)
+            if (boton != null)
             {
-                Materia materia = boton.Tag as Materia;
-                if (conexion.EliminarMateria(materia))
+                DialogResult resultado = MessageBox.Show("Esta seguro que quiere eliminar esta materia?", "Materia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (resultado == DialogResult.Yes)
                 {
-                    MessageBox.Show("Se ha eliminado la materia sin ningun incomveniente", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Materia materia = boton.Tag as Materia;
+                    if (conexion.EliminarMateria(materia))
+                    {
+                        MessageBox.Show("Se ha eliminado la materia sin ningun incomveniente", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }
