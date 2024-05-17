@@ -22,6 +22,7 @@ namespace AdministradorT
         public frmRecordatorios()
         {
             InitializeComponent();
+            conexion = new CConexion();
         }
 
         public void ActualizarForm(CGrafo grafo)
@@ -54,8 +55,54 @@ namespace AdministradorT
                 cuerpo.Text = "Cuerpo del recordatorio: " + recordatorio.Cuerpo;
                 tp.Controls.Add(cuerpo);
 
+                NodoInfo nodoInfo = new NodoInfo(recordatorio, grafo);
+                Button Editar = new Button();
+                Editar.Tag = nodoInfo;
+                Editar.Click += EditarRecordatorio_Click;
+
+                Button Eliminar = new Button();
+                Eliminar.Tag = nodoInfo;
+                Eliminar.Click += EliminarRecordatorio_Click;
+
+
                 // Agregar la TabPage al TabControl
                 tabRecordatorios.TabPages.Add(tp);
+            }
+        }
+        private void EditarRecordatorio_Click(object sender, EventArgs e)
+        {
+            Button boton = sender as Button;
+            if (boton != null)
+            {
+                Recordatorio recordatorio = boton.Tag as Recordatorio;
+
+                MessageBox.Show("Listo se editó :D");
+            }
+        }
+        public void EliminarRecordatorio_Click(object sender, EventArgs e)
+        {
+            NodoInfo nodoInfo;
+            Recordatorio recordatorio;
+            CGrafo grafo;
+
+            Button boton = sender as Button;
+            if (boton != null)
+            {
+                nodoInfo = boton.Tag as NodoInfo;
+                recordatorio = (Recordatorio)nodoInfo.Nodo;
+                grafo = nodoInfo.Grafo;
+
+                DialogResult result = MessageBox.Show($"¿Estás seguro de eliminar el registro de {recordatorio.Titulo}?, los cambios realizados no se podrán recuperar","Adverdencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if(result == DialogResult.Yes)
+                {
+                    Recordatorio recordatorioEliminado = (Recordatorio) grafo.EliminarNodo(recordatorio.ID);                    
+                    if (recordatorio!=null && !conexion.EliminarRecordatorio(recordatorio))                    
+                        MessageBox.Show($"Se ha eliminado correctamente el Recordatorio: {recordatorioEliminado.Titulo}","Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    else
+                        MessageBox.Show($"No se ha eliminado correctamente el Recordatorio: {recordatorioEliminado.Titulo}", "Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }

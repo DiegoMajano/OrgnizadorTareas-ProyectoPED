@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Media;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -30,25 +31,43 @@ namespace ModernGUI_V3
         private SoundPlayer soundPlayer = new SoundPlayer();
         private SoundPlayer soundPlayer2 = new SoundPlayer();
 
-        Bitmap bitmap = new Bitmap("C:\\Users\\Diego Majano\\Desktop\\UDB\\Año 2024\\PED\\OrganizadorTareas-PED\\NOTES\\ModernGUI_V3\\Recursos\\star.png"); // Bitmap
+        private Bitmap bitmap;
+
+        // para asignar rutas
+        private string rutaBase;
+        private string rutaBitMap;
+        private string rutaReady;
+        private string rutaSong;
+        private string rutaSound;
+        private string rutaStar;
+        
         double angle = 0; // Ángulo inicial
         int centerX; // Coordenada X del centro de rotación
         int centerY; // Coordenada Y del centro de rotación
         int radius = 100; // Radio de la órbita
         public frmTecnicaEstudio()
         {
-           InitializeComponent();
+            InitializeComponent();
+            AsignarRutas();
             timerPomodoro.Interval = 1000; // 1-second
             timerPomodoro.Tick += timerPomodoro_Tick;
-            pictureBox2.Image = bitmap; // Mostrar la imagen en el PictureBox
             centerX = pictureBox2.Width / 685; // Calcular el centro X del PictureBox
             centerY = pictureBox2.Height / 480;
 
-            // sound path: PomodoroTimerApp\bin\Debug\net6.0-windows\sound.wav
-            string soundFileName = "C:\\Users\\Diego Majano\\Desktop\\UDB\\Año 2024\\PED\\OrganizadorTareas-PED\\NOTES\\ModernGUI_V3\\Recursos\\sound.wav";
-            notifySoundPlayer = InitializeSoundPlayer(soundFileName);
+            bitmap = new Bitmap(rutaBitMap); // Bitmap
+            notifySoundPlayer = InitializeSoundPlayer(rutaSound);
 
             UpdateTimerDisplay();
+        }
+        private void AsignarRutas()
+        {
+            // Obtén la ruta del directorio donde se ejecuta el programa
+            rutaBase = AppDomain.CurrentDomain.BaseDirectory;
+            rutaBitMap = Path.Combine(rutaBase, "Recursos", "star.png");
+            rutaReady = Path.Combine(rutaBase, "Recursos", "ready.wav");
+            rutaSong = Path.Combine(rutaBase, "Recursos", "song.wav");
+            rutaSound = Path.Combine(rutaBase, "Recursos", "sound.wav");
+            rutaStar = Path.Combine(rutaBase, "Recursos", "star.jpg");
         }
         private void ShowErrorMessage(string message, string filePath)
         {
@@ -136,8 +155,8 @@ namespace ModernGUI_V3
         private void Form2_Load(object sender, EventArgs e)
         {
             // Asignar la ruta del archivo de sonido al SoundPlayer
-            soundPlayer2.SoundLocation = "C:\\Users\\Diego Majano\\Desktop\\UDB\\Año 2024\\PED\\OrganizadorTareas-PED\\NOTES\\ModernGUI_V3\\Recursos\\ready.wav";
-            soundPlayer.SoundLocation = "C:\\Users\\Diego Majano\\Desktop\\UDB\\Año 2024\\PED\\OrganizadorTareas-PED\\NOTES\\ModernGUI_V3\\Recursos\\song.wav";
+            soundPlayer2.SoundLocation = rutaReady;
+            soundPlayer.SoundLocation = rutaSong;
 
             timer1.Enabled = true;
         }
@@ -205,7 +224,7 @@ namespace ModernGUI_V3
             isWorking = true;
             isPaused = false;
             UpdateTimerDisplay();
-            pictureBox2.ImageLocation = "C:\\Users\\Diego Majano\\Desktop\\UDB\\Año 2024\\PED\\OrganizadorTareas-PED\\NOTES\\ModernGUI_V3\\Recursos\\star.jpg";
+            pictureBox2.ImageLocation = rutaStar;
 
 
             // Mover la imagen

@@ -114,12 +114,21 @@ namespace ModernGUI_V3
                     Editar.Click += EditarMateria_Click;
                     tp.Controls.Add(Editar);
 
+                    Button Eliminar = new Button();
+                    Eliminar.AutoSize = true;
+                    Eliminar.Text = "Editar Materia";
+                    Eliminar.Tag = materia;
+                    Eliminar.FlatStyle = btnEliminarMateria.FlatStyle;
+                    Eliminar.Location = btnEliminarMateria.Location;
+                    btnEliminarMateria.Click += btnEliminarMateria_Click;
+                    tp.Controls.Add(Eliminar);
+
+
                     // Agregar la TabPage al TabControl
                     tabMaterias.TabPages.Add(tp);
                 }
                 //actualizado = true;
             }
-            
         }
 
         private void EditarMateria_Click(object sender, EventArgs e)
@@ -127,11 +136,41 @@ namespace ModernGUI_V3
             Button boton = sender as Button;
             if (boton != null)
             {
+                nuevaMateria.Visible = false;
+                nuevaMateria.control = false;
+                nuevaMateria.ShowDialog();
                 Materia materia = boton.Tag as Materia;
-
-                MessageBox.Show("Listo se editó :D");
+                if (nuevaMateria.control) // tiene que ser un nuevo control porque sino se crea un nuevo nodo porque es el mismo control que se utiliza para agregar e insertar un nuevo nodo
+                {
+                    materia.nombre = nuevaMateria.nombreM;
+                    materia.Salon = nuevaMateria.salon;
+                    materia.Dias = nuevaMateria.dias;
+                    materia.Docente = nuevaMateria.nombreD;
+                    materia.horaClase = nuevaMateria.horaClase;
+                    if (conexion.ActualizarMateria(materia))
+                    {
+                        MessageBox.Show("Se ha actualizado la materia sin ningun problema", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al actualizar la materia", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
             }
         }
 
+        private void btnEliminarMateria_Click(object sender, EventArgs e)
+        {
+            Button boton = sender as Button;
+            DialogResult resultado = MessageBox.Show("Esta seguro que quiere eliminar esta materia?", "Materia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (resultado == DialogResult.Yes) // andate al frmRecordatorio y mira como hice esta parte de acá
+            {
+                Materia materia = boton.Tag as Materia;
+                if (conexion.EliminarMateria(materia))
+                {
+                    MessageBox.Show("Se ha eliminado la materia sin ningun incomveniente", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }

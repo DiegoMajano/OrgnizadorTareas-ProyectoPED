@@ -232,21 +232,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.Label lblSalonM;
-        private System.Windows.Forms.Label lblDocenteM;
-        private System.Windows.Forms.Label lblHoraM;
-        private System.Windows.Forms.Label lblNombreM;
-        private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.TextBox txtSalon;
-        private System.Windows.Forms.TextBox txtNDocente;
-        private System.Windows.Forms.TextBox txtNombreM;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbHora;
-        private System.Windows.Forms.CheckedListBox clbDias;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Panel pnlTop;
-        private System.Windows.Forms.Label lblTitulo;
+        public System.Windows.Forms.Panel pnlMain;
+        public System.Windows.Forms.Label lblSalonM;
+        public System.Windows.Forms.Label lblDocenteM;
+        public System.Windows.Forms.Label lblHoraM;
+        public System.Windows.Forms.Label lblNombreM;
+        public System.Windows.Forms.Button btnRegistrar;
+        public System.Windows.Forms.TextBox txtSalon;
+        public System.Windows.Forms.TextBox txtNDocente;
+        public System.Windows.Forms.TextBox txtNombreM;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.ComboBox cbHora;
+        public System.Windows.Forms.CheckedListBox clbDias;
+        public System.ComponentModel.BackgroundWorker backgroundWorker1;
+        public System.Windows.Forms.Button btnCancelar;
+        public System.Windows.Forms.Panel pnlTop;
+        public System.Windows.Forms.Label lblTitulo;
     }
 }

@@ -67,7 +67,7 @@ namespace ModernGUI_V3
             // llamar al metodo actualizar form del formulario frmAnotaciones para mostrar los datos
             //tareas.ActualizarForm(grafoMain);
 
-            //tecnica = (frmTecnicaEstudio)AbrirFormulario<frmTecnicaEstudio>();
+            tecnica = (frmTecnicaEstudio)AbrirFormulario<frmTecnicaEstudio>();
 
             calendario = (frmCalendario)AbrirFormulario<frmCalendario>();
 
@@ -170,12 +170,12 @@ namespace ModernGUI_V3
         }
 
         private void btnMetodos_Click(object sender, EventArgs e)
-        {/*
+        {
             tecnica.BringToFront();
             btnNuevoMeto.BringToFront();
             btnNuevoMeto.Visible = true;
             ReestablecerConfig();
-            btnMetodos.BackColor = Color.FromArgb(12, 61, 92);*/
+            btnMetodos.BackColor = Color.FromArgb(12, 61, 92);
         }
         
         private void btnCalendario_Click(object sender, EventArgs e)
