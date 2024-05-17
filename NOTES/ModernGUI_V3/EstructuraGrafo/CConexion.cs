@@ -65,22 +65,46 @@ namespace AdministradorT
             }
         }
 
+        
+
         public bool InsertarMateria(Materia materia)
         {
+            MySqlTransaction transaction = null;
             try
             {
                 conexion.Open();
-                string consulta = "INSERT INTO materia (nombre, horaClase, docente, salon) VALUES (@nombre, @horaClase, @docente, @salon)";
-                MySqlCommand comando = new MySqlCommand(consulta, conexion);
-                comando.Parameters.AddWithValue("@nombre", materia.Nombre);
-                comando.Parameters.AddWithValue("@horaClase", DateTime.Today.Add(materia.HoraClase)); // Se agrega la hora seleccionada al día actual
-                comando.Parameters.AddWithValue("@docente", materia.Docente);
-                comando.Parameters.AddWithValue("@salon", materia.Salon);
-                comando.ExecuteNonQuery();
+                transaction = conexion.BeginTransaction();
+
+                // Insertar la materia
+                string consultaMateria = "INSERT INTO materia (nombre, horaClase, docente, salon) VALUES (@nombre, @horaClase, @docente, @salon)";
+                MySqlCommand comandoMateria = new MySqlCommand(consultaMateria, conexion, transaction);
+                comandoMateria.Parameters.AddWithValue("@nombre", materia.Nombre);
+                comandoMateria.Parameters.AddWithValue("@horaClase", DateTime.Today.Add(materia.HoraClase)); // Se agrega la hora seleccionada al día actual
+                comandoMateria.Parameters.AddWithValue("@docente", materia.Docente);
+                comandoMateria.Parameters.AddWithValue("@salon", materia.Salon);
+                comandoMateria.ExecuteNonQuery();
+
+                // Obtener el ID de la materia insertada
+                long materiaId = comandoMateria.LastInsertedId;
+
+                // Insertar los días de la semana
+                string consultaDias = "INSERT INTO dia_materia (materia_id, dia) VALUES (@materiaId, @dia)";
+                foreach (var dia in materia.Dias)
+                {
+                    MySqlCommand comandoDias = new MySqlCommand(consultaDias, conexion, transaction);
+                    comandoDias.Parameters.AddWithValue("@materiaId", materiaId);
+                    comandoDias.Parameters.AddWithValue("@dia", dia);
+                    comandoDias.ExecuteNonQuery();
+                }
+
+                transaction.Commit();
                 return true;
             }
             catch (Exception ex)
             {
+                if (transaction != null)
+                    transaction.Rollback();
+
                 MessageBox.Show("Error al insertar la materia en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }

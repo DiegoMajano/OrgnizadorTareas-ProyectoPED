@@ -91,6 +91,12 @@ namespace AdministradorT
             else
                 e.Handled = true;
         }
+
+        private void clbDias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void LimpiarCampos()
         {
             txtNDocente.Clear();

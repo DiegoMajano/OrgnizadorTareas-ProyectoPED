@@ -111,9 +111,8 @@
             this.lblHead.ForeColor = System.Drawing.Color.Transparent;
             this.lblHead.Location = new System.Drawing.Point(216, 19);
             this.lblHead.Name = "lblHead";
-            this.lblHead.Size = new System.Drawing.Size(133, 23);
+            this.lblHead.Size = new System.Drawing.Size(0, 23);
             this.lblHead.TabIndex = 20;
-            this.lblHead.Text = "Nueva Tarea";
             // 
             // cbAnotacionT
             // 
@@ -149,6 +148,7 @@
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(258, 25);
             this.dtpFecha.TabIndex = 15;
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // btnCancelar
             // 
