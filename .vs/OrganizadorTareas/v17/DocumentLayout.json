@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|c:\\users\\valer\\onedrive\\escritorio\\catedra\\notes\\moderngui_v3\\frmanotaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|solutionrelative:notes\\moderngui_v3\\frmanotaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\notes\\moderngui_v3\\frmanotaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|solutionrelative:notes\\moderngui_v3\\frmanotaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|c:\\users\\valer\\onedrive\\escritorio\\catedra\\notes\\moderngui_v3\\frmmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|solutionrelative:notes\\moderngui_v3\\frmmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\notes\\moderngui_v3\\frmmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|solutionrelative:notes\\moderngui_v3\\frmmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\notes\\moderngui_v3\\frmtareas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|solutionrelative:notes\\moderngui_v3\\frmtareas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\notes\\moderngui_v3\\frmrecordatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|solutionrelative:notes\\moderngui_v3\\frmrecordatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\notes\\moderngui_v3\\frmrecordatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\notes\\moderngui_v3\\frmanotaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|solutionrelative:notes\\moderngui_v3\\frmanotaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|c:\\users\\valer\\onedrive\\escritorio\\catedra\\notes\\moderngui_v3\\frmtareas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|solutionrelative:notes\\moderngui_v3\\frmtareas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\notes\\moderngui_v3\\frmmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|solutionrelative:notes\\moderngui_v3\\frmmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|c:\\users\\valer\\onedrive\\escritorio\\catedra\\notes\\moderngui_v3\\frmrecordatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|solutionrelative:notes\\moderngui_v3\\frmrecordatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|c:\\users\\valer\\onedrive\\escritorio\\catedra\\notes\\moderngui_v3\\frmanotaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|solutionrelative:notes\\moderngui_v3\\frmanotaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\notes\\moderngui_v3\\frmmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|solutionrelative:notes\\moderngui_v3\\frmmaterias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\notes\\moderngui_v3\\frmtecnicaestudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\notes\\moderngui_v3\\estructuragrafo\\cconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|solutionrelative:notes\\moderngui_v3\\estructuragrafo\\cconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\notes\\moderngui_v3\\coneccion\\conect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|solutionrelative:notes\\moderngui_v3\\coneccion\\conect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E0F5AD57-4FF3-4A5F-AC3E-FA1585F7B566}|NOTES\\ModernGUI_V3\\Sistema.csproj|C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\notes\\moderngui_v3\\clasesnodos\\materia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 37,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,57 +82,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmAnotaciones.cs",
-              "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmAnotaciones.cs",
-              "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\frmAnotaciones.cs",
-              "ToolTip": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmAnotaciones.cs*",
-              "RelativeToolTip": "NOTES\\ModernGUI_V3\\frmAnotaciones.cs*",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAowG8AAAA3AAAA",
+              "DocumentIndex": 3,
+              "Title": "frmTareas.cs",
+              "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmTareas.cs",
+              "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\frmTareas.cs",
+              "ToolTip": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmTareas.cs*",
+              "RelativeToolTip": "NOTES\\ModernGUI_V3\\frmTareas.cs*",
+              "ViewState": "AQIAACgAAAAAAAAAAADwv1sAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T19:32:30.743Z",
+              "WhenOpened": "2024-05-17T20:43:46.175Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmMaterias.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmMaterias.cs",
-              "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\frmMaterias.cs",
-              "ToolTip": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmMaterias.cs [Design]",
-              "RelativeToolTip": "NOTES\\ModernGUI_V3\\frmMaterias.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T05:35:39.135Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmAnotaciones.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmAnotaciones.cs",
-              "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\frmAnotaciones.cs",
-              "ToolTip": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmAnotaciones.cs [Design]*",
-              "RelativeToolTip": "NOTES\\ModernGUI_V3\\frmAnotaciones.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T05:36:28.785Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "frmMaterias.cs",
               "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmMaterias.cs",
               "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\frmMaterias.cs",
               "ToolTip": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmMaterias.cs",
               "RelativeToolTip": "NOTES\\ModernGUI_V3\\frmMaterias.cs",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAcwMUAAAA1AAAA",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAkwIIAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-17T16:24:30.513Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "frmAnotaciones.cs",
+              "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmAnotaciones.cs",
+              "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\frmAnotaciones.cs",
+              "ToolTip": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmAnotaciones.cs",
+              "RelativeToolTip": "NOTES\\ModernGUI_V3\\frmAnotaciones.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAA3wH8AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T19:32:30.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "frmRecordatorios.cs [Design]",
               "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmRecordatorios.cs",
               "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\frmRecordatorios.cs",
@@ -140,7 +133,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
+              "Title": "frmTareas.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmTareas.cs",
+              "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\frmTareas.cs",
+              "ToolTip": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmTareas.cs [Design]*",
+              "RelativeToolTip": "NOTES\\ModernGUI_V3\\frmTareas.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T20:06:06.401Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmRecordatorios.cs",
+              "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmRecordatorios.cs",
+              "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\frmRecordatorios.cs",
+              "ToolTip": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmRecordatorios.cs",
+              "RelativeToolTip": "NOTES\\ModernGUI_V3\\frmRecordatorios.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAkwEkAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T17:38:34.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmMaterias.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmMaterias.cs",
+              "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\frmMaterias.cs",
+              "ToolTip": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmMaterias.cs [Design]",
+              "RelativeToolTip": "NOTES\\ModernGUI_V3\\frmMaterias.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T05:35:39.135Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmAnotaciones.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmAnotaciones.cs",
+              "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\frmAnotaciones.cs",
+              "ToolTip": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmAnotaciones.cs [Design]",
+              "RelativeToolTip": "NOTES\\ModernGUI_V3\\frmAnotaciones.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T20:36:19.967Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Materia.cs",
               "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\ClasesNodos\\Materia.cs",
               "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\ClasesNodos\\Materia.cs",
@@ -152,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "CConexion.cs",
               "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\EstructuraGrafo\\CConexion.cs",
               "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\EstructuraGrafo\\CConexion.cs",
@@ -164,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "frmTecnicaEstudio.cs",
               "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmTecnicaEstudio.cs",
               "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\frmTecnicaEstudio.cs",
@@ -176,32 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmRecordatorios.cs",
-              "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmRecordatorios.cs",
-              "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\frmRecordatorios.cs",
-              "ToolTip": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\frmRecordatorios.cs",
-              "RelativeToolTip": "NOTES\\ModernGUI_V3\\frmRecordatorios.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAYwCgAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T17:38:34.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "conect.cs",
-              "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\Coneccion\\conect.cs",
-              "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\Coneccion\\conect.cs",
-              "ToolTip": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\Coneccion\\conect.cs",
-              "RelativeToolTip": "NOTES\\ModernGUI_V3\\Coneccion\\conect.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T13:25:53.032Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "frmNuevaMateria.cs",
               "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\NuevosRegistros\\frmNuevaMateria.cs",
               "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\NuevosRegistros\\frmNuevaMateria.cs",
@@ -213,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "frmNuevaMateria.cs [Design]",
               "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\NuevosRegistros\\frmNuevaMateria.cs",
               "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\NuevosRegistros\\frmNuevaMateria.cs",
@@ -224,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "frmNuevaTarea.cs",
               "DocumentMoniker": "C:\\Users\\valer\\OneDrive\\Escritorio\\CATEDRA\\NOTES\\ModernGUI_V3\\NuevosRegistros\\frmNuevaTarea.cs",
               "RelativeDocumentMoniker": "NOTES\\ModernGUI_V3\\NuevosRegistros\\frmNuevaTarea.cs",

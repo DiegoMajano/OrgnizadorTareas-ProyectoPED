@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMaterias));
             this.pnlFormularios = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabMaterias = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lblDias = new System.Windows.Forms.Label();
@@ -39,13 +42,11 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnEliminarM = new System.Windows.Forms.Button();
             this.pnlFormularios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabMaterias.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlFormularios
@@ -63,6 +64,36 @@
             this.pnlFormularios.Size = new System.Drawing.Size(861, 597);
             this.pnlFormularios.TabIndex = 7;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Constantia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(90, 49);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(163, 40);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "My Notes";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Book Antiqua", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(90, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(164, 40);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "My Notes";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(38, 49);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(55, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            // 
             // tabMaterias
             // 
             this.tabMaterias.Controls.Add(this.tabPage1);
@@ -79,6 +110,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.tabPage1.Controls.Add(this.btnEliminarM);
             this.tabPage1.Controls.Add(this.lblDias);
             this.tabPage1.Controls.Add(this.lblSalon);
             this.tabPage1.Controls.Add(this.lblDocente);
@@ -148,7 +180,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnEditar.Location = new System.Drawing.Point(482, 255);
+            this.btnEditar.Location = new System.Drawing.Point(505, 172);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(148, 62);
             this.btnEditar.TabIndex = 0;
@@ -165,35 +197,17 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Materias registradas";
             // 
-            // label7
+            // btnEliminarM
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Constantia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(90, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(163, 40);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "My Notes";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Book Antiqua", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(90, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 40);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "My Notes";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(38, 49);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(55, 41);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
+            this.btnEliminarM.BackColor = System.Drawing.Color.SlateGray;
+            this.btnEliminarM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarM.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarM.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnEliminarM.Location = new System.Drawing.Point(505, 273);
+            this.btnEliminarM.Name = "btnEliminarM";
+            this.btnEliminarM.Size = new System.Drawing.Size(148, 62);
+            this.btnEliminarM.TabIndex = 6;
+            this.btnEliminarM.UseVisualStyleBackColor = false;
             // 
             // frmMaterias
             // 
@@ -206,10 +220,10 @@
             this.Text = "Form3";
             this.pnlFormularios.ResumeLayout(false);
             this.pnlFormularios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabMaterias.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -229,5 +243,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnEliminarM;
     }
 }

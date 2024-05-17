@@ -127,6 +127,19 @@ namespace ModernGUI_V3
                 Editar.Location = btnEditar.Location;
 
 
+                Button Eliminar = new Button();
+                Eliminar.AutoSize = true;
+                Eliminar.FlatStyle = btnEliminarM.FlatStyle;
+                Eliminar.Location = btnEliminarM.Location;
+                Eliminar.Size = btnEliminarM.Size;
+                Eliminar.BackColor = btnEliminarM.BackColor;
+                Eliminar.Text = "Eliminar Materia";
+
+                tp.Controls.Add(Eliminar);
+               Eliminar.Font = btnEliminarM.Font;
+                Eliminar.Location = btnEliminarM.Location;
+
+
                 // Agregar la TabPage al TabControl
                 tabMaterias.TabPages.Add(tp);
             }
