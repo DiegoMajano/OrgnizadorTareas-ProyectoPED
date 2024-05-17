@@ -66,6 +66,16 @@ namespace ModernGUI_V3
                 nombre.Text = "Nombre: " + materia.Nombre;
                 tp.Controls.Add(nombre);
 
+                Label dias = new Label();
+                dias.Text = "Días: ";
+                dias.AutoSize = true;
+                dias.Location = new Point(10, 90);
+                foreach (var dia in materia.Dias)
+                {                    
+                    dias.Text += $"{dia} ";                    
+                }
+                tp.Controls.Add(dias);
+
                 Label horaClase = new Label();
                 horaClase.AutoSize = true;
                 horaClase.Location = new Point(10, 30);
