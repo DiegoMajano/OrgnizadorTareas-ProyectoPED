@@ -76,7 +76,6 @@ namespace ModernGUI_V3
 
 
 
-<<<<<<< HEAD
                     Label horaClase = new Label();
                     horaClase.AutoSize = true;
                     horaClase.Location = lblHora.Location;
