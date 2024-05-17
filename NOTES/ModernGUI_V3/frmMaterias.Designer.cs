@@ -42,6 +42,10 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+=======
+            this.btnEliminarM = new System.Windows.Forms.Button();
+>>>>>>> 4f6f52796857c135122af1383d1b1b72a61164af
             this.pnlFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabMaterias.SuspendLayout();
@@ -69,7 +73,11 @@
             this.label7.Font = new System.Drawing.Font("Constantia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(90, 49);
             this.label7.Name = "label7";
+<<<<<<< HEAD
             this.label7.Size = new System.Drawing.Size(133, 33);
+=======
+            this.label7.Size = new System.Drawing.Size(163, 40);
+>>>>>>> 4f6f52796857c135122af1383d1b1b72a61164af
             this.label7.TabIndex = 20;
             this.label7.Text = "My Notes";
             // 
@@ -79,7 +87,11 @@
             this.label2.Font = new System.Drawing.Font("Book Antiqua", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(90, 49);
             this.label2.Name = "label2";
+<<<<<<< HEAD
             this.label2.Size = new System.Drawing.Size(135, 32);
+=======
+            this.label2.Size = new System.Drawing.Size(164, 40);
+>>>>>>> 4f6f52796857c135122af1383d1b1b72a61164af
             this.label2.TabIndex = 21;
             this.label2.Text = "My Notes";
             // 
@@ -109,6 +121,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.tabPage1.Controls.Add(this.btnEliminarM);
             this.tabPage1.Controls.Add(this.lblDias);
             this.tabPage1.Controls.Add(this.lblSalon);
             this.tabPage1.Controls.Add(this.lblDocente);
@@ -178,7 +191,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnEditar.Location = new System.Drawing.Point(482, 255);
+            this.btnEditar.Location = new System.Drawing.Point(505, 172);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(148, 62);
             this.btnEditar.TabIndex = 0;
@@ -196,6 +209,21 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Materias registradas";
             // 
+<<<<<<< HEAD
+=======
+            // btnEliminarM
+            // 
+            this.btnEliminarM.BackColor = System.Drawing.Color.SlateGray;
+            this.btnEliminarM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarM.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarM.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnEliminarM.Location = new System.Drawing.Point(505, 273);
+            this.btnEliminarM.Name = "btnEliminarM";
+            this.btnEliminarM.Size = new System.Drawing.Size(148, 62);
+            this.btnEliminarM.TabIndex = 6;
+            this.btnEliminarM.UseVisualStyleBackColor = false;
+            // 
+>>>>>>> 4f6f52796857c135122af1383d1b1b72a61164af
             // frmMaterias
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -230,5 +258,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnEliminarM;
     }
 }

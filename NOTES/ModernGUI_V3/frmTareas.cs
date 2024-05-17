@@ -66,5 +66,30 @@ namespace AdministradorT
                 tabTareas.TabPages.Add(tp);
             }
         }
+
+        private void tabTareas_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabControl tbA = (TabControl)sender;
+            Brush textBrush;
+            Rectangle tabRec = tbA.GetTabRect(e.Index);
+
+            Color tbAColor;
+
+            tbAColor = Color.LightSteelBlue;
+
+
+
+
+            e.Graphics.FillRectangle(new SolidBrush(tbAColor), tabRec);
+            textBrush = new SolidBrush(Color.Black);
+
+            string tabText = tbA.TabPages[e.Index].Text;
+            StringFormat stringFlags = new StringFormat();
+            stringFlags.Alignment = StringAlignment.Center;
+            stringFlags.LineAlignment = StringAlignment.Center;
+            e.Graphics.DrawString(tabText, tbA.Font, textBrush, tabRec, stringFlags);
+
+            tbA.TabPages[e.Index].BackColor = tbAColor;
+        }
     }
 }

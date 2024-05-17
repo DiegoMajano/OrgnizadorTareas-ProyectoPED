@@ -120,7 +120,64 @@ namespace ModernGUI_V3
                 }
                 tp.Controls.Add(dias);
                 dias.Font = lblDias.Font;
+<<<<<<< HEAD
+                dias.Location = lblDias.Location;
+
+
+                Label horaClase = new Label();
+                horaClase.AutoSize = true;
+                horaClase.Location = new Point(10, 30);
+                horaClase.Text = "Hora de Clase: " + materia.HoraClase.ToString();
+                tp.Controls.Add(horaClase);
+                horaClase.Font = lblHora.Font;
+                horaClase.Location = lblHora.Location;
+
+                Label docente = new Label();
+                docente.AutoSize = true;
+                docente.Location = new Point(10, 50);
+                docente.Text = "Docente: " + materia.Docente;
+                tp.Controls.Add(docente);
+                docente.Font = lblDocente.Font;
+                docente.Location = lblDocente.Location;
+
+                Label salon = new Label();
+                salon.AutoSize = true;
+                salon.Location = new Point(10, 70);
+                salon.Text = "Salón: " + materia.Salon;
+                tp.Controls.Add(salon);
+                salon.Font = lblSalon.Font;
+                salon.Location = lblSalon.Location;
+
+
+                Button Editar = new Button();
+                Editar.AutoSize = true;
+                Editar.FlatStyle = btnEditar.FlatStyle;
+                Editar.Location = btnEditar.Location;
+                Editar.Size = btnEditar.Size;
+                Editar.BackColor = btnEditar.BackColor;
+                Editar.Text = "Editar Materia";
+
+                tp.Controls.Add(Editar);
+                Editar.Font = btnEditar.Font;
+                Editar.Location = btnEditar.Location;
+
+
+                Button Eliminar = new Button();
+                Eliminar.AutoSize = true;
+                Eliminar.FlatStyle = btnEliminarM.FlatStyle;
+                Eliminar.Location = btnEliminarM.Location;
+                Eliminar.Size = btnEliminarM.Size;
+                Eliminar.BackColor = btnEliminarM.BackColor;
+                Eliminar.Text = "Eliminar Materia";
+
+                tp.Controls.Add(Eliminar);
+               Eliminar.Font = btnEliminarM.Font;
+                Eliminar.Location = btnEliminarM.Location;
+
+
+=======
                 dias.Location = lblDias.Location;               
+>>>>>>> df17e1667757f96c9ef4e383d78f70d2914dd7c2
                 // Agregar la TabPage al TabControl
                 tabMaterias.TabPages.Add(tp);
             }

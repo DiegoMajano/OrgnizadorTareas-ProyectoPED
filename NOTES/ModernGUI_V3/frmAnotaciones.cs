@@ -73,6 +73,22 @@ namespace ModernGUI_V3
                 Editar.Click += EditarAnotacion_Click;
                 tp.Controls.Add(Editar);
 
+
+                Button Eliminar = new Button();
+                Eliminar.AutoSize = true;
+
+                Eliminar.Text = "Eliminar Anotación";
+                Eliminar.Location = btnElimA.Location;
+                Eliminar.FlatStyle = btnElimA.FlatStyle;
+                Eliminar.Font = btnElimA.Font;
+                Eliminar.Size = btnElimA.Size;
+                Eliminar.BackColor = btnElimA.BackColor;
+              
+                Eliminar.Click += btnElimA_Click;
+                tp.Controls.Add(Eliminar);
+
+
+
                 // Agregar la TabPage al TabControl
                 tabAnotaciones.TabPages.Add(tp);
             }
@@ -149,6 +165,11 @@ namespace ModernGUI_V3
             e.Graphics.DrawString(tabText, tbA.Font, textBrush, tabRec, stringFlags);
 
             tbA.TabPages[e.Index].BackColor = tbAColor;
+        }
+
+        private void btnElimA_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

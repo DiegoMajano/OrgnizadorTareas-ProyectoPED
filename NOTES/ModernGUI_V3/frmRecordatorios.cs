@@ -37,6 +37,8 @@ namespace AdministradorT
             {
                 // Crear una nueva TabPage para mostrar los datos de la materia
                 TabPage tp = new TabPage();
+                tp.BackColor = tabPage1.BackColor;
+                tp.Font = tabPage1.Font;
                 tp.Text = recordatorio.ID; // Usar un identificador único de la materia como texto de la TabPage
 
                 // Crear y configurar los controles para mostrar los datos de la materia
@@ -45,33 +47,53 @@ namespace AdministradorT
                 Titulo.Location = lbltr.Location;
                 Titulo.Text = "Titulo: " + recordatorio.Titulo;
                 tp.Controls.Add(Titulo);
+                Titulo.Font = lbltr.Font;
+                Titulo.Location = lbltr.Location;
 
                 Label fechaRecordar = new Label();
                 fechaRecordar.AutoSize = true;
                 fechaRecordar.Location = lblfecha.Location;
                 fechaRecordar.Text = "Fecha a recordar: " + recordatorio.aRecordar.ToString();
                 tp.Controls.Add(fechaRecordar);
+                fechaRecordar.Location= lblfecha.Location;
+                fechaRecordar.Font = lblfecha.Font;
 
                 Label cuerpo = new Label();
                 cuerpo.AutoSize = true;
                 cuerpo.Location = lblcuerpo.Location;
                 cuerpo.Text = "Cuerpo del recordatorio: " + recordatorio.Cuerpo;
+                cuerpo.Font = lblcuerpo.Font;
+
                 tp.Controls.Add(cuerpo);
+                
 
                 NodoInfo nodoInfo = new NodoInfo(recordatorio, grafo);
 
                 Button Editar = new Button();
                 Editar.AutoSize = true;
-                Editar.Text = "editar";
-                Editar.Location = button1.Location;
+                Editar.Text = "Editar Recordatorio";
+                Editar.Location = btnEditR.Location;
                 Editar.Tag = nodoInfo;
                 Editar.Click += EditarRecordatorio_Click;
+               
+                Editar.FlatStyle = btnEditR.FlatStyle;
+                Editar.Location = btnEditR.Location;
+                Editar.Size = btnEditR.Size;
+                Editar.Font = btnEditR.Font;
+                Editar.BackColor = btnEditR.BackColor;
                 tp.Controls.Add(Editar);
+
 
                 Button Eliminar = new Button();
                 Eliminar.AutoSize = true;
-                Eliminar.Text = "Eliminar";
-                Eliminar.Location = button2.Location;
+             
+                
+                Eliminar.Text = "Eliminar Recordatorio";
+                Eliminar.Location = btnElimR.Location;
+                Eliminar.FlatStyle = btnElimR.FlatStyle;
+                Eliminar.Font = btnElimR.Font;
+                Eliminar.Size = btnElimR.Size;
+                Eliminar.BackColor = btnElimR.BackColor;
                 Eliminar.Tag = nodoInfo;
                 Eliminar.Click += EliminarRecordatorio_Click;
                 tp.Controls.Add(Eliminar);
@@ -119,6 +141,30 @@ namespace AdministradorT
                         MessageBox.Show($"No se ha eliminado correctamente el Recordatorio: {recordatorioEliminado.Titulo}", "Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void tabRecordatorios_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabControl tb = (TabControl)sender;
+            Brush textBrush;
+            Rectangle tabRec = tb.GetTabRect(e.Index);
+
+            Color tbColor;
+
+            tbColor = Color.LightSteelBlue;
+
+
+
+            e.Graphics.FillRectangle(new SolidBrush(tbColor), tabRec);
+            textBrush = new SolidBrush(Color.Black);
+
+            string tabText = tb.TabPages[e.Index].Text;
+            StringFormat stringFlags = new StringFormat();
+            stringFlags.Alignment = StringAlignment.Center;
+            stringFlags.LineAlignment = StringAlignment.Center;
+            e.Graphics.DrawString(tabText, tb.Font, textBrush, tabRec, stringFlags);
+
+            tb.TabPages[e.Index].BackColor = tbColor;
         }
     }
 }
