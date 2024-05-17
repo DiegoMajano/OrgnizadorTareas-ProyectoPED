@@ -19,29 +19,48 @@ namespace AdministradorT
         public DateTime fechaEntrega;
         // listas para guardar y mostrar las materias y las anotaciones
         public List<string> materias, anotaciones;
+        private CConexion conexion;//Conexion
 
 
 
         public frmNuevaTarea()
         {
             InitializeComponent();
+            conexion = new CConexion();//Conexion
+            RellenarMateria();
+        }
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+
         }
 
         // ------------------------- METODOS EXTRA -------------------------
 
-        public void RellenarMateriaAnotacion()
+        public void RellenarMateria()
         {
-            // para materias
             cbMateriaT.Items.Clear();
             cbMateriaT.Items.Add("Seleccionar materia");
-            cbMateriaT.SelectedIndex = 0;
+            materias = conexion.ObtenerNombresMaterias(); // Obtener los nombres de las materias desde la base de datos
             cbMateriaT.Items.AddRange(materias.ToArray());
-            // para anotaciones
+            cbMateriaT.SelectedIndex = 0;
+
+            cbImportanciaPeso.Items.Clear();
+            cbImportanciaPeso.Items.Add("Seleccionar importancia");
+            cbImportanciaPeso.Items.Add("Muy importante");  // Map to 2
+            cbImportanciaPeso.Items.Add("Importante");      // Map to 1
+            cbImportanciaPeso.Items.Add("No importante");   // Map to 0
+            cbImportanciaPeso.SelectedIndex = 0;
+
+
+
             cbAnotacionT.Items.Clear();
-            cbAnotacionT.Items.Add("Seleccionar materia");
-            cbAnotacionT.SelectedIndex = 0;
+            cbAnotacionT.Items.Add("Seleccionar anotación");
+            anotaciones = conexion.ObtenerNombresAnotaciones(); // Obtener los nombres de las anotaciones desde la base de datos
             cbAnotacionT.Items.AddRange(anotaciones.ToArray());
+            cbAnotacionT.SelectedIndex = 0;
         }
+
         private void LimpiarCampos()
         {
             txtTituloR.Clear();
@@ -55,9 +74,13 @@ namespace AdministradorT
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtTituloR.Text) || string.IsNullOrEmpty(txtCuerpo.Text))
+            {
                 MessageBox.Show("Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            if(cbImportanciaPeso.SelectedIndex<0)
+            }
+            else if (cbImportanciaPeso.SelectedIndex <= 0)
+            {
                 MessageBox.Show("Debe seleccionar el nivel de importancia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
             else
             {
                 titulo = txtTituloR.Text;
@@ -65,11 +88,39 @@ namespace AdministradorT
                 fechaEntrega = dtpFecha.Value;
                 materiaE = cbMateriaT.SelectedIndex > 0 ? cbMateriaT.SelectedItem.ToString() : "";
                 anotacionE = cbAnotacionT.SelectedIndex > 0 ? cbAnotacionT.SelectedItem.ToString() : "";
-                control = true;
-                LimpiarCampos();
-                this.Hide();
+
+                // Obtener el nivel de importancia seleccionado como cadena
+                string nivelImportancia = cbImportanciaPeso.SelectedItem.ToString();
+
+                // Llamar al método de inserción de tarea en la base de datos
+                if (conexion.InsertarTarea(titulo, cuerpo, fechaEntrega, materiaE, anotacionE, nivelImportancia))
+                {
+                    MessageBox.Show("Tarea registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarCampos();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Error al registrar la tarea.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {

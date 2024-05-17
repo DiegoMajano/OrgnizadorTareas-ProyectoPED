@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.cbImportanciaPeso = new System.Windows.Forms.ComboBox();
+            this.lblImportancia = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblHead = new System.Windows.Forms.Label();
             this.cbAnotacionT = new System.Windows.Forms.ComboBox();
@@ -43,8 +45,6 @@
             this.lblMateria = new System.Windows.Forms.Label();
             this.lblCuerpo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.cbImportanciaPeso = new System.Windows.Forms.ComboBox();
-            this.lblImportancia = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +75,25 @@
             this.pnlMain.Size = new System.Drawing.Size(564, 612);
             this.pnlMain.TabIndex = 2;
             // 
+            // cbImportanciaPeso
+            // 
+            this.cbImportanciaPeso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbImportanciaPeso.FormattingEnabled = true;
+            this.cbImportanciaPeso.Location = new System.Drawing.Point(248, 363);
+            this.cbImportanciaPeso.Name = "cbImportanciaPeso";
+            this.cbImportanciaPeso.Size = new System.Drawing.Size(253, 26);
+            this.cbImportanciaPeso.TabIndex = 21;
+            // 
+            // lblImportancia
+            // 
+            this.lblImportancia.AutoSize = true;
+            this.lblImportancia.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImportancia.Location = new System.Drawing.Point(52, 367);
+            this.lblImportancia.Name = "lblImportancia";
+            this.lblImportancia.Size = new System.Drawing.Size(147, 18);
+            this.lblImportancia.TabIndex = 20;
+            this.lblImportancia.Text = "Nivel de importancia";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(44)))), ((int)(((byte)(89)))));
@@ -92,9 +111,8 @@
             this.lblHead.ForeColor = System.Drawing.Color.Transparent;
             this.lblHead.Location = new System.Drawing.Point(216, 19);
             this.lblHead.Name = "lblHead";
-            this.lblHead.Size = new System.Drawing.Size(133, 23);
+            this.lblHead.Size = new System.Drawing.Size(0, 23);
             this.lblHead.TabIndex = 20;
-            this.lblHead.Text = "Nueva Tarea";
             // 
             // cbAnotacionT
             // 
@@ -130,6 +148,7 @@
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(258, 25);
             this.dtpFecha.TabIndex = 15;
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // btnCancelar
             // 
@@ -211,25 +230,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(52, 18);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Titulo:";
-            // 
-            // cbImportanciaPeso
-            // 
-            this.cbImportanciaPeso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbImportanciaPeso.FormattingEnabled = true;
-            this.cbImportanciaPeso.Location = new System.Drawing.Point(248, 363);
-            this.cbImportanciaPeso.Name = "cbImportanciaPeso";
-            this.cbImportanciaPeso.Size = new System.Drawing.Size(253, 26);
-            this.cbImportanciaPeso.TabIndex = 21;
-            // 
-            // lblImportancia
-            // 
-            this.lblImportancia.AutoSize = true;
-            this.lblImportancia.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImportancia.Location = new System.Drawing.Point(52, 367);
-            this.lblImportancia.Name = "lblImportancia";
-            this.lblImportancia.Size = new System.Drawing.Size(147, 18);
-            this.lblImportancia.TabIndex = 20;
-            this.lblImportancia.Text = "Nivel de importancia";
             // 
             // frmNuevaTarea
             // 

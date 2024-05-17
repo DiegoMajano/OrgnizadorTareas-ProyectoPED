@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ModernGUI_V3;
+using AdministradorT;
+using System.Data.SqlClient;
 
 namespace FlatLoginWatermark
 {
@@ -16,12 +18,15 @@ namespace FlatLoginWatermark
     {
         // Variables para almacenar credenciales de usuario
         private string usuarioValido = "PED";
-        private string contraseñaValida = "arboles";
+        private string contraseñaValida = "123";
+        private CConexion mConexion;
         public FormLogin()
         {
             InitializeComponent();
+              
+
         }
-        
+
 
         #region Drag Form/ Mover Arrastrar Formulario
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -94,30 +99,52 @@ namespace FlatLoginWatermark
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            
-                string usuarioIngresado = txtuser.Text;
-                string contraseñaIngresada = txtpass.Text;
 
-                // Verificar si las credenciales coinciden con las almacenadas
-                if (usuarioIngresado == usuarioValido && contraseñaIngresada == contraseñaValida)
-                {
-                    frmPrincipal formPrincipal = new frmPrincipal();
-                    this.Hide();
-                    formPrincipal.Show();              
+            string usuarioIngresado = txtuser.Text;
+            string contraseñaIngresada = txtpass.Text;
 
-                    // Aquí puedes abrir la ventana principal de la aplicación o realizar otras acciones
-                }
-                else
-                {
-                    MessageBox.Show("Nombre de usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+
+            // Verificar si las credenciales coinciden con las almacenadas
+            if (usuarioIngresado == usuarioValido && contraseñaIngresada == contraseñaValida)
+            {
+                frmPrincipal formPrincipal = new frmPrincipal();
+                this.Hide();
+                formPrincipal.Show();
+
+                // Aquí puedes abrir la ventana principal de la aplicación o realizar otras acciones
             }
+            else
+            {
+                MessageBox.Show("Nombre de usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+           
+          
+
+        }
 
         private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsControl(e.KeyChar))
                 btnlogin_Click(null, null);
         }
+
+        private void btnconectar_Click(object sender, EventArgs e)
+        {
+            CConexion conexion = new CConexion();
+            conexion.Conexion();
+
+
+        }
+
+        private void linkpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
+
+
     }
+
+    
 

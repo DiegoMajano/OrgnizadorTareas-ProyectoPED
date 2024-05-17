@@ -10,11 +10,11 @@ namespace AdministradorT.ClasesNodos
     public class Materia : CNodos
     {
         // atributos
-        private string nombre;
-        private TimeSpan horaClase;
+        public string nombre;
+        public TimeSpan horaClase;
         private List<string> dias;
-        private string docente;
-        private string salon;
+        public string docente;
+        public string salon;
 
         // propiedades
         public string Nombre
@@ -38,6 +38,8 @@ namespace AdministradorT.ClasesNodos
             get { return salon; } set { salon = value; }
         }
 
+        public int IdMateria { get; internal set; }
+
         public Materia(string nombre, TimeSpan horaClase, List<string> dias, string docente, string salon)
         {
             this.Nombre = nombre;
@@ -45,8 +47,18 @@ namespace AdministradorT.ClasesNodos
             this.Dias = dias;
             this.Docente = docente;
             this.Salon = salon;
+            
             setID(1, nombre);
         }
 
+        public Materia(string ID, string nombre, TimeSpan horaClase, List<string> dias, string docente, string salon)
+        {
+            this.ID = ID;
+            this.nombre = nombre;
+            this.HoraClase = horaClase;
+            this.Dias = dias;
+            this.Docente = docente;
+            this.Salon = salon;
+        }
     }
 }

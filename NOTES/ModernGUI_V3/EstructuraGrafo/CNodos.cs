@@ -12,7 +12,7 @@ namespace AdministradorT
         private string id;
         public string ID
         {
-            get { return id; }
+            get { return id; } set { id = value; } 
         }
         public List<CConexion> listaAdyacencia; //Lista de adyacencia para los nodos (Solo para el principal)
 

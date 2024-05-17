@@ -1,5 +1,6 @@
 ﻿using AdministradorT.ClasesNodos;
 using ModernGUI_V3;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,16 +19,18 @@ namespace AdministradorT
         private frmPrincipal principal;
         public Materia nuevaMateria;
         public bool control;
+         private CConexion conexion;
         
         public frmNuevaMateria()
         {
             InitializeComponent();
             LlenarCampos();
+            conexion = new CConexion();
         }
 
         private void LlenarCampos()
         {
-            List<string> dias = new List<string>() { "Luneas", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado","Domingo" };
+            List<string> dias = new List<string>() { "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado","Domingo" };
             List<TimeSpan> horas = new List<TimeSpan> {
                 new TimeSpan(07,00,00),
                 new TimeSpan(09,05,00),
@@ -47,21 +50,25 @@ namespace AdministradorT
             }
             cbHora.SelectedIndex = 0;
         }
+
         public string nombreM, nombreD, salon;
         public List<string> dias = new List<string>();
         public TimeSpan horaClase;
         private void btnRegistrar_Click(object sender, EventArgs e)
-        {            
+        {
             if (cbHora.SelectedIndex == 0 || clbDias.CheckedItems.Count == 0 || string.IsNullOrEmpty(txtNDocente.Text) || string.IsNullOrEmpty(txtNombreM.Text) || string.IsNullOrEmpty(txtSalon.Text))
-                MessageBox.Show("Completar todos los campos","Error",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                
+                MessageBox.Show("Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
             {
                 nombreM = txtNombreM.Text;
                 nombreD = txtNDocente.Text;
+                foreach (var dia in clbDias.CheckedItems)
+                    dias.Add(dia.ToString());
+
                 salon = txtSalon.Text;
-                horaClase = new TimeSpan(cbHora.SelectedIndex);
-                nuevaMateria = new Materia(nombreM, horaClase, dias, nombreD, salon);
-                control = true;                
+                horaClase = TimeSpan.Parse(cbHora.SelectedItem.ToString()); // Corregido para obtener la hora seleccionada correctamente
+                //nuevaMateria = new Materia(nombreM, horaClase, dias, nombreD, salon);
+                control = true;
                 LimpiarCampos();
                 this.Hide();
             }
@@ -74,6 +81,12 @@ namespace AdministradorT
             else
                 e.Handled = true;
         }
+
+        private void clbDias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void LimpiarCampos()
         {
             txtNDocente.Clear();

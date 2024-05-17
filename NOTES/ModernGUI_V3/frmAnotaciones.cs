@@ -1,9 +1,11 @@
 ﻿using AdministradorT;
+using AdministradorT.ClasesNodos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,38 +15,70 @@ namespace ModernGUI_V3
 {
     public partial class frmAnotaciones : Form
     {
+        public CGrafo grafoMain = new CGrafo();
+        private frmNuevaAnotacion nuevaAnotacion = new frmNuevaAnotacion();
+        private CConexion conexion;
+
         public frmAnotaciones()
         {
             InitializeComponent();
+            conexion = new CConexion();
         }
 
-        private void btnAgregarA_Click(object sender, EventArgs e)
+        public void ActualizarForm(CGrafo grafo, bool AlGrafo)
         {
-            AbrirFormulario<frmNuevaAnotacion>();
-        }
-        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
-        {
-            Form formulario;
-            formulario = pnlAnotaciones.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
-            //si el formulario/instancia no existe
-            if (formulario == null)
+            tabAnotaciones.TabPages.Clear();
+            List<Anotacion> anotaciones = conexion.ObtenerTodasLasAnotaciones(); // Obtener todas las materias de la base de datos
+            if (AlGrafo)
             {
-                formulario = new MiForm();
-                formulario.TopLevel = false;
-                formulario.FormBorderStyle = FormBorderStyle.None;
-                formulario.Dock = DockStyle.Fill;
-                pnlAnotaciones.Controls.Add(formulario);
-                pnlAnotaciones.Tag = formulario;
-                formulario.Show();
-                formulario.BringToFront();
+                grafo.AgregarNodos(2, anotaciones: anotaciones);
             }
-            //si el formulario/instancia existe
-            else
-            {
-                formulario.Show();
-                formulario.BringToFront();
-            }
-        }
 
+            foreach (Anotacion anotacion in anotaciones)
+            {
+                // Crear una nueva TabPage para mostrar los datos de la anotacion
+                TabPage tp = new TabPage();
+                tp.Text = anotacion.ID; // Usar un identificador único de la anotacion como texto de la TabPage
+
+                // Crear y configurar los controles para mostrar los datos de la anotacion
+                Label titulo = new Label();
+                titulo.AutoSize = true;
+                titulo.Location = lbltit.Location;
+                titulo.Font = lbltit.Font;
+                titulo.Anchor = lbltit.Anchor;
+                titulo.Text = "Nombre: " + anotacion.Titulo;
+                tp.Controls.Add(titulo);
+                                
+                Label cuerpo = new Label();
+                cuerpo.AutoSize = true;
+                cuerpo.Location = lblcuer.Location;
+                cuerpo.Text = anotacion.Cuerpo;
+                tp.Controls.Add(cuerpo);
+
+                Button Editar = new Button();
+                Editar.AutoSize = true;
+                Editar.Visible = true;
+                Editar.Text = "Editar";
+                Editar.Font = btnEditar.Font;
+                Editar.Anchor = btnEditar.Anchor;
+                Editar.FlatStyle = btnEditar.FlatStyle;
+                Editar.Location = btnEditar.Location;
+                Editar.Click += EditarAnotacion_Click;
+                tp.Controls.Add(Editar);
+
+                // Agregar la TabPage al TabControl
+                tabAnotaciones.TabPages.Add(tp);
+            }
+        }
+        private void EditarAnotacion_Click(object sender, EventArgs e)
+        {
+            Button boton = sender as Button;
+            if (boton != null)
+            {
+                Materia materia = boton.Tag as Materia;
+
+                MessageBox.Show("Listo se editó :D");
+            }
+        }
     }
 }
