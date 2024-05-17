@@ -16,7 +16,7 @@ namespace AdministradorT
     public partial class frmRecordatorios : Form
     {
         public CGrafo grafoMain = new CGrafo();
-        private frmNuevaAnotacion nuevaAnotacion = new frmNuevaAnotacion();
+        private frmNuevoRecordatorio nuevoRecordatorio = new frmNuevoRecordatorio();
         private CConexion conexion;
 
         public frmRecordatorios()
@@ -86,9 +86,35 @@ namespace AdministradorT
             Button boton = sender as Button;
             if (boton != null)
             {
-                Recordatorio recordatorio = boton.Tag as Recordatorio;
+                NodoInfo nodoInfo = boton.Tag as NodoInfo;
+                Recordatorio recordatorio = (Recordatorio) nodoInfo.Nodo;
+                grafoMain = (CGrafo)nodoInfo.Grafo;
 
-                MessageBox.Show("Listo se editó :D");
+                nuevoRecordatorio.Visible = false;
+                nuevoRecordatorio.control = false;
+                nuevoRecordatorio.cbAnotacionR.Enabled = false;
+                nuevoRecordatorio.cbMateriaR.Enabled = false;
+                nuevoRecordatorio.cbTareaR.Enabled = false;
+                nuevoRecordatorio.RellenarMateriaAnotacion();
+                nuevoRecordatorio.ShowDialog();
+
+                if (nuevoRecordatorio.control) // tiene que ser un nuevo control porque sino se crea un nuevo nodo porque es el mismo control que se utiliza para agregar e insertar un nuevo nodo
+                {
+                    // crear el nodo origen
+                    CNodos nodoOrigen = grafoMain.AgregarNodos(3, nombre: nuevoRecordatorio.titulo, aRecordar: nuevoRecordatorio.aRecordar, cuerpo: nuevoRecordatorio.cuerpo);
+                                        
+                    if (nodoOrigen != null)
+                    {
+                        bool exito = conexion.ActualizarRecordatorio(nuevoRecordatorio.newRecordatorio);
+
+                        if (!exito)
+                            MessageBox.Show("No se ha ingresado la nueva anotación en la bd", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);                        
+                    }
+                   
+                    else
+                        MessageBox.Show("No se ha ingresado la nueva anotación", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ActualizarForm(grafoMain, false);
+                }
             }
         }
         public void EliminarRecordatorio_Click(object sender, EventArgs e)

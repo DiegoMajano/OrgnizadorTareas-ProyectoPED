@@ -260,12 +260,12 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.ComboBox cbAnotacionR;
+        public System.Windows.Forms.ComboBox cbAnotacionR;
         private System.Windows.Forms.Label lblAnotacion;
-        private System.Windows.Forms.ComboBox cbMateriaR;
+        public System.Windows.Forms.ComboBox cbMateriaR;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblHead;
-        private System.Windows.Forms.ComboBox cbTareaR;
+        public System.Windows.Forms.ComboBox cbTareaR;
         private System.Windows.Forms.Label lblTarea;
     }
 }

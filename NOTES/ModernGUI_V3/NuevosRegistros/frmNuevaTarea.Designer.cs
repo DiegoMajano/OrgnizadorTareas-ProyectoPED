@@ -253,9 +253,9 @@
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblHead;
-        private System.Windows.Forms.ComboBox cbAnotacionT;
+        public System.Windows.Forms.ComboBox cbAnotacionT;
         private System.Windows.Forms.Label lblAnotacion;
-        private System.Windows.Forms.ComboBox cbMateriaT;
+        public System.Windows.Forms.ComboBox cbMateriaT;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRegistrar;
@@ -265,7 +265,7 @@
         private System.Windows.Forms.Label lblMateria;
         private System.Windows.Forms.Label lblCuerpo;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.ComboBox cbImportanciaPeso;
+        public System.Windows.Forms.ComboBox cbImportanciaPeso;
         private System.Windows.Forms.Label lblImportancia;
     }
 }

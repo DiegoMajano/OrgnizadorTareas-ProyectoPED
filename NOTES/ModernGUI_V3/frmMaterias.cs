@@ -51,16 +51,15 @@ namespace ModernGUI_V3
         public void ActualizarForm(CGrafo grafo,bool AlGrafo)
         {
            
-                tabMaterias.TabPages.Clear();
-                List<Materia> materias = conexion.ObtenerTodasLasMaterias(); // Obtener todas las materias de la base de datos
-                if (AlGrafo)                                 
-                    grafo.AgregarNodos(1, materias: materias);
-                
+            tabMaterias.TabPages.Clear();
+            List<Materia> materias = conexion.ObtenerTodasLasMaterias(); // Obtener todas las materias de la base de datos
+            if (AlGrafo)                                 
+                grafo.AgregarNodos(1, materias: materias);                
 
-                foreach (Materia materia in materias)
-                {
-                    // Crear una nueva TabPage para mostrar los datos de la materia
-                    TabPage tp = new TabPage();
+            foreach (Materia materia in materias)
+            {
+                // Crear una nueva TabPage para mostrar los datos de la materia
+                TabPage tp = new TabPage();
                 tp.BackColor = tabPage1.BackColor;
                 tp.Font = tabPage1.Font;
                 tp.Text = materia.ID; // Usar un identificador único de la materia como texto de la TabPage
@@ -73,8 +72,6 @@ namespace ModernGUI_V3
                 tp.Controls.Add(nombre);
                 nombre.Font = lblNombre.Font;
                 nombre.Location = lblNombre.Location;
-
-
 
                 Label horaClase = new Label();
                 horaClase.AutoSize = true;

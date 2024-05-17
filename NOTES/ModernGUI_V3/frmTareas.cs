@@ -66,5 +66,68 @@ namespace AdministradorT
                 tabTareas.TabPages.Add(tp);
             }
         }
+        private void EditarTarea_Click(object sender, EventArgs e)
+        {
+            Button boton = sender as Button;
+            if (boton != null)
+            {
+                NodoInfo nodoInfo = boton.Tag as NodoInfo;
+                Tarea tarea = (Tarea) nodoInfo.Nodo;
+                grafoMain = (CGrafo)nodoInfo.Grafo;
+
+                nuevaTarea.Visible = false;
+                nuevaTarea.control = false;
+                tarea.
+                nuevaTarea.cbAnotacionT.Enabled = false;
+                nuevaTarea.cbImportanciaPeso.Enabled = false;
+                nuevaTarea.cbMateriaT.Enabled = false;
+                nuevaTarea.ShowDialog();
+
+                if (nuevaTarea.control) // tiene que ser un nuevo control porque sino se crea un nuevo nodo porque es el mismo control que se utiliza para agregar e insertar un nuevo nodo
+                {
+                    
+                    // crear el nodo origen
+                    CNodos nodoOrigen = grafoMain.AgregarNodos(4, nombre: nuevaTarea.titulo, aRecordar: nuevaTarea.fechaEntrega, cuerpo: nuevaTarea.cuerpo);
+
+                   
+                    if (nodoOrigen != null)
+                    {
+                        bool exito = conexion.ActualizarTarea(nuevaTarea.nuevaTarea);
+                    }
+                    else                    
+                        MessageBox.Show("No se ha ingresado la nueva tarea", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ActualizarForm(grafoMain, false);
+                }
+            }
+        }
+        public void EliminarTarea_Click(object sender, EventArgs e)
+        {
+            NodoInfo nodoInfo;
+            Recordatorio recordatorio;
+            CGrafo grafo;
+
+            Button boton = sender as Button;
+            if (boton != null)
+            {
+                nodoInfo = boton.Tag as NodoInfo;
+                recordatorio = (Recordatorio)nodoInfo.Nodo;
+                grafo = nodoInfo.Grafo;
+
+                DialogResult result = MessageBox.Show($"¿Estás seguro de eliminar el registro de {recordatorio.Titulo}?, los cambios realizados no se podrán recuperar", "Adverdencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    Recordatorio recordatorioEliminado = (Recordatorio)grafo.EliminarNodo(3, recordatorio.ID);
+                    if (recordatorioEliminado != null && !conexion.EliminarRecordatorio(recordatorio))
+                    {
+                        ActualizarForm(grafo, false);
+                        MessageBox.Show($"Se ha eliminado correctamente el Recordatorio: {recordatorioEliminado.Titulo}", "Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    else
+                        MessageBox.Show($"No se ha eliminado correctamente el Recordatorio: {recordatorioEliminado.Titulo}", "Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }

@@ -69,6 +69,7 @@ namespace AdministradorT
 
         public bool AgregarNodos(int tipo, List<Materia> materias = null, List<Anotacion> anotaciones = null, List<Recordatorio> recordatorios = null, List<Tarea> tareas = null) 
         {
+            RecargarNodos();
             switch (tipo)
             {
                 case 1: // si es materia 
@@ -210,6 +211,15 @@ namespace AdministradorT
                 return nOrigen.listaAdyacencia.RemoveAll(arco => arco.nodoDestino == nDestino) > 0;
             }
             return false;
+        }
+
+        private void RecargarNodos()
+        {
+            nodos.Clear();
+            nodosMaterias.Clear();
+            nodosAnotaciones.Clear();
+            nodosRecordatorios.Clear();
+            nodosTarea.Clear();
         }
     }
 }
