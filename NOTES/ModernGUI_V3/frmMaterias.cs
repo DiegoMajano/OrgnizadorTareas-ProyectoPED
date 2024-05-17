@@ -140,7 +140,7 @@ namespace ModernGUI_V3
                 nuevaMateria.control = false;
                 nuevaMateria.ShowDialog();
                 Materia materia = boton.Tag as Materia;
-                if (nuevaMateria.control)
+                if (nuevaMateria.control) // tiene que ser un nuevo control porque sino se crea un nuevo nodo porque es el mismo control que se utiliza para agregar e insertar un nuevo nodo
                 {
                     materia.nombre = nuevaMateria.nombreM;
                     materia.Salon = nuevaMateria.salon;
@@ -163,7 +163,7 @@ namespace ModernGUI_V3
         {
             Button boton = sender as Button;
             DialogResult resultado = MessageBox.Show("Esta seguro que quiere eliminar esta materia?", "Materia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (resultado == DialogResult.Yes)
+            if (resultado == DialogResult.Yes) // andate al frmRecordatorio y mira como hice esta parte de acá
             {
                 Materia materia = boton.Tag as Materia;
                 if (conexion.EliminarMateria(materia))
