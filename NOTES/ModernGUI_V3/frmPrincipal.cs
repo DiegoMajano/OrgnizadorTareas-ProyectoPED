@@ -19,7 +19,7 @@ namespace ModernGUI_V3
     public partial class frmPrincipal : Form
     {
         // crear la instancia del grafo
-        public CGrafo grafoMain = new CGrafo();
+        public CGrafo grafoMain;
         // ubicacion de los botones para agregar los nodos
         private Point ubicacion;
         // instanciar las ventanas para agregar los nodos
@@ -34,9 +34,11 @@ namespace ModernGUI_V3
         public frmPrincipal()
         {
             InitializeComponent();
+            grafoMain = new CGrafo();
             ubicacion = btnNuevaMat.Location;
             ConfigurarBotones();
             conexion = new CConexion();
+            
         }
 
         private void ConfigurarBotones()
@@ -107,7 +109,6 @@ namespace ModernGUI_V3
             btnNuevaMat.Visible = true;
             ReestablecerConfig();
             btnMaterias.BackColor = Color.FromArgb(12, 61, 92);
-
             // Llamar al método ActualizarForm del formulario frmMaterias para mostrar los datos
             materias.ActualizarForm(grafoMain);
         }
@@ -229,6 +230,7 @@ namespace ModernGUI_V3
             nuevaAnotacion.ShowDialog();
             if (nuevaAnotacion.control)
             {
+                // hace falta un if de agregar Nodo
                 CNodos nodoOrigen = grafoMain.AgregarNodos(2, nombre: nuevaAnotacion.titulo, cuerpo: nuevaAnotacion.cuerpo);
                 CNodos nodoDestino = grafoMain.BuscarNodo(1,nuevaAnotacion.materiaE); // extraer con id en el obtener materias
                 if (nodoOrigen != null && nodoDestino != null)

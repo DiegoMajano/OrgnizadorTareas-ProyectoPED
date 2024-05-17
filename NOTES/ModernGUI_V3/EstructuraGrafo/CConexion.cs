@@ -76,8 +76,9 @@ namespace AdministradorT
                 transaction = conexion.BeginTransaction();
 
                 // Insertar la materia
-                string consultaMateria = "INSERT INTO materia (nombre, horaClase, docente, salon) VALUES (@nombre, @horaClase, @docente, @salon)";
+                string consultaMateria = "INSERT INTO materia (idMateria,nombre, horaClase, docente, salon) VALUES (@idMateria,@nombre, @horaClase, @docente, @salon)";
                 MySqlCommand comandoMateria = new MySqlCommand(consultaMateria, conexion, transaction);
+                comandoMateria.Parameters.AddWithValue("@idMateria", materia.ID);
                 comandoMateria.Parameters.AddWithValue("@nombre", materia.Nombre);
                 comandoMateria.Parameters.AddWithValue("@horaClase", DateTime.Today.Add(materia.HoraClase)); // Se agrega la hora seleccionada al día actual
                 comandoMateria.Parameters.AddWithValue("@docente", materia.Docente);
@@ -92,7 +93,7 @@ namespace AdministradorT
                 foreach (var dia in materia.Dias)
                 {
                     MySqlCommand comandoDias = new MySqlCommand(consultaDias, conexion, transaction);
-                    comandoDias.Parameters.AddWithValue("@materiaId", materiaId);
+                    comandoDias.Parameters.AddWithValue("@materiaId", materia.ID);
                     comandoDias.Parameters.AddWithValue("@dia", dia);
                     comandoDias.ExecuteNonQuery();
                 }
@@ -206,22 +207,67 @@ namespace AdministradorT
             try
             {
                 conexion.Open();
-                string consulta = "SELECT * FROM materia";
+                //string consulta = "SELECT * FROM materia";
+                string consulta = "SELECT * FROM materia INNER JOIN dia_materia on idMateria = materia_id";
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
+                string codigoAnterior = "";
+                string nombreAnterior = "";
+                TimeSpan horaAnterior = new TimeSpan(0,0,0);
+                string docenteAnterior = "";
+                string salonAnterior = "";
+                string diaAnterior = "";
+                List<string> dias = new List<string>();
+                List<string> diasAnterior = new List<string>();
+                int row = 0;
+                bool materiaR = false;
                 using (MySqlDataReader reader = comando.ExecuteReader())
                 {
                     while (reader.Read())
                     {
+                        string codigo = reader.GetString("idMateria");
                         string nombre = reader.GetString("nombre");
                         TimeSpan horaClase = reader.GetDateTime("horaClase").TimeOfDay;
                         string docente = reader.GetString("docente");
                         string salon = reader.GetString("salon");
-                        // Aquí puedes crear la instancia de Materia y agregarla a la lista
-                        Materia materia = new Materia(nombre, horaClase, new List<string>(), docente, salon);
-                        grafo.AgregarNodo(materia);
-                        grafo.nodosMaterias.Add(materia);
-                        materias.Add(materia);
+                        string dia = reader.GetString("dia");
+
+                        if (codigo == codigoAnterior || row == 0)
+                        {
+                            if (materiaR)
+                            {
+                                dias = null;
+                                dias = new List<string>();
+                                dias.Add(diaAnterior);
+                                materiaR = false;
+                            }
+                            dias.Add(dia);
+                            row++;
+                        }
+                        else
+                        { 
+                            // Aquí puedes crear la instancia de Materia y agregarla a la lista
+                            Materia materia = new Materia(codigoAnterior, nombreAnterior, horaAnterior, dias, docenteAnterior, salonAnterior);
+                            grafo.AgregarNodo(materia);
+                            grafo.nodosMaterias.Add(materia);
+                            materias.Add(materia);                            
+                            row = 0;
+                            materiaR = true;
+                        }
+                        codigoAnterior = codigo;
+                        nombreAnterior = nombre;
+                        horaAnterior = horaClase;
+                        docenteAnterior = docente;
+                        salonAnterior = salon;
+                        diaAnterior = dia;
                     }
+                }
+                if (!string.IsNullOrEmpty(codigoAnterior))
+                {
+                    // Aquí puedes crear la instancia de Materia y agregarla a la lista
+                    Materia materia = new Materia(codigoAnterior, nombreAnterior, horaAnterior, dias, docenteAnterior, salonAnterior);
+                    grafo.AgregarNodo(materia);
+                    grafo.nodosMaterias.Add(materia);
+                    materias.Add(materia);
                 }
             }
             catch (Exception ex)
@@ -234,6 +280,7 @@ namespace AdministradorT
             }
             return materias;
         }
+
 
 
         public List<string> ObtenerNombresAnotaciones()

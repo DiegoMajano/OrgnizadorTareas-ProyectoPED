@@ -38,17 +38,17 @@ namespace AdministradorT
                     nodos.Add(materia);
                     nodosMaterias.Add(materia);
                     return materia;
-                case 2:
+                case 2: // creacion de nodo para la anotacion
                     Anotacion anotacion = new Anotacion(nombre, cuerpo);
                     nodos.Add(anotacion);
                     nodosAnotaciones.Add(anotacion);
                     return anotacion;
-                case 3:
+                case 3: // creacion del nodo para el recordatorio
                     Recordatorio recordatorio = new Recordatorio(nombre, aRecordar, cuerpo);
                     nodos.Add(recordatorio);
                     nodosRecordatorios.Add(recordatorio);
                     return recordatorio;
-                case 4:
+                case 4: // creacion del nodo para la tarea
                     Tarea tarea = new Tarea(titulo, cuerpo, fechaEntrega);
                     nodos.Add(tarea);
                     nodosTarea.Add(tarea);
