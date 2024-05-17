@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.cbImportanciaPeso = new System.Windows.Forms.ComboBox();
+            this.lblImportancia = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblHead = new System.Windows.Forms.Label();
             this.cbAnotacionT = new System.Windows.Forms.ComboBox();
@@ -43,8 +45,6 @@
             this.lblMateria = new System.Windows.Forms.Label();
             this.lblCuerpo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.cbImportanciaPeso = new System.Windows.Forms.ComboBox();
-            this.lblImportancia = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,25 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(564, 612);
             this.pnlMain.TabIndex = 2;
+            // 
+            // cbImportanciaPeso
+            // 
+            this.cbImportanciaPeso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbImportanciaPeso.FormattingEnabled = true;
+            this.cbImportanciaPeso.Location = new System.Drawing.Point(248, 363);
+            this.cbImportanciaPeso.Name = "cbImportanciaPeso";
+            this.cbImportanciaPeso.Size = new System.Drawing.Size(253, 26);
+            this.cbImportanciaPeso.TabIndex = 21;
+            // 
+            // lblImportancia
+            // 
+            this.lblImportancia.AutoSize = true;
+            this.lblImportancia.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImportancia.Location = new System.Drawing.Point(52, 367);
+            this.lblImportancia.Name = "lblImportancia";
+            this.lblImportancia.Size = new System.Drawing.Size(147, 18);
+            this.lblImportancia.TabIndex = 20;
+            this.lblImportancia.Text = "Nivel de importancia";
             // 
             // panel1
             // 
@@ -211,25 +230,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(52, 18);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Titulo:";
-            // 
-            // cbImportanciaPeso
-            // 
-            this.cbImportanciaPeso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbImportanciaPeso.FormattingEnabled = true;
-            this.cbImportanciaPeso.Location = new System.Drawing.Point(248, 363);
-            this.cbImportanciaPeso.Name = "cbImportanciaPeso";
-            this.cbImportanciaPeso.Size = new System.Drawing.Size(253, 26);
-            this.cbImportanciaPeso.TabIndex = 21;
-            // 
-            // lblImportancia
-            // 
-            this.lblImportancia.AutoSize = true;
-            this.lblImportancia.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImportancia.Location = new System.Drawing.Point(52, 367);
-            this.lblImportancia.Name = "lblImportancia";
-            this.lblImportancia.Size = new System.Drawing.Size(147, 18);
-            this.lblImportancia.TabIndex = 20;
-            this.lblImportancia.Text = "Nivel de importancia";
             // 
             // frmNuevaTarea
             // 
