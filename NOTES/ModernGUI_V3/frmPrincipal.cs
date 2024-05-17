@@ -61,11 +61,11 @@ namespace ModernGUI_V3
 
             recordatorios = (frmRecordatorios)AbrirFormulario<frmRecordatorios>();
             // llamar al metodo actualizar form del formulario frmAnotaciones para mostrar los datos
-            //recordatorios.ActualizarForm(grafoMain);
+            recordatorios.ActualizarForm(grafoMain,true);
 
             tareas = (frmTareas)AbrirFormulario<frmTareas>();
             // llamar al metodo actualizar form del formulario frmAnotaciones para mostrar los datos
-            //tareas.ActualizarForm(grafoMain);
+            tareas.ActualizarForm(grafoMain, true);
 
             tecnica = (frmTecnicaEstudio)AbrirFormulario<frmTecnicaEstudio>();
 
@@ -341,7 +341,10 @@ namespace ModernGUI_V3
                     }
                 }
                 if (nodosConectados)
+                {
+                    recordatorios.ActualizarForm(grafoMain, false);
                     MessageBox.Show("Se ha ingresado exitosamente la nueva anotación", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 else
                     MessageBox.Show("No se ha ingresado la nueva anotación", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -377,13 +380,17 @@ namespace ModernGUI_V3
                         {
                             if (grafoMain.AgregarArco(nodoOrigen, nodoDestino)) // Verificar si el arco puede crearse
                                 nodosConectados = true;
+                            
                             else
                                 MessageBox.Show($"El arco entre nodo {nodoOrigen.ID} y {nodoDestino.ID} ya existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
                 if (nodosConectados)
+                {
+                    tareas.ActualizarForm(grafoMain, false);
                     MessageBox.Show("Se ha ingresado exitosamente la nueva tarea", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 else
                     MessageBox.Show("No se ha ingresado la nueva tarea", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

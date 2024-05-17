@@ -17,8 +17,13 @@ namespace AdministradorT
         public List<string> materias, anotaciones, tareas;
 
         // atributos para el control de informacion
+<<<<<<< HEAD
         public bool control;
         public string titulo, cuerpo, materiaE = "", anotacionE = "", tareaE = "";
+=======
+        public bool control, controlEditar;
+        public string titulo, cuerpo, materiaE ="", anotacionE="", tareaE="";
+>>>>>>> 4f4c14232b928ef32a7e9f26ac9829072b22228f
         public DateTime aRecordar;
         private CConexion conexion;
 
