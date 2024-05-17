@@ -77,7 +77,9 @@ namespace AdministradorT
 
                 nuevaTarea.Visible = false;
                 nuevaTarea.control = false;
-                tarea.
+                nuevaTarea.editar = true;
+                nuevaTarea.txtTituloR.Text = tarea.Titulo;
+                nuevaTarea.txtCuerpo.Text = tarea.Cuerpo;
                 nuevaTarea.cbAnotacionT.Enabled = false;
                 nuevaTarea.cbImportanciaPeso.Enabled = false;
                 nuevaTarea.cbMateriaT.Enabled = false;
@@ -128,6 +130,31 @@ namespace AdministradorT
                         MessageBox.Show($"No se ha eliminado correctamente el Recordatorio: {recordatorioEliminado.Titulo}", "Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void tabTareas_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabControl tbA = (TabControl)sender;
+            Brush textBrush;
+            Rectangle tabRec = tbA.GetTabRect(e.Index);
+
+            Color tbAColor;
+
+            tbAColor = Color.LightSteelBlue;
+
+
+
+
+            e.Graphics.FillRectangle(new SolidBrush(tbAColor), tabRec);
+            textBrush = new SolidBrush(Color.Black);
+
+            string tabText = tbA.TabPages[e.Index].Text;
+            StringFormat stringFlags = new StringFormat();
+            stringFlags.Alignment = StringAlignment.Center;
+            stringFlags.LineAlignment = StringAlignment.Center;
+            e.Graphics.DrawString(tabText, tbA.Font, textBrush, tabRec, stringFlags);
+
+            tbA.TabPages[e.Index].BackColor = tbAColor;
         }
     }
 }

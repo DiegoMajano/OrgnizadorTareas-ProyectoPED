@@ -68,7 +68,7 @@ namespace AdministradorT
             cbMateriaT.SelectedIndex = 0;
             cbAnotacionT.SelectedIndex = 0;
         }
-
+        public bool editar;
         // ------------------------- ACCION CLICK DE LOS BOTONES -------------------------
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -85,14 +85,17 @@ namespace AdministradorT
                 titulo = txtTituloR.Text;
                 cuerpo = txtCuerpo.Text;
                 fechaEntrega = dtpFecha.Value;
-                if(cbMateriaT.SelectedIndex == 0)
+                if(cbMateriaT.SelectedIndex == 0 || !editar)
                 {
                     MessageBox.Show("Debe de asignar una materia para la registrar la tarea","Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
+                    if(!editar)
+                    {
                     materiaE = cbMateriaT.SelectedItem.ToString();
                     anotacionE = cbAnotacionT.SelectedIndex > 0 ? cbAnotacionT.SelectedItem.ToString() : "";
+                    }
 
                     // Obtener el nivel de importancia seleccionado como cadena
                     string nivelImportancia = cbImportanciaPeso.SelectedItem.ToString();
