@@ -25,10 +25,13 @@ namespace AdministradorT
             conexion = new CConexion();
         }
 
-        public void ActualizarForm(CGrafo grafo)
+        public void ActualizarForm(CGrafo grafo, bool alGrafo)
         {
             tabRecordatorios.TabPages.Clear();
             List<Recordatorio> recordatorios = conexion.ObtenerRecordatorios(); // Obtener todas las materias de la base de datos
+
+            if (alGrafo)
+                grafo.AgregarNodos(3, recordatorios: recordatorios);
 
             foreach (Recordatorio recordatorio in recordatorios)
             {

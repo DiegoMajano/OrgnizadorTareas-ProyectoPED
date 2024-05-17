@@ -400,7 +400,10 @@ namespace AdministradorT
                     {
                         string titulo = reader.GetString("idRecordatorio");
                         string cuerpo = reader.GetString("cuerpo");
-                        string aRecordar = reader.GetString("arecordar");
+                        DateTime aRecordar = Convert.ToDateTime(reader.GetString("arecordar"));
+
+                        Recordatorio recordatorio = new Recordatorio(titulo, aRecordar, cuerpo);
+                        recordatorios.Add(recordatorio);
                     }
                 }
 
@@ -416,6 +419,45 @@ namespace AdministradorT
             }
 
             return recordatorios;
+        }
+
+        public List<Tarea> ObtenerTareas()
+        {
+            List<Tarea> tareas = new List<Tarea>();
+
+            try
+            {
+                conexion.Open();
+                string consulta = "SELECT * FROM tarea";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                using (MySqlDataReader reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string codigo = reader.GetString("id_tarea");
+                        string titulo = reader.GetString("nombre");
+                        string cuerpo = reader.GetString("descripcion");
+                        DateTime fechaLimite = Convert.ToDateTime(reader.GetString("fechaLimite"));
+                        string estado = reader.GetString("estadotarea");
+
+                        Tarea tarea = new Tarea(codigo, titulo, cuerpo, fechaLimite, estado);
+                        tareas.Add(tarea);
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener los recordatorios de la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+            return tareas;
         }
 
         // ------------------------------- METODOS PARA HACER UPDATES A LA BD -------------------------------

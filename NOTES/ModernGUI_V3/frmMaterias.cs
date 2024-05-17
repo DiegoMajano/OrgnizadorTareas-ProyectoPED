@@ -50,14 +50,12 @@ namespace ModernGUI_V3
         //Funcion que actualiza los datos de el tab page para que aparezcan los datos de el grafo
         public void ActualizarForm(CGrafo grafo,bool AlGrafo)
         {
-            if (!actualizado)
-            {
+           
                 tabMaterias.TabPages.Clear();
                 List<Materia> materias = conexion.ObtenerTodasLasMaterias(); // Obtener todas las materias de la base de datos
-                if (AlGrafo)
-                {                    
+                if (AlGrafo)                                 
                     grafo.AgregarNodos(1, materias: materias);
-                }
+                
 
                 foreach (Materia materia in materias)
                 {
@@ -116,18 +114,16 @@ namespace ModernGUI_V3
 
                     Button Eliminar = new Button();
                     Eliminar.AutoSize = true;
-                    Eliminar.Text = "Editar Materia";
+                    Eliminar.Text = "Eliminar Materia";
                     Eliminar.Tag = materia;
                     Eliminar.FlatStyle = btnEliminarMateria.FlatStyle;
                     Eliminar.Location = btnEliminarMateria.Location;
-                    btnEliminarMateria.Click += btnEliminarMateria_Click;
+                    Eliminar.Click += btnEliminarMateria_Click;
                     tp.Controls.Add(Eliminar);
 
 
                     // Agregar la TabPage al TabControl
                     tabMaterias.TabPages.Add(tp);
-                }
-                //actualizado = true;
             }
         }
 

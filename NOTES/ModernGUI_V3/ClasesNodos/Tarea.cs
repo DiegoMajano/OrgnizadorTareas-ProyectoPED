@@ -52,6 +52,14 @@ namespace AdministradorT.ClasesNodos
             setID(4, titulo);
         }
         
+        public Tarea(string ID, string titulo, string cuerpo, DateTime fechaEntrega, string estado)
+        {
+            this.ID = ID;
+            this.Titulo = titulo;
+            this.Cuerpo = cuerpo;
+            this.FechaEntrega = fechaEntrega;
+            this.EstadoTarea = estado == EstadoTarea.Pendiente.ToString() ? EstadoTarea.Pendiente : EstadoTarea.Finalizada;
+        }
 
         public void CompletarTarea()
         {

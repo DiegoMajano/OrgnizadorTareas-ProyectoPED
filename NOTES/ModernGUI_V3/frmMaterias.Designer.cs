@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabMaterias = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnEliminarMateria = new System.Windows.Forms.Button();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblSalon = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -42,7 +43,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnEliminarMateria = new System.Windows.Forms.Button();
             this.pnlFormularios.SuspendLayout();
             this.tabMaterias.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -103,6 +103,19 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnEliminarMateria
+            // 
+            this.btnEliminarMateria.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnEliminarMateria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarMateria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarMateria.Location = new System.Drawing.Point(672, 203);
+            this.btnEliminarMateria.Name = "btnEliminarMateria";
+            this.btnEliminarMateria.Size = new System.Drawing.Size(98, 38);
+            this.btnEliminarMateria.TabIndex = 6;
+            this.btnEliminarMateria.Text = "button1";
+            this.btnEliminarMateria.UseVisualStyleBackColor = true;
+            this.btnEliminarMateria.Click += new System.EventHandler(this.btnEliminarMateria_Click);
+            // 
             // lblHora
             // 
             this.lblHora.AutoSize = true;
@@ -143,10 +156,10 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(659, 19);
+            this.btnEditar.Location = new System.Drawing.Point(672, 14);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(98, 38);
             this.btnEditar.TabIndex = 1;
@@ -192,19 +205,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnEliminarMateria
-            // 
-            this.btnEliminarMateria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminarMateria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarMateria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarMateria.Location = new System.Drawing.Point(659, 165);
-            this.btnEliminarMateria.Name = "btnEliminarMateria";
-            this.btnEliminarMateria.Size = new System.Drawing.Size(98, 38);
-            this.btnEliminarMateria.TabIndex = 6;
-            this.btnEliminarMateria.Text = "button1";
-            this.btnEliminarMateria.UseVisualStyleBackColor = true;
-            this.btnEliminarMateria.Click += new System.EventHandler(this.btnEliminarMateria_Click);
             // 
             // frmMaterias
             // 

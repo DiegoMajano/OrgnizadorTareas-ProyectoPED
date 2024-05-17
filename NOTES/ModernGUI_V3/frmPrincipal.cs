@@ -61,11 +61,11 @@ namespace ModernGUI_V3
 
             recordatorios = (frmRecordatorios)AbrirFormulario<frmRecordatorios>();
             // llamar al metodo actualizar form del formulario frmAnotaciones para mostrar los datos
-            //recordatorios.ActualizarForm(grafoMain);
+            recordatorios.ActualizarForm(grafoMain,true);
 
             tareas = (frmTareas)AbrirFormulario<frmTareas>();
             // llamar al metodo actualizar form del formulario frmAnotaciones para mostrar los datos
-            //tareas.ActualizarForm(grafoMain);
+            tareas.ActualizarForm(grafoMain, true);
 
             tecnica = (frmTecnicaEstudio)AbrirFormulario<frmTecnicaEstudio>();
 
