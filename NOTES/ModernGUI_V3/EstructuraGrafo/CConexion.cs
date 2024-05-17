@@ -263,6 +263,34 @@ namespace AdministradorT
             return nombresAnotaciones;
         }
 
+        public List<string> ObtenerTitulosTareas()
+        {
+            List<string> titulosTareas = new List<string>();
+            try
+            {
+                conexion.Open();
+                string consulta = "SELECT titulo FROM tarea";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+                using (MySqlDataReader reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        titulosTareas.Add(reader.GetString("titulo"));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener los títulos de las tareas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+            return titulosTareas;
+        }
+
+
         // METODOS PARA OBTENER TODOS LOS CAMPOS DE LAS TABLAS
 
         public List<Materia> ObtenerTodasLasMaterias()
@@ -382,6 +410,38 @@ namespace AdministradorT
             }
 
             return anotaciones;
+        }
+
+        public bool InsertarRecordatorio(string idRecordatorio, string titulo, DateTime fechaRecordatorio, string cuerpo, string materiaR, string anotacionR, string tareaR)
+        {
+            try
+            {
+                conexion.Open();
+
+                string consulta = "INSERT INTO recordatorio (idRecordatorio, titulo, fechaRecordatorio, cuerpo, MateriaR, AnotacionR, TareaR) " +
+                                  "VALUES (@idRecordatorio, @titulo, @fechaRecordatorio, @cuerpo, @materiaR, @anotacionR, @tareaR)";
+
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+                comando.Parameters.AddWithValue("@idRecordatorio", idRecordatorio);
+                comando.Parameters.AddWithValue("@titulo", titulo);
+                comando.Parameters.AddWithValue("@fechaRecordatorio", fechaRecordatorio);
+                comando.Parameters.AddWithValue("@cuerpo", cuerpo);
+                comando.Parameters.AddWithValue("@materiaR", materiaR);
+                comando.Parameters.AddWithValue("@anotacionR", anotacionR);
+                comando.Parameters.AddWithValue("@tareaR", tareaR);
+
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar el recordatorio en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                conexion.Close();
+            }
         }
 
         public List<Recordatorio> ObtenerRecordatorios()
