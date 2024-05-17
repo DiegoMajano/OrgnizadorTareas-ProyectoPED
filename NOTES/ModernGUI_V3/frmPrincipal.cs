@@ -341,7 +341,10 @@ namespace ModernGUI_V3
                     }
                 }
                 if (nodosConectados)
+                {
+                    recordatorios.ActualizarForm(grafoMain, false);
                     MessageBox.Show("Se ha ingresado exitosamente la nueva anotación", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 else
                     MessageBox.Show("No se ha ingresado la nueva anotación", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -377,13 +380,17 @@ namespace ModernGUI_V3
                         {
                             if (grafoMain.AgregarArco(nodoOrigen, nodoDestino)) // Verificar si el arco puede crearse
                                 nodosConectados = true;
+                            
                             else
                                 MessageBox.Show($"El arco entre nodo {nodoOrigen.ID} y {nodoDestino.ID} ya existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
                 if (nodosConectados)
+                {
+                    tareas.ActualizarForm(grafoMain, false);
                     MessageBox.Show("Se ha ingresado exitosamente la nueva tarea", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 else
                     MessageBox.Show("No se ha ingresado la nueva tarea", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

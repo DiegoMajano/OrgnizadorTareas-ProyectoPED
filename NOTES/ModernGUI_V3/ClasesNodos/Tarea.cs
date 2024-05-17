@@ -43,11 +43,12 @@ namespace AdministradorT.ClasesNodos
             get { return prioridad; } set { prioridad = value; }
         }
 
-        public Tarea(string titulo, string cuerpo, DateTime fechaEntrega)
+        public Tarea(string titulo, string cuerpo, DateTime fechaEntrega, int prioridad = 1)
         {
             this.Titulo = titulo;
             this.Cuerpo = cuerpo;
             this.FechaEntrega = fechaEntrega;
+            this.Prioridad = prioridad;
             this.EstadoTarea = EstadoTarea.Pendiente;
             setID(4, titulo);
         }
