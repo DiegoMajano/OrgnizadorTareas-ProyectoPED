@@ -33,7 +33,7 @@ CREATE TABLE `anotacion` (
   `cuerpo` text,
   `idMateria` varchar(5) DEFAULT NULL,
   `NombreMat` varchar(500) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `anotacion`
@@ -56,7 +56,7 @@ CREATE TABLE `conexion` (
   `idNodoOrigen` varchar(5) NOT NULL,
   `idNodoDestino` varchar(5) NOT NULL,
   `Peso` int DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -101,7 +101,7 @@ CREATE TABLE `materia` (
   `docente` varchar(255) DEFAULT NULL,
   `salon` varchar(255) DEFAULT NULL,
   `id_tarea` int DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `materia`
@@ -124,7 +124,7 @@ CREATE TABLE `nodo` (
   `idNodo` int NOT NULL,
   `tipo` int DEFAULT NULL,
   `nombre` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -140,7 +140,7 @@ CREATE TABLE `recordatorio` (
   `arecordar` datetime DEFAULT NULL,
   `cuerpo` varchar(500) DEFAULT NULL,
   `idMateria` varchar(5) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -152,7 +152,7 @@ CREATE TABLE `sistemametodosestudio` (
   `id` int NOT NULL,
   `id_tarea` int DEFAULT NULL,
   `id_metodo` int DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -163,13 +163,13 @@ CREATE TABLE `sistemametodosestudio` (
 CREATE TABLE `tarea` (
   `id_tarea` varchar(5) NOT NULL,
   `fechaLimite` date DEFAULT NULL,
-  `estadotarea` varchar(5000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `nombre` varchar(5000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `estadotarea` varchar(5000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `nombre` varchar(5000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `descripcion` text,
   `AnotacionT` varchar(500) NOT NULL,
   `MateriaT` varchar(300) NOT NULL,
   `titulo` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -181,7 +181,7 @@ CREATE TABLE `usuario` (
   `idUsuario` int NOT NULL,
   `nombre` varchar(255) DEFAULT NULL,
   `contrasena` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`

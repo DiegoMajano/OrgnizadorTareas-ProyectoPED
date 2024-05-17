@@ -420,7 +420,7 @@ namespace AdministradorT
 
         // ------------------------------- METODOS PARA HACER UPDATES A LA BD -------------------------------
 
-        private bool ActualizarMateria(Materia materiaN)
+        public bool ActualizarMateria(Materia materiaN)
         {
             try
             {
@@ -455,7 +455,7 @@ namespace AdministradorT
             }
         }
 
-        private bool ActualizarAnotacion(Anotacion anotacionN)
+        public bool ActualizarAnotacion(Anotacion anotacionN)
         {
             try
             {
@@ -482,7 +482,7 @@ namespace AdministradorT
             }
         }
 
-        private bool ActualizarRecordatorio(Recordatorio recordatorioN)
+        public bool ActualizarRecordatorio(Recordatorio recordatorioN)
         {
             try
             {
@@ -509,7 +509,7 @@ namespace AdministradorT
             }
         }
 
-        private bool ActualizarTarea(Tarea tareaN)
+        public bool ActualizarTarea(Tarea tareaN)
         {
             try
             {
@@ -539,7 +539,7 @@ namespace AdministradorT
 
         // ------------------------------- METODOS PARA HACER DELETES A LA BD -------------------------------
 
-        private bool EliminarMateria(Materia materia)
+        public bool EliminarMateria(Materia materia)
         {
             try
             {
