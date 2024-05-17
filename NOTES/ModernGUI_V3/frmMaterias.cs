@@ -76,47 +76,46 @@ namespace ModernGUI_V3
 
 
 
-                    Label horaClase = new Label();
-                    horaClase.AutoSize = true;
-                    horaClase.Location = lblHora.Location;
+                Label horaClase = new Label();
+                horaClase.AutoSize = true;
+                horaClase.Location = lblHora.Location;
 
-                    horaClase.Text = "Hora de Clase: " + materia.HoraClase.ToString();
-                    tp.Controls.Add(horaClase);
+                horaClase.Text = "Hora de Clase: " + materia.HoraClase.ToString();
+                tp.Controls.Add(horaClase);
 
-                    Label docente = new Label();
-                    docente.AutoSize = true;
-                    docente.Location = lblDocente.Location;
-                    docente.Text = "Docente: " + materia.Docente;
-                    tp.Controls.Add(docente);
+                Label docente = new Label();
+                docente.AutoSize = true;
+                docente.Location = lblDocente.Location;
+                docente.Text = "Docente: " + materia.Docente;
+                tp.Controls.Add(docente);
 
-                    Label salon = new Label();
-                    salon.AutoSize = true;
-                    salon.Location = lblSalon.Location;
-                    salon.Text = "Salón: " + materia.Salon;
-                    tp.Controls.Add(salon);
+                Label salon = new Label();
+                salon.AutoSize = true;
+                salon.Location = lblSalon.Location;
+                salon.Text = "Salón: " + materia.Salon;
+                tp.Controls.Add(salon);
 
-                    Button Editar = new Button();
-                    Editar.AutoSize = true;
-                    Editar.Text = "Editar Materia";
-                    Editar.Tag = materia;
-                    Editar.FlatStyle = btnEditar.FlatStyle;
-                    Editar.Location = btnEditar.Location;
-                    Editar.Click += EditarMateria_Click;
-                    tp.Controls.Add(Editar);
+                Button Editar = new Button();
+                Editar.AutoSize = true;
+                Editar.Text = "Editar Materia";
+                Editar.Tag = materia;
+                Editar.FlatStyle = btnEditar.FlatStyle;
+                Editar.Location = btnEditar.Location;
+                Editar.Click += EditarMateria_Click;
+                tp.Controls.Add(Editar);
 
-                    Button Eliminar = new Button();
-                    Eliminar.AutoSize = true;
-                    Eliminar.Text = "Editar Materia";
-                    Eliminar.Tag = materia;
-                    Eliminar.FlatStyle = btnEliminarMateria.FlatStyle;
-                    Eliminar.Location = btnEliminarMateria.Location;
-                    Eliminar.Click += btnEliminarMateria_Click;
-                    tp.Controls.Add(Eliminar);
+                /*Button Eliminar = new Button();
+                Eliminar.AutoSize = true;
+                Eliminar.Text = "Editar Materia";
+                Eliminar.Tag = materia;
+                Eliminar.FlatStyle = btnEliminarMateria.FlatStyle;
+                Eliminar.Location = btnEliminarMateria.Location;
+                Eliminar.Click += btnEliminarMateria_Click;
+                tp.Controls.Add(Eliminar);*/
 
 
                     // Agregar la TabPage al TabControl
                     tabMaterias.TabPages.Add(tp);
-=======
                 Label dias = new Label();
                 dias.Text = "Días: ";
                 dias.AutoSize = true;
@@ -124,51 +123,10 @@ namespace ModernGUI_V3
                 foreach (var dia in materia.Dias)
                 {
                     dias.Text += $"{dia} ";
->>>>>>> c4a83d1f7f3164a8fdbb9edf6ee44b8a4414e04b
                 }
                 tp.Controls.Add(dias);
                 dias.Font = lblDias.Font;
-                dias.Location = lblDias.Location;
-
-
-                Label horaClase = new Label();
-                horaClase.AutoSize = true;
-                horaClase.Location = new Point(10, 30);
-                horaClase.Text = "Hora de Clase: " + materia.HoraClase.ToString();
-                tp.Controls.Add(horaClase);
-                horaClase.Font = lblHora.Font;
-                horaClase.Location = lblHora.Location;
-
-                Label docente = new Label();
-                docente.AutoSize = true;
-                docente.Location = new Point(10, 50);
-                docente.Text = "Docente: " + materia.Docente;
-                tp.Controls.Add(docente);
-                docente.Font = lblDocente.Font;
-                docente.Location = lblDocente.Location;
-
-                Label salon = new Label();
-                salon.AutoSize = true;
-                salon.Location = new Point(10, 70);
-                salon.Text = "Salón: " + materia.Salon;
-                tp.Controls.Add(salon);
-                salon.Font = lblSalon.Font;
-                salon.Location = lblSalon.Location;
-
-
-                Button Editar = new Button();
-                Editar.AutoSize = true;
-                Editar.FlatStyle = btnEditar.FlatStyle;
-                Editar.Location = btnEditar.Location;
-                Editar.Size = btnEditar.Size;
-                Editar.BackColor = btnEditar.BackColor;
-                Editar.Text = "Editar Materia";
-
-                tp.Controls.Add(Editar);
-                Editar.Font = btnEditar.Font;
-                Editar.Location = btnEditar.Location;
-
-
+                dias.Location = lblDias.Location;               
                 // Agregar la TabPage al TabControl
                 tabMaterias.TabPages.Add(tp);
             }
@@ -205,23 +163,20 @@ namespace ModernGUI_V3
         private void btnEliminarMateria_Click(object sender, EventArgs e)
         {
             Button boton = sender as Button;
-<<<<<<< HEAD
             if (boton != null)
-=======
-            DialogResult resultado = MessageBox.Show("Esta seguro que quiere eliminar esta materia?", "Materia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (resultado == DialogResult.Yes) // andate al frmRecordatorio y mira como hice esta parte de acá
->>>>>>> c4a83d1f7f3164a8fdbb9edf6ee44b8a4414e04b
             {
-                DialogResult resultado = MessageBox.Show("Esta seguro que quiere eliminar esta materia?", "Materia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-                if (resultado == DialogResult.Yes)
-                {
+                DialogResult resultado = resultado = MessageBox.Show("Esta seguro que quiere eliminar esta materia?", "Materia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                if (resultado == DialogResult.Yes) // andate al frmRecordatorio y mira como hice esta parte de acá
+                {                    
                     Materia materia = boton.Tag as Materia;
                     if (conexion.EliminarMateria(materia))
                     {
                         MessageBox.Show("Se ha eliminado la materia sin ningun incomveniente", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    }                    
                 }
             }
+            
         }
 
         private void tabMaterias_DrawItem(object sender, DrawItemEventArgs e)

@@ -228,3 +228,21 @@ C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\Sistema.
 C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.Up2Date
 C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.exe
 C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.pdb
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.AssemblyReference.cache
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.SuggestedBindingRedirects.cache
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmCalendario.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmHome.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmRecordatorios.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmTareas.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaAnotacion.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaMateria.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaTarea.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevoRecordatorio.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmTecnicaEstudio.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmMaterias.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmAnotaciones.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmPrincipal.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmOutput.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.Properties.Resources.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.GenerateResource.cache
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.CoreCompileInputs.cache
