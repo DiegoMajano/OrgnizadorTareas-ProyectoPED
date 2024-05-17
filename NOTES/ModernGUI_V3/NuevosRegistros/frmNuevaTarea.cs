@@ -42,10 +42,11 @@ namespace AdministradorT
 
             cbImportanciaPeso.Items.Clear();
             cbImportanciaPeso.Items.Add("Seleccionar importancia");
-            cbImportanciaPeso.Items.Add("Muy importante");
-            cbImportanciaPeso.Items.Add("Importante");
-            cbImportanciaPeso.Items.Add("No importante");
+            cbImportanciaPeso.Items.Add("Muy importante");  // Map to 2
+            cbImportanciaPeso.Items.Add("Importante");      // Map to 1
+            cbImportanciaPeso.Items.Add("No importante");   // Map to 0
             cbImportanciaPeso.SelectedIndex = 0;
+
 
 
             cbAnotacionT.Items.Clear();
@@ -68,19 +69,23 @@ namespace AdministradorT
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtTituloR.Text) || string.IsNullOrEmpty(txtCuerpo.Text))
+            {
                 MessageBox.Show("Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            else if (cbImportanciaPeso.SelectedIndex < 0)
+            }
+            else if (cbImportanciaPeso.SelectedIndex <= 0)
+            {
                 MessageBox.Show("Debe seleccionar el nivel de importancia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
             else
             {
                 titulo = txtTituloR.Text;
                 cuerpo = txtCuerpo.Text;
                 fechaEntrega = dtpFecha.Value;
                 materiaE = cbMateriaT.SelectedIndex > 0 ? cbMateriaT.SelectedItem.ToString() : "";
-                anotacionE = cbAnotacionT.SelectedIndex > 0 ? cbAnotacionT.SelectedItem.ToString() : ""; // Capturar el valor seleccionado del ComboBox cbAnotacionT
+                anotacionE = cbAnotacionT.SelectedIndex > 0 ? cbAnotacionT.SelectedItem.ToString() : "";
 
-                // Obtener el nivel de importancia seleccionado
-                int nivelImportancia = cbImportanciaPeso.SelectedIndex;
+                // Obtener el nivel de importancia seleccionado como cadena
+                string nivelImportancia = cbImportanciaPeso.SelectedItem.ToString();
 
                 // Llamar al método de inserción de tarea en la base de datos
                 if (conexion.InsertarTarea(titulo, cuerpo, fechaEntrega, materiaE, anotacionE, nivelImportancia))
@@ -95,6 +100,20 @@ namespace AdministradorT
                 }
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -145,54 +145,8 @@ namespace AdministradorT
         }
 
 
-        public bool InsertarTarea(string titulo, string cuerpo, DateTime fechaLimite, string nombreMateria, string nombreAnotacion, int nivelImportancia)
-        {
-            try
-            {
-                conexion.Open();
-                string consulta = "INSERT INTO tarea (nombre, descripcion, fechaLimite, estadotarea, idAnotacion) VALUES (@nombre, @descripcion, @fechaLimite, @estadotarea, @idAnotacion)";
-                MySqlCommand comando = new MySqlCommand(consulta, conexion);
-                comando.Parameters.AddWithValue("@nombre", titulo);
-                comando.Parameters.AddWithValue("@descripcion", cuerpo);
-                comando.Parameters.AddWithValue("@fechaLimite", fechaLimite);
+       
 
-                // Convertir el índice seleccionado en el estado correspondiente
-                string estadoTarea = "";
-                switch (nivelImportancia)
-                {
-                    case 1:
-                        estadoTarea = "Muy importante";
-                        break;
-                    case 2:
-                        estadoTarea = "Importante";
-                        break;
-                    case 3:
-                        estadoTarea = "No importante";
-                        break;
-                    default:
-                        // Por si acaso el índice seleccionado es inválido
-                        estadoTarea = "No especificado";
-                        break;
-                }
-                comando.Parameters.AddWithValue("@estadotarea", estadoTarea);
-
-                // Obtener el id de la anotación asociada a partir del nombre
-                int idAnotacion = ObtenerIdAnotacion(nombreAnotacion);
-                comando.Parameters.AddWithValue("@idAnotacion", idAnotacion);
-
-                comando.ExecuteNonQuery();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al insertar la tarea en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            finally
-            {
-                conexion.Close();
-            }
-        }
 
 
         private int ObtenerIdAnotacion(string nombreAnotacion)
@@ -264,7 +218,7 @@ namespace AdministradorT
             try
             {
                 conexion.Open();
-                string consulta = "SELECT titulo FROM anotacion"; // Asumiendo que la tabla de anotaciones se llama 'anotacion' y tiene un campo 'nombre' que contiene los nombres de las anotaciones
+                string consulta = "SELECT titulo FROM anotacion"; 
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
                 using (MySqlDataReader reader = comando.ExecuteReader())
                 {
@@ -284,6 +238,48 @@ namespace AdministradorT
             }
             return nombresAnotaciones;
         }
+
+        
+        public bool InsertarTarea(string titulo, string descripcion, DateTime fechaLimite, string materia, string anotacion, string estadoTarea)
+        {
+            try
+            {
+                conexion.Open();
+
+                string consulta = "INSERT INTO tarea (titulo, descripcion, fechaLimite, nombre, AnotacionT, MateriaT, estadotarea) " +
+                                  "VALUES (@titulo, @descripcion, @fechaLimite, @nombre, @AnotacionT, @MateriaT, @estadoTarea)";
+
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+                comando.Parameters.AddWithValue("@titulo", titulo);
+                comando.Parameters.AddWithValue("@descripcion", descripcion);
+                comando.Parameters.AddWithValue("@fechaLimite", fechaLimite);
+                comando.Parameters.AddWithValue("@nombre", materia);
+                comando.Parameters.AddWithValue("@AnotacionT", anotacion);
+                comando.Parameters.AddWithValue("@MateriaT", materia);
+                comando.Parameters.AddWithValue("@estadoTarea", estadoTarea);
+
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar la tarea en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
+
+
+
+
+
+
+
+
 
 
 
