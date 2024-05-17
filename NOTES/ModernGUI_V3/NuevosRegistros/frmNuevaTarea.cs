@@ -21,7 +21,7 @@ namespace AdministradorT
         public List<string> materias, anotaciones;
         private CConexion conexion;//Conexion
 
-
+        public Tarea nuevaTarea;
 
         public frmNuevaTarea()
         {
@@ -85,24 +85,25 @@ namespace AdministradorT
                 titulo = txtTituloR.Text;
                 cuerpo = txtCuerpo.Text;
                 fechaEntrega = dtpFecha.Value;
-                materiaE = cbMateriaT.SelectedIndex > 0 ? cbMateriaT.SelectedItem.ToString() : "";
-                anotacionE = cbAnotacionT.SelectedIndex > 0 ? cbAnotacionT.SelectedItem.ToString() : "";
-
-                // Obtener el nivel de importancia seleccionado como cadena
-                string nivelImportancia = cbImportanciaPeso.SelectedItem.ToString();
-                int importancia = nivelImportancia == "Muy Importante" ? 1 : 2;
-                Tarea tarea = new Tarea(titulo, cuerpo, fechaEntrega, importancia);
-                // Llamar al método de inserción de tarea en la base de datos
-                if (conexion.InsertarTarea(tarea, materiaE, anotacionE))
+                if(cbMateriaT.SelectedIndex == 0)
                 {
-                    MessageBox.Show("Tarea registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimpiarCampos();
-                    this.Hide();
+                    MessageBox.Show("Debe de asignar una materia para la registrar la tarea","Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
-                    MessageBox.Show("Error al registrar la tarea.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    materiaE = cbMateriaT.SelectedItem.ToString();
+                    anotacionE = cbAnotacionT.SelectedIndex > 0 ? cbAnotacionT.SelectedItem.ToString() : "";
+
+                    // Obtener el nivel de importancia seleccionado como cadena
+                    string nivelImportancia = cbImportanciaPeso.SelectedItem.ToString();
+                    int importancia = nivelImportancia == "Muy Importante" ? 1 : 2;
+                    nuevaTarea = new Tarea(titulo, cuerpo, fechaEntrega, importancia);
+                    // Llamar al método de inserción de tarea en la base de datos
+                    control = true;
+                    LimpiarCampos();
+                    this.Hide();
                 }
+                
             }
         }
 

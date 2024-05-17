@@ -59,6 +59,7 @@ namespace AdministradorT
                 tp.Controls.Add(cuerpo);
 
                 NodoInfo nodoInfo = new NodoInfo(recordatorio, grafo);
+
                 Button Editar = new Button();
                 Editar.AutoSize = true;
                 Editar.Text = "editar";

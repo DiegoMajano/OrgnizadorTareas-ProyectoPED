@@ -149,8 +149,8 @@ namespace AdministradorT
             {
                 conexion.Open();
 
-                string consulta = "INSERT INTO tarea (id_tarea,titulo, descripcion, importancia,fechaLimite, nombre, AnotacionT, MateriaT, estadotarea) " +
-                                  "VALUES (@titulo, @descripcion, @fechaLimite, @importancia, @nombre, @AnotacionT, @MateriaT, @estadoTarea)";
+                string consulta = "INSERT INTO tarea (id_tarea, fechaLimite , estadotarea, nombre, descripcion, importancia,  AnotacionT, MateriaT, titulo) " +
+                                  "VALUES (@id, @fechaLimite, @estadoTarea, @nombre, @descripcion,  @importancia,  @AnotacionT, @MateriaT, @titulo)";
 
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
                 comando.Parameters.AddWithValue("@id", tarea.ID);
@@ -161,7 +161,7 @@ namespace AdministradorT
                 comando.Parameters.AddWithValue("@nombre", materia);
                 comando.Parameters.AddWithValue("@AnotacionT", anotacion);
                 comando.Parameters.AddWithValue("@MateriaT", materia);
-                comando.Parameters.AddWithValue("@estadoTarea", tarea.EstadoTarea);
+                comando.Parameters.AddWithValue("@estadoTarea", tarea.EstadoTarea.ToString());
 
                 comando.ExecuteNonQuery();
                 return true;

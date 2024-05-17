@@ -38,6 +38,8 @@ namespace ModernGUI_V3
             {
                 // Crear una nueva TabPage para mostrar los datos de la anotacion
                 TabPage tp = new TabPage();
+                tp.BackColor = tabPage1.BackColor;
+                tp.Font = tabPage1.Font;
                 tp.Text = anotacion.ID; // Usar un identificador único de la anotacion como texto de la TabPage
 
                 // Crear y configurar los controles para mostrar los datos de la anotacion
@@ -45,24 +47,28 @@ namespace ModernGUI_V3
                 titulo.AutoSize = true;
                 titulo.Location = lbltit.Location;
                 titulo.Font = lbltit.Font;
+
                 titulo.Anchor = lbltit.Anchor;
                 titulo.Text = "Nombre: " + anotacion.Titulo;
                 tp.Controls.Add(titulo);
-                                
+
                 Label cuerpo = new Label();
                 cuerpo.AutoSize = true;
                 cuerpo.Location = lblcuer.Location;
                 cuerpo.Text = anotacion.Cuerpo;
+                cuerpo.Font = lblcuer.Font;
                 tp.Controls.Add(cuerpo);
 
                 Button Editar = new Button();
                 Editar.AutoSize = true;
                 Editar.Visible = true;
-                Editar.Text = "Editar";
-                Editar.Font = btnEditar.Font;
-                Editar.Anchor = btnEditar.Anchor;
-                Editar.FlatStyle = btnEditar.FlatStyle;
-                Editar.Location = btnEditar.Location;
+                Editar.Text = "Editar Anotación";
+                Editar.Font = btnEditarA.Font;
+                Editar.Anchor = btnEditarA.Anchor;
+                Editar.FlatStyle = btnEditarA.FlatStyle;
+                Editar.Location = btnEditarA.Location;
+                Editar.BackColor = btnEditarA.BackColor;
+                Editar.Size = btnEditarA.Size;
                 Editar.Click += EditarAnotacion_Click;
                 tp.Controls.Add(Editar);
 
@@ -79,6 +85,31 @@ namespace ModernGUI_V3
 
                 MessageBox.Show("Listo se editó :D");
             }
+        }
+
+        private void tabAnotaciones_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabControl tbA = (TabControl)sender;
+            Brush textBrush;
+            Rectangle tabRec = tbA.GetTabRect(e.Index);
+
+            Color tbAColor;
+
+            tbAColor = Color.LightSteelBlue;
+
+
+
+
+            e.Graphics.FillRectangle(new SolidBrush(tbAColor), tabRec);
+            textBrush = new SolidBrush(Color.Black);
+
+            string tabText = tbA.TabPages[e.Index].Text;
+            StringFormat stringFlags = new StringFormat();
+            stringFlags.Alignment = StringAlignment.Center;
+            stringFlags.LineAlignment = StringAlignment.Center;
+            e.Graphics.DrawString(tabText, tbA.Font, textBrush, tabRec, stringFlags);
+
+            tbA.TabPages[e.Index].BackColor = tbAColor;
         }
     }
 }

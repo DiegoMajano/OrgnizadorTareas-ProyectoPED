@@ -334,6 +334,7 @@ namespace ModernGUI_V3
 
                     if (!exito)
                         MessageBox.Show("No se ha ingresado la nueva anotación en la bd", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     foreach (var nodoDestino in nodosDestinos)
                     {
                         if (nodoOrigen != null && nodoDestino != null)
@@ -369,7 +370,7 @@ namespace ModernGUI_V3
                 List<CNodos> nodosDestinos = new List<CNodos>();
                 bool nodosConectados = false;
                 // crear el nodo origen
-                CNodos nodoOrigen = grafoMain.AgregarNodos(3, nombre: nuevoRecordatorio.titulo, aRecordar: nuevoRecordatorio.aRecordar, cuerpo: nuevoRecordatorio.cuerpo);
+                CNodos nodoOrigen = grafoMain.AgregarNodos(4, nombre: nuevaTarea.titulo, aRecordar: nuevaTarea.fechaEntrega, cuerpo: nuevaTarea.cuerpo);
 
                 // si ha seleccionado cualquiera de las 3 se le asigna al nodoDestino para crear su conexion
                 if (!string.IsNullOrEmpty(nuevaTarea.materiaE))
@@ -379,6 +380,11 @@ namespace ModernGUI_V3
 
                 if (nodoOrigen != null)
                 {
+                    bool exito = conexion.InsertarTarea(nuevaTarea.nuevaTarea,nuevaTarea.materiaE,nuevaTarea.anotacionE);
+
+                    if(!exito)
+                        MessageBox.Show("No se ha ingresado la nueva tarea en la bd", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     foreach (var nodoDestino in nodosDestinos)
                     {
                         if (nodoOrigen != null && nodoDestino != null)
@@ -389,16 +395,17 @@ namespace ModernGUI_V3
                             else
                                 MessageBox.Show($"El arco entre nodo {nodoOrigen.ID} y {nodoDestino.ID} ya existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
+                        else
+                            MessageBox.Show("pito");
                     }
                 }
                 if (nodosConectados)
                 {
-                    tareas.ActualizarForm(grafoMain, false);
                     MessageBox.Show("Se ha ingresado exitosamente la nueva tarea", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                     MessageBox.Show("No se ha ingresado la nueva tarea", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                tareas.ActualizarForm(grafoMain, false);
             }
         }
               

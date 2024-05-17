@@ -50,7 +50,7 @@ namespace AdministradorT
                     nodosRecordatorios.Add(recordatorio);
                     return recordatorio;
                 case 4: // creacion del nodo para la tarea
-                    Tarea tarea = new Tarea(titulo, cuerpo, fechaEntrega);
+                    Tarea tarea = new Tarea(nombre, cuerpo, fechaEntrega);
                     nodos.Add(tarea);
                     nodosTarea.Add(tarea);
                     return tarea;
