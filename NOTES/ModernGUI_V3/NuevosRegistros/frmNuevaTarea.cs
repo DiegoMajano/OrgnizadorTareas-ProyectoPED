@@ -30,6 +30,11 @@ namespace AdministradorT
             RellenarMateria();
         }
 
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
         // ------------------------- METODOS EXTRA -------------------------
 
         public void RellenarMateria()
