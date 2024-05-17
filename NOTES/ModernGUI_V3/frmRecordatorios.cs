@@ -42,30 +42,38 @@ namespace AdministradorT
                 // Crear y configurar los controles para mostrar los datos de la materia
                 Label Titulo = new Label();
                 Titulo.AutoSize = true;
-                Titulo.Location = new Point(10, 10);
+                Titulo.Location = lbltr.Location;
                 Titulo.Text = "Titulo: " + recordatorio.Titulo;
                 tp.Controls.Add(Titulo);
 
                 Label fechaRecordar = new Label();
                 fechaRecordar.AutoSize = true;
-                fechaRecordar.Location = new Point(10, 30);
+                fechaRecordar.Location = lblfecha.Location;
                 fechaRecordar.Text = "Fecha a recordar: " + recordatorio.aRecordar.ToString();
                 tp.Controls.Add(fechaRecordar);
 
                 Label cuerpo = new Label();
                 cuerpo.AutoSize = true;
-                cuerpo.Location = new Point(10, 70);
+                cuerpo.Location = lblcuerpo.Location;
                 cuerpo.Text = "Cuerpo del recordatorio: " + recordatorio.Cuerpo;
                 tp.Controls.Add(cuerpo);
 
                 NodoInfo nodoInfo = new NodoInfo(recordatorio, grafo);
                 Button Editar = new Button();
+                Editar.AutoSize = true;
+                Editar.Text = "editar";
+                Editar.Location = button1.Location;
                 Editar.Tag = nodoInfo;
                 Editar.Click += EditarRecordatorio_Click;
+                tp.Controls.Add(Editar);
 
                 Button Eliminar = new Button();
+                Eliminar.AutoSize = true;
+                Eliminar.Text = "Eliminar";
+                Eliminar.Location = button2.Location;
                 Eliminar.Tag = nodoInfo;
                 Eliminar.Click += EliminarRecordatorio_Click;
+                tp.Controls.Add(Eliminar);
 
 
                 // Agregar la TabPage al TabControl
@@ -99,9 +107,12 @@ namespace AdministradorT
 
                 if(result == DialogResult.Yes)
                 {
-                    Recordatorio recordatorioEliminado = (Recordatorio) grafo.EliminarNodo(recordatorio.ID);                    
-                    if (recordatorio!=null && !conexion.EliminarRecordatorio(recordatorio))                    
+                    Recordatorio recordatorioEliminado = (Recordatorio) grafo.EliminarNodo(3,recordatorio.ID);                    
+                    if (recordatorioEliminado!=null && !conexion.EliminarRecordatorio(recordatorio))
+                    {
+                        ActualizarForm(grafo, false);
                         MessageBox.Show($"Se ha eliminado correctamente el Recordatorio: {recordatorioEliminado.Titulo}","Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }               
                     
                     else
                         MessageBox.Show($"No se ha eliminado correctamente el Recordatorio: {recordatorioEliminado.Titulo}", "Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);

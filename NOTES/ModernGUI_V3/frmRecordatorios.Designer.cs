@@ -34,8 +34,16 @@
             this.tabRecordatorios = new System.Windows.Forms.TabControl();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lbltr = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lblcuerpo = new System.Windows.Forms.Label();
+            this.lblfecha = new System.Windows.Forms.Label();
             this.pnlAnotaciones.SuspendLayout();
+            this.tabRecordatorios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlAnotaciones
@@ -67,6 +75,7 @@
             // 
             this.tabRecordatorios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabRecordatorios.Controls.Add(this.tabPage1);
             this.tabRecordatorios.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tabRecordatorios.Location = new System.Drawing.Point(32, 154);
             this.tabRecordatorios.Name = "tabRecordatorios";
@@ -94,6 +103,66 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.lblfecha);
+            this.tabPage1.Controls.Add(this.lblcuerpo);
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.lbltr);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(792, 256);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lbltr
+            // 
+            this.lbltr.AutoSize = true;
+            this.lbltr.Location = new System.Drawing.Point(114, 30);
+            this.lbltr.Name = "lbltr";
+            this.lbltr.Size = new System.Drawing.Size(35, 13);
+            this.lbltr.TabIndex = 0;
+            this.lbltr.Text = "label2";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(481, 159);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 39);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(481, 30);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(84, 52);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // lblcuerpo
+            // 
+            this.lblcuerpo.AutoSize = true;
+            this.lblcuerpo.Location = new System.Drawing.Point(114, 94);
+            this.lblcuerpo.Name = "lblcuerpo";
+            this.lblcuerpo.Size = new System.Drawing.Size(35, 13);
+            this.lblcuerpo.TabIndex = 3;
+            this.lblcuerpo.Text = "label2";
+            // 
+            // lblfecha
+            // 
+            this.lblfecha.AutoSize = true;
+            this.lblfecha.Location = new System.Drawing.Point(114, 195);
+            this.lblfecha.Name = "lblfecha";
+            this.lblfecha.Size = new System.Drawing.Size(35, 13);
+            this.lblfecha.TabIndex = 4;
+            this.lblfecha.Text = "label2";
+            // 
             // frmRecordatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,7 +174,10 @@
             this.Text = "frmRecordatorios";
             this.pnlAnotaciones.ResumeLayout(false);
             this.pnlAnotaciones.PerformLayout();
+            this.tabRecordatorios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -117,5 +189,11 @@
         private System.Windows.Forms.TabControl tabRecordatorios;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TabPage tabPage1;
+        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbltr;
+        private System.Windows.Forms.Label lblfecha;
+        private System.Windows.Forms.Label lblcuerpo;
     }
 }

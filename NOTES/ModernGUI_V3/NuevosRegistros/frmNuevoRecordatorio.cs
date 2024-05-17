@@ -19,13 +19,14 @@ namespace AdministradorT
         // atributos para el control de informacion
         public bool control;
         public string titulo, cuerpo, materiaE = "", anotacionE = "", tareaE = "";
-        public bool  controlEditar;
+        public bool controlEditar;
         public DateTime aRecordar;
-        private CConexion conexion;
+
+        public Recordatorio newRecordatorio;
 
         public frmNuevoRecordatorio()
         {
-            InitializeComponent(); conexion = new CConexion();
+            InitializeComponent();
             RellenarMateriaAnotacion();
         }
 
@@ -58,9 +59,6 @@ namespace AdministradorT
             cbTareaR.Items.AddRange(tareas.ToArray());
         }
 
-
-
-
         private void LimpiarCampos()
         {
             txtTituloR.Clear();
@@ -79,28 +77,18 @@ namespace AdministradorT
             else
             {
                 string idRecordatorio = Guid.NewGuid().ToString().Substring(0, 5); // Generar un ID único para el recordatorio
-                string titulo = txtTituloR.Text;
-                DateTime fechaRecordatorio = dtpFecha.Value;
-                string cuerpo = txtCuerpo.Text;
-                string materiaR = cbMateriaR.SelectedIndex > 0 ? cbMateriaR.SelectedItem.ToString() : "";
-                string anotacionR = cbAnotacionR.SelectedIndex > 0 ? cbAnotacionR.SelectedItem.ToString() : "";
-                string tareaR = cbTareaR.SelectedIndex > 0 ? cbTareaR.SelectedItem.ToString() : ""; // Asegurarse de obtener el título de la tarea
-
-                CConexion conexion = new CConexion();
-                bool exito = conexion.InsertarRecordatorio(idRecordatorio, titulo, fechaRecordatorio, cuerpo, materiaR, anotacionR, tareaR);
-
-                if (exito)
-                {
-                    MessageBox.Show("Recordatorio registrado con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimpiarCampos();
-                    this.Hide();
-                }
+                titulo = txtTituloR.Text;
+                aRecordar = dtpFecha.Value;
+                cuerpo = txtCuerpo.Text;
+                materiaE = cbMateriaR.SelectedIndex > 0 ? cbMateriaR.SelectedItem.ToString() : "";
+                anotacionE = cbAnotacionR.SelectedIndex > 0 ? cbAnotacionR.SelectedItem.ToString() : "";
+                tareaE = cbTareaR.SelectedIndex > 0 ? cbTareaR.SelectedItem.ToString() : ""; // Asegurarse de obtener el título de la tarea
+                newRecordatorio = new Recordatorio(titulo,aRecordar,cuerpo);
+                control = true;
+                LimpiarCampos();
+                this.Hide();               
             }
         }
-
-
-
-
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {

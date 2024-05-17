@@ -414,7 +414,7 @@ namespace AdministradorT
             return anotaciones;
         }
 
-        public bool InsertarRecordatorio(string idRecordatorio, string titulo, DateTime fechaRecordatorio, string cuerpo, string materiaR, string anotacionR, string tareaR)
+        public bool InsertarRecordatorio(Recordatorio recordatorio, string materiaR, string anotacionR, string tareaR)
         {
             try
             {
@@ -424,10 +424,10 @@ namespace AdministradorT
                                   "VALUES (@idRecordatorio, @titulo, @fechaRecordatorio, @cuerpo, @materiaR, @anotacionR, @tareaR)";
 
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
-                comando.Parameters.AddWithValue("@idRecordatorio", idRecordatorio);
-                comando.Parameters.AddWithValue("@titulo", titulo);
-                comando.Parameters.AddWithValue("@fechaRecordatorio", fechaRecordatorio);
-                comando.Parameters.AddWithValue("@cuerpo", cuerpo);
+                comando.Parameters.AddWithValue("@idRecordatorio", recordatorio.ID);
+                comando.Parameters.AddWithValue("@titulo", recordatorio.Titulo);
+                comando.Parameters.AddWithValue("@fechaRecordatorio", recordatorio.aRecordar);
+                comando.Parameters.AddWithValue("@cuerpo", recordatorio.Cuerpo);
                 comando.Parameters.AddWithValue("@materiaR", materiaR);
                 comando.Parameters.AddWithValue("@anotacionR", anotacionR);
                 comando.Parameters.AddWithValue("@tareaR", tareaR);
@@ -702,13 +702,16 @@ namespace AdministradorT
             try
             {
                 conexion.Open();
-                string consulta = "DELETE FROM tarea where id_tarea = @id"; 
+                string consulta = "DELETE FROM recordatorio where idRecordatorio = @id"; 
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
 
                 comando.Parameters.AddWithValue("@id", recordatorioE.ID);
-                comando.ExecuteNonQuery();
+                if (comando.ExecuteNonQuery()>0)
+                {
+                    return true;
+                }
+                return false;
 
-                return true;
             }
             catch (Exception ex)
             {

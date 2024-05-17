@@ -9,6 +9,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -329,6 +330,10 @@ namespace ModernGUI_V3
 
                 if (nodoOrigen != null)
                 {
+                    bool exito = conexion.InsertarRecordatorio(nuevoRecordatorio.newRecordatorio, nuevoRecordatorio.materiaE, nuevoRecordatorio.anotacionE, nuevoRecordatorio.tareaE);
+
+                    if (!exito)
+                        MessageBox.Show("No se ha ingresado la nueva anotación en la bd", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     foreach (var nodoDestino in nodosDestinos)
                     {
                         if (nodoOrigen != null && nodoDestino != null)
@@ -342,11 +347,11 @@ namespace ModernGUI_V3
                 }
                 if (nodosConectados)
                 {
-                    recordatorios.ActualizarForm(grafoMain, false);
                     MessageBox.Show("Se ha ingresado exitosamente la nueva anotación", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                     MessageBox.Show("No se ha ingresado la nueva anotación", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                recordatorios.ActualizarForm(grafoMain, false);
             }
         }
 
