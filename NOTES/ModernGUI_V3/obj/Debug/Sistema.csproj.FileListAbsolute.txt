@@ -186,3 +186,9 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\Mode
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\Recursos\star.png
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmHome.resources
 >>>>>>> 7af631387300eb4e4cf35f30b9856841afceb9ce
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Recursos\ready.wav
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Recursos\song.wav
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Recursos\sound.wav
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Recursos\star.jpg
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Recursos\star.png
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmHome.resources
