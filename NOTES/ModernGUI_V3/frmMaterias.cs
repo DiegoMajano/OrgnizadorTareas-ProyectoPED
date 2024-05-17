@@ -46,62 +46,90 @@ namespace ModernGUI_V3
                 formulario.BringToFront();
             }
         }
-
+        bool actualizado = false;
         //Funcion que actualiza los datos de el tab page para que aparezcan los datos de el grafo
-        public void ActualizarForm(CGrafo grafo)
+        public void ActualizarForm(CGrafo grafo,bool AlGrafo)
         {
-            tabMaterias.TabPages.Clear();
-            List<Materia> materias = conexion.ObtenerTodasLasMaterias(grafo); // Obtener todas las materias de la base de datos
-
-            foreach (Materia materia in materias)
+            if (!actualizado)
             {
-                // Crear una nueva TabPage para mostrar los datos de la materia
-                TabPage tp = new TabPage();
-                tp.Text = materia.ID; // Usar un identificador único de la materia como texto de la TabPage
-
-                // Crear y configurar los controles para mostrar los datos de la materia
-                Label nombre = new Label();
-                nombre.AutoSize = true;
-                nombre.Location = new Point(10, 10);
-                nombre.Text = "Nombre: " + materia.Nombre;
-                tp.Controls.Add(nombre);
-
-                Label dias = new Label();
-                dias.Text = "Días: ";
-                dias.AutoSize = true;
-                dias.Location = new Point(10, 90);
-                foreach (var dia in materia.Dias)
+                tabMaterias.TabPages.Clear();
+                List<Materia> materias = conexion.ObtenerTodasLasMaterias(); // Obtener todas las materias de la base de datos
+                if (AlGrafo)
                 {                    
-                    dias.Text += $"{dia} ";                    
+                    grafo.AgregarNodos(1, materias: materias);
                 }
-                tp.Controls.Add(dias);
 
-                Label horaClase = new Label();
-                horaClase.AutoSize = true;
-                horaClase.Location = new Point(10, 30);
-                horaClase.Text = "Hora de Clase: " + materia.HoraClase.ToString();
-                tp.Controls.Add(horaClase);
+                foreach (Materia materia in materias)
+                {
+                    // Crear una nueva TabPage para mostrar los datos de la materia
+                    TabPage tp = new TabPage();
+                    tp.Text = materia.ID; // Usar un identificador único de la materia como texto de la TabPage
 
-                Label docente = new Label();
-                docente.AutoSize = true;
-                docente.Location = new Point(10, 50);
-                docente.Text = "Docente: " + materia.Docente;
-                tp.Controls.Add(docente);
+                    // Crear y configurar los controles para mostrar los datos de la materia
+                    Label nombre = new Label();
+                    nombre.Font = lblPrueba.Font;
 
-                Label salon = new Label();
-                salon.AutoSize = true;
-                salon.Location = new Point(10, 70);
-                salon.Text = "Salón: " + materia.Salon;
-                tp.Controls.Add(salon);
+                    nombre.AutoSize = true;
+                    nombre.Location = new Point(10, 10);
+                    nombre.Text = "Nombre: " + materia.Nombre;
+                    nombre.Location = lblPrueba.Location;
+                    tp.Controls.Add(nombre);
 
-                Button Editar = new Button();
-                Editar.AutoSize = true;
-                Editar.Location = new Point(tabMaterias.Width - 140, 10);
-                Editar.Text = "Editar Materia";
-                tp.Controls.Add(Editar);
 
-                // Agregar la TabPage al TabControl
-                tabMaterias.TabPages.Add(tp);
+                    Label dias = new Label();
+                    dias.Text = "Días: ";
+                    dias.AutoSize = true;
+                    dias.Location = new Point(10, 90);
+                    foreach (var dia in materia.Dias)
+                    {
+                        dias.Text += $"{dia} ";
+                    }
+                    tp.Controls.Add(dias);
+
+                    Label horaClase = new Label();
+                    horaClase.AutoSize = true;
+                    horaClase.Location = lblHora.Location;
+
+                    horaClase.Text = "Hora de Clase: " + materia.HoraClase.ToString();
+                    tp.Controls.Add(horaClase);
+
+                    Label docente = new Label();
+                    docente.AutoSize = true;
+                    docente.Location = lblDocente.Location;
+                    docente.Text = "Docente: " + materia.Docente;
+                    tp.Controls.Add(docente);
+
+                    Label salon = new Label();
+                    salon.AutoSize = true;
+                    salon.Location = lblSalon.Location;
+                    salon.Text = "Salón: " + materia.Salon;
+                    tp.Controls.Add(salon);
+
+                    Button Editar = new Button();
+                    Editar.AutoSize = true;
+                    Editar.Text = "Editar Materia";
+                    Editar.Tag = materia;
+                    Editar.FlatStyle = btnEditar.FlatStyle;
+                    Editar.Location = btnEditar.Location;
+                    Editar.Click += EditarMateria_Click;
+                    tp.Controls.Add(Editar);
+
+                    // Agregar la TabPage al TabControl
+                    tabMaterias.TabPages.Add(tp);
+                }
+                //actualizado = true;
+            }
+            
+        }
+
+        private void EditarMateria_Click(object sender, EventArgs e)
+        {
+            Button boton = sender as Button;
+            if (boton != null)
+            {
+                Materia materia = boton.Tag as Materia;
+
+                MessageBox.Show("Listo se editó :D");
             }
         }
 

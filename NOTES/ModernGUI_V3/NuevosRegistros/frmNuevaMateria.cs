@@ -67,20 +67,10 @@ namespace AdministradorT
 
                 salon = txtSalon.Text;
                 horaClase = TimeSpan.Parse(cbHora.SelectedItem.ToString()); // Corregido para obtener la hora seleccionada correctamente
-                nuevaMateria = new Materia(nombreM, horaClase, dias, nombreD, salon);
+                //nuevaMateria = new Materia(nombreM, horaClase, dias, nombreD, salon);
                 control = true;
-
-                // Insertar los datos en la base de datos
-                if (conexion.InsertarMateria(nuevaMateria))
-                {
-                    MessageBox.Show("Materia registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimpiarCampos();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Error al registrar la materia.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                LimpiarCampos();
+                this.Hide();
             }
         }
 

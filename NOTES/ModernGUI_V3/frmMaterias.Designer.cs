@@ -32,10 +32,19 @@
             this.pnlFormularios = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tabMaterias = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblSalon = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblDocente = new System.Windows.Forms.Label();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.lblPrueba = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlFormularios.SuspendLayout();
+            this.tabMaterias.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,9 +65,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(326, 83);
+            this.label1.Location = new System.Drawing.Point(315, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 31);
             this.label1.TabIndex = 11;
@@ -66,12 +76,90 @@
             // 
             // tabMaterias
             // 
+            this.tabMaterias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabMaterias.Controls.Add(this.tabPage1);
             this.tabMaterias.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tabMaterias.Location = new System.Drawing.Point(31, 134);
             this.tabMaterias.Name = "tabMaterias";
             this.tabMaterias.SelectedIndex = 0;
             this.tabMaterias.Size = new System.Drawing.Size(800, 282);
             this.tabMaterias.TabIndex = 10;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.lblHora);
+            this.tabPage1.Controls.Add(this.lblSalon);
+            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.lblDocente);
+            this.tabPage1.Controls.Add(this.btnEditar);
+            this.tabPage1.Controls.Add(this.lblPrueba);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(792, 256);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.Location = new System.Drawing.Point(573, 165);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(47, 17);
+            this.lblHora.TabIndex = 5;
+            this.lblHora.Text = "label3";
+            // 
+            // lblSalon
+            // 
+            this.lblSalon.AutoSize = true;
+            this.lblSalon.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalon.Location = new System.Drawing.Point(323, 203);
+            this.lblSalon.Name = "lblSalon";
+            this.lblSalon.Size = new System.Drawing.Size(47, 17);
+            this.lblSalon.TabIndex = 4;
+            this.lblSalon.Text = "label3";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(97, 56);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 3;
+            // 
+            // lblDocente
+            // 
+            this.lblDocente.AutoSize = true;
+            this.lblDocente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDocente.Location = new System.Drawing.Point(94, 145);
+            this.lblDocente.Name = "lblDocente";
+            this.lblDocente.Size = new System.Drawing.Size(47, 17);
+            this.lblDocente.TabIndex = 2;
+            this.lblDocente.Text = "label3";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(659, 19);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(98, 38);
+            this.btnEditar.TabIndex = 1;
+            this.btnEditar.Text = "button1";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // lblPrueba
+            // 
+            this.lblPrueba.AutoSize = true;
+            this.lblPrueba.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrueba.Location = new System.Drawing.Point(366, 19);
+            this.lblPrueba.Name = "lblPrueba";
+            this.lblPrueba.Size = new System.Drawing.Size(69, 23);
+            this.lblPrueba.TabIndex = 0;
+            this.lblPrueba.Text = "label3";
             // 
             // label7
             // 
@@ -114,6 +202,9 @@
             this.Text = "Form3";
             this.pnlFormularios.ResumeLayout(false);
             this.pnlFormularios.PerformLayout();
+            this.tabMaterias.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -127,5 +218,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabMaterias;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label lblPrueba;
+        private System.Windows.Forms.Label lblDocente;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblSalon;
     }
 }

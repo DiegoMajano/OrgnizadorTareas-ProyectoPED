@@ -10,6 +10,7 @@ namespace AdministradorT.ClasesNodos
     {
         private string titulo;
         private string cuerpo;
+        private string idMateria;
 
         public string Titulo
         {
@@ -23,7 +24,7 @@ namespace AdministradorT.ClasesNodos
             set { cuerpo = value; }
         }
 
-        public int idMateria
+        public string IdMateria
         {
             get { return idMateria; }
             set { idMateria = value; }
@@ -31,10 +32,17 @@ namespace AdministradorT.ClasesNodos
 
         public Anotacion(string titulo, string cuerpo)
         {
-            this.titulo = titulo;
-            this.cuerpo = cuerpo;
+            this.Titulo = titulo;
+            this.Cuerpo = cuerpo;
             setID(2, titulo);
             
+        }
+
+        public Anotacion(string ID, string titulo, string cuerpo)
+        {
+            this.ID = ID;
+            this.Titulo = titulo;
+            this.Cuerpo = cuerpo;
         }
     }
 }

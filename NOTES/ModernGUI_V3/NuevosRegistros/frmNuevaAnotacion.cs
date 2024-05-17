@@ -48,20 +48,12 @@ namespace AdministradorT
                 MessageBox.Show("Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
             {
-                string titulo = txtTituloA.Text;
-                string cuerpo = txtCuerpo.Text;
-                string nombreMateria = cbMateriaA.SelectedItem.ToString();
-
-                if (conexion.InsertarAnotacion(titulo, cuerpo, nombreMateria))
-                {
-                    MessageBox.Show("Anotación registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimpiarCampos();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Error al registrar la anotación.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                titulo = txtTituloA.Text;
+                cuerpo = txtCuerpo.Text;
+                materiaE = cbMateriaA.SelectedItem.ToString();
+                control = true;
+                LimpiarCampos();
+                this.Hide();
             }
         }
 

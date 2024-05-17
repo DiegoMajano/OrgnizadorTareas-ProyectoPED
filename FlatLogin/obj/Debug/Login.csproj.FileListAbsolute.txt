@@ -44,21 +44,6 @@ D:\2024 UDB\Ciclo 1\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\Login.csproj.C
 D:\2024 UDB\Ciclo 1\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\Login.csproj.CopyComplete
 D:\2024 UDB\Ciclo 1\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\FlatLoginWatermark.exe
 D:\2024 UDB\Ciclo 1\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\FlatLoginWatermark.pdb
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\FlatLoginWatermark.exe.config
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\FlatLoginWatermark.exe
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\FlatLoginWatermark.pdb
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\AdministradorT.exe
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\AdministradorT.pdb
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\AdministradorT.exe.config
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\Login.csproj.AssemblyReference.cache
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\Login.csproj.SuggestedBindingRedirects.cache
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\FlatLoginWatermark.FormLogin.resources
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\FlatLoginWatermark.Properties.Resources.resources
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\Login.csproj.GenerateResource.cache
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\Login.csproj.CoreCompileInputs.cache
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\Login.csproj.CopyComplete
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\FlatLoginWatermark.exe
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\FlatLoginWatermark.pdb
 C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\bin\Debug\FlatLoginWatermark.exe.config
 C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\bin\Debug\FlatLoginWatermark.exe
 C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\bin\Debug\FlatLoginWatermark.pdb
@@ -104,6 +89,10 @@ C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\b
 C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\FlatLogin\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\FlatLoginWatermark.exe.config
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\FlatLoginWatermark.exe
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\FlatLoginWatermark.pdb
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\AdministradorT.exe
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\BouncyCastle.Cryptography.dll
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\Google.Protobuf.dll
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\K4os.Compression.LZ4.dll
@@ -120,6 +109,8 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\ZstdSharp.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\AdministradorT.pdb
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\AdministradorT.exe.config
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\BouncyCastle.Cryptography.xml
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\Google.Protobuf.pdb
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\Google.Protobuf.xml
@@ -135,3 +126,12 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\Login.csproj.AssemblyReference.cache
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\Login.csproj.SuggestedBindingRedirects.cache
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\FlatLoginWatermark.FormLogin.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\FlatLoginWatermark.Properties.Resources.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\Login.csproj.CopyComplete
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\FlatLoginWatermark.exe
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\FlatLogin\obj\Debug\FlatLoginWatermark.pdb
