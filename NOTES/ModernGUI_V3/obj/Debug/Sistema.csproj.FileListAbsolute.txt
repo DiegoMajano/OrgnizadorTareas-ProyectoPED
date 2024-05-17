@@ -160,10 +160,8 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\Mode
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmCalendario.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmRecordatorios.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmTareas.resources
-<<<<<<< HEAD
 C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmRecordatorios.resources
 C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmTareas.resources
-=======
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaAnotacion.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaMateria.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaTarea.resources
@@ -185,7 +183,6 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\Mode
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\Recursos\star.jpg
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\Recursos\star.png
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmHome.resources
->>>>>>> 7af631387300eb4e4cf35f30b9856841afceb9ce
 C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Recursos\ready.wav
 C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Recursos\song.wav
 C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Recursos\sound.wav
@@ -232,4 +229,3 @@ D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frm
 D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmRecordatorios.resources
 D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmTareas.resources
 D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.CopyComplete
->>>>>>> 0183da2b0ab27d2cdf77b980b7b1b774cb3df460
