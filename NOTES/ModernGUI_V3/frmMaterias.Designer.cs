@@ -42,7 +42,10 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+=======
             this.btnEliminarM = new System.Windows.Forms.Button();
+>>>>>>> 4f6f52796857c135122af1383d1b1b72a61164af
             this.pnlFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabMaterias.SuspendLayout();
@@ -70,7 +73,11 @@
             this.label7.Font = new System.Drawing.Font("Constantia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(90, 49);
             this.label7.Name = "label7";
+<<<<<<< HEAD
+            this.label7.Size = new System.Drawing.Size(133, 33);
+=======
             this.label7.Size = new System.Drawing.Size(163, 40);
+>>>>>>> 4f6f52796857c135122af1383d1b1b72a61164af
             this.label7.TabIndex = 20;
             this.label7.Text = "My Notes";
             // 
@@ -80,7 +87,11 @@
             this.label2.Font = new System.Drawing.Font("Book Antiqua", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(90, 49);
             this.label2.Name = "label2";
+<<<<<<< HEAD
+            this.label2.Size = new System.Drawing.Size(135, 32);
+=======
             this.label2.Size = new System.Drawing.Size(164, 40);
+>>>>>>> 4f6f52796857c135122af1383d1b1b72a61164af
             this.label2.TabIndex = 21;
             this.label2.Text = "My Notes";
             // 
@@ -118,9 +129,9 @@
             this.tabPage1.Controls.Add(this.lblNombre);
             this.tabPage1.Controls.Add(this.btnEditar);
             this.tabPage1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(720, 359);
+            this.tabPage1.Size = new System.Drawing.Size(720, 363);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -130,7 +141,7 @@
             this.lblDias.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDias.Location = new System.Drawing.Point(40, 291);
             this.lblDias.Name = "lblDias";
-            this.lblDias.Size = new System.Drawing.Size(81, 26);
+            this.lblDias.Size = new System.Drawing.Size(68, 22);
             this.lblDias.TabIndex = 5;
             this.lblDias.Text = "label3";
             // 
@@ -140,7 +151,7 @@
             this.lblSalon.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalon.Location = new System.Drawing.Point(40, 237);
             this.lblSalon.Name = "lblSalon";
-            this.lblSalon.Size = new System.Drawing.Size(81, 26);
+            this.lblSalon.Size = new System.Drawing.Size(68, 22);
             this.lblSalon.TabIndex = 4;
             this.lblSalon.Text = "label6";
             // 
@@ -150,7 +161,7 @@
             this.lblDocente.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDocente.Location = new System.Drawing.Point(40, 172);
             this.lblDocente.Name = "lblDocente";
-            this.lblDocente.Size = new System.Drawing.Size(81, 26);
+            this.lblDocente.Size = new System.Drawing.Size(68, 22);
             this.lblDocente.TabIndex = 3;
             this.lblDocente.Text = "label5";
             // 
@@ -160,7 +171,7 @@
             this.lblHora.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.Location = new System.Drawing.Point(40, 104);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(81, 26);
+            this.lblHora.Size = new System.Drawing.Size(68, 22);
             this.lblHora.TabIndex = 2;
             this.lblHora.Text = "label4";
             // 
@@ -170,7 +181,7 @@
             this.lblNombre.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(40, 41);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(81, 26);
+            this.lblNombre.Size = new System.Drawing.Size(68, 22);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "label3";
             // 
@@ -185,6 +196,7 @@
             this.btnEditar.Size = new System.Drawing.Size(148, 62);
             this.btnEditar.TabIndex = 0;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // label1
             // 
@@ -193,10 +205,12 @@
             this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Location = new System.Drawing.Point(350, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(309, 37);
+            this.label1.Size = new System.Drawing.Size(257, 31);
             this.label1.TabIndex = 17;
             this.label1.Text = "Materias registradas";
             // 
+<<<<<<< HEAD
+=======
             // btnEliminarM
             // 
             this.btnEliminarM.BackColor = System.Drawing.Color.SlateGray;
@@ -209,6 +223,7 @@
             this.btnEliminarM.TabIndex = 6;
             this.btnEliminarM.UseVisualStyleBackColor = false;
             // 
+>>>>>>> 4f6f52796857c135122af1383d1b1b72a61164af
             // frmMaterias
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;

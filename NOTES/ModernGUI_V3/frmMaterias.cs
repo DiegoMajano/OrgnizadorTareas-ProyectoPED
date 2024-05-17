@@ -50,6 +50,7 @@ namespace ModernGUI_V3
         //Funcion que actualiza los datos de el tab page para que aparezcan los datos de el grafo
         public void ActualizarForm(CGrafo grafo,bool AlGrafo)
         {
+<<<<<<< HEAD
            
             tabMaterias.TabPages.Clear();
             List<Materia> materias = conexion.ObtenerTodasLasMaterias(); // Obtener todas las materias de la base de datos
@@ -59,6 +60,17 @@ namespace ModernGUI_V3
             foreach (Materia materia in materias)
             {
                 // Crear una nueva TabPage para mostrar los datos de la materia
+=======
+                tabMaterias.TabPages.Clear();
+                List<Materia> materias = conexion.ObtenerTodasLasMaterias(); // Obtener todas las materias de la base de datos
+                if (AlGrafo)                                 
+                    grafo.AgregarNodos(1, materias: materias);
+                
+
+                foreach (Materia materia in materias)
+                {
+                    // Crear una nueva TabPage para mostrar los datos de la materia
+>>>>>>> 6b96de676a3c09b83d70afbfb76bddb0051d8835
                 TabPage tp = new TabPage();
                 tp.BackColor = tabPage1.BackColor;
                 tp.Font = tabPage1.Font;
@@ -98,7 +110,7 @@ namespace ModernGUI_V3
                 Editar.Tag = materia;
                 Editar.FlatStyle = btnEditar.FlatStyle;
                 Editar.Location = btnEditar.Location;
-                Editar.Click += EditarMateria_Click;
+                Editar.Click += btnEditar_Click;
                 tp.Controls.Add(Editar);
 
                 /*Button Eliminar = new Button();
@@ -110,9 +122,6 @@ namespace ModernGUI_V3
                 Eliminar.Click += btnEliminarMateria_Click;
                 tp.Controls.Add(Eliminar);*/
 
-
-                    // Agregar la TabPage al TabControl
-                    tabMaterias.TabPages.Add(tp);
                 Label dias = new Label();
                 dias.Text = "Días: ";
                 dias.AutoSize = true;
@@ -186,7 +195,58 @@ namespace ModernGUI_V3
             }
         }
 
-        private void EditarMateria_Click(object sender, EventArgs e)
+        private void btnEliminarMateria_Click(object sender, EventArgs e)
+        {
+            NodoInfo nodoInfo;
+            Materia materia;
+            CGrafo grafo;
+
+            Button boton = sender as Button;
+            if (boton != null)
+            {
+                nodoInfo = boton.Tag as NodoInfo;
+                materia = (Materia)nodoInfo.Nodo;
+                grafo = nodoInfo.Grafo;
+
+                DialogResult result = MessageBox.Show($"¿Estás seguro de eliminar la materia {materia.nombre}?, los cambios realizados no se podrán recuperar", "Adverdencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    Materia materiaEliminada= (Materia)grafo.EliminarNodo(3, materia.ID);
+                    if (materiaEliminada != null && !conexion.EliminarMateria(materia))
+                    {
+                        ActualizarForm(grafo, false);
+                        MessageBox.Show($"Se ha eliminado correctamente la Materia: {materiaEliminada.nombre}", "Eliminar Materia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                        MessageBox.Show($"No se ha eliminado correctamente la Materia: {materiaEliminada.nombre}", "Eliminar Materia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void tabMaterias_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabControl tb = (TabControl)sender;
+            Brush textBrush;
+            Rectangle tabRec = tb.GetTabRect(e.Index);
+
+            Color tbColor;
+
+            tbColor = Color.LightSteelBlue;
+
+            e.Graphics.FillRectangle(new SolidBrush(tbColor), tabRec);
+            textBrush = new SolidBrush(Color.Black);
+
+            string tabText = tb.TabPages[e.Index].Text;
+            StringFormat stringFlags = new StringFormat();
+            stringFlags.Alignment = StringAlignment.Center;
+            stringFlags.LineAlignment = StringAlignment.Center;
+            e.Graphics.DrawString(tabText, tb.Font, textBrush, tabRec, stringFlags);
+
+            tb.TabPages[e.Index].BackColor = tbColor;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
         {
             Button boton = sender as Button;
             if (boton != null)
@@ -212,49 +272,6 @@ namespace ModernGUI_V3
                     }
                 }
             }
-        }
-
-        private void btnEliminarMateria_Click(object sender, EventArgs e)
-        {
-            Button boton = sender as Button;
-            if (boton != null)
-            {
-                DialogResult resultado = resultado = MessageBox.Show("Esta seguro que quiere eliminar esta materia?", "Materia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-
-                if (resultado == DialogResult.Yes) // andate al frmRecordatorio y mira como hice esta parte de acá
-                {                    
-                    Materia materia = boton.Tag as Materia;
-                    if (conexion.EliminarMateria(materia))
-                    {
-                        MessageBox.Show("Se ha eliminado la materia sin ningun incomveniente", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }                    
-                }
-            }
-            
-        }
-
-        private void tabMaterias_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            TabControl tb = (TabControl)sender;
-            Brush textBrush;
-            Rectangle tabRec = tb.GetTabRect(e.Index);
-
-            Color tbColor;
-
-            tbColor = Color.LightSteelBlue;
-
-
-
-            e.Graphics.FillRectangle(new SolidBrush(tbColor), tabRec);
-            textBrush = new SolidBrush(Color.Black);
-
-            string tabText = tb.TabPages[e.Index].Text;
-            StringFormat stringFlags = new StringFormat();
-            stringFlags.Alignment = StringAlignment.Center;
-            stringFlags.LineAlignment = StringAlignment.Center;
-            e.Graphics.DrawString(tabText, tb.Font, textBrush, tabRec, stringFlags);
-
-            tb.TabPages[e.Index].BackColor = tbColor;
         }
     }
 }

@@ -51,6 +51,7 @@
             this.cbMateriaA.Name = "cbMateriaA";
             this.cbMateriaA.Size = new System.Drawing.Size(253, 26);
             this.cbMateriaA.TabIndex = 16;
+            this.cbMateriaA.Visible = false;
             // 
             // btnCancelar
             // 
@@ -102,6 +103,7 @@
             this.lblMateria.Size = new System.Drawing.Size(165, 18);
             this.lblMateria.TabIndex = 3;
             this.lblMateria.Text = "Materia de la anotación";
+            this.lblMateria.Visible = false;
             // 
             // lblCuerpo
             // 
