@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 17-05-2024 a las 18:14:05
--- Versión del servidor: 8.0.31
--- Versión de PHP: 8.0.26
+-- Servidor: localhost:3306
+-- Tiempo de generación: 17-05-2024 a las 18:57:17
+-- Versión del servidor: 8.0.30
+-- Versión de PHP: 8.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,15 +27,12 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `anotacion`
 --
 
-DROP TABLE IF EXISTS `anotacion`;
-CREATE TABLE IF NOT EXISTS `anotacion` (
+CREATE TABLE `anotacion` (
   `idAnotacion` varchar(5) NOT NULL,
   `titulo` varchar(255) DEFAULT NULL,
   `cuerpo` text,
   `idMateria` varchar(5) DEFAULT NULL,
-  `NombreMat` varchar(500) NOT NULL,
-  PRIMARY KEY (`idAnotacion`),
-  KEY `fk_idMateria` (`idMateria`)
+  `NombreMat` varchar(500) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -52,17 +49,26 @@ INSERT INTO `anotacion` (`idAnotacion`, `titulo`, `cuerpo`, `idMateria`, `Nombre
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `conexion`
+--
+
+CREATE TABLE `conexion` (
+  `idNodoOrigen` varchar(5) NOT NULL,
+  `idNodoDestino` varchar(5) NOT NULL,
+  `Peso` int DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `dia_materia`
 --
 
-DROP TABLE IF EXISTS `dia_materia`;
-CREATE TABLE IF NOT EXISTS `dia_materia` (
-  `id` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `dia_materia` (
+  `id` int NOT NULL,
   `materia_id` varchar(5) DEFAULT NULL,
-  `dia` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `materia_id` (`materia_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `dia` varchar(20) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `dia_materia`
@@ -88,16 +94,13 @@ INSERT INTO `dia_materia` (`id`, `materia_id`, `dia`) VALUES
 -- Estructura de tabla para la tabla `materia`
 --
 
-DROP TABLE IF EXISTS `materia`;
-CREATE TABLE IF NOT EXISTS `materia` (
+CREATE TABLE `materia` (
   `idMateria` varchar(5) NOT NULL,
   `nombre` varchar(255) DEFAULT NULL,
   `horaClase` datetime DEFAULT NULL,
   `docente` varchar(255) DEFAULT NULL,
   `salon` varchar(255) DEFAULT NULL,
-  `id_tarea` int DEFAULT NULL,
-  PRIMARY KEY (`idMateria`),
-  KEY `fk_id_tarea` (`id_tarea`)
+  `id_tarea` int DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -114,11 +117,22 @@ INSERT INTO `materia` (`idMateria`, `nombre`, `horaClase`, `docente`, `salon`, `
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `nodo`
+--
+
+CREATE TABLE `nodo` (
+  `idNodo` int NOT NULL,
+  `tipo` int DEFAULT NULL,
+  `nombre` varchar(255) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `recordatorio`
 --
 
-DROP TABLE IF EXISTS `recordatorio`;
-CREATE TABLE IF NOT EXISTS `recordatorio` (
+CREATE TABLE `recordatorio` (
   `idRecordatorio` varchar(5) NOT NULL,
   `idNodo` varchar(10) DEFAULT NULL,
   `titulo` varchar(255) DEFAULT NULL,
@@ -127,10 +141,7 @@ CREATE TABLE IF NOT EXISTS `recordatorio` (
   `idMateria` varchar(5) DEFAULT NULL,
   `AnotacionR` varchar(500) NOT NULL,
   `MateriaR` varchar(500) NOT NULL,
-  `TareaR` varchar(500) NOT NULL,
-  PRIMARY KEY (`idRecordatorio`),
-  UNIQUE KEY `UC_idNodo_recordatorio` (`idNodo`),
-  KEY `fk_idMateria` (`idMateria`)
+  `TareaR` varchar(500) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -144,29 +155,40 @@ INSERT INTO `recordatorio` (`idRecordatorio`, `idNodo`, `titulo`, `fechaRecordat
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `sistemametodosestudio`
+--
+
+CREATE TABLE `sistemametodosestudio` (
+  `id` int NOT NULL,
+  `id_tarea` int DEFAULT NULL,
+  `id_metodo` int DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `tarea`
 --
 
-DROP TABLE IF EXISTS `tarea`;
-CREATE TABLE IF NOT EXISTS `tarea` (
-  `id_tarea` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tarea` (
+  `id_tarea` varchar(5) NOT NULL,
   `fechaLimite` date DEFAULT NULL,
   `estadotarea` varchar(5000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `nombre` varchar(5000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `descripcion` text,
+  `importancia` int NOT NULL,
   `AnotacionT` varchar(500) NOT NULL,
   `MateriaT` varchar(300) NOT NULL,
-  `titulo` varchar(500) NOT NULL,
-  PRIMARY KEY (`id_tarea`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `titulo` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `tarea`
 --
 
-INSERT INTO `tarea` (`id_tarea`, `fechaLimite`, `estadotarea`, `nombre`, `descripcion`, `AnotacionT`, `MateriaT`, `titulo`) VALUES
-(1, '2024-05-17', 'Importante', 'Quimica General', 'Importanteee', 'MatLab', 'Quimica General', 'Hacer ejercicios'),
-(2, '2024-06-04', 'Importante', 'Programación Estructurada', 'sasas', 'Proyecto', 'Programación Estructurada', 'sasasas');
+INSERT INTO `tarea` (`id_tarea`, `fechaLimite`, `estadotarea`, `nombre`, `descripcion`, `importancia`, `AnotacionT`, `MateriaT`, `titulo`) VALUES
+('1', '2024-05-17', 'Importante', 'Quimica General', 'Importanteee', 0, 'MatLab', 'Quimica General', 'Hacer ejercicios'),
+('2', '2024-06-04', 'Importante', 'Programación Estructurada', 'sasas', 0, 'Proyecto', 'Programación Estructurada', 'sasasas');
 
 -- --------------------------------------------------------
 
@@ -174,12 +196,10 @@ INSERT INTO `tarea` (`id_tarea`, `fechaLimite`, `estadotarea`, `nombre`, `descri
 -- Estructura de tabla para la tabla `usuario`
 --
 
-DROP TABLE IF EXISTS `usuario`;
-CREATE TABLE IF NOT EXISTS `usuario` (
+CREATE TABLE `usuario` (
   `idUsuario` int NOT NULL,
   `nombre` varchar(255) DEFAULT NULL,
-  `contrasena` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`idUsuario`)
+  `contrasena` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -188,6 +208,88 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 
 INSERT INTO `usuario` (`idUsuario`, `nombre`, `contrasena`) VALUES
 (1, 'PED', '1234');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `anotacion`
+--
+ALTER TABLE `anotacion`
+  ADD PRIMARY KEY (`idAnotacion`),
+  ADD KEY `fk_idMateria` (`idMateria`);
+
+--
+-- Indices de la tabla `conexion`
+--
+ALTER TABLE `conexion`
+  ADD PRIMARY KEY (`idNodoOrigen`,`idNodoDestino`),
+  ADD KEY `idNodoDestino` (`idNodoDestino`);
+
+--
+-- Indices de la tabla `dia_materia`
+--
+ALTER TABLE `dia_materia`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `materia_id` (`materia_id`);
+
+--
+-- Indices de la tabla `materia`
+--
+ALTER TABLE `materia`
+  ADD PRIMARY KEY (`idMateria`),
+  ADD KEY `fk_id_tarea` (`id_tarea`);
+
+--
+-- Indices de la tabla `nodo`
+--
+ALTER TABLE `nodo`
+  ADD PRIMARY KEY (`idNodo`);
+
+--
+-- Indices de la tabla `recordatorio`
+--
+ALTER TABLE `recordatorio`
+  ADD PRIMARY KEY (`idRecordatorio`),
+  ADD UNIQUE KEY `UC_idNodo_recordatorio` (`idNodo`),
+  ADD KEY `fk_idMateria` (`idMateria`);
+
+--
+-- Indices de la tabla `sistemametodosestudio`
+--
+ALTER TABLE `sistemametodosestudio`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_tarea` (`id_tarea`),
+  ADD KEY `id_metodo` (`id_metodo`);
+
+--
+-- Indices de la tabla `tarea`
+--
+ALTER TABLE `tarea`
+  ADD PRIMARY KEY (`id_tarea`);
+
+--
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`idUsuario`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `dia_materia`
+--
+ALTER TABLE `dia_materia`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT de la tabla `sistemametodosestudio`
+--
+ALTER TABLE `sistemametodosestudio`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
