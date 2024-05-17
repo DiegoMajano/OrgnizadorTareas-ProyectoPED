@@ -119,7 +119,6 @@
     <Compile Include="ClasesNodos\NodoInfo.cs" />
     <Compile Include="ClasesNodos\Recordatorio.cs" />
     <Compile Include="ClasesNodos\Tarea.cs" />
-    <Compile Include="Coneccion\conect.cs" />
     <Compile Include="EstructuraGrafo\CConexion.cs" />
     <Compile Include="EstructuraGrafo\CGrafo.cs" />
     <Compile Include="EstructuraGrafo\CNodos.cs" />

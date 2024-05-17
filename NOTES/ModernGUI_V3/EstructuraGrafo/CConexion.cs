@@ -149,8 +149,8 @@ namespace AdministradorT
             {
                 conexion.Open();
 
-                string consulta = "INSERT INTO tarea (id_tarea,titulo, descripcion, importancia,fechaLimite, nombre, AnotacionT, MateriaT, estadotarea) " +
-                                  "VALUES (@titulo, @descripcion, @fechaLimite, @importancia, @nombre, @AnotacionT, @MateriaT, @estadoTarea)";
+                string consulta = "INSERT INTO tarea (id_tarea, fechaLimite , estadotarea, nombre, descripcion, importancia,  AnotacionT, MateriaT, titulo) " +
+                                  "VALUES (@id, @fechaLimite, @estadoTarea, @nombre, @descripcion,  @importancia,  @AnotacionT, @MateriaT, @titulo)";
 
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
                 comando.Parameters.AddWithValue("@id", tarea.ID);
@@ -161,7 +161,7 @@ namespace AdministradorT
                 comando.Parameters.AddWithValue("@nombre", materia);
                 comando.Parameters.AddWithValue("@AnotacionT", anotacion);
                 comando.Parameters.AddWithValue("@MateriaT", materia);
-                comando.Parameters.AddWithValue("@estadoTarea", tarea.EstadoTarea);
+                comando.Parameters.AddWithValue("@estadoTarea", tarea.EstadoTarea.ToString());
 
                 comando.ExecuteNonQuery();
                 return true;
@@ -414,7 +414,7 @@ namespace AdministradorT
             return anotaciones;
         }
 
-        public bool InsertarRecordatorio(string idRecordatorio, string titulo, DateTime fechaRecordatorio, string cuerpo, string materiaR, string anotacionR, string tareaR)
+        public bool InsertarRecordatorio(Recordatorio recordatorio, string materiaR, string anotacionR, string tareaR)
         {
             try
             {
@@ -424,10 +424,10 @@ namespace AdministradorT
                                   "VALUES (@idRecordatorio, @titulo, @fechaRecordatorio, @cuerpo, @materiaR, @anotacionR, @tareaR)";
 
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
-                comando.Parameters.AddWithValue("@idRecordatorio", idRecordatorio);
-                comando.Parameters.AddWithValue("@titulo", titulo);
-                comando.Parameters.AddWithValue("@fechaRecordatorio", fechaRecordatorio);
-                comando.Parameters.AddWithValue("@cuerpo", cuerpo);
+                comando.Parameters.AddWithValue("@idRecordatorio", recordatorio.ID);
+                comando.Parameters.AddWithValue("@titulo", recordatorio.Titulo);
+                comando.Parameters.AddWithValue("@fechaRecordatorio", recordatorio.aRecordar);
+                comando.Parameters.AddWithValue("@cuerpo", recordatorio.Cuerpo);
                 comando.Parameters.AddWithValue("@materiaR", materiaR);
                 comando.Parameters.AddWithValue("@anotacionR", anotacionR);
                 comando.Parameters.AddWithValue("@tareaR", tareaR);
@@ -702,13 +702,16 @@ namespace AdministradorT
             try
             {
                 conexion.Open();
-                string consulta = "DELETE FROM tarea where id_tarea = @id"; 
+                string consulta = "DELETE FROM recordatorio where idRecordatorio = @id"; 
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
 
                 comando.Parameters.AddWithValue("@id", recordatorioE.ID);
-                comando.ExecuteNonQuery();
+                if (comando.ExecuteNonQuery()>0)
+                {
+                    return true;
+                }
+                return false;
 
-                return true;
             }
             catch (Exception ex)
             {
