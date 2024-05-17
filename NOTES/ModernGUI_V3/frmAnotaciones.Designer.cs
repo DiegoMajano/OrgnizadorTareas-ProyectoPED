@@ -30,162 +30,168 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAnotaciones));
             this.pnlAnotaciones = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabAnotaciones = new System.Windows.Forms.TabControl();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.lbltit = new System.Windows.Forms.Label();
+            this.btnEditarA = new System.Windows.Forms.Button();
             this.lblcuer = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnEditar = new System.Windows.Forms.Button();
+            this.lbltit = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlAnotaciones.SuspendLayout();
             this.tabAnotaciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlAnotaciones
             // 
             this.pnlAnotaciones.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlAnotaciones.Controls.Add(this.lblTitulo);
-            this.pnlAnotaciones.Controls.Add(this.tabAnotaciones);
+            this.pnlAnotaciones.Controls.Add(this.label7);
             this.pnlAnotaciones.Controls.Add(this.label1);
-            this.pnlAnotaciones.Controls.Add(this.pictureBox1);
+            this.pnlAnotaciones.Controls.Add(this.pictureBox2);
+            this.pnlAnotaciones.Controls.Add(this.label2);
+            this.pnlAnotaciones.Controls.Add(this.tabAnotaciones);
             this.pnlAnotaciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAnotaciones.Location = new System.Drawing.Point(0, 0);
-            this.pnlAnotaciones.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlAnotaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlAnotaciones.Name = "pnlAnotaciones";
-            this.pnlAnotaciones.Size = new System.Drawing.Size(861, 597);
+            this.pnlAnotaciones.Size = new System.Drawing.Size(1148, 735);
             this.pnlAnotaciones.TabIndex = 10;
             // 
-            // lblTitulo
+            // label2
             // 
-            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(294, 85);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(272, 31);
-            this.lblTitulo.TabIndex = 13;
-            this.lblTitulo.Text = "Anotaciones registradas";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label2.Location = new System.Drawing.Point(352, 146);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(354, 37);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Anotaciones registradas";
             // 
             // tabAnotaciones
             // 
-            this.tabAnotaciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabAnotaciones.Controls.Add(this.tabPage1);
+            this.tabAnotaciones.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabAnotaciones.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabAnotaciones.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tabAnotaciones.Location = new System.Drawing.Point(32, 154);
+            this.tabAnotaciones.Location = new System.Drawing.Point(68, 219);
             this.tabAnotaciones.Name = "tabAnotaciones";
             this.tabAnotaciones.SelectedIndex = 0;
-            this.tabAnotaciones.Size = new System.Drawing.Size(800, 282);
-            this.tabAnotaciones.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(94, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 23);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "My Notes";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(42, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.tabAnotaciones.Size = new System.Drawing.Size(1012, 370);
+            this.tabAnotaciones.TabIndex = 19;
+            this.tabAnotaciones.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabAnotaciones_DrawItem);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnEditar);
-            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.btnEditarA);
             this.tabPage1.Controls.Add(this.lblcuer);
             this.tabPage1.Controls.Add(this.lbltit);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 256);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(1004, 334);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // lbltit
+            // btnEditarA
             // 
-            this.lbltit.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltit.Location = new System.Drawing.Point(350, 16);
-            this.lbltit.Name = "lbltit";
-            this.lbltit.Size = new System.Drawing.Size(100, 23);
-            this.lbltit.TabIndex = 7;
-            this.lbltit.Text = "label2";
-            this.lbltit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEditarA.BackColor = System.Drawing.Color.SlateGray;
+            this.btnEditarA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarA.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarA.ForeColor = System.Drawing.Color.MintCream;
+            this.btnEditarA.Location = new System.Drawing.Point(763, 262);
+            this.btnEditarA.Name = "btnEditarA";
+            this.btnEditarA.Size = new System.Drawing.Size(186, 47);
+            this.btnEditarA.TabIndex = 11;
+            this.btnEditarA.UseVisualStyleBackColor = false;
             // 
             // lblcuer
             // 
             this.lblcuer.AutoSize = true;
-            this.lblcuer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcuer.Location = new System.Drawing.Point(121, 79);
+            this.lblcuer.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcuer.Location = new System.Drawing.Point(44, 98);
+            this.lblcuer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcuer.Name = "lblcuer";
-            this.lblcuer.Size = new System.Drawing.Size(53, 20);
+            this.lblcuer.Size = new System.Drawing.Size(69, 23);
             this.lblcuer.TabIndex = 8;
             this.lblcuer.Text = "label3";
             // 
-            // label4
+            // lbltit
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 114);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 20);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "label4";
+            this.lbltit.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltit.Location = new System.Drawing.Point(43, 33);
+            this.lbltit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbltit.Name = "lbltit";
+            this.lbltit.Size = new System.Drawing.Size(133, 28);
+            this.lbltit.TabIndex = 7;
+            this.lbltit.Text = "label2";
+            this.lbltit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnEditar
+            // label7
             // 
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(6, 216);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(125, 34);
-            this.btnEditar.TabIndex = 10;
-            this.btnEditar.Text = "button1";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Constantia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(99, 38);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(163, 40);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "My Notes";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Book Antiqua", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(99, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 40);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "My Notes";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(47, 38);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(55, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
             // 
             // frmAnotaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 597);
+            this.ClientSize = new System.Drawing.Size(1148, 735);
             this.Controls.Add(this.pnlAnotaciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAnotaciones";
             this.Text = "frmAnotaciones";
             this.pnlAnotaciones.ResumeLayout(false);
             this.pnlAnotaciones.PerformLayout();
             this.tabAnotaciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel pnlAnotaciones;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabControl tabAnotaciones;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnEditarA;
         private System.Windows.Forms.Label lblcuer;
         private System.Windows.Forms.Label lbltit;
     }

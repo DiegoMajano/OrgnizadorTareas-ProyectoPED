@@ -116,6 +116,7 @@
   <ItemGroup>
     <Compile Include="ClasesNodos\Materia.cs" />
     <Compile Include="ClasesNodos\Anotacion.cs" />
+    <Compile Include="ClasesNodos\NodoInfo.cs" />
     <Compile Include="ClasesNodos\Recordatorio.cs" />
     <Compile Include="ClasesNodos\Tarea.cs" />
     <Compile Include="Coneccion\conect.cs" />

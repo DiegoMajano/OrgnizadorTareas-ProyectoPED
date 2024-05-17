@@ -30,19 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMaterias));
             this.pnlFormularios = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabMaterias = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.lblHora = new System.Windows.Forms.Label();
+            this.lblDias = new System.Windows.Forms.Label();
             this.lblSalon = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblDocente = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.lblPrueba = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnEliminarMateria = new System.Windows.Forms.Button();
             this.pnlFormularios.SuspendLayout();
             this.tabMaterias.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -52,11 +51,11 @@
             // pnlFormularios
             // 
             this.pnlFormularios.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlFormularios.Controls.Add(this.label1);
-            this.pnlFormularios.Controls.Add(this.tabMaterias);
             this.pnlFormularios.Controls.Add(this.label7);
             this.pnlFormularios.Controls.Add(this.label2);
             this.pnlFormularios.Controls.Add(this.pictureBox2);
+            this.pnlFormularios.Controls.Add(this.tabMaterias);
+            this.pnlFormularios.Controls.Add(this.label1);
             this.pnlFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFormularios.Location = new System.Drawing.Point(0, 0);
             this.pnlFormularios.Margin = new System.Windows.Forms.Padding(2);
@@ -64,147 +63,137 @@
             this.pnlFormularios.Size = new System.Drawing.Size(861, 597);
             this.pnlFormularios.TabIndex = 7;
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(315, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 31);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Materias registradas";
-            // 
             // tabMaterias
             // 
-            this.tabMaterias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabMaterias.Controls.Add(this.tabPage1);
+            this.tabMaterias.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabMaterias.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.tabMaterias.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tabMaterias.Location = new System.Drawing.Point(31, 134);
+            this.tabMaterias.Location = new System.Drawing.Point(66, 137);
             this.tabMaterias.Name = "tabMaterias";
             this.tabMaterias.SelectedIndex = 0;
-            this.tabMaterias.Size = new System.Drawing.Size(800, 282);
-            this.tabMaterias.TabIndex = 10;
+            this.tabMaterias.Size = new System.Drawing.Size(728, 395);
+            this.tabMaterias.TabIndex = 18;
+            this.tabMaterias.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabMaterias_DrawItem);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnEliminarMateria);
-            this.tabPage1.Controls.Add(this.lblHora);
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.tabPage1.Controls.Add(this.lblDias);
             this.tabPage1.Controls.Add(this.lblSalon);
-            this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.lblDocente);
+            this.tabPage1.Controls.Add(this.lblHora);
+            this.tabPage1.Controls.Add(this.lblNombre);
             this.tabPage1.Controls.Add(this.btnEditar);
-            this.tabPage1.Controls.Add(this.lblPrueba);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(792, 256);
+            this.tabPage1.Size = new System.Drawing.Size(720, 359);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // lblHora
+            // lblDias
             // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(573, 165);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(47, 17);
-            this.lblHora.TabIndex = 5;
-            this.lblHora.Text = "label3";
+            this.lblDias.AutoSize = true;
+            this.lblDias.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDias.Location = new System.Drawing.Point(40, 291);
+            this.lblDias.Name = "lblDias";
+            this.lblDias.Size = new System.Drawing.Size(81, 26);
+            this.lblDias.TabIndex = 5;
+            this.lblDias.Text = "label3";
             // 
             // lblSalon
             // 
             this.lblSalon.AutoSize = true;
-            this.lblSalon.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalon.Location = new System.Drawing.Point(323, 203);
+            this.lblSalon.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalon.Location = new System.Drawing.Point(40, 237);
             this.lblSalon.Name = "lblSalon";
-            this.lblSalon.Size = new System.Drawing.Size(47, 17);
+            this.lblSalon.Size = new System.Drawing.Size(81, 26);
             this.lblSalon.TabIndex = 4;
-            this.lblSalon.Text = "label3";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(97, 56);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
+            this.lblSalon.Text = "label6";
             // 
             // lblDocente
             // 
             this.lblDocente.AutoSize = true;
-            this.lblDocente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDocente.Location = new System.Drawing.Point(94, 145);
+            this.lblDocente.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDocente.Location = new System.Drawing.Point(40, 172);
             this.lblDocente.Name = "lblDocente";
-            this.lblDocente.Size = new System.Drawing.Size(47, 17);
-            this.lblDocente.TabIndex = 2;
-            this.lblDocente.Text = "label3";
+            this.lblDocente.Size = new System.Drawing.Size(81, 26);
+            this.lblDocente.TabIndex = 3;
+            this.lblDocente.Text = "label5";
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.Location = new System.Drawing.Point(40, 104);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(81, 26);
+            this.lblHora.TabIndex = 2;
+            this.lblHora.Text = "label4";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(40, 41);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(81, 26);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "label3";
             // 
             // btnEditar
             // 
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.BackColor = System.Drawing.Color.SlateGray;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(659, 19);
+            this.btnEditar.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnEditar.Location = new System.Drawing.Point(482, 255);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(98, 38);
-            this.btnEditar.TabIndex = 1;
-            this.btnEditar.Text = "button1";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Size = new System.Drawing.Size(148, 62);
+            this.btnEditar.TabIndex = 0;
+            this.btnEditar.UseVisualStyleBackColor = false;
             // 
-            // lblPrueba
+            // label1
             // 
-            this.lblPrueba.AutoSize = true;
-            this.lblPrueba.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrueba.Location = new System.Drawing.Point(366, 19);
-            this.lblPrueba.Name = "lblPrueba";
-            this.lblPrueba.Size = new System.Drawing.Size(69, 23);
-            this.lblPrueba.TabIndex = 0;
-            this.lblPrueba.Text = "label3";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label1.Location = new System.Drawing.Point(350, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(309, 37);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Materias registradas";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(55, 12);
+            this.label7.Font = new System.Drawing.Font("Constantia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(90, 49);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 31);
-            this.label7.TabIndex = 9;
+            this.label7.Size = new System.Drawing.Size(163, 40);
+            this.label7.TabIndex = 20;
             this.label7.Text = "My Notes";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(55, 12);
+            this.label2.Font = new System.Drawing.Font("Book Antiqua", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(90, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 31);
-            this.label2.TabIndex = 9;
+            this.label2.Size = new System.Drawing.Size(164, 40);
+            this.label2.TabIndex = 21;
             this.label2.Text = "My Notes";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(38, 49);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(46, 31);
+            this.pictureBox2.Size = new System.Drawing.Size(55, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnEliminarMateria
-            // 
-            this.btnEliminarMateria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminarMateria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarMateria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarMateria.Location = new System.Drawing.Point(659, 165);
-            this.btnEliminarMateria.Name = "btnEliminarMateria";
-            this.btnEliminarMateria.Size = new System.Drawing.Size(98, 38);
-            this.btnEliminarMateria.TabIndex = 6;
-            this.btnEliminarMateria.Text = "button1";
-            this.btnEliminarMateria.UseVisualStyleBackColor = true;
-            this.btnEliminarMateria.Click += new System.EventHandler(this.btnEliminarMateria_Click);
             // 
             // frmMaterias
             // 
@@ -228,18 +217,17 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlFormularios;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabMaterias;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label lblPrueba;
-        private System.Windows.Forms.Label lblDocente;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblDias;
         private System.Windows.Forms.Label lblSalon;
-        private System.Windows.Forms.Button btnEliminarMateria;
+        private System.Windows.Forms.Label lblDocente;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Label label1;
     }
 }

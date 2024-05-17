@@ -49,7 +49,6 @@ namespace AdministradorT
             cbImportanciaPeso.Items.Add("Seleccionar importancia");
             cbImportanciaPeso.Items.Add("Muy importante");  // Map to 2
             cbImportanciaPeso.Items.Add("Importante");      // Map to 1
-            cbImportanciaPeso.Items.Add("No importante");   // Map to 0
             cbImportanciaPeso.SelectedIndex = 0;
 
 
@@ -91,9 +90,10 @@ namespace AdministradorT
 
                 // Obtener el nivel de importancia seleccionado como cadena
                 string nivelImportancia = cbImportanciaPeso.SelectedItem.ToString();
-
+                int importancia = nivelImportancia == "Muy Importante" ? 1 : 2;
+                Tarea tarea = new Tarea(titulo, cuerpo, fechaEntrega, importancia);
                 // Llamar al método de inserción de tarea en la base de datos
-                if (conexion.InsertarTarea(titulo, cuerpo, fechaEntrega, materiaE, anotacionE, nivelImportancia))
+                if (conexion.InsertarTarea(tarea, materiaE, anotacionE))
                 {
                     MessageBox.Show("Tarea registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos();

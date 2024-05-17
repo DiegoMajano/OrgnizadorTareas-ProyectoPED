@@ -50,42 +50,33 @@ namespace ModernGUI_V3
         //Funcion que actualiza los datos de el tab page para que aparezcan los datos de el grafo
         public void ActualizarForm(CGrafo grafo,bool AlGrafo)
         {
-            if (!actualizado)
-            {
+           
                 tabMaterias.TabPages.Clear();
                 List<Materia> materias = conexion.ObtenerTodasLasMaterias(); // Obtener todas las materias de la base de datos
-                if (AlGrafo)
-                {                    
+                if (AlGrafo)                                 
                     grafo.AgregarNodos(1, materias: materias);
-                }
+                
 
                 foreach (Materia materia in materias)
                 {
                     // Crear una nueva TabPage para mostrar los datos de la materia
                     TabPage tp = new TabPage();
-                    tp.Text = materia.ID; // Usar un identificador único de la materia como texto de la TabPage
+                tp.BackColor = tabPage1.BackColor;
+                tp.Font = tabPage1.Font;
+                tp.Text = materia.ID; // Usar un identificador único de la materia como texto de la TabPage
 
-                    // Crear y configurar los controles para mostrar los datos de la materia
-                    Label nombre = new Label();
-                    nombre.Font = lblPrueba.Font;
+                // Crear y configurar los controles para mostrar los datos de la materia
+                Label nombre = new Label();
+                nombre.AutoSize = true;
+                nombre.Location = new Point(10, 10);
+                nombre.Text = "Nombre: " + materia.Nombre;
+                tp.Controls.Add(nombre);
+                nombre.Font = lblNombre.Font;
+                nombre.Location = lblNombre.Location;
 
-                    nombre.AutoSize = true;
-                    nombre.Location = new Point(10, 10);
-                    nombre.Text = "Nombre: " + materia.Nombre;
-                    nombre.Location = lblPrueba.Location;
-                    tp.Controls.Add(nombre);
 
 
-                    Label dias = new Label();
-                    dias.Text = "Días: ";
-                    dias.AutoSize = true;
-                    dias.Location = new Point(10, 90);
-                    foreach (var dia in materia.Dias)
-                    {
-                        dias.Text += $"{dia} ";
-                    }
-                    tp.Controls.Add(dias);
-
+<<<<<<< HEAD
                     Label horaClase = new Label();
                     horaClase.AutoSize = true;
                     horaClase.Location = lblHora.Location;
@@ -126,8 +117,61 @@ namespace ModernGUI_V3
 
                     // Agregar la TabPage al TabControl
                     tabMaterias.TabPages.Add(tp);
+=======
+                Label dias = new Label();
+                dias.Text = "Días: ";
+                dias.AutoSize = true;
+                dias.Location = new Point(10, 90);
+                foreach (var dia in materia.Dias)
+                {
+                    dias.Text += $"{dia} ";
+>>>>>>> c4a83d1f7f3164a8fdbb9edf6ee44b8a4414e04b
                 }
-                //actualizado = true;
+                tp.Controls.Add(dias);
+                dias.Font = lblDias.Font;
+                dias.Location = lblDias.Location;
+
+
+                Label horaClase = new Label();
+                horaClase.AutoSize = true;
+                horaClase.Location = new Point(10, 30);
+                horaClase.Text = "Hora de Clase: " + materia.HoraClase.ToString();
+                tp.Controls.Add(horaClase);
+                horaClase.Font = lblHora.Font;
+                horaClase.Location = lblHora.Location;
+
+                Label docente = new Label();
+                docente.AutoSize = true;
+                docente.Location = new Point(10, 50);
+                docente.Text = "Docente: " + materia.Docente;
+                tp.Controls.Add(docente);
+                docente.Font = lblDocente.Font;
+                docente.Location = lblDocente.Location;
+
+                Label salon = new Label();
+                salon.AutoSize = true;
+                salon.Location = new Point(10, 70);
+                salon.Text = "Salón: " + materia.Salon;
+                tp.Controls.Add(salon);
+                salon.Font = lblSalon.Font;
+                salon.Location = lblSalon.Location;
+
+
+                Button Editar = new Button();
+                Editar.AutoSize = true;
+                Editar.FlatStyle = btnEditar.FlatStyle;
+                Editar.Location = btnEditar.Location;
+                Editar.Size = btnEditar.Size;
+                Editar.BackColor = btnEditar.BackColor;
+                Editar.Text = "Editar Materia";
+
+                tp.Controls.Add(Editar);
+                Editar.Font = btnEditar.Font;
+                Editar.Location = btnEditar.Location;
+
+
+                // Agregar la TabPage al TabControl
+                tabMaterias.TabPages.Add(tp);
             }
         }
 
@@ -140,7 +184,7 @@ namespace ModernGUI_V3
                 nuevaMateria.control = false;
                 nuevaMateria.ShowDialog();
                 Materia materia = boton.Tag as Materia;
-                if (nuevaMateria.control)
+                if (nuevaMateria.control) // tiene que ser un nuevo control porque sino se crea un nuevo nodo porque es el mismo control que se utiliza para agregar e insertar un nuevo nodo
                 {
                     materia.nombre = nuevaMateria.nombreM;
                     materia.Salon = nuevaMateria.salon;
@@ -162,7 +206,12 @@ namespace ModernGUI_V3
         private void btnEliminarMateria_Click(object sender, EventArgs e)
         {
             Button boton = sender as Button;
+<<<<<<< HEAD
             if (boton != null)
+=======
+            DialogResult resultado = MessageBox.Show("Esta seguro que quiere eliminar esta materia?", "Materia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (resultado == DialogResult.Yes) // andate al frmRecordatorio y mira como hice esta parte de acá
+>>>>>>> c4a83d1f7f3164a8fdbb9edf6ee44b8a4414e04b
             {
                 DialogResult resultado = MessageBox.Show("Esta seguro que quiere eliminar esta materia?", "Materia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if (resultado == DialogResult.Yes)
@@ -174,6 +223,30 @@ namespace ModernGUI_V3
                     }
                 }
             }
+        }
+
+        private void tabMaterias_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabControl tb = (TabControl)sender;
+            Brush textBrush;
+            Rectangle tabRec = tb.GetTabRect(e.Index);
+
+            Color tbColor;
+
+            tbColor = Color.LightSteelBlue;
+
+
+
+            e.Graphics.FillRectangle(new SolidBrush(tbColor), tabRec);
+            textBrush = new SolidBrush(Color.Black);
+
+            string tabText = tb.TabPages[e.Index].Text;
+            StringFormat stringFlags = new StringFormat();
+            stringFlags.Alignment = StringAlignment.Center;
+            stringFlags.LineAlignment = StringAlignment.Center;
+            e.Graphics.DrawString(tabText, tb.Font, textBrush, tabRec, stringFlags);
+
+            tb.TabPages[e.Index].BackColor = tbColor;
         }
     }
 }

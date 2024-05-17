@@ -143,23 +143,25 @@ namespace AdministradorT
         }
 
         // METODO PARA INSERTAR TAREAS
-        public bool InsertarTarea(string titulo, string descripcion, DateTime fechaLimite, string materia, string anotacion, string estadoTarea)
+        public bool InsertarTarea(Tarea tarea, string materia, string anotacion)
         {
             try
             {
                 conexion.Open();
 
-                string consulta = "INSERT INTO tarea (titulo, descripcion, fechaLimite, nombre, AnotacionT, MateriaT, estadotarea) " +
-                                  "VALUES (@titulo, @descripcion, @fechaLimite, @nombre, @AnotacionT, @MateriaT, @estadoTarea)";
+                string consulta = "INSERT INTO tarea (id_tarea,titulo, descripcion, importancia,fechaLimite, nombre, AnotacionT, MateriaT, estadotarea) " +
+                                  "VALUES (@titulo, @descripcion, @fechaLimite, @importancia, @nombre, @AnotacionT, @MateriaT, @estadoTarea)";
 
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
-                comando.Parameters.AddWithValue("@titulo", titulo);
-                comando.Parameters.AddWithValue("@descripcion", descripcion);
-                comando.Parameters.AddWithValue("@fechaLimite", fechaLimite);
+                comando.Parameters.AddWithValue("@id", tarea.ID);
+                comando.Parameters.AddWithValue("@titulo", tarea.Titulo);
+                comando.Parameters.AddWithValue("@descripcion", tarea.Cuerpo);
+                comando.Parameters.AddWithValue("@fechaLimite", tarea.FechaEntrega);
+                comando.Parameters.AddWithValue("@importancia", tarea.Prioridad);
                 comando.Parameters.AddWithValue("@nombre", materia);
                 comando.Parameters.AddWithValue("@AnotacionT", anotacion);
                 comando.Parameters.AddWithValue("@MateriaT", materia);
-                comando.Parameters.AddWithValue("@estadoTarea", estadoTarea);
+                comando.Parameters.AddWithValue("@estadoTarea", tarea.EstadoTarea);
 
                 comando.ExecuteNonQuery();
                 return true;
@@ -262,6 +264,34 @@ namespace AdministradorT
             }
             return nombresAnotaciones;
         }
+
+        public List<string> ObtenerTitulosTareas()
+        {
+            List<string> titulosTareas = new List<string>();
+            try
+            {
+                conexion.Open();
+                string consulta = "SELECT titulo FROM tarea";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+                using (MySqlDataReader reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        titulosTareas.Add(reader.GetString("titulo"));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener los títulos de las tareas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+            return titulosTareas;
+        }
+
 
         // METODOS PARA OBTENER TODOS LOS CAMPOS DE LAS TABLAS
 
@@ -384,6 +414,38 @@ namespace AdministradorT
             return anotaciones;
         }
 
+        public bool InsertarRecordatorio(string idRecordatorio, string titulo, DateTime fechaRecordatorio, string cuerpo, string materiaR, string anotacionR, string tareaR)
+        {
+            try
+            {
+                conexion.Open();
+
+                string consulta = "INSERT INTO recordatorio (idRecordatorio, titulo, fechaRecordatorio, cuerpo, MateriaR, AnotacionR, TareaR) " +
+                                  "VALUES (@idRecordatorio, @titulo, @fechaRecordatorio, @cuerpo, @materiaR, @anotacionR, @tareaR)";
+
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+                comando.Parameters.AddWithValue("@idRecordatorio", idRecordatorio);
+                comando.Parameters.AddWithValue("@titulo", titulo);
+                comando.Parameters.AddWithValue("@fechaRecordatorio", fechaRecordatorio);
+                comando.Parameters.AddWithValue("@cuerpo", cuerpo);
+                comando.Parameters.AddWithValue("@materiaR", materiaR);
+                comando.Parameters.AddWithValue("@anotacionR", anotacionR);
+                comando.Parameters.AddWithValue("@tareaR", tareaR);
+
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar el recordatorio en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
         public List<Recordatorio> ObtenerRecordatorios()
         {
             List<Recordatorio> recordatorios = new List<Recordatorio>();
@@ -398,9 +460,13 @@ namespace AdministradorT
                 {
                     while (reader.Read())
                     {
-                        string titulo = reader.GetString("idRecordatorio");
+                        string codigo = reader.GetString("idRecordatorio");
+                        string titulo = reader.GetString("titulo");
                         string cuerpo = reader.GetString("cuerpo");
-                        string aRecordar = reader.GetString("arecordar");
+                        DateTime aRecordar = reader.GetDateTime("fechaRecordatorio");
+
+                        Recordatorio recordatorio = new Recordatorio(codigo, titulo, aRecordar, cuerpo);
+                        recordatorios.Add(recordatorio);
                     }
                 }
 
@@ -408,7 +474,7 @@ namespace AdministradorT
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al obtener los recordatorios de la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al obtener los recordatorios de la base de datos: " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -416,6 +482,45 @@ namespace AdministradorT
             }
 
             return recordatorios;
+        }
+
+        public List<Tarea> ObtenerTareas()
+        {
+            List<Tarea> tareas = new List<Tarea>();
+
+            try
+            {
+                conexion.Open();
+                string consulta = "SELECT * FROM tarea";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                using (MySqlDataReader reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string codigo = reader.GetString("id_tarea");
+                        string titulo = reader.GetString("nombre");
+                        string cuerpo = reader.GetString("descripcion");
+                        DateTime fechaLimite = reader.GetDateTime("fechaLimite");
+                        string estado = reader.GetString("estadotarea");
+
+                        Tarea tarea = new Tarea(codigo, titulo, cuerpo, fechaLimite, estado);
+                        tareas.Add(tarea);
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener las tareas de la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+            return tareas;
         }
 
         // ------------------------------- METODOS PARA HACER UPDATES A LA BD -------------------------------
@@ -568,7 +673,7 @@ namespace AdministradorT
                 conexion.Close();
             }
         }
-        private bool EliminarAnotacion(Anotacion anotacionE)
+        public bool EliminarAnotacion(Anotacion anotacionE)
         {
             try
             {
@@ -592,7 +697,7 @@ namespace AdministradorT
                 conexion.Close();
             }
         }
-        private bool EliminarRecordatorio(Recordatorio recordatorioE)
+        public bool EliminarRecordatorio(Recordatorio recordatorioE)
         {
             try
             {
@@ -615,7 +720,7 @@ namespace AdministradorT
                 conexion.Close();
             }
         }
-        private bool EliminarTarea(Tarea tareaE)
+        public bool EliminarTarea(Tarea tareaE)
         {
             try
             {

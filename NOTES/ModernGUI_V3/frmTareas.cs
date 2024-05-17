@@ -26,10 +26,13 @@ namespace AdministradorT
         }
 
         //Funcion que actualiza los datos de el tab page para que aparezcan los datos de el grafo
-        public void ActualizarForm(CGrafo grafo)
-        {/*
+        public void ActualizarForm(CGrafo grafo, bool alGrafo)
+        {
             tabTareas.TabPages.Clear();
-            List<Tarea> tareas = conexion.ObtenerTodasLasMaterias(); // Obtener todas las tareas de la base de datos
+            List<Tarea> tareas = conexion.ObtenerTareas(); // Obtener todas las tareas de la base de datos
+
+            if (alGrafo)
+                grafo.AgregarNodos(4, tareas: tareas);
 
             foreach (Tarea tarea in tareas)
             {
@@ -61,7 +64,7 @@ namespace AdministradorT
 
                 // Agregar la TabPage al TabControl
                 tabTareas.TabPages.Add(tp);
-            }*/
+            }
         }
     }
 }

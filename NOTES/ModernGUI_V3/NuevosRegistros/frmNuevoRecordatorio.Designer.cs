@@ -192,9 +192,9 @@
             this.lblHead.ForeColor = System.Drawing.Color.Transparent;
             this.lblHead.Location = new System.Drawing.Point(186, 19);
             this.lblHead.Name = "lblHead";
-            this.lblHead.Size = new System.Drawing.Size(209, 23);
+            this.lblHead.Size = new System.Drawing.Size(163, 23);
             this.lblHead.TabIndex = 20;
-            this.lblHead.Text = "Nuevo Recordatorio";
+            this.lblHead.Text = "Recordar Tarea";
             // 
             // cbAnotacionR
             // 
