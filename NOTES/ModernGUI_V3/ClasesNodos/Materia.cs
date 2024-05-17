@@ -51,8 +51,14 @@ namespace AdministradorT.ClasesNodos
             setID(1, nombre);
         }
 
-        public Materia()
+        public Materia(string ID, string nombre, TimeSpan horaClase, List<string> dias, string docente, string salon)
         {
+            this.ID = ID;
+            this.nombre = nombre;
+            this.HoraClase = horaClase;
+            this.Dias = dias;
+            this.Docente = docente;
+            this.Salon = salon;
         }
     }
 }

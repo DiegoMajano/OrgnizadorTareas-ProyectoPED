@@ -98,11 +98,18 @@ namespace ModernGUI_V3
                 Editar.AutoSize = true;
                 Editar.Location = new Point(tabMaterias.Width - 140, 10);
                 Editar.Text = "Editar Materia";
+                Editar.Tag = materia;
+                Editar.Click += EditarMateria_Click;
                 tp.Controls.Add(Editar);
 
                 // Agregar la TabPage al TabControl
                 tabMaterias.TabPages.Add(tp);
             }
+        }
+
+        private void EditarMateria_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
