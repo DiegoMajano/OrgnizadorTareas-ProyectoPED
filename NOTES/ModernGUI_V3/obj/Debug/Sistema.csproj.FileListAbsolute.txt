@@ -122,3 +122,5 @@ C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\Mode
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.CopyComplete
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmRecordatorios.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmTareas.resources
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmRecordatorios.resources
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmTareas.resources
