@@ -65,9 +65,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(326, 83);
+            this.label1.Location = new System.Drawing.Point(315, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 31);
             this.label1.TabIndex = 11;
@@ -75,6 +76,8 @@
             // 
             // tabMaterias
             // 
+            this.tabMaterias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabMaterias.Controls.Add(this.tabPage1);
             this.tabMaterias.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tabMaterias.Location = new System.Drawing.Point(31, 134);
@@ -138,6 +141,7 @@
             // 
             // btnEditar
             // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(659, 19);
@@ -151,7 +155,7 @@
             // 
             this.lblPrueba.AutoSize = true;
             this.lblPrueba.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrueba.Location = new System.Drawing.Point(355, 19);
+            this.lblPrueba.Location = new System.Drawing.Point(366, 19);
             this.lblPrueba.Name = "lblPrueba";
             this.lblPrueba.Size = new System.Drawing.Size(69, 23);
             this.lblPrueba.TabIndex = 0;

@@ -23,22 +23,55 @@ namespace ModernGUI_V3
         // ubicacion de los botones para agregar los nodos
         private Point ubicacion;
         // instanciar las ventanas para agregar los nodos
+        private frmHome home;
         private frmNuevaMateria nuevaMateria = new frmNuevaMateria();
         private frmNuevaAnotacion nuevaAnotacion = new frmNuevaAnotacion();
         private frmNuevoRecordatorio nuevoRecordatorio = new frmNuevoRecordatorio();
         private frmNuevaTarea nuevaTarea = new frmNuevaTarea();
+        // instanciar los modulos donde se presentan la información del estudiante
         private frmMaterias materias;
+        private frmAnotaciones anotaciones;
+        private frmRecordatorios recordatorios;
+        private frmTareas tareas;
+        private frmTecnicaEstudio tecnica;
+        private frmCalendario calendario;
+        // para instanciar a la conexion de la bd
         private CConexion conexion;
-        private frmMaterias mats = new frmMaterias();
-
+        
         public frmPrincipal()
         {
             InitializeComponent();
+            conexion = new CConexion();
             grafoMain = new CGrafo();
             ubicacion = btnNuevaMat.Location;
-            ConfigurarBotones();
-            conexion = new CConexion();
-            
+            InicializarModulos();
+            ConfigurarBotones();            
+        }
+
+        private void InicializarModulos()
+        {
+
+            materias = (frmMaterias)AbrirFormulario<frmMaterias>();
+            // Llamar al método ActualizarForm del formulario frmMaterias para mostrar los datos
+            materias.ActualizarForm(grafoMain, true);
+
+            anotaciones = (frmAnotaciones)AbrirFormulario<frmAnotaciones>();
+            // llamar al metodo actualizar form del formulario frmAnotaciones para mostrar los datos
+            anotaciones.ActualizarForm(grafoMain, true);
+
+            recordatorios = (frmRecordatorios)AbrirFormulario<frmRecordatorios>();
+            // llamar al metodo actualizar form del formulario frmAnotaciones para mostrar los datos
+            //recordatorios.ActualizarForm(grafoMain);
+
+            tareas = (frmTareas)AbrirFormulario<frmTareas>();
+            // llamar al metodo actualizar form del formulario frmAnotaciones para mostrar los datos
+            //tareas.ActualizarForm(grafoMain);
+
+            tecnica = (frmTecnicaEstudio)AbrirFormulario<frmTecnicaEstudio>();
+
+            calendario = (frmCalendario)AbrirFormulario<frmCalendario>();
+
+            home = (frmHome)AbrirFormulario<frmHome>();
         }
 
         private void ConfigurarBotones()
@@ -104,59 +137,56 @@ namespace ModernGUI_V3
         private void btnMaterias_Click(object sender, EventArgs e)
         {
             // Abrir el formulario frmMaterias y obtener una referencia a él
-            materias = (frmMaterias)AbrirFormulario<frmMaterias>();
+            materias.BringToFront();
             btnNuevaMat.BringToFront();
             btnNuevaMat.Visible = true;
             ReestablecerConfig();
             btnMaterias.BackColor = Color.FromArgb(12, 61, 92);
-            // Llamar al método ActualizarForm del formulario frmMaterias para mostrar los datos
-            materias.ActualizarForm(grafoMain);
         }
-
-
 
         private void btnAnotaciones_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frmAnotaciones>();
+            anotaciones.BringToFront();
             btnNuevaAnot.BringToFront();
             btnNuevaAnot.Visible = true;
             ReestablecerConfig();
             btnAnotaciones.BackColor = Color.FromArgb(12, 61, 92);
         }
-        private void btnMetodos_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<frmTecnicaEstudio>();
-            btnNuevoMeto.BringToFront();
-            btnNuevoMeto.Visible = true;
-            ReestablecerConfig();
-            btnMetodos.BackColor = Color.FromArgb(12, 61, 92);
-        }
-
         private void btnRecordatorio_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frmRecordatorios>(); 
+            recordatorios.BringToFront();
             btnNuevoReco.BringToFront();
             btnNuevoReco.Visible = true;
             ReestablecerConfig();
             btnRecordatorio.BackColor = Color.FromArgb(12, 61, 92);
         }
+        private void btnTareas_Click(object sender, EventArgs e)
+        {
+            tareas.BringToFront();
+            btnNuevaTarea.BringToFront();
+            btnNuevaTarea.Visible = true;
+            ReestablecerConfig();
+            btnTareas.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
+        private void btnMetodos_Click(object sender, EventArgs e)
+        {
+            tecnica.BringToFront();
+            btnNuevoMeto.BringToFront();
+            btnNuevoMeto.Visible = true;
+            ReestablecerConfig();
+            btnMetodos.BackColor = Color.FromArgb(12, 61, 92);
+        }
+        
         private void btnCalendario_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frmCalendario>();
+            calendario.BringToFront();
+            btnCalendario.BringToFront();            
             btnNuevoCalen.BringToFront();
             btnNuevoCalen.Visible = true;
             ReestablecerConfig();
             btnCalendario.BackColor = Color.FromArgb(12, 61, 92);
-        }
-
-        private void btnTareas_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<frmTareas>();
-            btnNuevaTarea.BringToFront();
-            btnNuevaTarea.Visible = true;
-            ReestablecerConfig();
-            btnRecordatorio.BackColor = Color.FromArgb(12, 61, 92);
-        }
+        }        
 
         private frmOutput form = new frmOutput();
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -209,15 +239,23 @@ namespace ModernGUI_V3
             nuevaMateria.Visible = false;
             nuevaMateria.control = false;
             nuevaMateria.ShowDialog();
+            Materia nMateria;
             if (nuevaMateria.control)
             {
-                if (grafoMain.AgregarNodos(1, nombre: nuevaMateria.nombreM, hora: nuevaMateria.horaClase, dias: nuevaMateria.dias, docente: nuevaMateria.nombreD, salon: nuevaMateria.salon) != null)
+                nMateria = (Materia)grafoMain.AgregarNodos(1, nombre: nuevaMateria.nombreM, hora: nuevaMateria.horaClase, dias: nuevaMateria.dias, docente: nuevaMateria.nombreD, salon: nuevaMateria.salon);
+                if (nMateria != null)
                 {
-                    materias.ActualizarForm(grafoMain);
-                    MessageBox.Show("Se ha ingresado exitosamente la nueva materia", "Registro de materia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Insertar los datos en la base de datos
+                    if (conexion.InsertarMateria(nMateria))
+                    {
+                        materias.ActualizarForm(grafoMain,false);
+                        MessageBox.Show("Materia registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al registrar la materia.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
-                    MessageBox.Show("No se ha ingresado la nueva materia", "Regustro de materia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -230,16 +268,37 @@ namespace ModernGUI_V3
             nuevaAnotacion.ShowDialog();
             if (nuevaAnotacion.control)
             {
-                // hace falta un if de agregar Nodo
-                CNodos nodoOrigen = grafoMain.AgregarNodos(2, nombre: nuevaAnotacion.titulo, cuerpo: nuevaAnotacion.cuerpo);
-                CNodos nodoDestino = grafoMain.BuscarNodo(1,nuevaAnotacion.materiaE); // extraer con id en el obtener materias
-                if (nodoOrigen != null && nodoDestino != null)
+                CNodos nodoOrigen;
+                CNodos nodoDestino;
+
+                nodoOrigen = grafoMain.AgregarNodos(2, nombre: nuevaAnotacion.titulo, cuerpo: nuevaAnotacion.cuerpo);
+                if (nodoOrigen != null)
                 {
-                    grafoMain.AgregarArco(nodoOrigen, nodoDestino);
-                    MessageBox.Show("Se ha ingresado exitosamente la nueva anotación", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    nodoDestino = grafoMain.BuscarNodo(1, nuevaAnotacion.materiaE); // extraer con id en el obtener materias
+
+                    if (nodoDestino != null)
+                    {
+                        if (grafoMain.AgregarArco(nodoDestino, nodoOrigen))
+                        {
+                            if (conexion.InsertarAnotacion((Anotacion)nodoOrigen, nuevaAnotacion.materiaE))
+                            {
+                                anotaciones.ActualizarForm(grafoMain, false);
+                                MessageBox.Show("Anotación registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error al registrar la anotación.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                            MessageBox.Show("fue null el arco");
+                    }
+                    else
+                        MessageBox.Show("fue null la materia");
                 }
                 else
-                    MessageBox.Show("No se ha ingresado la nueva anotación", "Regustro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("fue null el nodo");
             }
         }
 

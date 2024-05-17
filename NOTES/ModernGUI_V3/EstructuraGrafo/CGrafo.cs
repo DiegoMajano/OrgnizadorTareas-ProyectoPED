@@ -28,9 +28,10 @@ namespace AdministradorT
             nodosTarea = new List<Tarea>();
         }
 
-        public CNodos AgregarNodos(int tipo, string nombre, TimeSpan hora = new TimeSpan(), List<string> dias=null, string cuerpo = "", string docente = "", string salon = "", DateTime aRecordar = new DateTime(), string titulo = "", DateTime fechaEntrega = new DateTime())
+        public CNodos AgregarNodos(int tipo, string nombre, TimeSpan hora = new TimeSpan(), List<string> dias=null, string cuerpo = "", 
+                                    string docente = "", string salon = "", DateTime aRecordar = new DateTime(), string titulo = "",
+                                        DateTime fechaEntrega = new DateTime())
         {
-            // SE PODRIA HACER UN SWITCH AQUI, SEGUN EL TIPO DE NODO QUE SE QUIERE CREAR ES COMO SE VA A GENERAR, SI ES MATERIA, ANOTACION, ETC
             switch (tipo)
             {
                 case 1: //Creacion de nodo para la materia
@@ -59,18 +60,54 @@ namespace AdministradorT
 
         public bool AgregarNodo(CNodos nodo)
         {
-            int antiugo = nodos.Count;
+            int antiguo = nodos.Count;
             nodos.Add(nodo);
-            if (nodos.Count > antiugo)
+            if (nodos.Count > antiguo)
                 return true;            
             return false;            
         }          
 
+        public bool AgregarNodos(int tipo, List<Materia> materias = null, List<Anotacion> anotaciones = null, List<Recordatorio> recordatorios = null, List<Tarea> tareas = null) 
+        {
+            switch (tipo)
+            {
+                case 1: // si es materia 
+                    foreach (var nodoMateria in materias)
+                    {
+                        nodos.Add(nodoMateria);
+                        nodosMaterias.Add(nodoMateria);
+                    }
+                 return true;
+                case 2: // si es anotacion
+                    foreach (var nodoAnotacion in anotaciones)
+                    {
+                        nodos.Add(nodoAnotacion);
+                        nodosAnotaciones.Add(nodoAnotacion);                            
+                    }
+                    return true;
+                case 3: // si es recordatorio
+                    foreach (var nodoRecordatorio in recordatorios)
+                    {
+                        nodos.Add(nodoRecordatorio);
+                        nodosRecordatorios.Add(nodoRecordatorio);
+                    }
+                    return true;
+                case 4: // si es tarea
+                    foreach (var nodoTarea in tareas)
+                    {
+                        nodos.Add(nodoTarea);
+                        nodosTarea.Add(nodoTarea);
+                    }
+                    return true;
+            }
+            return false;
+        }
+
         public bool AgregarArco(CNodos origen, CNodos destino)
         {
-            if (origen.listaAdyacencia.Find(v => v.nodoDestino == destino) == null)
+            if (origen.listaAdyacencia.Find(v => v.nodoDestino == destino) == null) // se verifica que exista el nodo destino en la lista de adyacencia del nodo origen
             {
-                origen.listaAdyacencia.Add(new CConexion(destino));
+                origen.listaAdyacencia.Add(new CConexion(destino)); 
                 return true;
             }
             return false;
@@ -115,6 +152,64 @@ namespace AdministradorT
                     break;
             }
             return null;
+        }
+        public CNodos EliminarNodo(string id)
+        {
+            CNodos nodoE = BuscarNodo(id);
+            
+            nodos.Remove(nodoE);
+
+            foreach (CNodos nodo in nodos)
+            {
+                foreach (CConexion arco in nodo.listaAdyacencia)
+                {
+                    if (arco.nodoDestino.ID == id)
+                    {
+                        nodo.listaAdyacencia.Remove(arco);
+                        break;
+                    }
+                }
+            }
+            return nodoE;
+        }
+
+        public CNodos EliminarNodo(int tipo, string id)
+        {
+            switch (tipo)
+            {
+                case 1:
+                    Materia materia = (Materia) EliminarNodo(id);
+                    nodosMaterias.Remove(materia);
+                    return materia;
+                case 2:
+                    Anotacion anotacion = (Anotacion) EliminarNodo(id);
+                    nodosAnotaciones.Remove(anotacion);
+                    return anotacion;
+                case 3:
+                    Recordatorio recordatorio = (Recordatorio) EliminarNodo(id);
+                    nodosRecordatorios.Remove(recordatorio);
+                    return recordatorio;
+                case 4:
+                    Tarea tarea = (Tarea) EliminarNodo(id);
+                    nodosTarea.Remove(tarea);
+                    return tarea;
+                default:
+                    return null;
+            }
+        }
+
+        public bool EliminarArco(CNodos nodoOrigen, CNodos nodoDestino)
+        {
+            // Buscar los vértices de origen y destino en el grafo
+            CNodos nOrigen = BuscarNodo(nodoOrigen.ID);
+            CNodos nDestino = BuscarNodo(nodoDestino.ID);
+
+            if (nOrigen != null && nDestino != null)
+            {
+                // Eliminar el arco de la lista de adyacencia del vértice origen
+                return nOrigen.listaAdyacencia.RemoveAll(arco => arco.nodoDestino == nDestino) > 0;
+            }
+            return false;
         }
     }
 }

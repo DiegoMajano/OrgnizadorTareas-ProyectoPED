@@ -54,9 +54,10 @@
             // 
             // lblTitulo
             // 
+            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(294, 85);
+            this.lblTitulo.Location = new System.Drawing.Point(328, 63);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(205, 31);
             this.lblTitulo.TabIndex = 13;
@@ -64,6 +65,8 @@
             // 
             // tabTareas
             // 
+            this.tabTareas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabTareas.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tabTareas.Location = new System.Drawing.Point(32, 154);
             this.tabTareas.Name = "tabTareas";

@@ -30,7 +30,7 @@ namespace ModernGUI_V3
         private SoundPlayer soundPlayer = new SoundPlayer();
         private SoundPlayer soundPlayer2 = new SoundPlayer();
 
-        Bitmap bitmap = new Bitmap("C:\\Users\\50376\\source\\repos\\OrgnizadorTareas-ProyectoPED\\NOTES\\star.png"); // Bitmap
+        Bitmap bitmap = new Bitmap("C:\\Users\\Diego Majano\\Desktop\\UDB\\Año 2024\\PED\\OrganizadorTareas-PED\\NOTES\\ModernGUI_V3\\Recursos\\star.png"); // Bitmap
         double angle = 0; // Ángulo inicial
         int centerX; // Coordenada X del centro de rotación
         int centerY; // Coordenada Y del centro de rotación
@@ -45,7 +45,7 @@ namespace ModernGUI_V3
             centerY = pictureBox2.Height / 480;
 
             // sound path: PomodoroTimerApp\bin\Debug\net6.0-windows\sound.wav
-            string soundFileName = "C:\\Users\\50376\\source\\repos\\OrgnizadorTareas-ProyectoPED\\NOTES\\sound.wav";
+            string soundFileName = "C:\\Users\\Diego Majano\\Desktop\\UDB\\Año 2024\\PED\\OrganizadorTareas-PED\\NOTES\\ModernGUI_V3\\Recursos\\sound.wav";
             notifySoundPlayer = InitializeSoundPlayer(soundFileName);
 
             UpdateTimerDisplay();
@@ -136,8 +136,8 @@ namespace ModernGUI_V3
         private void Form2_Load(object sender, EventArgs e)
         {
             // Asignar la ruta del archivo de sonido al SoundPlayer
-            soundPlayer2.SoundLocation = "C:\\Users\\50376\\source\\repos\\OrgnizadorTareas-ProyectoPED\\NOTES\\ready.wav";
-            soundPlayer.SoundLocation = "C:\\Users\\50376\\source\\repos\\OrgnizadorTareas-ProyectoPED\\NOTES\\song.wav";
+            soundPlayer2.SoundLocation = "C:\\Users\\Diego Majano\\Desktop\\UDB\\Año 2024\\PED\\OrganizadorTareas-PED\\NOTES\\ModernGUI_V3\\Recursos\\ready.wav";
+            soundPlayer.SoundLocation = "C:\\Users\\Diego Majano\\Desktop\\UDB\\Año 2024\\PED\\OrganizadorTareas-PED\\NOTES\\ModernGUI_V3\\Recursos\\song.wav";
 
             timer1.Enabled = true;
         }
@@ -205,7 +205,7 @@ namespace ModernGUI_V3
             isWorking = true;
             isPaused = false;
             UpdateTimerDisplay();
-            pictureBox2.ImageLocation = "C:\\Users\\50376\\source\\repos\\OrgnizadorTareas-ProyectoPED\\NOTES\\star.jpg";
+            pictureBox2.ImageLocation = "C:\\Users\\Diego Majano\\Desktop\\UDB\\Año 2024\\PED\\OrganizadorTareas-PED\\NOTES\\ModernGUI_V3\\Recursos\\star.jpg";
 
 
             // Mover la imagen

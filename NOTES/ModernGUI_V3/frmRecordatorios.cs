@@ -25,9 +25,9 @@ namespace AdministradorT
         }
 
         public void ActualizarForm(CGrafo grafo)
-        {/*
+        {
             tabRecordatorios.TabPages.Clear();
-            List<Recordatorio> recordatorios = conexion.ObtenerTodasLasMaterias(); // Obtener todas las materias de la base de datos
+            List<Recordatorio> recordatorios = conexion.ObtenerRecordatorios(); // Obtener todas las materias de la base de datos
 
             foreach (Recordatorio recordatorio in recordatorios)
             {
@@ -56,7 +56,7 @@ namespace AdministradorT
 
                 // Agregar la TabPage al TabControl
                 tabRecordatorios.TabPages.Add(tp);
-            }*/
+            }
         }
     }
 }
