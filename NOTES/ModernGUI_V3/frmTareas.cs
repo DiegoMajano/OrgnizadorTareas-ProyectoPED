@@ -38,6 +38,8 @@ namespace AdministradorT
             {
                 // Crear una nueva TabPage para mostrar los datos de la tarea
                 TabPage tp = new TabPage();
+                tp.BackColor = tabPage1.BackColor;
+                tp.Font = tabPage1.Font;
                 tp.Text = tarea.ID; // Usar un identificador único de la tarea como texto de la TabPage
 
                 // Crear y configurar los controles para mostrar los datos de la tarea
@@ -45,22 +47,67 @@ namespace AdministradorT
                 titulo.AutoSize = true;
                 titulo.Location = new Point(10, 10);
                 titulo.Text = "Titulo: " + tarea.Titulo;
+                titulo.Location = lblTituloT.Location;
+                titulo.Font = lblTituloT.Font;
                 tp.Controls.Add(titulo);
 
                 Label cuerpo = new Label();
                 cuerpo.AutoSize = true;
                 cuerpo.Location = new Point(10, 30);
-                cuerpo.Text = "Salón: " + tarea.Cuerpo;
+                cuerpo.Text = "Descripción: " + tarea.Cuerpo;
+                cuerpo.Location = lblCuerpo.Location;
+                cuerpo.Font = lblCuerpo.Font;
                 tp.Controls.Add(cuerpo);
 
                 Label fechaEntrega = new Label();
                 fechaEntrega.AutoSize = true;
                 fechaEntrega.Location = new Point(10, 70);
-                fechaEntrega.Text = "Hora de Clase: " + tarea.FechaEntrega.ToString();
+                fechaEntrega.Text = "Fecha de entrega: " + tarea.FechaEntrega.ToString();
+                fechaEntrega.Location = lblFecha.Location;
+                fechaEntrega.Font = lblFecha.Font;
                 tp.Controls.Add(fechaEntrega);
 
+
+                Button Editar = new Button();
+                Editar.AutoSize = true;
+                Editar.Visible = true;
+                Editar.Text = "Editar Tarea";
+                Editar.Font = btnEditarT.Font;
+                Editar.Anchor = btnEditarT.Anchor;
+                Editar.FlatStyle = btnEditarT.FlatStyle;
+                Editar.Location = btnEditarT.Location;
+                Editar.BackColor = btnEditarT.BackColor;
+                Editar.Size = btnEditarT.Size;
+                
+                tp.Controls.Add(Editar);
+
+
+                Button Eliminar = new Button();
+                Eliminar.AutoSize = true;
+                Eliminar.Visible = true;
+                Eliminar.Text = "Eliminar Anotación";
+                Eliminar.Font = btnEliminarT.Font;
+                Eliminar.Anchor = btnEliminarT.Anchor;
+                Eliminar.FlatStyle = btnEliminarT.FlatStyle;
+                Eliminar.Location = btnEliminarT.Location;
+                Eliminar.BackColor = btnEliminarT.BackColor;
+                Eliminar.Size = btnEliminarT.Size;
+                
+                tp.Controls.Add(Eliminar);
+
                 // agregar boton para asignar en compleada la tarea
-               
+                Button Completada = new Button();
+                Completada.AutoSize = true;
+                Completada.Visible = true;
+                Completada.Text = "★ Tarea Completada ★";
+                Completada.Font = btnTareaC.Font;
+                Completada.Location = btnTareaC.Location;
+                Completada.Anchor = btnTareaC.Anchor;
+                Completada.FlatStyle = btnTareaC.FlatStyle;
+                Completada.BackColor = btnTareaC.BackColor;
+                Completada.Size = btnTareaC.Size;
+
+                tp.Controls.Add(Completada);
 
                 // Agregar la TabPage al TabControl
                 tabTareas.TabPages.Add(tp);

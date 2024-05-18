@@ -165,5 +165,10 @@ namespace ModernGUI_V3
 
             tbA.TabPages[e.Index].BackColor = tbAColor;
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

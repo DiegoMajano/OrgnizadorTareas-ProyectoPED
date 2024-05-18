@@ -68,9 +68,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Constantia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(90, 49);
+            this.label7.Location = new System.Drawing.Point(99, 48);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(133, 33);
+            this.label7.Size = new System.Drawing.Size(163, 40);
             this.label7.TabIndex = 20;
             this.label7.Text = "My Notes";
             // 
@@ -78,16 +78,16 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Book Antiqua", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(90, 49);
+            this.label2.Location = new System.Drawing.Point(99, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 32);
+            this.label2.Size = new System.Drawing.Size(164, 40);
             this.label2.TabIndex = 21;
             this.label2.Text = "My Notes";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(38, 49);
+            this.pictureBox2.Location = new System.Drawing.Point(47, 48);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(55, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -100,10 +100,10 @@
             this.tabMaterias.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabMaterias.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.tabMaterias.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tabMaterias.Location = new System.Drawing.Point(66, 137);
+            this.tabMaterias.Location = new System.Drawing.Point(68, 240);
             this.tabMaterias.Name = "tabMaterias";
             this.tabMaterias.SelectedIndex = 0;
-            this.tabMaterias.Size = new System.Drawing.Size(728, 395);
+            this.tabMaterias.Size = new System.Drawing.Size(781, 395);
             this.tabMaterias.TabIndex = 18;
             this.tabMaterias.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabMaterias_DrawItem);
             // 
@@ -118,9 +118,9 @@
             this.tabPage1.Controls.Add(this.lblNombre);
             this.tabPage1.Controls.Add(this.btnEditar);
             this.tabPage1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 28);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(720, 363);
+            this.tabPage1.Size = new System.Drawing.Size(773, 359);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -142,7 +142,7 @@
             this.lblDias.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDias.Location = new System.Drawing.Point(40, 291);
             this.lblDias.Name = "lblDias";
-            this.lblDias.Size = new System.Drawing.Size(68, 22);
+            this.lblDias.Size = new System.Drawing.Size(81, 26);
             this.lblDias.TabIndex = 5;
             this.lblDias.Text = "label3";
             // 
@@ -152,7 +152,7 @@
             this.lblSalon.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalon.Location = new System.Drawing.Point(40, 237);
             this.lblSalon.Name = "lblSalon";
-            this.lblSalon.Size = new System.Drawing.Size(68, 22);
+            this.lblSalon.Size = new System.Drawing.Size(81, 26);
             this.lblSalon.TabIndex = 4;
             this.lblSalon.Text = "label6";
             // 
@@ -162,7 +162,7 @@
             this.lblDocente.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDocente.Location = new System.Drawing.Point(40, 172);
             this.lblDocente.Name = "lblDocente";
-            this.lblDocente.Size = new System.Drawing.Size(68, 22);
+            this.lblDocente.Size = new System.Drawing.Size(81, 26);
             this.lblDocente.TabIndex = 3;
             this.lblDocente.Text = "label5";
             // 
@@ -172,7 +172,7 @@
             this.lblHora.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.Location = new System.Drawing.Point(40, 104);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(68, 22);
+            this.lblHora.Size = new System.Drawing.Size(81, 26);
             this.lblHora.TabIndex = 2;
             this.lblHora.Text = "label4";
             // 
@@ -182,7 +182,7 @@
             this.lblNombre.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(40, 41);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(68, 22);
+            this.lblNombre.Size = new System.Drawing.Size(81, 26);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "label3";
             // 
@@ -203,9 +203,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label1.Location = new System.Drawing.Point(295, 83);
+            this.label1.Location = new System.Drawing.Point(376, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 31);
+            this.label1.Size = new System.Drawing.Size(309, 37);
             this.label1.TabIndex = 17;
             this.label1.Text = "Materias registradas";
             // 
