@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 17-05-2024 a las 18:57:17
+-- Tiempo de generación: 18-05-2024 a las 08:55:01
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.3.2
 
@@ -33,7 +33,7 @@ CREATE TABLE `anotacion` (
   `cuerpo` text,
   `idMateria` varchar(5) DEFAULT NULL,
   `NombreMat` varchar(500) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `anotacion`
@@ -43,8 +43,7 @@ INSERT INTO `anotacion` (`idAnotacion`, `titulo`, `cuerpo`, `idMateria`, `Nombre
 ('AM810', 'MatLab', 'Para realizar los laboratorios de Cálculo Diferencial se utiliza MatLab, se debe estudiar sobre la sintaxis que se utiliza en la aplicación', NULL, 'Cálculo Diferencial'),
 ('AP517', 'Proyecto', 'Repartir al grupo de proyecto los apartados que se deben de realizar', NULL, 'Programación Estructurada'),
 ('AL111', 'Laboratorio', 'Para los laboratorios se deben realizar una hoja de papel con el resumen y pasos de la practica a realizar en el laboratorio', NULL, 'Quimica General'),
-('AR502', 'Reglas de integración', 'Ver y descargar el archivo de las reglas de integracion del aula, estudiarlas y aprenderlas', NULL, 'Cálculo Integral'),
-('AP345', 'PRUEB', 'prueba', '', 'Comunicación Oral y Escrita');
+('AR502', 'Reglas de integración', 'Ver y descargar el archivo de las reglas de integracion del aula, estudiarlas y aprenderlas', NULL, 'Cálculo Integral');
 
 -- --------------------------------------------------------
 
@@ -56,7 +55,7 @@ CREATE TABLE `conexion` (
   `idNodoOrigen` varchar(5) NOT NULL,
   `idNodoDestino` varchar(5) NOT NULL,
   `Peso` int DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -68,7 +67,7 @@ CREATE TABLE `dia_materia` (
   `id` int NOT NULL,
   `materia_id` varchar(5) DEFAULT NULL,
   `dia` varchar(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `dia_materia`
@@ -86,7 +85,9 @@ INSERT INTO `dia_materia` (`id`, `materia_id`, `dia`) VALUES
 (22, 'MC987', 'Jueves'),
 (24, 'MP999', 'Lunes'),
 (25, 'MC570', 'Lunes'),
-(26, 'MC570', 'Miércoles');
+(26, 'MC570', 'Miércoles'),
+(28, 'MP639', 'Martes'),
+(29, 'MP639', 'Jueves');
 
 -- --------------------------------------------------------
 
@@ -101,18 +102,19 @@ CREATE TABLE `materia` (
   `docente` varchar(255) DEFAULT NULL,
   `salon` varchar(255) DEFAULT NULL,
   `id_tarea` int DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `materia`
 --
 
 INSERT INTO `materia` (`idMateria`, `nombre`, `horaClase`, `docente`, `salon`, `id_tarea`) VALUES
-('MP999', 'Programación Estructurada', '2024-05-17 11:10:00', 'Ing Melvin', '6-22', NULL),
+('MP999', 'Programación Estructurada', '2024-05-18 15:20:00', 'Ing Melvin', '6-22', NULL),
 ('MQ443', 'Quimica General', '2024-05-17 09:05:00', 'Ing Francisco Merino', 'C35', NULL),
 ('MC616', 'Cálculo Diferencial', '2024-05-17 07:00:00', 'Lic Glenda', 'C24', NULL),
 ('MC987', 'Cinematica y Dinámica de Particulas', '2024-05-17 11:10:00', 'Ing Francisco', 'C34', NULL),
-('MC570', 'Cálculo Integral', '2024-05-17 11:10:00', 'Lic Karen', 'C24', NULL);
+('MC570', 'Cálculo Integral', '2024-05-17 11:10:00', 'Lic Karen', 'C24', NULL),
+('MP639', 'Programación con Estructura de Datos', '2024-05-17 13:15:00', 'Ing Carmen', 'B23', NULL);
 
 -- --------------------------------------------------------
 
@@ -124,7 +126,7 @@ CREATE TABLE `nodo` (
   `idNodo` int NOT NULL,
   `tipo` int DEFAULT NULL,
   `nombre` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -142,15 +144,14 @@ CREATE TABLE `recordatorio` (
   `AnotacionR` varchar(500) NOT NULL,
   `MateriaR` varchar(500) NOT NULL,
   `TareaR` varchar(500) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `recordatorio`
 --
 
 INSERT INTO `recordatorio` (`idRecordatorio`, `idNodo`, `titulo`, `fechaRecordatorio`, `cuerpo`, `idMateria`, `AnotacionR`, `MateriaR`, `TareaR`) VALUES
-('d4439', NULL, 'sasas', '2024-05-21 12:09:46', 'sasas', NULL, 'Proyecto', 'Quimica General', 'Hacer ejercicios'),
-('9ef33', NULL, 'sasas', '2024-05-20 12:07:13', 'sasas', NULL, 'Laboratorio', 'Quimica General', 'Hacer ejercicios');
+('Ra677', NULL, 'Laboratorio', '2024-05-30 02:49:36', 'Para el laboratorio se debe estudiar las inercias ya obtenidas', NULL, '', 'Cinematica y Dinámica de Particulas', '');
 
 -- --------------------------------------------------------
 
@@ -162,7 +163,7 @@ CREATE TABLE `sistemametodosestudio` (
   `id` int NOT NULL,
   `id_tarea` int DEFAULT NULL,
   `id_metodo` int DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -173,22 +174,21 @@ CREATE TABLE `sistemametodosestudio` (
 CREATE TABLE `tarea` (
   `id_tarea` varchar(5) NOT NULL,
   `fechaLimite` date DEFAULT NULL,
-  `estadotarea` varchar(5000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `nombre` varchar(5000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `estadotarea` varchar(5000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `nombre` varchar(5000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `descripcion` text,
   `importancia` int NOT NULL,
   `AnotacionT` varchar(500) NOT NULL,
   `MateriaT` varchar(300) NOT NULL,
   `titulo` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `tarea`
 --
 
 INSERT INTO `tarea` (`id_tarea`, `fechaLimite`, `estadotarea`, `nombre`, `descripcion`, `importancia`, `AnotacionT`, `MateriaT`, `titulo`) VALUES
-('1', '2024-05-17', 'Importante', 'Quimica General', 'Importanteee', 0, 'MatLab', 'Quimica General', 'Hacer ejercicios'),
-('2', '2024-06-04', 'Importante', 'Programación Estructurada', 'sasas', 0, 'Proyecto', 'Programación Estructurada', 'sasasas');
+('Tg358', '2024-05-10', 'Finalizada', 'Guia ejercicios', 'Guia de ejercicios por hacer', 2, 'MatLab', 'Programación Estructurada', 'Guia ejercicios');
 
 -- --------------------------------------------------------
 
@@ -200,7 +200,7 @@ CREATE TABLE `usuario` (
   `idUsuario` int NOT NULL,
   `nombre` varchar(255) DEFAULT NULL,
   `contrasena` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
@@ -283,7 +283,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `dia_materia`
 --
 ALTER TABLE `dia_materia`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT de la tabla `sistemametodosestudio`
