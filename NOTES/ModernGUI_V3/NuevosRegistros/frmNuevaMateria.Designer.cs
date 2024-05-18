@@ -44,6 +44,7 @@
             this.lblHoraM = new System.Windows.Forms.Label();
             this.lblNombreM = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.pnlMain.SuspendLayout();
             this.pnlTop.SuspendLayout();
             this.SuspendLayout();
@@ -212,6 +213,13 @@
             this.lblNombreM.TabIndex = 0;
             this.lblNombreM.Text = "Nombre:";
             // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
+            // 
             // frmNuevaMateria
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -247,5 +255,6 @@
         public System.Windows.Forms.Button btnCancelar;
         public System.Windows.Forms.Panel pnlTop;
         public System.Windows.Forms.Label lblTitulo;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
     }
 }

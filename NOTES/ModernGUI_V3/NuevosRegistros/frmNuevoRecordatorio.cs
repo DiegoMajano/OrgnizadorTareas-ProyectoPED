@@ -83,7 +83,8 @@ namespace AdministradorT
                 materiaE = cbMateriaR.SelectedIndex > 0 ? cbMateriaR.SelectedItem.ToString() : "";
                 anotacionE = cbAnotacionR.SelectedIndex > 0 ? cbAnotacionR.SelectedItem.ToString() : "";
                 tareaE = cbTareaR.SelectedIndex > 0 ? cbTareaR.SelectedItem.ToString() : ""; // Asegurarse de obtener el título de la tarea
-                newRecordatorio = new Recordatorio(titulo,aRecordar,cuerpo);
+                if(!controlEditar)
+                    newRecordatorio = new Recordatorio(titulo,aRecordar,cuerpo);
                 control = true;
                 LimpiarCampos();
                 this.Hide();               

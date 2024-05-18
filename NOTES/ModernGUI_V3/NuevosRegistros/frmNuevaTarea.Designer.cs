@@ -111,8 +111,9 @@
             this.lblHead.ForeColor = System.Drawing.Color.Transparent;
             this.lblHead.Location = new System.Drawing.Point(216, 19);
             this.lblHead.Name = "lblHead";
-            this.lblHead.Size = new System.Drawing.Size(0, 23);
+            this.lblHead.Size = new System.Drawing.Size(128, 23);
             this.lblHead.TabIndex = 20;
+            this.lblHead.Text = "Nueva tarea";
             // 
             // cbAnotacionT
             // 
@@ -252,7 +253,7 @@
 
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblHead;
+        public System.Windows.Forms.Label lblHead;
         public System.Windows.Forms.ComboBox cbAnotacionT;
         private System.Windows.Forms.Label lblAnotacion;
         public System.Windows.Forms.ComboBox cbMateriaT;

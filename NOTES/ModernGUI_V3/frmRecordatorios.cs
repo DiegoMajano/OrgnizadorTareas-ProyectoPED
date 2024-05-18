@@ -43,6 +43,7 @@ namespace AdministradorT
                 tp.Text = recordatorio.ID; // Usar un identificador único de la materia como texto de la TabPage
                 tp.Font = tabPage1.Font;
                 tp.BackColor = tabPage1.BackColor;
+                tp.AutoScroll = tabPage1.AutoScroll;
 
                 // Crear y configurar los controles para mostrar los datos de la materia
                 Label Titulo = new Label();
@@ -116,7 +117,9 @@ namespace AdministradorT
 
             if (nuevoRecordatorio.control) // tiene que ser un nuevo control porque sino se crea un nuevo nodo porque es el mismo control que se utiliza para agregar e insertar un nuevo nodo
             {
-                
+                recordatorio.Titulo = nuevoRecordatorio.titulo;
+                recordatorio.Cuerpo = nuevoRecordatorio.cuerpo;
+                recordatorio.aRecordar = nuevoRecordatorio.aRecordar;
                 if (conexion.ActualizarRecordatorio(recordatorio))
                 {
                     MessageBox.Show("Se ha actualizado la materia sin ningun problema", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -125,6 +128,7 @@ namespace AdministradorT
                 {
                     MessageBox.Show("Error al actualizar la materia", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                ActualizarForm(grafo, false);
             }
         }
         public void EliminarRecordatorio_Click(object sender, EventArgs e)
@@ -145,7 +149,7 @@ namespace AdministradorT
                 if(result == DialogResult.Yes)
                 {
                     Recordatorio recordatorioEliminado = (Recordatorio) grafo.EliminarNodo(3,recordatorio.ID);                    
-                    if (recordatorioEliminado!=null && !conexion.EliminarRecordatorio(recordatorio))
+                    if (conexion.EliminarRecordatorio(recordatorio))
                     {
                         ActualizarForm(grafo, false);
                         MessageBox.Show($"Se ha eliminado correctamente el Recordatorio: {recordatorioEliminado.Titulo}","Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -154,6 +158,7 @@ namespace AdministradorT
                     else
                         MessageBox.Show($"No se ha eliminado correctamente el Recordatorio: {recordatorioEliminado.Titulo}", "Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                ActualizarForm(grafo, false);
             }
         }
         private void tabRecordatorios_DrawItem(object sender, DrawItemEventArgs e)

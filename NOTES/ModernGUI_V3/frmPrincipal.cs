@@ -254,6 +254,7 @@ namespace ModernGUI_V3
         {
             nuevaAnotacion.Visible = false;
             nuevaAnotacion.control = false;
+            nuevaAnotacion.controlEditar = false;
             nuevaAnotacion.materias = ObtenerNodos(1);
             nuevaAnotacion.RellenarMaterias();
             nuevaAnotacion.ShowDialog();

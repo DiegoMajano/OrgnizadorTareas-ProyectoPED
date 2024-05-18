@@ -43,6 +43,7 @@ namespace AdministradorT
                 tp.BackColor = tabPage1.BackColor;
                 tp.Font = tabPage1.Font;
                 tp.Text = tarea.ID; // Usar un identificador único de la tarea como texto de la TabPage
+                tp.AutoScroll = tabPage1.AutoScroll;
 
                 // Crear y configurar los controles para mostrar los datos de la tarea
                 Label titulo = new Label();
@@ -68,6 +69,14 @@ namespace AdministradorT
                 fechaEntrega.Location = lblFecha.Location;
                 fechaEntrega.Font = lblFecha.Font;
                 tp.Controls.Add(fechaEntrega);
+
+                Label estado = new Label();
+                estado.AutoSize = true;
+                estado.Location = new Point(10, 30);
+                estado.Text = "Descripción: " + tarea.EstadoTarea;
+                estado.Location = label3.Location;
+                estado.Font = label3.Font;
+                tp.Controls.Add(estado);
 
 
                 Button Editar = new Button();
@@ -103,7 +112,7 @@ namespace AdministradorT
                 Button Completada = new Button();
                 Completada.AutoSize = true;
                 Completada.Visible = true;
-                Completada.Text = "★ Tarea Completada ★";
+                Completada.Text = "★ Completar Tarea ★";
                 Completada.Font = btnTareaC.Font;
                 Completada.Location = btnTareaC.Location;
                 Completada.Anchor = btnTareaC.Anchor;
@@ -151,9 +160,17 @@ namespace AdministradorT
 
             if (tarea != null)
             {
-                tarea.CompletarTarea();
-                conexion.ActualizarTarea(tarea);
-                ActualizarForm(grafo,false);
+                if (tarea.EstadoTarea != EstadoTarea.Finalizada)
+                {
+                    tarea.CompletarTarea();
+                    conexion.ActualizarTarea(tarea);
+                    ActualizarForm(grafo, false);
+                    MessageBox.Show("Se ha completado la tarea, Felicidades", "Completar tarea", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("La tarea ya está finalizada", "Completar tarea", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -169,6 +186,7 @@ namespace AdministradorT
                 nuevaTarea.Visible = false;
                 nuevaTarea.control = false;
                 //nuevaTarea.editar = true;
+                nuevaTarea.lblHead.Text = "Editar " + tarea.Titulo;
                 nuevaTarea.txtTituloR.Text = tarea.Titulo;
                 nuevaTarea.txtCuerpo.Text = tarea.Cuerpo;
                 nuevaTarea.cbAnotacionT.Enabled = false;
@@ -213,7 +231,7 @@ namespace AdministradorT
                 if (result == DialogResult.Yes)
                 {
                     Tarea tareaEliminada= (Tarea)grafo.EliminarNodo(4, tarea.ID);
-                    if (tareaEliminada != null && conexion.EliminarTarea(tarea))
+                    if (conexion.EliminarTarea(tarea))
                     {
                         ActualizarForm(grafo, false);
                         MessageBox.Show($"Se ha eliminado correctamente la Tarea: {tareaEliminada.Titulo}", "Eliminar Tarea", MessageBoxButtons.OK, MessageBoxIcon.Information);

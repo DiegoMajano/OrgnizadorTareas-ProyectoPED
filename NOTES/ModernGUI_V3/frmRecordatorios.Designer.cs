@@ -57,7 +57,7 @@
             this.pnlAnotaciones.Controls.Add(this.tabRecordatorios);
             this.pnlAnotaciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAnotaciones.Location = new System.Drawing.Point(0, 0);
-            this.pnlAnotaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAnotaciones.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAnotaciones.Name = "pnlAnotaciones";
             this.pnlAnotaciones.Size = new System.Drawing.Size(861, 597);
             this.pnlAnotaciones.TabIndex = 11;
@@ -88,7 +88,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(35, 39);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(41, 33);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -124,6 +124,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.AutoScroll = true;
             this.tabPage1.Controls.Add(this.lblfecha);
             this.tabPage1.Controls.Add(this.lblcuerpo);
             this.tabPage1.Controls.Add(this.btnEliminar);
@@ -131,7 +132,7 @@
             this.tabPage1.Controls.Add(this.lbltr);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(753, 250);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";

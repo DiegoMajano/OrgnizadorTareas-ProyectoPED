@@ -184,13 +184,13 @@
         public System.Windows.Forms.ComboBox cbMateriaA;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.TextBox txtCuerpo;
-        private System.Windows.Forms.TextBox txtTituloA;
+        public System.Windows.Forms.TextBox txtCuerpo;
+        public System.Windows.Forms.TextBox txtTituloA;
         private System.Windows.Forms.Label lblMateria;
         private System.Windows.Forms.Label lblCuerpo;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.Label lblTitu;
+        public System.Windows.Forms.Label lblTitu;
         private System.Windows.Forms.Panel pnTop;
     }
 }

@@ -496,7 +496,7 @@ namespace AdministradorT
                     while (reader.Read())
                     {
                         string codigo = reader.GetString("id_tarea");
-                        string titulo = reader.GetString("nombre");
+                        string titulo = reader.GetString("titulo");
                         string cuerpo = reader.GetString("descripcion");
                         DateTime fechaLimite = reader.GetDateTime("fechaLimite");
                         string estado = reader.GetString("estadotarea");
@@ -538,11 +538,11 @@ namespace AdministradorT
                 
                 foreach (string dia in materiaN.Dias)
                 {
-                    string consulta2 = "UPDATE dia_materia SET dia = @dia where materia_id = @id";
+                    string consulta2 = "UPDATE dia_materia SET dia = @dia where materia_id = @idD";
                     MySqlCommand comando2 = new MySqlCommand(consulta2, conexion);
                     comando2.Parameters.AddWithValue("@dia", dia);
-                    comando2.Parameters.AddWithValue("@id", materiaN.ID);
-                    comando.ExecuteNonQuery();
+                    comando2.Parameters.AddWithValue("@idD", materiaN.ID);
+                    comando2.ExecuteNonQuery();
                 }
                 return true;
             }
@@ -565,8 +565,8 @@ namespace AdministradorT
 
                 string consulta = "UPDATE anotacion SET titulo = @tituloN, cuerpo = @cuerpoN where idAnotacion = @id ";
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
-                comando.Parameters.AddWithValue("@nombreN", anotacionN.Titulo);
-                comando.Parameters.AddWithValue("@cuerpo", anotacionN.Cuerpo);
+                comando.Parameters.AddWithValue("@tituloN", anotacionN.Titulo);
+                comando.Parameters.AddWithValue("@cuerpoN", anotacionN.Cuerpo);
                 comando.Parameters.AddWithValue("@id", anotacionN.ID);
                 comando.ExecuteNonQuery();
 
@@ -590,11 +590,11 @@ namespace AdministradorT
             {
                 conexion.Open();
 
-                string consulta = "UPDATE recordatorio SET titulo = @tituloN, arecordar = @aRecordar, cuerpo = @cuerpoN where idRecordatorio = @id ";
+                string consulta = "UPDATE recordatorio SET titulo = @tituloN, fechaRecordatorio = @aRecordar, cuerpo = @cuerpoN where idRecordatorio = @id ";
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
-                comando.Parameters.AddWithValue("@nombreN", recordatorioN.Titulo);
-                comando.Parameters.AddWithValue("@horaClase", recordatorioN.aRecordar);
-                comando.Parameters.AddWithValue("@cuerpo", recordatorioN.Cuerpo);
+                comando.Parameters.AddWithValue("@tituloN", recordatorioN.Titulo);
+                comando.Parameters.AddWithValue("@aRecordar", recordatorioN.aRecordar);
+                comando.Parameters.AddWithValue("@cuerpoN", recordatorioN.Cuerpo);
                 comando.Parameters.AddWithValue("@id", recordatorioN.ID);
                 comando.ExecuteNonQuery();
 
@@ -655,8 +655,8 @@ namespace AdministradorT
                 string consulta1 = "DELETE FROM materia where idMateria = @id";
                 MySqlCommand comando1 = new MySqlCommand(consulta1, conexion);
 
-                comando.Parameters.AddWithValue("@id", materia.ID);
-                comando.ExecuteNonQuery();                
+                comando1.Parameters.AddWithValue("@id", materia.ID);
+                comando1.ExecuteNonQuery();                
 
                 return true;
             }

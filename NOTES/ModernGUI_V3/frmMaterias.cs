@@ -69,6 +69,7 @@ namespace ModernGUI_V3
                 tp.BackColor = tabPage1.BackColor;
                 tp.Font = tabPage1.Font;
                 tp.Text = materia.ID; // Usar un identificador único de la materia como texto de la TabPage
+                tp.AutoScroll = tabPage1.AutoScroll;
 
                 // Crear y configurar los controles para mostrar los datos de la materia
                 Label nombre = new Label();
@@ -157,6 +158,7 @@ namespace ModernGUI_V3
             CGrafo grafo = info.Grafo;
             
             nuevaMateria.control = false;
+            nuevaMateria.lblTitulo.Text = "Editar" + materia.Nombre;
             nuevaMateria.txtNombreM.Text = materia.Nombre;
             nuevaMateria.txtNDocente.Text = materia.Docente;
             nuevaMateria.txtSalon.Text = materia.Salon;
@@ -180,6 +182,7 @@ namespace ModernGUI_V3
                 {
                     MessageBox.Show("Error al actualizar la materia", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                ActualizarForm(grafo, false);
             }
             
         }
@@ -201,13 +204,13 @@ namespace ModernGUI_V3
                 if (result == DialogResult.Yes)
                 {
                     Materia materiaEliminada = (Materia)grafo.EliminarNodo(1, materia.ID);
-                    if (materiaEliminada != null && !conexion.EliminarMateria(materia))
+                    if (materiaEliminada != null && conexion.EliminarMateria(materia))
                     {
                         ActualizarForm(grafo, false);
-                        MessageBox.Show($"Se ha eliminado correctamente el Recordatorio: {materiaEliminada.Nombre}", "Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"Se ha eliminado correctamente la materia: {materiaEliminada.Nombre}", "Eliminar materia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
-                        MessageBox.Show($"No se ha eliminado correctamente el Recordatorio: {materiaEliminada.Nombre}", "Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"No se ha eliminado correctamente la materia: {materiaEliminada.Nombre}", "Eliminar materia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
            
         }

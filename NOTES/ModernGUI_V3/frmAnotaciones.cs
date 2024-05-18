@@ -42,6 +42,7 @@ namespace ModernGUI_V3
                 tp.BackColor = tabPage1.BackColor;
                 tp.Font = tabPage1.Font;
                 tp.Text = anotacion.ID; // Usar un identificador único de la anotacion como texto de la TabPage
+                tp.AutoScroll = tabPage1.AutoScroll;
 
                 // Crear y configurar los controles para mostrar los datos de la anotacion
                 Label titulo = new Label();
@@ -94,12 +95,19 @@ namespace ModernGUI_V3
         private void EditarAnotacion_Click(object sender, EventArgs e)
         {
             Button boton = sender as Button;
+            NodoInfo nodoInfo = boton.Tag as NodoInfo;
+            Anotacion anotacion = (Anotacion)nodoInfo.Nodo;
+            CGrafo grafo = (CGrafo)nodoInfo.Grafo;
             if (boton != null)
             {
                 nuevaAnotacion.Visible = false;
                 nuevaAnotacion.control = false;
+                nuevaAnotacion.controlEditar = true;
+                nuevaAnotacion.lblTitu.Text = "Editar "+anotacion.Titulo;
+                nuevaAnotacion.txtTituloA.Text = anotacion.Titulo;
+                nuevaAnotacion.txtCuerpo.Text = anotacion.Cuerpo;
+                nuevaAnotacion.cbMateriaA.Enabled = false;
                 nuevaAnotacion.ShowDialog();
-                Anotacion anotacion = boton.Tag as Anotacion;
                 if (nuevaAnotacion.control) // tiene que ser un nuevo control porque sino se crea un nuevo nodo porque es el mismo control que se utiliza para agregar e insertar un nuevo nodo
                 {
                     anotacion.Titulo = nuevaAnotacion.titulo;
@@ -113,6 +121,7 @@ namespace ModernGUI_V3
                         MessageBox.Show("Error al actualizar la Anotacion", "Anotacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+                ActualizarForm(grafo, false);
             }
         }
         private void EliminarAnotacion_Click(object sender, EventArgs e)
@@ -141,6 +150,7 @@ namespace ModernGUI_V3
                     else
                         MessageBox.Show($"No se ha eliminado correctamente la Anotacion: {anotacionEliminada.Titulo}", "Eliminar Anotacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                ActualizarForm(grafo, false);
             }
         }
 

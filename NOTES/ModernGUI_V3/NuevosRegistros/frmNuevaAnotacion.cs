@@ -16,13 +16,14 @@ namespace AdministradorT
     public partial class frmNuevaAnotacion : Form
     {
         public Anotacion nuevaAnotacion;
-        public bool control;
+        public bool control, controlEditar;
         public List<string> materias;
         private CConexion conexion;//Conexion
         public frmNuevaAnotacion()
         {
             InitializeComponent();
             conexion = new CConexion();//Conexion
+            RellenarMaterias();
         }
 
         public void RellenarMaterias()
@@ -44,8 +45,11 @@ namespace AdministradorT
         public string titulo, cuerpo, materiaE;
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTituloA.Text) || string.IsNullOrEmpty(txtCuerpo.Text) || cbMateriaA.SelectedIndex == 0)
+            if (string.IsNullOrEmpty(txtTituloA.Text) || string.IsNullOrEmpty(txtCuerpo.Text))
                 MessageBox.Show("Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            if (!controlEditar && cbMateriaA.SelectedIndex == 0)
+                MessageBox.Show("Debe seleccionar una materia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
             else
             {
                 titulo = txtTituloA.Text;

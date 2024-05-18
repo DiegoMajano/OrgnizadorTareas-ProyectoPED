@@ -56,18 +56,19 @@
             this.pnlAnotaciones.Controls.Add(this.tabAnotaciones);
             this.pnlAnotaciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAnotaciones.Location = new System.Drawing.Point(0, 0);
-            this.pnlAnotaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlAnotaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlAnotaciones.Name = "pnlAnotaciones";
-            this.pnlAnotaciones.Size = new System.Drawing.Size(1148, 735);
+            this.pnlAnotaciones.Size = new System.Drawing.Size(861, 597);
             this.pnlAnotaciones.TabIndex = 10;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Constantia", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(99, 48);
+            this.label7.Location = new System.Drawing.Point(74, 39);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(163, 40);
+            this.label7.Size = new System.Drawing.Size(133, 33);
             this.label7.TabIndex = 22;
             this.label7.Text = "My Notes";
             // 
@@ -75,19 +76,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Book Antiqua", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 48);
+            this.label1.Location = new System.Drawing.Point(74, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 40);
+            this.label1.Size = new System.Drawing.Size(135, 32);
             this.label1.TabIndex = 23;
             this.label1.Text = "My Notes";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(47, 48);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(35, 39);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(55, 41);
+            this.pictureBox2.Size = new System.Drawing.Size(41, 33);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
@@ -97,38 +99,42 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label2.Location = new System.Drawing.Point(383, 146);
+            this.label2.Location = new System.Drawing.Point(287, 119);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(354, 37);
+            this.label2.Size = new System.Drawing.Size(295, 31);
             this.label2.TabIndex = 20;
             this.label2.Text = "Anotaciones registradas";
             // 
             // tabAnotaciones
             // 
+            this.tabAnotaciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabAnotaciones.Controls.Add(this.tabPage1);
             this.tabAnotaciones.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabAnotaciones.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabAnotaciones.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tabAnotaciones.Location = new System.Drawing.Point(47, 226);
-            this.tabAnotaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabAnotaciones.Location = new System.Drawing.Point(35, 184);
+            this.tabAnotaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabAnotaciones.Name = "tabAnotaciones";
             this.tabAnotaciones.SelectedIndex = 0;
-            this.tabAnotaciones.Size = new System.Drawing.Size(1015, 347);
+            this.tabAnotaciones.Size = new System.Drawing.Size(761, 282);
+            this.tabAnotaciones.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabAnotaciones.TabIndex = 19;
             this.tabAnotaciones.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabAnotaciones_DrawItem);
             // 
             // tabPage1
             // 
+            this.tabPage1.AutoScroll = true;
             this.tabPage1.Controls.Add(this.btnEliminar);
             this.tabPage1.Controls.Add(this.btnEditarA);
             this.tabPage1.Controls.Add(this.lblcuer);
             this.tabPage1.Controls.Add(this.lbltit);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1007, 311);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(753, 250);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -140,10 +146,10 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.MintCream;
-            this.btnEliminar.Location = new System.Drawing.Point(768, 239);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEliminar.Location = new System.Drawing.Point(576, 194);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(187, 47);
+            this.btnEliminar.Size = new System.Drawing.Size(140, 38);
             this.btnEliminar.TabIndex = 12;
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
@@ -153,10 +159,10 @@
             this.btnEditarA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarA.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarA.ForeColor = System.Drawing.Color.MintCream;
-            this.btnEditarA.Location = new System.Drawing.Point(768, 183);
-            this.btnEditarA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditarA.Location = new System.Drawing.Point(576, 149);
+            this.btnEditarA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditarA.Name = "btnEditarA";
-            this.btnEditarA.Size = new System.Drawing.Size(187, 47);
+            this.btnEditarA.Size = new System.Drawing.Size(140, 38);
             this.btnEditarA.TabIndex = 11;
             this.btnEditarA.UseVisualStyleBackColor = false;
             // 
@@ -164,32 +170,30 @@
             // 
             this.lblcuer.AutoSize = true;
             this.lblcuer.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcuer.Location = new System.Drawing.Point(44, 98);
-            this.lblcuer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcuer.Location = new System.Drawing.Point(33, 80);
             this.lblcuer.Name = "lblcuer";
-            this.lblcuer.Size = new System.Drawing.Size(69, 23);
+            this.lblcuer.Size = new System.Drawing.Size(57, 20);
             this.lblcuer.TabIndex = 8;
             this.lblcuer.Text = "label3";
             // 
             // lbltit
             // 
             this.lbltit.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltit.Location = new System.Drawing.Point(43, 33);
-            this.lbltit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbltit.Location = new System.Drawing.Point(32, 27);
             this.lbltit.Name = "lbltit";
-            this.lbltit.Size = new System.Drawing.Size(133, 28);
+            this.lbltit.Size = new System.Drawing.Size(100, 23);
             this.lbltit.TabIndex = 7;
             this.lbltit.Text = "label2";
             this.lbltit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmAnotaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1148, 735);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(861, 597);
             this.Controls.Add(this.pnlAnotaciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAnotaciones";
             this.Text = "frmAnotaciones";
             this.pnlAnotaciones.ResumeLayout(false);
