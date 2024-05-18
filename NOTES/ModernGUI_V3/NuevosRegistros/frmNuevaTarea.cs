@@ -24,6 +24,11 @@ namespace AdministradorT
 
         public Tarea nuevaTarea;
 
+        public bool bandera = false;
+        public bool edicion = false;
+        public string id = "";
+        public string estado;
+
         public frmNuevaTarea()
         {
             InitializeComponent();
@@ -67,7 +72,7 @@ namespace AdministradorT
             txtCuerpo.Clear();
             dtpFecha.Value = DateTime.Now;
             cbMateriaT.SelectedIndex = 0;
-            cbAnotacionT.SelectedIndex = 0;
+           cbAnotacionT.SelectedIndex = 0;
         }
 
         // ------------------------- ACCION CLICK DE LOS BOTONES -------------------------
@@ -77,7 +82,7 @@ namespace AdministradorT
             {
                 MessageBox.Show("Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else if (cbImportanciaPeso.SelectedIndex <= 0)
+            else if (cbImportanciaPeso.SelectedIndex <= 0 && bandera == false)
             {
                 MessageBox.Show("Debe seleccionar el nivel de importancia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -86,11 +91,9 @@ namespace AdministradorT
                 titulo = txtTituloR.Text;
                 cuerpo = txtCuerpo.Text;
                 fechaEntrega = dtpFecha.Value;
-                if(cbMateriaT.SelectedIndex == 0)
-                {
+                if(cbMateriaT.SelectedIndex == 0 && bandera == false)
                     MessageBox.Show("Debe de asignar una materia para la registrar la tarea","Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
+                else  
                 {
                     materiaE = cbMateriaT.SelectedItem.ToString();
                     anotacionE = cbAnotacionT.SelectedIndex > 0 ? cbAnotacionT.SelectedItem.ToString() : "";
@@ -98,15 +101,18 @@ namespace AdministradorT
                     // Obtener el nivel de importancia seleccionado como cadena
                     string nivelImportancia = cbImportanciaPeso.SelectedItem.ToString();
                     importancia = nivelImportancia == "Muy Importante" ? 1 : 2;
-                    nuevaTarea = new Tarea(titulo, cuerpo, fechaEntrega, importancia);
+                    if (edicion == false)
+                        nuevaTarea = new Tarea(titulo, cuerpo, fechaEntrega, importancia);
+                    else
+                        nuevaTarea = new Tarea(id ,titulo, cuerpo, fechaEntrega, estado);
                     // Llamar al método de inserción de tarea en la base de datos
                     control = true;
                     LimpiarCampos();
                     this.Hide();
                 }
-                
             }
         }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();

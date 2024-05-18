@@ -213,8 +213,6 @@ namespace AdministradorT
 
         // METODOS PARA OBTENER LOS ID
 
-
-
         private int ObtenerIdAnotacion(string nombreAnotacion)
         {
             int idAnotacion = -1;
@@ -326,7 +324,6 @@ namespace AdministradorT
 
 
         // METODOS PARA OBTENER TODOS LOS CAMPOS DE LAS TABLAS
-
         public List<Materia> ObtenerTodasLasMaterias()
         {
             List<Materia> materias = new List<Materia>();
@@ -445,7 +442,6 @@ namespace AdministradorT
 
             return anotaciones;
         }
-
 
         public List<Recordatorio> ObtenerRecordatorios()
         {

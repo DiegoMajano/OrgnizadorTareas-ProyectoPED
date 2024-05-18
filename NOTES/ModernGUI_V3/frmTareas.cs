@@ -81,6 +81,7 @@ namespace AdministradorT
                 Editar.BackColor = btnEditarT.BackColor;
                 Editar.Size = btnEditarT.Size;
                 Editar.Tag = nodoInfo;
+                Editar.Click += EditarTarea_Click;
                 tp.Controls.Add(Editar);
 
 
@@ -95,6 +96,7 @@ namespace AdministradorT
                 Eliminar.BackColor = btnEliminarT.BackColor;
                 Eliminar.Size = btnEliminarT.Size;
                 Eliminar.Tag = nodoInfo;
+                Eliminar.Click += EliminarTarea_Click;
                 tp.Controls.Add(Eliminar);
 
                 // agregar boton para asignar en compleada la tarea
@@ -153,7 +155,73 @@ namespace AdministradorT
                 conexion.ActualizarTarea(tarea);
                 ActualizarForm(grafo,false);
             }
+        }
 
+        private void EditarTarea_Click(Object sender, EventArgs e)
+        {
+            Button boton = sender as Button;
+            if (boton != null)
+            {
+                NodoInfo nodoInfo = boton.Tag as NodoInfo;
+                Tarea tarea = (Tarea)nodoInfo.Nodo;
+                grafoMain = (CGrafo)nodoInfo.Grafo;
+
+                nuevaTarea.Visible = false;
+                nuevaTarea.control = false;
+                //nuevaTarea.editar = true;
+                nuevaTarea.txtTituloR.Text = tarea.Titulo;
+                nuevaTarea.txtCuerpo.Text = tarea.Cuerpo;
+                nuevaTarea.cbAnotacionT.Enabled = false;
+                nuevaTarea.cbImportanciaPeso.Enabled = false;
+                nuevaTarea.cbMateriaT.Enabled = false;
+                nuevaTarea.bandera = true;
+                nuevaTarea.edicion = true;
+                nuevaTarea.id = tarea.ID;
+                nuevaTarea.estado = tarea.EstadoTarea.ToString();
+                nuevaTarea.ShowDialog();
+
+                if (nuevaTarea.control) // tiene que ser un nuevo control porque sino se crea un nuevo nodo porque es el mismo control que se utiliza para agregar e insertar un nuevo nodo
+                {
+                    // crear el nodo origen
+                    CNodos nodoOrigen = grafoMain.AgregarNodos(4, nombre: nuevaTarea.titulo, aRecordar: nuevaTarea.fechaEntrega, cuerpo: nuevaTarea.cuerpo);
+                    if (conexion.ActualizarTarea(nuevaTarea.nuevaTarea))
+                    {
+                        MessageBox.Show("Se ha editado sin ningun problema la tarea", "Registro de tarea", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                        MessageBox.Show("No se ha ingresado la nueva tarea", "Registro de tarea", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ActualizarForm(grafoMain, false);
+                }
+            }
+        }
+
+        private void EliminarTarea_Click(object sender, EventArgs e)
+        {
+            NodoInfo nodoInfo;
+            Tarea tarea;
+            CGrafo grafo;
+
+            Button boton = sender as Button;
+            if (boton != null)
+            {
+                nodoInfo = boton.Tag as NodoInfo;
+                tarea = (Tarea)nodoInfo.Nodo;
+                grafo = nodoInfo.Grafo;
+
+                DialogResult result = MessageBox.Show($"¿Estás seguro de eliminar la tarea de {tarea.Titulo}?, los cambios realizados no se podrán recuperar", "Adverdencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    Tarea tareaEliminada= (Tarea)grafo.EliminarNodo(4, tarea.ID);
+                    if (tareaEliminada != null && conexion.EliminarTarea(tarea))
+                    {
+                        ActualizarForm(grafo, false);
+                        MessageBox.Show($"Se ha eliminado correctamente la Tarea: {tareaEliminada.Titulo}", "Eliminar Tarea", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                        MessageBox.Show($"No se ha eliminado correctamente la Tarea: {tareaEliminada.Titulo}", "Eliminar Tarea", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }
