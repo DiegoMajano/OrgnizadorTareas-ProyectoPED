@@ -21,14 +21,17 @@ namespace ModernGUI_V3
     {
         // crear la instancia del grafo
         public CGrafo grafoMain;
+
         // ubicacion de los botones para agregar los nodos
         private Point ubicacion;
+
         // instanciar las ventanas para agregar los nodos
         private frmHome home;
         private frmNuevaMateria nuevaMateria = new frmNuevaMateria();
         private frmNuevaAnotacion nuevaAnotacion = new frmNuevaAnotacion();
         private frmNuevoRecordatorio nuevoRecordatorio = new frmNuevoRecordatorio();
         private frmNuevaTarea nuevaTarea = new frmNuevaTarea();
+
         // instanciar los modulos donde se presentan la información del estudiante
         private frmMaterias materias;
         private frmAnotaciones anotaciones;
@@ -36,6 +39,7 @@ namespace ModernGUI_V3
         private frmTareas tareas;
         private frmTecnicaEstudio tecnica;
         private frmCalendario calendario;
+
         // para instanciar a la conexion de la bd
         private CConexion conexion;
         
@@ -327,31 +331,41 @@ namespace ModernGUI_V3
                     nodosDestinos.Add(grafoMain.BuscarNodo(2, nuevoRecordatorio.anotacionE)); // extraer con id en el obtener materias
                 if (!string.IsNullOrEmpty(nuevoRecordatorio.tareaE))
                     nodosDestinos.Add(grafoMain.BuscarNodo(4, nuevoRecordatorio.tareaE)); // extraer con id en el obtener materias
-
-                if (nodoOrigen != null)
-                {
-                    bool exito = conexion.InsertarRecordatorio(nuevoRecordatorio.newRecordatorio, nuevoRecordatorio.materiaE, nuevoRecordatorio.anotacionE, nuevoRecordatorio.tareaE);
-
-                    if (!exito)
-                        MessageBox.Show("No se ha ingresado la nueva anotación en la bd", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    foreach (var nodoDestino in nodosDestinos)
-                    {
-                        if (nodoOrigen != null && nodoDestino != null)
-                        {
-                            if (grafoMain.AgregarArco(nodoOrigen, nodoDestino)) // Verificar si el arco puede crearse
-                                nodosConectados = true;
-                            else
-                                MessageBox.Show($"El arco entre nodo {nodoOrigen.ID} y {nodoDestino.ID} ya existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                if (nodosConectados)
-                {
-                    MessageBox.Show("Se ha ingresado exitosamente la nueva anotación", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                
                 else
-                    MessageBox.Show("No se ha ingresado la nueva anotación", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                {
+                    if (nuevoRecordatorio.controlEditar)
+                    {
+                        MessageBox.Show("a editar");
+                    }
+                    else
+                    {
+                        if (nodoOrigen != null)
+                        {
+                            bool exito = conexion.InsertarRecordatorio(nuevoRecordatorio.newRecordatorio, nuevoRecordatorio.materiaE, nuevoRecordatorio.anotacionE, nuevoRecordatorio.tareaE);
+
+                            if (!exito)
+                                MessageBox.Show("No se ha ingresado la nueva anotación en la bd", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            foreach (var nodoDestino in nodosDestinos)
+                            {
+                                if (nodoOrigen != null && nodoDestino != null)
+                                {
+                                    if (grafoMain.AgregarArco(nodoOrigen, nodoDestino)) // Verificar si el arco puede crearse
+                                        nodosConectados = true;
+                                    else
+                                        MessageBox.Show($"El arco entre nodo {nodoOrigen.ID} y {nodoDestino.ID} ya existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                        }
+                        if (nodosConectados)
+                        {
+                            MessageBox.Show("Se ha ingresado exitosamente la nueva anotación", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                            MessageBox.Show("No se ha ingresado la nueva anotación", "Registro de anotación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }                
                 recordatorios.ActualizarForm(grafoMain, false);
             }
         }

@@ -16,7 +16,7 @@ namespace AdministradorT
     public partial class frmRecordatorios : Form
     {
         public CGrafo grafoMain = new CGrafo();
-        private frmNuevaAnotacion nuevaAnotacion = new frmNuevaAnotacion();
+        private frmNuevoRecordatorio nuevoRecordatorio = new frmNuevoRecordatorio();
         private CConexion conexion;
 
         public frmRecordatorios()
@@ -33,11 +33,16 @@ namespace AdministradorT
             if (alGrafo)
                 grafo.AgregarNodos(3, recordatorios: recordatorios);
 
+            NodoInfo nodoInfo; // para agregar la info de este nodo
+
             foreach (Recordatorio recordatorio in recordatorios)
             {
+                nodoInfo = new NodoInfo(recordatorio, grafo);
                 // Crear una nueva TabPage para mostrar los datos de la materia
                 TabPage tp = new TabPage();
                 tp.Text = recordatorio.ID; // Usar un identificador único de la materia como texto de la TabPage
+                tp.Font = tabPage1.Font;
+                tp.BackColor = tabPage1.BackColor;
 
                 // Crear y configurar los controles para mostrar los datos de la materia
                 Label Titulo = new Label();
@@ -45,33 +50,45 @@ namespace AdministradorT
                 Titulo.Location = lbltr.Location;
                 Titulo.Text = "Titulo: " + recordatorio.Titulo;
                 tp.Controls.Add(Titulo);
+                Titulo.Font = lbltr.Font;
+                Titulo.Location = lbltr.Location;
+
 
                 Label fechaRecordar = new Label();
                 fechaRecordar.AutoSize = true;
                 fechaRecordar.Location = lblfecha.Location;
                 fechaRecordar.Text = "Fecha a recordar: " + recordatorio.aRecordar.ToString();
                 tp.Controls.Add(fechaRecordar);
+                fechaRecordar.Location = lblfecha.Location;
+                fechaRecordar.Font = lblfecha.Font;
 
                 Label cuerpo = new Label();
                 cuerpo.AutoSize = true;
                 cuerpo.Location = lblcuerpo.Location;
                 cuerpo.Text = "Cuerpo del recordatorio: " + recordatorio.Cuerpo;
+                cuerpo.Font = lblcuerpo.Font;
                 tp.Controls.Add(cuerpo);
-
-                NodoInfo nodoInfo = new NodoInfo(recordatorio, grafo);
 
                 Button Editar = new Button();
                 Editar.AutoSize = true;
-                Editar.Text = "editar";
-                Editar.Location = button1.Location;
+                Editar.Text = "Editar Recordatorio";
+                Editar.Location = btnEditar.Location;
                 Editar.Tag = nodoInfo;
                 Editar.Click += EditarRecordatorio_Click;
+                Editar.FlatStyle = btnEditar.FlatStyle;
+                Editar.Location = btnEditar.Location;
+                Editar.Size = btnEditar.Size;
+                Editar.Font = btnEditar.Font;
+                Editar.BackColor = btnEditar.BackColor;
                 tp.Controls.Add(Editar);
 
                 Button Eliminar = new Button();
-                Eliminar.AutoSize = true;
-                Eliminar.Text = "Eliminar";
-                Eliminar.Location = button2.Location;
+                Eliminar.Text = "Eliminar Recordatorio";
+                Eliminar.Location = btnEliminar.Location;
+                Eliminar.FlatStyle = btnEliminar.FlatStyle;
+                Eliminar.Font = btnEliminar.Font;
+                Eliminar.Size = btnEliminar.Size;
+                Eliminar.BackColor = btnEliminar.BackColor;
                 Eliminar.Tag = nodoInfo;
                 Eliminar.Click += EliminarRecordatorio_Click;
                 tp.Controls.Add(Eliminar);
@@ -84,11 +101,30 @@ namespace AdministradorT
         private void EditarRecordatorio_Click(object sender, EventArgs e)
         {
             Button boton = sender as Button;
-            if (boton != null)
-            {
-                Recordatorio recordatorio = boton.Tag as Recordatorio;
+            NodoInfo info = boton.Tag as NodoInfo;
 
-                MessageBox.Show("Listo se editó :D");
+            Recordatorio recordatorio = (Recordatorio)info.Nodo;
+            CGrafo grafo = (CGrafo)info.Grafo;
+
+            nuevoRecordatorio.control = false;
+            nuevoRecordatorio.controlEditar = true;
+            nuevoRecordatorio.txtTituloR.Text = recordatorio.Titulo;
+            nuevoRecordatorio.txtCuerpo.Text = recordatorio.Cuerpo;
+            nuevoRecordatorio.Visible = false;
+            nuevoRecordatorio.cbAnotacionR.Enabled = nuevoRecordatorio.cbMateriaR.Enabled = nuevoRecordatorio.cbTareaR.Enabled = false;
+            nuevoRecordatorio.ShowDialog();
+
+            if (nuevoRecordatorio.control) // tiene que ser un nuevo control porque sino se crea un nuevo nodo porque es el mismo control que se utiliza para agregar e insertar un nuevo nodo
+            {
+                
+                if (conexion.ActualizarRecordatorio(recordatorio))
+                {
+                    MessageBox.Show("Se ha actualizado la materia sin ningun problema", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al actualizar la materia", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
         public void EliminarRecordatorio_Click(object sender, EventArgs e)
@@ -119,6 +155,29 @@ namespace AdministradorT
                         MessageBox.Show($"No se ha eliminado correctamente el Recordatorio: {recordatorioEliminado.Titulo}", "Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+        private void tabRecordatorios_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabControl tb = (TabControl)sender;
+            Brush textBrush;
+            Rectangle tabRec = tb.GetTabRect(e.Index);
+
+            Color tbColor;
+
+            tbColor = Color.LightSteelBlue;
+
+
+
+            e.Graphics.FillRectangle(new SolidBrush(tbColor), tabRec);
+            textBrush = new SolidBrush(Color.Black);
+
+            string tabText = tb.TabPages[e.Index].Text;
+            StringFormat stringFlags = new StringFormat();
+            stringFlags.Alignment = StringAlignment.Center;
+            stringFlags.LineAlignment = StringAlignment.Center;
+            e.Graphics.DrawString(tabText, tb.Font, textBrush, tabRec, stringFlags);
+
+            tb.TabPages[e.Index].BackColor = tbColor;
         }
     }
 }

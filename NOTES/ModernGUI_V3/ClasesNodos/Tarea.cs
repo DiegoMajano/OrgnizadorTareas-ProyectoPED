@@ -43,7 +43,7 @@ namespace AdministradorT.ClasesNodos
             get { return prioridad; } set { prioridad = value; }
         }
 
-        public Tarea(string titulo, string cuerpo, DateTime fechaEntrega, int prioridad = 1)
+        public Tarea(string titulo, string cuerpo, DateTime fechaEntrega, int prioridad = 0)
         {
             this.Titulo = titulo;
             this.Cuerpo = cuerpo;

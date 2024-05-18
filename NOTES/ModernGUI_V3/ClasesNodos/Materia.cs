@@ -10,11 +10,11 @@ namespace AdministradorT.ClasesNodos
     public class Materia : CNodos
     {
         // atributos
-        public string nombre;
-        public TimeSpan horaClase;
+        private string nombre;
+        private TimeSpan horaClase;
         private List<string> dias;
-        public string docente;
-        public string salon;
+        private string docente;
+        private string salon;
 
         // propiedades
         public string Nombre

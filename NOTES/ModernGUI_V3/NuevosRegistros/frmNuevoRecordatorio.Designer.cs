@@ -192,9 +192,9 @@
             this.lblHead.ForeColor = System.Drawing.Color.Transparent;
             this.lblHead.Location = new System.Drawing.Point(186, 19);
             this.lblHead.Name = "lblHead";
-            this.lblHead.Size = new System.Drawing.Size(163, 23);
+            this.lblHead.Size = new System.Drawing.Size(204, 23);
             this.lblHead.TabIndex = 20;
-            this.lblHead.Text = "Recordar Tarea";
+            this.lblHead.Text = "Nuevo recordatorio";
             // 
             // cbAnotacionR
             // 
@@ -252,20 +252,20 @@
 
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.TextBox txtCuerpo;
-        private System.Windows.Forms.TextBox txtTituloR;
+        public System.Windows.Forms.TextBox txtCuerpo;
+        public System.Windows.Forms.TextBox txtTituloR;
         private System.Windows.Forms.Label lblRecordar;
         private System.Windows.Forms.Label lblMateria;
         private System.Windows.Forms.Label lblCuerpo;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.ComboBox cbAnotacionR;
+        public System.Windows.Forms.DateTimePicker dtpFecha;
+        public System.Windows.Forms.ComboBox cbAnotacionR;
         private System.Windows.Forms.Label lblAnotacion;
-        private System.Windows.Forms.ComboBox cbMateriaR;
+        public System.Windows.Forms.ComboBox cbMateriaR;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblHead;
-        private System.Windows.Forms.ComboBox cbTareaR;
+        public System.Windows.Forms.ComboBox cbTareaR;
         private System.Windows.Forms.Label lblTarea;
     }
 }

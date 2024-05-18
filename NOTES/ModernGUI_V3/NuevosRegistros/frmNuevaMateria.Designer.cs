@@ -133,7 +133,6 @@
             this.clbDias.Name = "clbDias";
             this.clbDias.Size = new System.Drawing.Size(195, 124);
             this.clbDias.TabIndex = 11;
-            this.clbDias.SelectedIndexChanged += new System.EventHandler(this.clbDias_SelectedIndexChanged);
             // 
             // btnRegistrar
             // 

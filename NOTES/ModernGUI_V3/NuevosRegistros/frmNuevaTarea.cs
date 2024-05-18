@@ -16,6 +16,7 @@ namespace AdministradorT
         // atributos para el control de informacion
         public bool control;
         public string titulo, cuerpo, materiaE = "", anotacionE = "";
+        public int importancia;
         public DateTime fechaEntrega;
         // listas para guardar y mostrar las materias y las anotaciones
         public List<string> materias, anotaciones;
@@ -96,7 +97,7 @@ namespace AdministradorT
 
                     // Obtener el nivel de importancia seleccionado como cadena
                     string nivelImportancia = cbImportanciaPeso.SelectedItem.ToString();
-                    int importancia = nivelImportancia == "Muy Importante" ? 1 : 2;
+                    importancia = nivelImportancia == "Muy Importante" ? 1 : 2;
                     nuevaTarea = new Tarea(titulo, cuerpo, fechaEntrega, importancia);
                     // Llamar al método de inserción de tarea en la base de datos
                     control = true;
@@ -106,23 +107,6 @@ namespace AdministradorT
                 
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();

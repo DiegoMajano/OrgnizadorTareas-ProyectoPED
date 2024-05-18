@@ -73,6 +73,7 @@
             this.tabTareas.SelectedIndex = 0;
             this.tabTareas.Size = new System.Drawing.Size(800, 282);
             this.tabTareas.TabIndex = 12;
+            this.tabTareas.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabTareas_DrawItem);
             // 
             // label1
             // 

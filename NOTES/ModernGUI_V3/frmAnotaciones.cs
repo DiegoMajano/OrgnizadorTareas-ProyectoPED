@@ -33,9 +33,10 @@ namespace ModernGUI_V3
             {
                 grafo.AgregarNodos(2, anotaciones: anotaciones);
             }
-
+            NodoInfo nodoInfo;
             foreach (Anotacion anotacion in anotaciones)
             {
+                nodoInfo = new NodoInfo(anotacion, grafo);
                 // Crear una nueva TabPage para mostrar los datos de la anotacion
                 TabPage tp = new TabPage();
                 tp.BackColor = tabPage1.BackColor;
@@ -69,9 +70,23 @@ namespace ModernGUI_V3
                 Editar.Location = btnEditarA.Location;
                 Editar.BackColor = btnEditarA.BackColor;
                 Editar.Size = btnEditarA.Size;
+                Editar.Tag = nodoInfo;
                 Editar.Click += EditarAnotacion_Click;
                 tp.Controls.Add(Editar);
 
+                Button Eliminar = new Button();
+                Eliminar.AutoSize = true;
+                Eliminar.Visible = true;
+                Eliminar.Text = "Eliminar Anotación";
+                Eliminar.Font = btnEliminar.Font;
+                Eliminar.Anchor = btnEliminar.Anchor;
+                Eliminar.FlatStyle = btnEliminar.FlatStyle;
+                Eliminar.Location = btnEliminar.Location;
+                Eliminar.BackColor = btnEliminar.BackColor;
+                Eliminar.Size = btnEliminar.Size;
+                Eliminar.Tag = nodoInfo;
+                Eliminar.Click+= EliminarAnotacion_Click;
+                tp.Controls.Add(Eliminar);
                 // Agregar la TabPage al TabControl
                 tabAnotaciones.TabPages.Add(tp);
             }
@@ -81,9 +96,51 @@ namespace ModernGUI_V3
             Button boton = sender as Button;
             if (boton != null)
             {
-                Materia materia = boton.Tag as Materia;
+                nuevaAnotacion.Visible = false;
+                nuevaAnotacion.control = false;
+                nuevaAnotacion.ShowDialog();
+                Anotacion anotacion = boton.Tag as Anotacion;
+                if (nuevaAnotacion.control) // tiene que ser un nuevo control porque sino se crea un nuevo nodo porque es el mismo control que se utiliza para agregar e insertar un nuevo nodo
+                {
+                    anotacion.Titulo = nuevaAnotacion.titulo;
+                    anotacion.Cuerpo = nuevaAnotacion.cuerpo;
+                    if (conexion.ActualizarAnotacion(anotacion))
+                    {
+                        MessageBox.Show("Se ha actualizado la Anotacion sin ningun problema", "Anotacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al actualizar la Anotacion", "Anotacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+        }
+        private void EliminarAnotacion_Click(object sender, EventArgs e)
+        {
+            NodoInfo nodoInfo;
+            Anotacion anotacion;
+            CGrafo grafo;
 
-                MessageBox.Show("Listo se editó :D");
+            Button boton = sender as Button;
+            if (boton != null)
+            {
+                nodoInfo = boton.Tag as NodoInfo;
+                anotacion = (Anotacion)nodoInfo.Nodo;
+                grafo = nodoInfo.Grafo;
+
+                DialogResult result = MessageBox.Show($"¿Estás seguro de eliminar la Anotacion {anotacion.Titulo}?, los cambios realizados no se podrán recuperar", "Adverdencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    Anotacion anotacionEliminada = (Anotacion)grafo.EliminarNodo(3, anotacion.ID);
+                    if (anotacionEliminada != null && !conexion.EliminarAnotacion(anotacion))
+                    {
+                        ActualizarForm(grafo, false);
+                        MessageBox.Show($"Se ha eliminado correctamente la Anotacion: {anotacionEliminada.Titulo}", "Eliminar Anotacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                        MessageBox.Show($"No se ha eliminado correctamente la Anotacion: {anotacionEliminada.Titulo}", "Eliminar Anotacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -96,9 +153,6 @@ namespace ModernGUI_V3
             Color tbAColor;
 
             tbAColor = Color.LightSteelBlue;
-
-
-
 
             e.Graphics.FillRectangle(new SolidBrush(tbAColor), tabRec);
             textBrush = new SolidBrush(Color.Black);

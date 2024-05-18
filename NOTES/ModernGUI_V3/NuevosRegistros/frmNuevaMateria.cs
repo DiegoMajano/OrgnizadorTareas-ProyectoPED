@@ -16,21 +16,22 @@ namespace AdministradorT
 {
     public partial class frmNuevaMateria : Form
     {
-        private frmPrincipal principal;
         public Materia nuevaMateria;
-        public bool control;
-         private CConexion conexion;
-        
+        public bool control, editar;
+        private CConexion conexion;
+        private List<string> diasCb = new List<string>() { "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado","Domingo" };
+
+
         public frmNuevaMateria()
         {
             InitializeComponent();
             LlenarCampos();
             conexion = new CConexion();
+
         }
 
         private void LlenarCampos()
         {
-            List<string> dias = new List<string>() { "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado","Domingo" };
             List<TimeSpan> horas = new List<TimeSpan> {
                 new TimeSpan(07,00,00),
                 new TimeSpan(09,05,00),
@@ -41,8 +42,8 @@ namespace AdministradorT
             };
 
             cbHora.Items.Add("Seleccionar Hora");
-            for (int i = 0; i < dias.Count; i++)
-                clbDias.Items.Add(dias[i]);
+            for (int i = 0; i < diasCb.Count; i++)
+                clbDias.Items.Add(diasCb[i]);
             for (int i=0; i<horas.Count;i++)
             {
                 string format = string.Format("{00:00}:{1:00}", horas[i].TotalHours, horas[i].Minutes);
@@ -67,7 +68,8 @@ namespace AdministradorT
 
                 salon = txtSalon.Text;
                 horaClase = TimeSpan.Parse(cbHora.SelectedItem.ToString()); // Corregido para obtener la hora seleccionada correctamente
-                //nuevaMateria = new Materia(nombreM, horaClase, dias, nombreD, salon);
+                if(!editar)
+                    nuevaMateria = new Materia(nombreM, horaClase, dias, nombreD, salon);
                 control = true;
                 LimpiarCampos();
                 this.Hide();
@@ -82,24 +84,35 @@ namespace AdministradorT
                 e.Handled = true;
         }
 
-        private void clbDias_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void LimpiarCampos()
         {
             txtNDocente.Clear();
             txtNombreM.Clear();
             txtSalon.Clear();
             cbHora.SelectedIndex = 0;
-            clbDias.ClearSelected();
+            Desmarcar();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
             this.Hide();
+        }
+        public void CheckearList(List<string> dias)
+        {
+            Desmarcar();
+            foreach (string dia in dias)
+            {
+                int pos = diasCb.IndexOf(dia);
+                clbDias.SetItemChecked(pos,true);
+            }
+        }
+        public void Desmarcar()
+        {
+            for (int i =0; i<clbDias.Items.Count; i++)
+            {
+                clbDias.SetItemChecked(i, false);
+            }
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,12 +16,13 @@ namespace ModernGUI_V3
     public partial class frmMaterias : Form
     {
         public CGrafo grafoMain = new CGrafo();
-        private frmNuevaMateria nuevaMateria = new frmNuevaMateria();
+        private frmNuevaMateria nuevaMateria;
         private CConexion conexion;
         public frmMaterias()
         {
             InitializeComponent();
             conexion = new CConexion();
+            nuevaMateria = new frmNuevaMateria();
         }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
@@ -51,16 +53,19 @@ namespace ModernGUI_V3
         public void ActualizarForm(CGrafo grafo,bool AlGrafo)
         {
            
-                tabMaterias.TabPages.Clear();
-                List<Materia> materias = conexion.ObtenerTodasLasMaterias(); // Obtener todas las materias de la base de datos
-                if (AlGrafo)                                 
-                    grafo.AgregarNodos(1, materias: materias);
-                
+            tabMaterias.TabPages.Clear();
+            List<Materia> materias = conexion.ObtenerTodasLasMaterias(); // Obtener todas las materias de la base de datos
+            if (AlGrafo)                                 
+                grafo.AgregarNodos(1, materias: materias);
 
-                foreach (Materia materia in materias)
-                {
-                    // Crear una nueva TabPage para mostrar los datos de la materia
-                    TabPage tp = new TabPage();
+            NodoInfo nodoInfo; // para agregar la info de este nodo
+
+            foreach (Materia materia in materias)
+             {
+
+                 nodoInfo = new NodoInfo(materia, grafo);
+                // Crear una nueva TabPage para mostrar los datos de la materia
+                TabPage tp = new TabPage();
                 tp.BackColor = tabPage1.BackColor;
                 tp.Font = tabPage1.Font;
                 tp.Text = materia.ID; // Usar un identificador único de la materia como texto de la TabPage
@@ -73,7 +78,6 @@ namespace ModernGUI_V3
                 tp.Controls.Add(nombre);
                 nombre.Font = lblNombre.Font;
                 nombre.Location = lblNombre.Location;
-
 
 
                 Label dias = new Label();
@@ -118,14 +122,26 @@ namespace ModernGUI_V3
                 Editar.AutoSize = true;
                 Editar.FlatStyle = btnEditar.FlatStyle;
                 Editar.Location = btnEditar.Location;
-                Editar.Size = btnEditar.Size;
                 Editar.BackColor = btnEditar.BackColor;
                 Editar.Text = "Editar Materia";
+                Editar.Tag = nodoInfo;
+                Editar.Click += EditarMateria_Click;
 
                 tp.Controls.Add(Editar);
                 Editar.Font = btnEditar.Font;
                 Editar.Location = btnEditar.Location;
 
+                Button Eliminar = new Button();
+                Eliminar.AutoSize = true;
+                Eliminar.Location = btnEliminar.Location;
+                Eliminar.FlatStyle = btnEliminar.FlatStyle;
+                Eliminar.BackColor = btnEliminar.BackColor;
+                Eliminar.Text = "Eliminar Materia";
+                Eliminar.Tag = nodoInfo;
+                Eliminar.Click += btnEliminarMateria_Click;
+                tp.Controls.Add(Eliminar);
+                Eliminar.Font = btnEliminar.Font;                
+                Eliminar.Location = btnEliminar.Location;
 
                 // Agregar la TabPage al TabControl
                 tabMaterias.TabPages.Add(tp);
@@ -135,43 +151,65 @@ namespace ModernGUI_V3
         private void EditarMateria_Click(object sender, EventArgs e)
         {
             Button boton = sender as Button;
-            if (boton != null)
+            NodoInfo info = boton.Tag as NodoInfo;
+            
+            Materia materia = (Materia)info.Nodo;
+            CGrafo grafo = info.Grafo;
+            
+            nuevaMateria.control = false;
+            nuevaMateria.txtNombreM.Text = materia.Nombre;
+            nuevaMateria.txtNDocente.Text = materia.Docente;
+            nuevaMateria.txtSalon.Text = materia.Salon;
+            nuevaMateria.cbHora.SelectedItem = string.Format("{00:00}:{1:00}",materia.HoraClase.TotalHours, materia.HoraClase.Minutes);
+            nuevaMateria.CheckearList(materia.Dias);
+            nuevaMateria.Visible = false;
+            nuevaMateria.ShowDialog();
+
+            if (nuevaMateria.control) // tiene que ser un nuevo control porque sino se crea un nuevo nodo porque es el mismo control que se utiliza para agregar e insertar un nuevo nodo
             {
-                nuevaMateria.Visible = false;
-                nuevaMateria.control = false;
-                nuevaMateria.ShowDialog();
-                Materia materia = boton.Tag as Materia;
-                if (nuevaMateria.control) // tiene que ser un nuevo control porque sino se crea un nuevo nodo porque es el mismo control que se utiliza para agregar e insertar un nuevo nodo
+                materia.Nombre = nuevaMateria.nombreM;
+                materia.Salon = nuevaMateria.salon;
+                materia.Dias = nuevaMateria.dias;
+                materia.Docente = nuevaMateria.nombreD;
+                materia.HoraClase = nuevaMateria.horaClase;
+                if (conexion.ActualizarMateria(materia))
                 {
-                    materia.nombre = nuevaMateria.nombreM;
-                    materia.Salon = nuevaMateria.salon;
-                    materia.Dias = nuevaMateria.dias;
-                    materia.Docente = nuevaMateria.nombreD;
-                    materia.horaClase = nuevaMateria.horaClase;
-                    if (conexion.ActualizarMateria(materia))
-                    {
-                        MessageBox.Show("Se ha actualizado la materia sin ningun problema", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error al actualizar la materia", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    MessageBox.Show("Se ha actualizado la materia sin ningun problema", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al actualizar la materia", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            
         }
 
         private void btnEliminarMateria_Click(object sender, EventArgs e)
         {
+            NodoInfo nodoInfo;
+            Materia materia;
+            CGrafo grafo;
+
             Button boton = sender as Button;
-            DialogResult resultado = MessageBox.Show("Esta seguro que quiere eliminar esta materia?", "Materia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (resultado == DialogResult.Yes) // andate al frmRecordatorio y mira como hice esta parte de acá
-            {
-                Materia materia = boton.Tag as Materia;
-                if (conexion.EliminarMateria(materia))
+            
+                nodoInfo = boton.Tag as NodoInfo;
+                materia = (Materia)nodoInfo.Nodo;
+                grafo = nodoInfo.Grafo;
+
+                DialogResult result = MessageBox.Show($"¿Estás seguro de eliminar el registro de {materia.Nombre}?, los cambios realizados no se podrán recuperar", "Adverdencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Se ha eliminado la materia sin ningun incomveniente", "Materias", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Materia materiaEliminada = (Materia)grafo.EliminarNodo(1, materia.ID);
+                    if (materiaEliminada != null && !conexion.EliminarMateria(materia))
+                    {
+                        ActualizarForm(grafo, false);
+                        MessageBox.Show($"Se ha eliminado correctamente el Recordatorio: {materiaEliminada.Nombre}", "Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                        MessageBox.Show($"No se ha eliminado correctamente el Recordatorio: {materiaEliminada.Nombre}", "Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
+           
         }
 
         private void tabMaterias_DrawItem(object sender, DrawItemEventArgs e)

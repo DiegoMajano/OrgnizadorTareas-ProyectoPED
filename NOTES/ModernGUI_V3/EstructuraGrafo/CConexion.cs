@@ -142,6 +142,38 @@ namespace AdministradorT
             }
         }
 
+        public bool InsertarRecordatorio(Recordatorio recordatorio, string materiaR, string anotacionR, string tareaR)
+        {
+            try
+            {
+                conexion.Open();
+
+                string consulta = "INSERT INTO recordatorio (idRecordatorio, titulo, fechaRecordatorio, cuerpo, MateriaR, AnotacionR, TareaR) " +
+                                  "VALUES (@idRecordatorio, @titulo, @fechaRecordatorio, @cuerpo, @materiaR, @anotacionR, @tareaR)";
+
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+                comando.Parameters.AddWithValue("@idRecordatorio", recordatorio.ID);
+                comando.Parameters.AddWithValue("@titulo", recordatorio.Titulo);
+                comando.Parameters.AddWithValue("@fechaRecordatorio", recordatorio.aRecordar);
+                comando.Parameters.AddWithValue("@cuerpo", recordatorio.Cuerpo);
+                comando.Parameters.AddWithValue("@materiaR", materiaR);
+                comando.Parameters.AddWithValue("@anotacionR", anotacionR);
+                comando.Parameters.AddWithValue("@tareaR", tareaR);
+
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar el recordatorio en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
         // METODO PARA INSERTAR TAREAS
         public bool InsertarTarea(Tarea tarea, string materia, string anotacion)
         {
@@ -414,37 +446,6 @@ namespace AdministradorT
             return anotaciones;
         }
 
-        public bool InsertarRecordatorio(Recordatorio recordatorio, string materiaR, string anotacionR, string tareaR)
-        {
-            try
-            {
-                conexion.Open();
-
-                string consulta = "INSERT INTO recordatorio (idRecordatorio, titulo, fechaRecordatorio, cuerpo, MateriaR, AnotacionR, TareaR) " +
-                                  "VALUES (@idRecordatorio, @titulo, @fechaRecordatorio, @cuerpo, @materiaR, @anotacionR, @tareaR)";
-
-                MySqlCommand comando = new MySqlCommand(consulta, conexion);
-                comando.Parameters.AddWithValue("@idRecordatorio", recordatorio.ID);
-                comando.Parameters.AddWithValue("@titulo", recordatorio.Titulo);
-                comando.Parameters.AddWithValue("@fechaRecordatorio", recordatorio.aRecordar);
-                comando.Parameters.AddWithValue("@cuerpo", recordatorio.Cuerpo);
-                comando.Parameters.AddWithValue("@materiaR", materiaR);
-                comando.Parameters.AddWithValue("@anotacionR", anotacionR);
-                comando.Parameters.AddWithValue("@tareaR", tareaR);
-
-                comando.ExecuteNonQuery();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al insertar el recordatorio en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            finally
-            {
-                conexion.Close();
-            }
-        }
 
         public List<Recordatorio> ObtenerRecordatorios()
         {
@@ -532,7 +533,7 @@ namespace AdministradorT
                 conexion.Open();
                 string consulta = "UPDATE materia SET nombre = @nombreN, horaClase = @horaClase, docente = @docente, salon = @salon  where idMateria = @id ";
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
-                comando.Parameters.AddWithValue("@nombreN", materiaN.nombre);
+                comando.Parameters.AddWithValue("@nombreN", materiaN.Nombre);
                 comando.Parameters.AddWithValue("@horaClase", DateTime.Today.Add(materiaN.HoraClase));
                 comando.Parameters.AddWithValue("@docente", materiaN.Docente);
                 comando.Parameters.AddWithValue("@salon", materiaN.Salon);
@@ -566,7 +567,7 @@ namespace AdministradorT
             {
                 conexion.Open();
 
-                string consulta = "UPDATE anotacion SET titulo = @tituloN, cuerpo = @cuerpoN where idRecordatorio = @id ";
+                string consulta = "UPDATE anotacion SET titulo = @tituloN, cuerpo = @cuerpoN where idAnotacion = @id ";
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
                 comando.Parameters.AddWithValue("@nombreN", anotacionN.Titulo);
                 comando.Parameters.AddWithValue("@cuerpo", anotacionN.Cuerpo);

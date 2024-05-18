@@ -59,12 +59,34 @@ namespace AdministradorT
                 fechaEntrega.Text = "Hora de Clase: " + tarea.FechaEntrega.ToString();
                 tp.Controls.Add(fechaEntrega);
 
-                
+                // agregar boton para asignar en compleada la tarea
                
 
                 // Agregar la TabPage al TabControl
                 tabTareas.TabPages.Add(tp);
             }
+        }
+        private void tabTareas_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabControl tbA = (TabControl)sender;
+            Brush textBrush;
+            Rectangle tabRec = tbA.GetTabRect(e.Index);
+
+            Color tbAColor;
+
+            tbAColor = Color.LightSteelBlue;
+
+
+            e.Graphics.FillRectangle(new SolidBrush(tbAColor), tabRec);
+            textBrush = new SolidBrush(Color.Black);
+
+            string tabText = tbA.TabPages[e.Index].Text;
+            StringFormat stringFlags = new StringFormat();
+            stringFlags.Alignment = StringAlignment.Center;
+            stringFlags.LineAlignment = StringAlignment.Center;
+            e.Graphics.DrawString(tabText, tbA.Font, textBrush, tabRec, stringFlags);
+
+            tbA.TabPages[e.Index].BackColor = tbAColor;
         }
     }
 }

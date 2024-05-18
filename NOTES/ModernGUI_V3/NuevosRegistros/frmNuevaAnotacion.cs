@@ -44,7 +44,7 @@ namespace AdministradorT
         public string titulo, cuerpo, materiaE;
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTituloA.Text) || string.IsNullOrEmpty(txtCuerpo.Text) || cbMateriaA.SelectedIndex < 0)
+            if (string.IsNullOrEmpty(txtTituloA.Text) || string.IsNullOrEmpty(txtCuerpo.Text) || cbMateriaA.SelectedIndex == 0)
                 MessageBox.Show("Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
             {
