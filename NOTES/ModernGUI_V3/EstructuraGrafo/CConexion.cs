@@ -621,11 +621,11 @@ namespace AdministradorT
             {
                 conexion.Open();
 
-                string consulta = "UPDATE tarea SET nombre = @tituloN, descripcion = @cuerpoN, estadotarea = @estado where id_tarea = @id ";
+                string consulta = "UPDATE tarea SET nombre = @tituloN, fechaLimite = @fecha, descripcion = @cuerpoN, estadotarea = @estado where id_tarea = @id ";
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
-                comando.Parameters.AddWithValue("@nombreN", tareaN.Titulo);
-                comando.Parameters.AddWithValue("@hora", tareaN.FechaEntrega);
-                comando.Parameters.AddWithValue("@cuerpo", tareaN.Cuerpo);
+                comando.Parameters.AddWithValue("@tituloN", tareaN.Titulo);
+                comando.Parameters.AddWithValue("@fecha", tareaN.FechaEntrega);
+                comando.Parameters.AddWithValue("@cuerpoN", tareaN.Cuerpo);
                 comando.Parameters.AddWithValue("@estado", tareaN.EstadoTarea.ToString());                
                 comando.Parameters.AddWithValue("@id", tareaN.ID);
                 comando.ExecuteNonQuery();

@@ -33,9 +33,11 @@ namespace AdministradorT
 
             if (alGrafo)
                 grafo.AgregarNodos(4, tareas: tareas);
+            NodoInfo nodoInfo;
 
             foreach (Tarea tarea in tareas)
             {
+                nodoInfo = new NodoInfo(tarea, grafo);
                 // Crear una nueva TabPage para mostrar los datos de la tarea
                 TabPage tp = new TabPage();
                 tp.BackColor = tabPage1.BackColor;
@@ -78,7 +80,7 @@ namespace AdministradorT
                 Editar.Location = btnEditarT.Location;
                 Editar.BackColor = btnEditarT.BackColor;
                 Editar.Size = btnEditarT.Size;
-                
+                Editar.Tag = nodoInfo;
                 tp.Controls.Add(Editar);
 
 
@@ -92,7 +94,7 @@ namespace AdministradorT
                 Eliminar.Location = btnEliminarT.Location;
                 Eliminar.BackColor = btnEliminarT.BackColor;
                 Eliminar.Size = btnEliminarT.Size;
-                
+                Eliminar.Tag = nodoInfo;
                 tp.Controls.Add(Eliminar);
 
                 // agregar boton para asignar en compleada la tarea
@@ -106,7 +108,8 @@ namespace AdministradorT
                 Completada.FlatStyle = btnTareaC.FlatStyle;
                 Completada.BackColor = btnTareaC.BackColor;
                 Completada.Size = btnTareaC.Size;
-
+                Completada.Click += CompletarTarea_Click;
+                Completada.Tag = nodoInfo;
                 tp.Controls.Add(Completada);
 
                 // Agregar la TabPage al TabControl
@@ -134,6 +137,23 @@ namespace AdministradorT
             e.Graphics.DrawString(tabText, tbA.Font, textBrush, tabRec, stringFlags);
 
             tbA.TabPages[e.Index].BackColor = tbAColor;
+        }
+        private void CompletarTarea_Click(object sender, EventArgs e) 
+        {
+            Button boton = sender as Button;
+            NodoInfo nodoInfo = boton.Tag as NodoInfo;
+            Tarea tarea = (Tarea)nodoInfo.Nodo;
+            CGrafo grafo = (CGrafo)nodoInfo.Grafo;
+
+            Tarea Completada = (Tarea)grafo.BuscarNodo(4,tarea.ID);
+
+            if (tarea != null)
+            {
+                tarea.CompletarTarea();
+                conexion.ActualizarTarea(tarea);
+                ActualizarForm(grafo,false);
+            }
+
         }
     }
 }

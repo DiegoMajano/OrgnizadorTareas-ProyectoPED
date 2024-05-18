@@ -69,7 +69,6 @@ namespace AdministradorT
 
         public bool AgregarNodos(int tipo, List<Materia> materias = null, List<Anotacion> anotaciones = null, List<Recordatorio> recordatorios = null, List<Tarea> tareas = null) 
         {
-            RecargarNodos();
             switch (tipo)
             {
                 case 1: // si es materia 

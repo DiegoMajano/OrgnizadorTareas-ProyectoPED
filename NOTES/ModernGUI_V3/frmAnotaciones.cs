@@ -132,8 +132,8 @@ namespace ModernGUI_V3
 
                 if (result == DialogResult.Yes)
                 {
-                    Anotacion anotacionEliminada = (Anotacion)grafo.EliminarNodo(3, anotacion.ID);
-                    if (anotacionEliminada != null && !conexion.EliminarAnotacion(anotacion))
+                    Anotacion anotacionEliminada = (Anotacion)grafo.EliminarNodo(2, anotacion.ID);
+                    if (anotacionEliminada != null && conexion.EliminarAnotacion(anotacion))
                     {
                         ActualizarForm(grafo, false);
                         MessageBox.Show($"Se ha eliminado correctamente la Anotacion: {anotacionEliminada.Titulo}", "Eliminar Anotacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
