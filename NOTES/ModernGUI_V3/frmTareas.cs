@@ -233,11 +233,12 @@ namespace AdministradorT
                     Tarea tareaEliminada= (Tarea)grafo.EliminarNodo(4, tarea.ID);
                     if (conexion.EliminarTarea(tarea))
                     {
+                        MessageBox.Show($"Se ha eliminado correctamente la Tarea: {tarea.Titulo}", "Eliminar Tarea", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        conexion.EliminarArco(tarea);
                         ActualizarForm(grafo, false);
-                        MessageBox.Show($"Se ha eliminado correctamente la Tarea: {tareaEliminada.Titulo}", "Eliminar Tarea", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
-                        MessageBox.Show($"No se ha eliminado correctamente la Tarea: {tareaEliminada.Titulo}", "Eliminar Tarea", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"No se ha eliminado correctamente la Tarea: {tarea.Titulo}", "Eliminar Tarea", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

@@ -11,6 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
+using static Google.Protobuf.Reflection.GeneratedCodeInfo.Types;
 
 namespace AdministradorT
 {
@@ -201,6 +202,34 @@ namespace AdministradorT
             catch (Exception ex)
             {
                 MessageBox.Show("Error al insertar la tarea en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
+
+        public bool InsertarArco(CNodos origen, CNodos destino, int peso)
+        {
+            try
+            {
+                conexion.Open();
+
+                string consulta = "INSERT INTO conexion (idNodoOrigen, idNodoDestino ,Peso) VALUES (@idOrigen, @idDestino, @peso)";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                comando.Parameters.AddWithValue("@idOrigen", origen.ID);
+                comando.Parameters.AddWithValue("@idDestino", destino.ID);
+                comando.Parameters.AddWithValue("@peso", peso);
+
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar el arco en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -736,6 +765,30 @@ namespace AdministradorT
             catch (Exception ex)
             {
                 MessageBox.Show("Error al eliminar la tarea de la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
+        public bool EliminarArco(CNodos destino)
+        {
+            try
+            {
+                conexion.Open();
+                string consulta = "DELETE FROM conexion where idNodoDestino = @idDestino";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                comando.Parameters.AddWithValue("@idDestino", destino.ID);
+                comando.ExecuteNonQuery();
+
+                return true;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el arco de la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally

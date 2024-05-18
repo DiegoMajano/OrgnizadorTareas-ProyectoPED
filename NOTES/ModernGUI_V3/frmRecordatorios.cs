@@ -151,12 +151,13 @@ namespace AdministradorT
                     Recordatorio recordatorioEliminado = (Recordatorio) grafo.EliminarNodo(3,recordatorio.ID);                    
                     if (conexion.EliminarRecordatorio(recordatorio))
                     {
+                        conexion.EliminarArco(recordatorio);
                         ActualizarForm(grafo, false);
-                        MessageBox.Show($"Se ha eliminado correctamente el Recordatorio: {recordatorioEliminado.Titulo}","Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"Se ha eliminado correctamente el Recordatorio: {recordatorio.Titulo}","Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }               
                     
                     else
-                        MessageBox.Show($"No se ha eliminado correctamente el Recordatorio: {recordatorioEliminado.Titulo}", "Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"No se ha eliminado correctamente el Recordatorio: {recordatorio.Titulo}", "Eliminar recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 ActualizarForm(grafo, false);
             }
