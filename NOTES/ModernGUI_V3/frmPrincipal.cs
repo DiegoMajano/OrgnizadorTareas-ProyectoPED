@@ -84,11 +84,9 @@ namespace ModernGUI_V3
             btnNuevaMat.Location = ubicacion;
             btnNuevaAnot.Location = ubicacion;
             btnNuevoCalen.Location = ubicacion;
-            btnNuevoMeto.Location = ubicacion;
             btnNuevoReco.Location = ubicacion;
             btnNuevaTarea.Location = ubicacion;
             btnNuevoReco.Visible = false;
-            btnNuevoMeto.Visible = false;
             btnNuevaMat.Visible = false;
             btnNuevaAnot.Visible = false;
             btnNuevoCalen.Visible = false;
@@ -177,22 +175,10 @@ namespace ModernGUI_V3
         private void btnMetodos_Click(object sender, EventArgs e)
         {
             tecnica.BringToFront();
-            btnNuevoMeto.BringToFront();
-            btnNuevoMeto.Visible = true;
             ReestablecerConfig();
             btnMetodos.BackColor = Color.FromArgb(12, 61, 92);
         }
-        
-        private void btnCalendario_Click(object sender, EventArgs e)
-        {
-            calendario.BringToFront();
-            btnCalendario.BringToFront();            
-            btnNuevoCalen.BringToFront();
-            btnNuevoCalen.Visible = true;
-            ReestablecerConfig();
-            btnCalendario.BackColor = Color.FromArgb(12, 61, 92);
-        }        
-
+                
         private frmOutput form = new frmOutput();
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -429,11 +415,6 @@ namespace ModernGUI_V3
 
         }
 
-        private void btnNuevoMeto_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         //--------------------------------- METODO PARA ARRASTRAR EL FORMULARIO ----------------------------------
 
@@ -447,7 +428,6 @@ namespace ModernGUI_V3
 
         private void ReestablecerConfig()
         {
-            btnCalendario.BackColor = Color.FromArgb(4, 41, 68);
             btnMaterias.BackColor = Color.FromArgb(4, 41, 68);
             btnMetodos.BackColor = Color.FromArgb(4, 41, 68);
             btnAnotaciones.BackColor = Color.FromArgb(4, 41, 68);
@@ -485,8 +465,6 @@ namespace ModernGUI_V3
         // --------------------------------------- EVENTOS CLOSE ---------------------------------------
 
         private void CloseForms(object sender,FormClosedEventArgs e) {
-            if (Application.OpenForms["Form1"] == null)
-                btnCalendario.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["Form2"] == null)
                 btnMetodos.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["Form3"] == null)

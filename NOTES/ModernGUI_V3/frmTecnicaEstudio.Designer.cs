@@ -58,7 +58,7 @@
             // 
             // panelformularios
             // 
-            this.panelformularios.BackColor = System.Drawing.SystemColors.Control;
+            this.panelformularios.BackColor = System.Drawing.Color.SeaShell;
             this.panelformularios.Controls.Add(this.label1);
             this.panelformularios.Controls.Add(this.pictureBox2);
             this.panelformularios.Controls.Add(this.pictureBox1);
