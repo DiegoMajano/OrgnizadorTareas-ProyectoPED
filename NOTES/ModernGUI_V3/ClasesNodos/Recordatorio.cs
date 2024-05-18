@@ -14,15 +14,18 @@ namespace AdministradorT.ClasesNodos
 
         public string Titulo
         {
-            get { return titulo; } set { titulo = value; } 
+            get { return titulo; }
+            set { titulo = value; }
         }
         public DateTime aRecordar
         {
-            get { return arecordar; } set { arecordar = value; }
+            get { return arecordar; }
+            set { arecordar = value; }
         }
         public string Cuerpo
         {
-            get { return cuerpo; } set { cuerpo = value; }
+            get { return cuerpo; }
+            set { cuerpo = value; }
         }
 
         public Recordatorio(string titulo, DateTime arecordar, string cuerpo)
@@ -31,6 +34,13 @@ namespace AdministradorT.ClasesNodos
             this.aRecordar = arecordar;
             this.Cuerpo = cuerpo;
             setID(3, titulo);
+        }
+        public Recordatorio(string codigo, string titulo, DateTime arecordar, string cuerpo)
+        {
+            this.ID = codigo;
+            this.Titulo = titulo;
+            this.aRecordar = arecordar;
+            this.Cuerpo = cuerpo;
         }
     }
 }

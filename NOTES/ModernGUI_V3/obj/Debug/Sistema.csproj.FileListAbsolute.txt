@@ -1,19 +1,290 @@
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.exe.config
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.exe
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.pdb
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.AssemblyReference.cache
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmCalendario.resources
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaAnotacion.resources
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaMateria.resources
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaTarea.resources
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevoRecordatorio.resources
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmTecnicaEstudio.resources
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmMaterias.resources
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmAnotaciones.resources
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmPrincipal.resources
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmOutput.resources
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.Properties.Resources.resources
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.GenerateResource.cache
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.CoreCompileInputs.cache
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.exe
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.pdb
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Google.Protobuf.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\MySql.Data.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Buffers.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.IO.Pipelines.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Memory.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\ZstdSharp.dll
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Google.Protobuf.pdb
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Google.Protobuf.xml
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\MySql.Data.xml
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Buffers.xml
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.IO.Pipelines.xml
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Memory.xml
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\alear\Source\Repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.CopyComplete
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.AssemblyReference.cache
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmCalendario.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaAnotacion.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaMateria.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaTarea.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevoRecordatorio.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmTecnicaEstudio.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmMaterias.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmAnotaciones.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmPrincipal.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmOutput.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.Properties.Resources.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.GenerateResource.cache
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.CoreCompileInputs.cache
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.exe
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.pdb
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.exe.config
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.exe
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.pdb
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.exe.config
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.exe
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.pdb
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Google.Protobuf.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\MySql.Data.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Buffers.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.IO.Pipelines.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Memory.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\ZstdSharp.dll
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Google.Protobuf.pdb
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Google.Protobuf.xml
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\MySql.Data.xml
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Buffers.xml
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.IO.Pipelines.xml
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Memory.xml
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.AssemblyReference.cache
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmCalendario.resources
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmRecordatorios.resources
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmTareas.resources
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaAnotacion.resources
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaMateria.resources
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaTarea.resources
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevoRecordatorio.resources
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmTecnicaEstudio.resources
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmMaterias.resources
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmAnotaciones.resources
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmPrincipal.resources
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmOutput.resources
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.Properties.Resources.resources
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.GenerateResource.cache
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.CoreCompileInputs.cache
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.CopyComplete
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.exe
+C:\Users\50376\source\repos\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.pdb
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.exe.config
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.exe
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.pdb
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\Google.Protobuf.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\MySql.Data.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\System.Buffers.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\System.Memory.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\ZstdSharp.dll
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\Google.Protobuf.pdb
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\Google.Protobuf.xml
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\MySql.Data.xml
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\System.Buffers.xml
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\System.IO.Pipelines.xml
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\System.Memory.xml
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.AssemblyReference.cache
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.SuggestedBindingRedirects.cache
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmCalendario.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmRecordatorios.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmTareas.resources
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmRecordatorios.resources
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmTareas.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaAnotacion.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaMateria.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaTarea.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevoRecordatorio.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmTecnicaEstudio.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmMaterias.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmAnotaciones.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmPrincipal.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmOutput.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.Properties.Resources.resources
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.GenerateResource.cache
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.CoreCompileInputs.cache
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.CopyComplete
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.exe
 C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.pdb
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaAnotacion.resources
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevoRecordatorio.resources
-C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmAnotaciones.resources
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\Recursos\ready.wav
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\Recursos\song.wav
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\Recursos\sound.wav
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\Recursos\star.jpg
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\bin\Debug\Recursos\star.png
+C:\Users\Diego Majano\Desktop\UDB\Año 2024\PED\OrganizadorTareas-PED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmHome.resources
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Recursos\ready.wav
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Recursos\song.wav
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Recursos\sound.wav
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Recursos\star.jpg
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\bin\Debug\Recursos\star.png
+C:\Users\alear\source\repos\DiegoMajano\OrgnizadorTareas-ProyectoPED\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmHome.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\Recursos\ready.wav
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\Recursos\song.wav
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\Recursos\sound.wav
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\Recursos\star.jpg
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\Recursos\star.png
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\BouncyCastle.Cryptography.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\Google.Protobuf.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\K4os.Hash.xxHash.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\MySql.Data.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\System.Buffers.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\System.IO.Pipelines.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\System.Memory.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\System.Numerics.Vectors.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\ZstdSharp.dll
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\BouncyCastle.Cryptography.xml
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\Google.Protobuf.pdb
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\Google.Protobuf.xml
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.xml
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\K4os.Hash.xxHash.xml
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\MySql.Data.xml
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\System.Buffers.xml
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\System.IO.Pipelines.xml
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\System.Memory.xml
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\System.Numerics.Vectors.xml
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmHome.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmRecordatorios.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmTareas.resources
+D:\2024 UDB\Ciclo 1\PED\Proyecto\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.CopyComplete
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\Recursos\ready.wav
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\Recursos\song.wav
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\Recursos\sound.wav
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\Recursos\star.jpg
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\Recursos\star.png
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.exe.config
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.exe
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\AdministradorT.pdb
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\Google.Protobuf.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\MySql.Data.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\System.Buffers.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\System.IO.Pipelines.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\System.Memory.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\ZstdSharp.dll
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\Google.Protobuf.pdb
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\Google.Protobuf.xml
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\MySql.Data.xml
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\System.Buffers.xml
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\System.IO.Pipelines.xml
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\System.Memory.xml
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.AssemblyReference.cache
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmCalendario.resources
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmHome.resources
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmRecordatorios.resources
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmTareas.resources
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaAnotacion.resources
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaMateria.resources
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevaTarea.resources
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.frmNuevoRecordatorio.resources
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmTecnicaEstudio.resources
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmMaterias.resources
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmAnotaciones.resources
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmPrincipal.resources
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\ModernGUI_V3.frmOutput.resources
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.Properties.Resources.resources
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.GenerateResource.cache
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.CoreCompileInputs.cache
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\Sistema.csproj.Up2Date
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.exe
+C:\Users\valer\OneDrive\Escritorio\CATEDRA\NOTES\ModernGUI_V3\obj\Debug\AdministradorT.pdb
